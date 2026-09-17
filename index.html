@@ -383,24 +383,29 @@ let DB={cats:DCATS,fu:DFU,tc:1200,meses:{}};
 let syncTimer=null;
 
 // ── GOOGLE AUTH ──
+let tokenClient=null;
+
 function onGoogleLogin(response){
   const payload=JSON.parse(atob(response.credential.split('.')[1]));
   userEmail=payload.email;
   document.getElementById('sync-user').textContent=userEmail;
   document.getElementById('login-status').textContent='Obteniendo acceso a Drive...';
-  // Request access token via implicit flow
-  const client=google.accounts.oauth2.initTokenClient({
+  tokenClient=google.accounts.oauth2.initTokenClient({
     client_id:CLIENT_ID,
     scope:SCOPES,
     callback:(tokenResponse)=>{
-      if(tokenResponse.error){document.getElementById('login-status').textContent='Error: '+tokenResponse.error;return;}
+      if(tokenResponse.error){
+        document.getElementById('login-status').textContent='Error: '+tokenResponse.error;
+        return;
+      }
       accessToken=tokenResponse.access_token;
       document.getElementById('login-screen').classList.remove('show');
       setSyncStatus('sync','Conectando...');
       loadFromDrive();
     }
   });
-  client.requestAccessToken();
+  // Small delay to ensure GSI is ready
+  setTimeout(()=>tokenClient.requestAccessToken({prompt:''}), 300);
 }
 
 function signOut(){
