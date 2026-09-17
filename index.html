@@ -138,6 +138,25 @@ tr:hover td{background:rgba(255,255,255,.015);}
 #toast.show{opacity:1;}
 #sov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:49;}
 .green{color:var(--green);}.red{color:var(--red);}.blue{color:var(--acc);}.warn{color:var(--warn);}
+/* AGENDA */
+.ag-item{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--bd);transition:background .1s;}
+.ag-item:last-child{border-bottom:none;}
+.ag-item:hover{background:rgba(255,255,255,.02);}
+.ag-dia{font-size:22px;font-weight:800;width:32px;text-align:center;flex-shrink:0;line-height:1;}
+.ag-dia-lbl{font-size:9px;color:var(--tx3);text-align:center;}
+.ag-info{flex:1;min-width:0;}
+.ag-nom{font-size:13px;font-weight:600;}
+.ag-monto{font-size:12px;color:var(--warn);margin-top:1px;}
+.ag-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;flex-shrink:0;}
+.ag-ok{background:rgba(56,201,138,.15);color:var(--green);}
+.ag-pend{background:rgba(138,147,171,.12);color:var(--tx2);}
+.ag-hoy{background:rgba(247,169,79,.2);color:var(--warn);}
+.ag-venc{background:rgba(247,95,95,.15);color:var(--red);}
+.ag-prox{background:rgba(79,142,247,.15);color:var(--acc);}
+.ag-check{width:22px;height:22px;border-radius:50%;border:2px solid var(--bd);background:none;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;transition:all .15s;}
+.ag-check.done{background:var(--green);border-color:var(--green);color:#fff;}
+.ag-check:hover{border-color:var(--acc);}
+.ag-alert{background:rgba(247,169,79,.08);border:1px solid rgba(247,169,79,.25);border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:var(--warn);display:flex;align-items:center;gap:8px;}
 @media(max-width:720px){
   #sb{transform:translateX(-100%);}
   #sb.open{transform:translateX(0);}
@@ -175,6 +194,7 @@ tr:hover td{background:rgba(255,255,255,.015);}
     <div class="ni" onclick="nav(this,'presupuesto')">📋 Presupuesto</div>
     <div class="ni" onclick="nav(this,'ingresos')">💰 Ingresos</div>
     <div class="ni" onclick="nav(this,'egresos')">💳 Egresos</div>
+    <div class="ni" onclick="nav(this,'agenda')">📅 Agenda de pagos</div>
     <div class="ns">Herramientas</div>
     <div class="ni" onclick="nav(this,'buscar')">🔍 Buscar producto</div>
     <div class="ns">Configuración</div>
@@ -210,6 +230,7 @@ tr:hover td{background:rgba(255,255,255,.015);}
 
     <!-- DASHBOARD -->
     <div class="view on" id="view-dashboard">
+      <div id="dash-ag-alert"></div>
       <div class="ahorro-box">
         <div class="ai"><div class="al">Ahorro proyectado</div><div class="av green" id="d-ap">—</div><div class="as" id="d-ap-u"></div></div>
         <div class="ai"><div class="al">Ahorro real</div><div class="av" id="d-ar">—</div><div class="as" id="d-ar-u"></div></div>
@@ -289,6 +310,19 @@ tr:hover td{background:rgba(255,255,255,.015);}
       </div>
     </div>
 
+    <!-- AGENDA -->
+    <div class="view" id="view-agenda">
+      <div id="ag-alert-box"></div>
+      <div class="card">
+        <div class="card-hd">
+          <h3>Agenda de pagos — <span id="ag-mes-lbl"></span></h3>
+          <div style="font-size:11px;color:var(--tx3)" id="ag-resumen"></div>
+        </div>
+        <div id="ag-list"><div class="empty"><p>No hay pagos con vencimiento configurado para este mes.<br>Agregá un "Día de vencimiento" a los egresos fijos del presupuesto.</p></div></div>
+      </div>
+      <div style="font-size:11px;color:var(--tx3);padding:0 4px;margin-top:-8px">Los pagos se generan automáticamente desde el presupuesto del mes. Tildá cada pago a medida que lo realizás.</div>
+    </div>
+
     <!-- CATEGORÍAS -->
     <div class="view" id="view-categorias">
       <div class="card"><div class="card-hd"><h3>Categorías de egresos</h3><button class="btn b-acc b-sm" onclick="openM('m-ac')">+ Nueva</button></div><div style="padding:14px 16px" id="cats-d"></div></div>
@@ -335,6 +369,7 @@ tr:hover td{background:rgba(255,255,255,.015);}
   <div class="f2"><div class="fr"><label>Categoría</label><select id="pe-c"></select></div><div class="fr"><label>Tipo</label><select id="pe-t"><option value="Fijo">Fijo</option><option value="Variable">Variable</option></select></div></div>
   <div class="fr"><label>Descripción</label><input id="pe-d" placeholder="Ej: Cablevisión, Escuela Franco"></div>
   <div class="f2"><div class="fr"><label>Moneda</label><select id="pe-m"><option value="ARS">ARS $</option><option value="USD">USD</option></select></div><div class="fr"><label>Monto</label><input id="pe-v" type="number" inputmode="decimal" placeholder="0"></div></div>
+  <div class="fr"><label>Día de vencimiento <span style="color:var(--tx3);font-size:9px;text-transform:none">(opcional — para agenda de pagos)</span></label><input id="pe-vto" type="number" inputmode="numeric" min="1" max="31" placeholder="Ej: 10"></div>
   <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-pe')">Cancelar</button><button class="btn b-warn" onclick="savePE()">Guardar</button></div>
 </div></div>
 
@@ -513,7 +548,7 @@ function bdD(r,p){if(!p)return'<span class="badge b-ne">—</span>';const x=r/p;
 function pb(r,p){if(!p)return'';const x=Math.min(r/p*100,100);const c=x>100?'var(--red)':x>80?'var(--warn)':'var(--green)';return`<div class="pb-w"><div class="pb-b" style="width:${x}%;background:${c}"></div></div>`;}
 
 // ── NAV ──
-const TTLS={dashboard:'Dashboard',presupuesto:'Presupuesto del mes',ingresos:'Ingresos',egresos:'Egresos',buscar:'Buscar producto',categorias:'Categorías',datos:'Datos'};
+const TTLS={dashboard:'Dashboard',presupuesto:'Presupuesto del mes',ingresos:'Ingresos',egresos:'Egresos',agenda:'Agenda de pagos',buscar:'Buscar producto',categorias:'Categorías',datos:'Datos'};
 function nav(el,v){document.querySelectorAll('.ni').forEach(n=>n.classList.remove('on'));el.classList.add('on');document.querySelectorAll('.view').forEach(vv=>vv.classList.remove('on'));document.getElementById('view-'+v).classList.add('on');document.getElementById('topTitle').textContent=TTLS[v]||v;closeSB();refreshAll();}
 function toggleSB(){document.getElementById('sb').classList.toggle('open');document.getElementById('sov').classList.toggle('open');}
 function closeSB(){document.getElementById('sb').classList.remove('open');document.getElementById('sov').classList.remove('open');}
@@ -531,7 +566,7 @@ function popFu(){const fu=getFu();['dl-f','dl-f2'].forEach(id=>{const el=documen
 // ── CRUD ──
 function savePI(){const f=document.getElementById('pi-f').value.trim(),v=parseFloat(document.getElementById('pi-v').value);if(!f||!v){toast('Completá fuente y monto');return;}const d=getPI();d.push({id:Date.now(),fuente:f,per:document.getElementById('pi-p').value,mon:document.getElementById('pi-m').value,monto:v});setPI(d);closeM('m-pi');document.getElementById('pi-f').value='';document.getElementById('pi-v').value='';refreshAll();toast('✓ Guardado');}
 function delPI(id){setPI(getPI().filter(r=>r.id!==id));refreshAll();}
-function savePE(){const v=parseFloat(document.getElementById('pe-v').value);if(!v){toast('Ingresá un monto');return;}const d=getPE();d.push({id:Date.now(),cat:document.getElementById('pe-c').value,tipo:document.getElementById('pe-t').value,desc:document.getElementById('pe-d').value||document.getElementById('pe-c').value,mon:document.getElementById('pe-m').value,monto:v});setPE(d);closeM('m-pe');document.getElementById('pe-d').value='';document.getElementById('pe-v').value='';refreshAll();toast('✓ Guardado');}
+function savePE(){const v=parseFloat(document.getElementById('pe-v').value);if(!v){toast('Ingresá un monto');return;}const vtoRaw=parseInt(document.getElementById('pe-vto').value);const vto=(vtoRaw>=1&&vtoRaw<=31)?vtoRaw:null;const d=getPE();d.push({id:Date.now(),cat:document.getElementById('pe-c').value,tipo:document.getElementById('pe-t').value,desc:document.getElementById('pe-d').value||document.getElementById('pe-c').value,mon:document.getElementById('pe-m').value,monto:v,vto});setPE(d);closeM('m-pe');document.getElementById('pe-d').value='';document.getElementById('pe-v').value='';document.getElementById('pe-vto').value='';refreshAll();toast('✓ Guardado');}
 function delPE(id){setPE(getPE().filter(r=>r.id!==id));refreshAll();}
 function saveIR(){const s=document.getElementById('ir-s').value.trim(),v=parseFloat(document.getElementById('ir-v').value);if(!s||!v){toast('Completá fuente y monto');return;}const d=getIR();d.push({id:Date.now(),fecha:document.getElementById('ir-f').value,fuente:s,per:document.getElementById('ir-p').value,mon:document.getElementById('ir-m').value,monto:v,obs:document.getElementById('ir-o').value});setIR(d);closeM('m-ir');document.getElementById('ir-s').value='';document.getElementById('ir-v').value='';document.getElementById('ir-o').value='';refreshAll();toast('✓ Ingreso registrado');}
 function delIR(id){setIR(getIR().filter(r=>r.id!==id));refreshAll();}
@@ -691,6 +726,7 @@ function renderDash(){
   const dm=document.getElementById('d-movs');
   if(!movs.length)dm.innerHTML='<div class="empty"><p>Sin movimientos</p></div>';
   else dm.innerHTML='<table><thead><tr><th>Fecha</th><th>Concepto</th><th class="tr">Monto</th></tr></thead><tbody>'+movs.map(r=>`<tr><td style="color:var(--tx3)">${r.f||'—'}</td><td>${r.n}</td><td class="tr" style="font-weight:600;color:${r.tipo==='ing'?'var(--green)':'var(--red)'}">${r.tipo==='ing'?'+':'-'}${fN(r.t)}</td></tr>`).join('')+'</tbody></table>';
+  const daa=document.getElementById('dash-ag-alert');if(daa)daa.innerHTML=renderAgDashAlert();
 }
 
 function renderCats(){
@@ -721,7 +757,98 @@ function buscar(){
   '</tbody></table>';
 }
 
-function refreshAll(){renderPres();renderIR();renderEg();renderDash();renderCats();}
+// ── AGENDA ──
+function getAgendaKey(){return `ag_${anio}_${mes}`;}
+function getAgendaStates(){
+  if(!DB.agenda)DB.agenda={};
+  if(!DB.agenda[getAgendaKey()])DB.agenda[getAgendaKey()]={};
+  return DB.agenda[getAgendaKey()];
+}
+function toggleAgPago(peId){
+  const st=getAgendaStates();
+  st[peId]=!st[peId];
+  DB.agenda[getAgendaKey()]=st;
+  scheduleSave();
+  renderAgenda();
+  renderDash();
+}
+
+function renderAgenda(){
+  const pe=getPE().filter(r=>r.vto);
+  const st=getAgendaStates();
+  const hoy=new Date();
+  const dHoy=hoy.getDate();
+  const esMesActual=(mes===hoy.getMonth()+1&&anio===hoy.getFullYear());
+  document.getElementById('ag-mes-lbl').textContent=MESES[mes-1]+' '+anio;
+
+  if(!pe.length){
+    document.getElementById('ag-list').innerHTML='<div class="empty"><p>No hay pagos con vencimiento configurado para este mes.<br>Agregá un "Día de vencimiento" a los egresos fijos del presupuesto.</p></div>';
+    document.getElementById('ag-resumen').textContent='';
+    document.getElementById('ag-alert-box').innerHTML='';
+    return;
+  }
+
+  // Ordenar por día de vencimiento
+  const sorted=[...pe].sort((a,b)=>a.vto-b.vto);
+  const pagados=sorted.filter(r=>st[r.id]).length;
+  const pendientes=sorted.length-pagados;
+  document.getElementById('ag-resumen').textContent=`${pagados} pagado${pagados!==1?'s':''} · ${pendientes} pendiente${pendientes!==1?'s':''}`;
+
+  // Alerta en agenda para próximos 5 días
+  if(esMesActual&&pendientes>0){
+    const proximos=sorted.filter(r=>!st[r.id]&&r.vto>=dHoy&&r.vto<=dHoy+5);
+    const vencidos=sorted.filter(r=>!st[r.id]&&r.vto<dHoy);
+    let alertHTML='';
+    if(vencidos.length)alertHTML+=`<div class="ag-alert">⚠️ Tenés ${vencidos.length} pago${vencidos.length!==1?'s':''} vencido${vencidos.length!==1?'s':''} sin marcar como pagado.</div>`;
+    else if(proximos.length)alertHTML+=`<div class="ag-alert">📅 ${proximos.length} pago${proximos.length!==1?'s':''} vence${proximos.length===1?'':'n'} en los próximos 5 días.</div>`;
+    document.getElementById('ag-alert-box').innerHTML=alertHTML;
+  } else {
+    document.getElementById('ag-alert-box').innerHTML='';
+  }
+
+  document.getElementById('ag-list').innerHTML=sorted.map(r=>{
+    const pagado=!!st[r.id];
+    let badgeClass,badgeTxt;
+    if(pagado){badgeClass='ag-ok';badgeTxt='✓ Pagado';}
+    else if(!esMesActual){badgeClass='ag-pend';badgeTxt='Pendiente';}
+    else if(r.vto<dHoy){badgeClass='ag-venc';badgeTxt='Vencido';}
+    else if(r.vto===dHoy){badgeClass='ag-hoy';badgeTxt='Hoy';}
+    else if(r.vto<=dHoy+5){badgeClass='ag-prox';badgeTxt='Próximo';}
+    else{badgeClass='ag-pend';badgeTxt='Pendiente';}
+    const montoFmt=r.mon==='USD'?fU(r.monto):fN(r.monto);
+    const opacidad=pagado?'opacity:.5;':'';
+    return`<div class="ag-item" style="${opacidad}">
+      <button class="ag-check${pagado?' done':''}" onclick="toggleAgPago(${r.id})" title="${pagado?'Marcar como pendiente':'Marcar como pagado'}">${pagado?'✓':''}</button>
+      <div style="text-align:center;flex-shrink:0;width:36px">
+        <div class="ag-dia" style="color:${pagado?'var(--tx3)':r.vto<dHoy&&esMesActual&&!pagado?'var(--red)':'var(--tx)'}">${r.vto}</div>
+        <div class="ag-dia-lbl">día</div>
+      </div>
+      <div class="ag-info">
+        <div class="ag-nom" style="${pagado?'text-decoration:line-through;color:var(--tx3)':''}">${r.desc}</div>
+        <div class="ag-monto">${montoFmt} · ${r.cat}</div>
+      </div>
+      <span class="ag-badge ${badgeClass}">${badgeTxt}</span>
+    </div>`;
+  }).join('');
+}
+
+// Indicador de pagos pendientes en dashboard
+function renderAgDashAlert(){
+  const pe=getPE().filter(r=>r.vto);
+  if(!pe.length)return'';
+  const st=getAgendaStates();
+  const hoy=new Date();
+  if(mes!==hoy.getMonth()+1||anio!==hoy.getFullYear())return'';
+  const dHoy=hoy.getDate();
+  const vencidos=pe.filter(r=>!st[r.id]&&r.vto<dHoy);
+  const proximos=pe.filter(r=>!st[r.id]&&r.vto>=dHoy&&r.vto<=dHoy+5);
+  if(vencidos.length)return`<div class="ag-alert" style="cursor:pointer" onclick="navToAgenda()">⚠️ ${vencidos.length} pago${vencidos.length!==1?'s':''} vencido${vencidos.length!==1?'s':''} sin registrar → <strong>Ver agenda</strong></div>`;
+  if(proximos.length)return`<div class="ag-alert" style="cursor:pointer" onclick="navToAgenda()">📅 ${proximos.length} pago${proximos.length!==1?'s':''} próximo${proximos.length!==1?'s':''} en los siguientes 5 días → <strong>Ver agenda</strong></div>`;
+  return'';
+}
+function navToAgenda(){const el=document.querySelector('.ni[onclick*="agenda"]');if(el)nav(el,'agenda');}
+
+function refreshAll(){renderPres();renderIR();renderEg();renderDash();renderCats();renderAgenda();}
 
 (function(){
   const now=new Date();mes=now.getMonth()+1;anio=now.getFullYear();
