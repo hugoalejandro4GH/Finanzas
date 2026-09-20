@@ -6,6 +6,7 @@
 <title>Finanzas del Hogar — Familia Fernandez Soto</title>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
 /* ── PALETA VERDE MENTA ── */
 :root{
@@ -334,6 +335,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
         <span>📋 Presupuesto base del mes</span>
         <div style="display:flex;gap:8px;flex-wrap:wrap;">
           <button class="btn b-ghost b-sm" onclick="copiarMesAnt()">Copiar mes anterior</button>
+          <button class="btn b-ghost b-sm" onclick="exportPresupuesto()">📥 Excel</button>
           <button class="btn b-green b-sm" onclick="openM('m-pi')">+ Ingreso</button>
           <button class="btn b-warn b-sm" onclick="openM('m-pe')">+ Egreso</button>
         </div>
@@ -383,6 +385,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
         </div>
         <div style="display:flex;gap:6px;align-items:center">
           <span style="font-size:var(--sz-sm);color:var(--tx3)">Total: <strong id="er-tot" class="red">$0</strong></span>
+          <button class="btn b-ghost b-sm" onclick="exportEgresos()">📥 Excel</button>
           <button class="btn b-acc" onclick="openM('m-er')">+ Egreso</button>
         </div>
       </div>
@@ -1216,6 +1219,72 @@ function renderAgAlerta(){
   if(vencidos.length)return`<div class="alert-box alert-red" onclick="navToAgenda()">⚠️ ${vencidos.length} pago${vencidos.length!==1?'s':''} vencido${vencidos.length!==1?'s':''} sin registrar — <strong>Ver agenda →</strong></div>`;
   if(proximos.length)return`<div class="alert-box alert-warn" onclick="navToAgenda()">📅 ${proximos.length} pago${proximos.length!==1?'s':''} próximo${proximos.length!==1?'s':''} en los siguientes 5 días — <strong>Ver agenda →</strong></div>`;
   return'';
+}
+
+// ════════════════════════════════════
+// EXPORTACIÓN A EXCEL
+// ════════════════════════════════════
+function mesLabel(){return MESES[mes-1]+'_'+anio;}
+
+function exportPresupuesto(){
+  const pi=getPI(), pe=getPE();
+  if(!pi.length&&!pe.length){toast('No hay datos para exportar');return;}
+
+  // Hoja ingresos
+  const hdPI=['Fuente','Persona','Moneda','Monto','Monto ARS'];
+  const rowsPI=pi.map(r=>[r.fuente,r.per,r.mon,r.monto,Math.round(toARS(r.monto,r.mon))]);
+  const totPI=pi.reduce((a,r)=>a+toARS(r.monto,r.mon),0);
+  rowsPI.push(['','','','TOTAL',Math.round(totPI)]);
+
+  // Hoja egresos
+  const hdPE=['Categoría','Tipo','Descripción','Moneda','Monto','Monto ARS','Vencimiento','Estado'];
+  const rowsPE=pe.map(r=>[r.cat,r.tipo,r.desc,r.mon,r.monto,Math.round(toARS(r.monto,r.mon)),r.vto?'Día '+r.vto:'—',r.estado==='pendiente'?'A confirmar':'Confirmado']);
+  const totPE=pe.reduce((a,r)=>a+toARS(r.monto,r.mon),0);
+  rowsPE.push(['','','','','TOTAL',Math.round(totPE),'','']);
+
+  const wb=XLSX.utils.book_new();
+  const wsPI=XLSX.utils.aoa_to_sheet([hdPI,...rowsPI]);
+  const wsPE=XLSX.utils.aoa_to_sheet([hdPE,...rowsPE]);
+
+  // Anchos de columna
+  wsPI['!cols']=[{wch:24},{wch:12},{wch:8},{wch:14},{wch:14}];
+  wsPE['!cols']=[{wch:18},{wch:10},{wch:28},{wch:8},{wch:14},{wch:14},{wch:14},{wch:14}];
+
+  XLSX.utils.book_append_sheet(wb,wsPI,'Ingresos presupuestados');
+  XLSX.utils.book_append_sheet(wb,wsPE,'Egresos presupuestados');
+  XLSX.writeFile(wb,'Presupuesto_'+mesLabel()+'.xlsx');
+  toast('✓ Exportado: Presupuesto_'+mesLabel()+'.xlsx');
+}
+
+function exportEgresos(){
+  const comps=getComps(), items=getItems();
+  if(!comps.length){toast('No hay egresos para exportar');return;}
+
+  // Hoja comprobantes
+  const hdC=['Comprobante','Fecha','Persona','Lugar','Categorías','Total ARS'];
+  const rowsC=comps.map(c=>[c.nombre,c.fecha||'—',c.persona,c.lugar||'—',(c.cats||[]).join(', '),Math.round(c.total)]);
+  const totC=comps.reduce((a,c)=>a+c.total,0);
+  rowsC.push(['','','','','TOTAL',Math.round(totC)]);
+
+  // Hoja detalle ítems
+  const hdI=['Comprobante','Fecha','Descripción','Marca','Categoría','Moneda','Monto','Cantidad','Unidad','Precio Unitario','Lugar','Persona'];
+  const rowsI=items.map(i=>{
+    const comp=comps.find(c=>c.id===i.compId);
+    const pu=i.cant&&i.uni?Math.round(i.monto/i.cant):'';
+    return[comp?comp.nombre:'—',comp?comp.fecha||'—':'—',i.item,i.marca||'—',i.cat,i.mon,i.monto,i.cant||'',i.uni||'',pu,i.lugar||comp?.lugar||'—',comp?comp.persona:'—'];
+  });
+
+  const wb=XLSX.utils.book_new();
+  const wsC=XLSX.utils.aoa_to_sheet([hdC,...rowsC]);
+  const wsI=XLSX.utils.aoa_to_sheet([hdI,...rowsI]);
+
+  wsC['!cols']=[{wch:24},{wch:12},{wch:12},{wch:18},{wch:24},{wch:14}];
+  wsI['!cols']=[{wch:22},{wch:12},{wch:26},{wch:14},{wch:16},{wch:8},{wch:12},{wch:10},{wch:8},{wch:14},{wch:18},{wch:12}];
+
+  XLSX.utils.book_append_sheet(wb,wsC,'Comprobantes');
+  XLSX.utils.book_append_sheet(wb,wsI,'Detalle ítems');
+  XLSX.writeFile(wb,'Egresos_'+mesLabel()+'.xlsx');
+  toast('✓ Exportado: Egresos_'+mesLabel()+'.xlsx');
 }
 
 // ════════════════════════════════════
