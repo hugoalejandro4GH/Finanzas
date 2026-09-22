@@ -176,7 +176,25 @@ tr:hover td{background:rgba(42,138,90,.03);}
 .alert-warn{background:rgba(212,136,10,.08);border:1px solid rgba(212,136,10,.3);color:var(--warn);}
 .alert-red{background:rgba(192,72,72,.08);border:1px solid rgba(192,72,72,.3);color:var(--red);}
 
-/* ── AUTOCOMPLETE ── */
+/* ── CALCULADORA ── */
+.calc-wrap{position:relative;display:flex;gap:6px;}
+.calc-wrap input{flex:1;}
+.calc-btn{background:var(--s2);border:1px solid var(--bd);border-radius:6px;padding:8px 10px;cursor:pointer;font-size:16px;flex-shrink:0;color:var(--tx2);transition:all .12s;}
+.calc-btn:hover{background:var(--acc-light);color:var(--acc);}
+.calc-pop{position:absolute;top:100%;right:0;z-index:300;background:var(--s1);border:1px solid var(--bd);border-radius:10px;padding:12px;box-shadow:0 8px 24px rgba(0,0,0,.15);display:none;width:240px;margin-top:4px;}
+.calc-pop.open{display:block;}
+.calc-display{background:var(--s2);border:1px solid var(--bd);border-radius:6px;padding:8px 10px;text-align:right;margin-bottom:8px;}
+.calc-expr{font-size:11px;color:var(--tx3);min-height:16px;}
+.calc-result{font-size:20px;font-weight:700;color:var(--tx);}
+.calc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;}
+.ck{background:var(--s2);border:1px solid var(--bd);border-radius:6px;padding:10px 4px;text-align:center;cursor:pointer;font-size:14px;font-weight:600;color:var(--tx);transition:all .12s;-webkit-tap-highlight-color:transparent;user-select:none;}
+.ck:hover,.ck:active{background:var(--acc-light);color:var(--acc);}
+.ck-op{color:var(--acc);}
+.ck-eq{background:var(--acc);color:#fff;border-color:var(--acc);}
+.ck-eq:hover{background:var(--green);border-color:var(--green);}
+.ck-cl{background:var(--s2);color:var(--warn);}
+.ck-ok{background:var(--green);color:#fff;border-color:var(--green);grid-column:span 2;}
+.ck-ok:hover{opacity:.85;}
 .ac-wrap{position:relative;}
 .ac-list{position:absolute;top:100%;left:0;right:0;background:var(--s1);border:1px solid var(--bd);border-radius:6px;z-index:200;max-height:200px;overflow-y:auto;box-shadow:0 4px 16px rgba(0,0,0,.12);display:none;}
 .ac-list.open{display:block;}
@@ -460,7 +478,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
 <div class="mo" id="m-pi"><div class="modal"><h3>Ingreso presupuestado</h3>
   <div class="fr"><label>Fuente</label><input id="pi-f" list="dl-f" placeholder="Ej: Sueldo Alejandro"></div><datalist id="dl-f"></datalist>
   <div class="f2"><div class="fr"><label>Persona</label><select id="pi-p"><option>Alejandro</option><option>Clarisa</option><option>Ambos</option></select></div><div class="fr"><label>Moneda</label><select id="pi-m"><option value="ARS">ARS $</option><option value="USD">USD</option></select></div></div>
-  <div class="fr"><label>Monto</label><input id="pi-v" type="number" inputmode="decimal" placeholder="0"></div>
+  <div class="fr"><label>Monto</label><div class="calc-wrap"><input id="pi-v" type="number" inputmode="decimal" placeholder="0"><button type="button" class="calc-btn" onclick="openCalc('pi-v',this)">🧮</button><div class="calc-pop" id="calc-pi-v"></div></div></div>
   <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-pi')">Cancelar</button><button class="btn b-green" onclick="savePI()">Guardar</button></div>
 </div></div>
 
@@ -469,6 +487,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
   <div class="fr"><label>Descripción</label><input id="pe-d" placeholder="Ej: Cablevisión, Escuela Franco"></div>
   <div class="f2"><div class="fr"><label>Moneda</label><select id="pe-m"><option value="ARS">ARS $</option><option value="USD">USD</option></select></div><div class="fr"><label>Monto</label><input id="pe-v" type="number" inputmode="decimal" placeholder="0"></div></div>
   <div class="fr"><label>Día de vencimiento <span style="font-weight:400;text-transform:none">(opcional)</span></label><input id="pe-vto" type="number" inputmode="numeric" min="1" max="31" placeholder="Ej: 10"></div>
+  <div class="fr"><label>Monto</label><div class="calc-wrap"><input id="pe-v" type="number" inputmode="decimal" placeholder="0"><button type="button" class="calc-btn" onclick="openCalc('pe-v',this)">🧮</button><div class="calc-pop" id="calc-pe-v"></div></div></div>
   <input type="hidden" id="pe-edit-id">
   <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-pe')">Cancelar</button><button class="btn b-warn" onclick="savePE()">Guardar</button></div>
 </div></div>
@@ -477,7 +496,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
   <div class="fr"><label>Fecha</label><input id="ir-f" type="date"></div>
   <div class="fr"><label>Fuente</label><input id="ir-s" list="dl-f2" placeholder="Ej: Sueldo"></div><datalist id="dl-f2"></datalist>
   <div class="f2"><div class="fr"><label>Persona</label><select id="ir-p"><option>Alejandro</option><option>Clarisa</option><option>Ambos</option></select></div><div class="fr"><label>Moneda</label><select id="ir-m"><option value="ARS">ARS $</option><option value="USD">USD</option></select></div></div>
-  <div class="fr"><label>Monto</label><input id="ir-v" type="number" inputmode="decimal" placeholder="0"></div>
+  <div class="fr"><label>Monto</label><div class="calc-wrap"><input id="ir-v" type="number" inputmode="decimal" placeholder="0"><button type="button" class="calc-btn" onclick="openCalc('ir-v',this)">🧮</button><div class="calc-pop" id="calc-ir-v"></div></div></div>
   <div class="fr"><label>Observaciones</label><input id="ir-o" placeholder="Opcional"></div>
   <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-ir')">Cancelar</button><button class="btn b-green" onclick="saveIR()">Guardar</button></div>
 </div></div>
@@ -498,7 +517,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
   </div>
   <div class="f2">
     <div class="fr"><label>Moneda</label><select id="er-m" onchange="calcPUnit()"><option value="ARS">ARS $</option><option value="USD">USD</option></select></div>
-    <div class="fr"><label>Monto total</label><input id="er-v" type="number" inputmode="decimal" placeholder="0" oninput="calcPUnit()"></div>
+    <div class="fr"><label>Monto total</label><div class="calc-wrap"><input id="er-v" type="number" inputmode="decimal" placeholder="0" oninput="calcPUnit()"><button type="button" class="calc-btn" onclick="openCalc('er-v',this)">🧮</button><div class="calc-pop" id="calc-er-v"></div></div></div>
   </div>
   <div class="fr"><label>Unidad</label><select id="er-uni" onchange="calcPUnit()"><option value="">— sin unidad —</option><option>kg</option><option>g</option><option>lt</option><option>ml</option><option>unidad</option><option>docena</option><option>paquete</option><option>otro</option></select></div>
   <div class="f2" id="er-punit-wrap" style="display:none">
@@ -516,7 +535,27 @@ tr:hover td{background:rgba(42,138,90,.03);}
   <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-er')">Cancelar</button><button class="btn b-acc" onclick="saveER()">Guardar</button></div>
 </div></div>
 
-<div class="mo" id="m-ag-pago"><div class="modal"><h3>Registrar pago</h3>
+<div class="mo" id="m-er-edit"><div class="modal"><h3>Editar egreso</h3>
+  <div class="f2"><div class="fr"><label>Fecha</label><input id="ere-f" type="date"></div><div class="fr"><label>Persona</label><select id="ere-p"><option>Alejandro</option><option>Clarisa</option><option>Ambos</option></select></div></div>
+  <div class="fr"><label>Comprobante / Lugar</label><input id="ere-c" placeholder="Ej: Don Gastón"></div>
+  <div class="fr"><label>Descripción</label><input id="ere-d" placeholder="Ej: Milanesas"></div>
+  <div class="f2">
+    <div class="fr"><label>Marca <span style="font-weight:400;text-transform:none">(opcional)</span></label><input id="ere-marca" placeholder="Ej: Nucrem"></div>
+    <div class="fr"><label>Categoría</label><select id="ere-cat"></select></div>
+  </div>
+  <div class="f2">
+    <div class="fr"><label>Moneda</label><select id="ere-m"><option value="ARS">ARS $</option><option value="USD">USD</option></select></div>
+    <div class="fr"><label>Monto total</label><div class="calc-wrap"><input id="ere-v" type="number" inputmode="decimal" placeholder="0"><button type="button" class="calc-btn" onclick="openCalc('ere-v',this)">🧮</button><div class="calc-pop" id="calc-ere-v"></div></div></div>
+  </div>
+  <div class="f2">
+    <div class="fr"><label>Cantidad <span style="font-weight:400;text-transform:none">(opcional)</span></label><input id="ere-cant" type="number" inputmode="decimal" placeholder="Ej: 2"></div>
+    <div class="fr"><label>Unidad</label><select id="ere-uni"><option value="">—</option><option>kg</option><option>g</option><option>lt</option><option>ml</option><option>unidad</option><option>docena</option><option>paquete</option><option>otro</option></select></div>
+  </div>
+  <div class="fr"><label>Observaciones</label><input id="ere-o" placeholder="Opcional"></div>
+  <input type="hidden" id="ere-comp-id">
+  <input type="hidden" id="ere-item-id">
+  <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-er-edit')">Cancelar</button><button class="btn b-acc" onclick="saveEREdit()">Guardar cambios</button></div>
+</div></div><div class="modal"><h3>Registrar pago</h3>
   <p style="font-size:var(--sz-sm);color:var(--tx3);margin-bottom:14px">Confirmá los datos. Podés ajustar el monto si difirió del presupuesto.</p>
   <div class="fr"><label>Fecha</label><input id="ag-f" type="date"></div>
   <div class="fr"><label>Comprobante</label><input id="ag-c" placeholder="Ej: Transferencia, CBU"></div>
@@ -819,8 +858,149 @@ function saveIR(){const s=document.getElementById('ir-s').value.trim();const v=p
 function delIR(id){setIR(getIR().filter(r=>r.id!==id));refreshAll();}
 
 // ════════════════════════════════════
-// CÁLCULO CANTIDAD / PRECIO UNITARIO
+// CALCULADORA
 // ════════════════════════════════════
+let calcTarget=null,calcExpr='',calcHasResult=false;
+
+function openCalc(inputId,btn){
+  // Cerrar cualquier calculadora abierta
+  document.querySelectorAll('.calc-pop.open').forEach(p=>p.classList.remove('open'));
+  calcTarget=inputId;
+  calcExpr=document.getElementById(inputId).value||'';
+  calcHasResult=false;
+  const pop=btn.nextElementSibling;
+  pop.innerHTML=buildCalc();
+  pop.classList.add('open');
+  updateCalcDisplay(pop);
+}
+
+function buildCalc(){
+  const btns=[
+    {l:'C',cls:'ck ck-cl',fn:"calcClear()"},
+    {l:'⌫',cls:'ck ck-op',fn:"calcBack()"},
+    {l:'%',cls:'ck ck-op',fn:"calcOp('%')"},
+    {l:'÷',cls:'ck ck-op',fn:"calcOp('/')"},
+    {l:'7',cls:'ck',fn:"calcNum('7')"},
+    {l:'8',cls:'ck',fn:"calcNum('8')"},
+    {l:'9',cls:'ck',fn:"calcNum('9')"},
+    {l:'×',cls:'ck ck-op',fn:"calcOp('*')"},
+    {l:'4',cls:'ck',fn:"calcNum('4')"},
+    {l:'5',cls:'ck',fn:"calcNum('5')"},
+    {l:'6',cls:'ck',fn:"calcNum('6')"},
+    {l:'−',cls:'ck ck-op',fn:"calcOp('-')"},
+    {l:'1',cls:'ck',fn:"calcNum('1')"},
+    {l:'2',cls:'ck',fn:"calcNum('2')"},
+    {l:'3',cls:'ck',fn:"calcNum('3')"},
+    {l:'+',cls:'ck ck-op',fn:"calcOp('+')"},
+    {l:'0',cls:'ck',fn:"calcNum('0')"},
+    {l:'.',cls:'ck',fn:"calcNum('.')"},
+    {l:'=',cls:'ck ck-eq',fn:"calcEquals()"},
+    {l:'↩',cls:'ck ck-op',fn:"calcCancel()"},
+  ];
+  return`<div class="calc-display"><div class="calc-expr" id="calc-expr-disp"></div><div class="calc-result" id="calc-result-disp">0</div></div>
+  <div class="calc-grid">${btns.map(b=>`<div class="${b.cls}" onmousedown="event.preventDefault()" onclick="${b.fn}">${b.l}</div>`).join('')}
+  <div class="ck ck-ok" onmousedown="event.preventDefault()" onclick="calcUsar()" style="grid-column:span 2">✓ Usar resultado</div></div>`;
+}
+
+function getCalcPop(){return document.querySelector('.calc-pop.open');}
+function updateCalcDisplay(pop){
+  const p=pop||getCalcPop();if(!p)return;
+  const expr=p.querySelector('#calc-expr-disp');
+  const res=p.querySelector('#calc-result-disp');
+  if(expr)expr.textContent=calcExpr||'';
+  if(res){
+    try{
+      const r=calcExpr?Function('"use strict";return ('+calcExpr.replace(/×/g,'*').replace(/÷/g,'/').replace(/−/g,'-')+')')():0;
+      res.textContent=isFinite(r)?fN(r):'Error';
+    }catch{res.textContent=calcExpr||'0';}
+  }
+}
+function calcNum(n){
+  if(calcHasResult){calcExpr=n;calcHasResult=false;}
+  else calcExpr+=n;
+  updateCalcDisplay();
+}
+function calcOp(op){calcHasResult=false;calcExpr+=op;updateCalcDisplay();}
+function calcClear(){calcExpr='';calcHasResult=false;updateCalcDisplay();}
+function calcBack(){calcExpr=calcExpr.slice(0,-1);updateCalcDisplay();}
+function calcEquals(){
+  try{
+    const r=Function('"use strict";return ('+calcExpr.replace(/×/g,'*').replace(/÷/g,'/').replace(/−/g,'-')+')')();
+    if(isFinite(r)){calcExpr=String(Math.round(r*100)/100);calcHasResult=true;}
+  }catch{}
+  updateCalcDisplay();
+}
+function calcUsar(){
+  try{
+    const r=Function('"use strict";return ('+calcExpr.replace(/×/g,'*').replace(/÷/g,'/').replace(/−/g,'-')+')')();
+    if(isFinite(r)&&calcTarget){
+      document.getElementById(calcTarget).value=Math.round(r*100)/100;
+      // Disparar eventos para recalcular precio unitario si aplica
+      document.getElementById(calcTarget).dispatchEvent(new Event('input'));
+    }
+  }catch{}
+  const p=getCalcPop();if(p)p.classList.remove('open');
+}
+function calcCancel(){const p=getCalcPop();if(p)p.classList.remove('open');}
+document.addEventListener('mousedown',e=>{
+  if(!e.target.closest('.calc-pop')&&!e.target.closest('.calc-btn')){
+    document.querySelectorAll('.calc-pop.open').forEach(p=>p.classList.remove('open'));
+  }
+});
+document.addEventListener('touchstart',e=>{
+  if(!e.target.closest('.calc-pop')&&!e.target.closest('.calc-btn')){
+    document.querySelectorAll('.calc-pop.open').forEach(p=>p.classList.remove('open'));
+  }
+},{passive:true});
+
+// ════════════════════════════════════
+// EDITAR EGRESO
+// ════════════════════════════════════
+function editER(compId,itemId){
+  const comp=getComps().find(c=>c.id===compId);
+  const item=getItems().find(i=>i.id===itemId);
+  if(!comp||!item)return;
+  popCats();
+  document.getElementById('ere-f').value=comp.fecha||'';
+  document.getElementById('ere-p').value=comp.persona||'Ambos';
+  document.getElementById('ere-c').value=comp.nombre||'';
+  document.getElementById('ere-d').value=item.item||'';
+  document.getElementById('ere-marca').value=item.marca||'';
+  document.getElementById('ere-cat').value=item.cat||'';
+  document.getElementById('ere-m').value=item.mon||'ARS';
+  document.getElementById('ere-v').value=item.monto||'';
+  document.getElementById('ere-cant').value=item.cant||'';
+  document.getElementById('ere-uni').value=item.uni||'';
+  document.getElementById('ere-o').value=item.obs||'';
+  document.getElementById('ere-comp-id').value=compId;
+  document.getElementById('ere-item-id').value=itemId;
+  document.getElementById('m-er-edit').classList.add('open');
+}
+
+function saveEREdit(){
+  const compId=document.getElementById('ere-comp-id').value;
+  const itemId=document.getElementById('ere-item-id').value;
+  const v=parseFloat(document.getElementById('ere-v').value);
+  if(!v){toast('Ingresá un monto');return;}
+  const comp=document.getElementById('ere-c').value.trim();
+  const desc=document.getElementById('ere-d').value.trim()||comp;
+  const cat=document.getElementById('ere-cat').value;
+  const per=document.getElementById('ere-p').value;
+  const mon=document.getElementById('ere-m').value;
+  const fecha=document.getElementById('ere-f').value;
+  const cant=parseFloat(document.getElementById('ere-cant').value)||null;
+  const uni=document.getElementById('ere-uni').value||null;
+  const marca=document.getElementById('ere-marca').value.trim()||null;
+  // Actualizar comprobante
+  const comps=getComps().map(c=>c.id===compId?{...c,nombre:comp,fecha,persona:per,total:toARS(v,mon),cats:[cat],lugar:comp}:c);
+  setComps(comps);
+  // Actualizar ítem
+  const items=getItems().map(i=>i.id===itemId?{...i,item:desc,cat,mon,monto:v,cant,uni,marca,lugar:comp,obs:document.getElementById('ere-o').value}:i);
+  setItems(items);
+  closeM('m-er-edit');
+  refreshAll();
+  toast('✓ Egreso actualizado');
+}
 function calcPUnit(){
   const uni=document.getElementById('er-uni').value;
   const wrap=document.getElementById('er-punit-wrap');
@@ -1225,11 +1405,12 @@ function renderEg(){
             ${i.marca?`<div style="font-size:var(--sz-xs);color:var(--acc);font-style:italic">${i.marca}</div>`:''}
             ${i.cant&&i.uni?`<div style="font-size:var(--sz-xs);color:var(--tx3)">${i.cant} ${i.uni}</div>`:''}
           </div>
-          <div style="text-align:right;flex-shrink:0;display:flex;align-items:center;gap:8px">
+          <div style="text-align:right;flex-shrink:0;display:flex;align-items:center;gap:6px">
             <div>
               <div style="font-size:14px;font-weight:700;color:var(--red)">${i.mon==='USD'?fU(i.monto):fN(i.monto)}</div>
               ${pu?`<div style="font-size:var(--sz-xs);color:var(--acc)">${pu}</div>`:''}
             </div>
+            <button class="btn b-ghost b-icon" onclick="editER('${cid}','${i.id}')" title="Editar">✏️</button>
             <button class="btn b-ghost b-xs" onclick="delComp('${cid}')" title="Eliminar">✕</button>
           </div>
         </div>`;
@@ -1244,9 +1425,12 @@ function renderEg(){
             ${i.marca?`<div style="font-size:var(--sz-xs);color:var(--acc);font-style:italic">${i.marca}</div>`:''}
             ${i.cant&&i.uni?`<div style="font-size:var(--sz-xs);color:var(--tx3)">${i.cant} ${i.uni}</div>`:''}
           </div>
-          <div style="text-align:right;flex-shrink:0">
-            <div style="font-weight:700;color:var(--red)">${i.mon==='USD'?fU(i.monto):fN(i.monto)}</div>
-            ${pu?`<div style="font-size:var(--sz-xs);color:var(--acc)">${pu}</div>`:''}
+          <div style="text-align:right;flex-shrink:0;display:flex;align-items:center;gap:6px">
+            <div>
+              <div style="font-weight:700;color:var(--red)">${i.mon==='USD'?fU(i.monto):fN(i.monto)}</div>
+              ${pu?`<div style="font-size:var(--sz-xs);color:var(--acc)">${pu}</div>`:''}
+            </div>
+            <button class="btn b-ghost b-icon" onclick="editER('${cid}','${i.id}')" title="Editar">✏️</button>
           </div>
         </div>`;
       }).join('');
