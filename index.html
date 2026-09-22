@@ -396,10 +396,6 @@ tr:hover td{background:rgba(42,138,90,.03);}
           <select id="fil-cat" onchange="renderEg()" style="background:var(--s1);border:1px solid var(--bd);border-radius:6px;color:var(--tx);font-size:var(--sz-sm);padding:6px 10px;outline:none;">
             <option value="">Todas las categorías</option>
           </select>
-          <select id="fil-per" onchange="renderEg()" style="background:var(--s1);border:1px solid var(--bd);border-radius:6px;color:var(--tx);font-size:var(--sz-sm);padding:6px 10px;outline:none;">
-            <option value="">Todas las personas</option>
-            <option>Alejandro</option><option>Clarisa</option><option>Ambos</option>
-          </select>
         </div>
         <div style="display:flex;gap:6px;align-items:center">
           <span style="font-size:var(--sz-sm);color:var(--tx3)">Total: <strong id="er-tot" class="red">$0</strong></span>
@@ -502,7 +498,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
 </div></div>
 
 <div class="mo" id="m-er"><div class="modal"><h3>Registrar egreso</h3>
-  <div class="f2"><div class="fr"><label>Fecha</label><input id="er-f" type="date"></div><div class="fr"><label>Persona</label><select id="er-p"><option>Alejandro</option><option>Clarisa</option><option>Ambos</option></select></div></div>
+  <div class="fr"><label>Fecha</label><input id="er-f" type="date"></div>
   <div class="fr"><label>Comprobante / Lugar</label>
     <div class="ac-wrap"><input id="er-c" placeholder="Ej: Don Gastón, Farmacia Central" oninput="acLugar(this.value)" onfocus="acFocusLugar()" onblur="closeAllAC()" autocomplete="off"><div class="ac-list" id="ac-lugar"></div></div>
   </div>
@@ -536,7 +532,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
 </div></div>
 
 <div class="mo" id="m-er-edit"><div class="modal"><h3>Editar egreso</h3>
-  <div class="f2"><div class="fr"><label>Fecha</label><input id="ere-f" type="date"></div><div class="fr"><label>Persona</label><select id="ere-p"><option>Alejandro</option><option>Clarisa</option><option>Ambos</option></select></div></div>
+  <div class="fr"><label>Fecha</label><input id="ere-f" type="date"></div>
   <div class="fr"><label>Comprobante / Lugar</label><input id="ere-c" placeholder="Ej: Don Gastón"></div>
   <div class="fr"><label>Descripción</label><input id="ere-d" placeholder="Ej: Milanesas"></div>
   <div class="f2">
@@ -985,7 +981,7 @@ function saveEREdit(){
   const comp=document.getElementById('ere-c').value.trim();
   const desc=document.getElementById('ere-d').value.trim()||comp;
   const cat=document.getElementById('ere-cat').value;
-  const per=document.getElementById('ere-p').value;
+  const per='Hogar';
   const mon=document.getElementById('ere-m').value;
   const fecha=document.getElementById('ere-f').value;
   const cant=parseFloat(document.getElementById('ere-cant').value)||null;
@@ -1054,7 +1050,7 @@ function saveER(){
   const v=parseFloat(document.getElementById('er-v').value);
   if(!v){toast('Ingresá un monto');return;}
   const cat=document.getElementById('er-cat').value;
-  const per=document.getElementById('er-p').value;
+  const per='Hogar';
   const mon=document.getElementById('er-m').value;
   const fecha=document.getElementById('er-f').value;
   const cant=parseFloat(document.getElementById('er-cant').value)||null;
@@ -1362,10 +1358,8 @@ function renderIR(){
 // ════════════════════════════════════
 function renderEg(){
   const filCat=document.getElementById('fil-cat').value;
-  const filPer=document.getElementById('fil-per').value;
   popCats();
   let comps=getComps();const items=getItems();
-  if(filPer)comps=comps.filter(c=>c.persona===filPer);
   document.getElementById('er-tot').textContent=fN(comps.reduce((a,c)=>a+c.total,0));
   const list=document.getElementById('comp-list');
   if(!comps.length){list.innerHTML='<div class="empty"><p>Sin egresos registrados este mes</p></div>';return;}
@@ -1410,7 +1404,7 @@ function renderEg(){
               <div style="font-size:14px;font-weight:700;color:var(--red)">${i.mon==='USD'?fU(i.monto):fN(i.monto)}</div>
               ${pu?`<div style="font-size:var(--sz-xs);color:var(--acc)">${pu}</div>`:''}
             </div>
-            <button class="btn b-ghost b-icon" onclick="editER('${cid}','${i.id}')" title="Editar">✏️</button>
+            <button class="btn b-ghost b-xs" onclick="editER('${cid}','${i.id}')" title="Editar">✏️</button>
             <button class="btn b-ghost b-xs" onclick="delComp('${cid}')" title="Eliminar">✕</button>
           </div>
         </div>`;
@@ -1430,7 +1424,7 @@ function renderEg(){
               <div style="font-weight:700;color:var(--red)">${i.mon==='USD'?fU(i.monto):fN(i.monto)}</div>
               ${pu?`<div style="font-size:var(--sz-xs);color:var(--acc)">${pu}</div>`:''}
             </div>
-            <button class="btn b-ghost b-icon" onclick="editER('${cid}','${i.id}')" title="Editar">✏️</button>
+            <button class="btn b-ghost b-xs" onclick="editER('${cid}','${i.id}')" title="Editar">✏️</button>
           </div>
         </div>`;
       }).join('');
