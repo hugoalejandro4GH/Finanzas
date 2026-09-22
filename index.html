@@ -178,11 +178,11 @@ tr:hover td{background:rgba(42,138,90,.03);}
 
 /* ── AUTOCOMPLETE ── */
 .ac-wrap{position:relative;}
-.ac-list{position:absolute;top:100%;left:0;right:0;background:var(--s1);border:1px solid var(--bd);border-radius:6px;z-index:200;max-height:180px;overflow-y:auto;box-shadow:0 4px 12px rgba(0,0,0,.1);display:none;}
+.ac-list{position:absolute;top:100%;left:0;right:0;background:var(--s1);border:1px solid var(--bd);border-radius:6px;z-index:200;max-height:200px;overflow-y:auto;box-shadow:0 4px 16px rgba(0,0,0,.12);display:none;}
 .ac-list.open{display:block;}
-.ac-item{padding:8px 12px;cursor:pointer;font-size:var(--sz-sm);border-bottom:1px solid var(--bd);}
+.ac-item{padding:11px 12px;cursor:pointer;font-size:var(--sz-sm);border-bottom:1px solid var(--bd);-webkit-tap-highlight-color:transparent;user-select:none;}
 .ac-item:last-child{border-bottom:none;}
-.ac-item:hover{background:var(--acc-light);}
+.ac-item:hover,.ac-item:active{background:var(--acc-light);}
 .ac-sub{font-size:var(--sz-xs);color:var(--tx3);}
 
 /* ── NORMALIZACIÓN ── */
@@ -485,17 +485,33 @@ tr:hover td{background:rgba(42,138,90,.03);}
 <div class="mo" id="m-er"><div class="modal"><h3>Registrar egreso</h3>
   <div class="f2"><div class="fr"><label>Fecha</label><input id="er-f" type="date"></div><div class="fr"><label>Persona</label><select id="er-p"><option>Alejandro</option><option>Clarisa</option><option>Ambos</option></select></div></div>
   <div class="fr"><label>Comprobante / Lugar</label>
-    <div class="ac-wrap"><input id="er-c" placeholder="Ej: Don Gastón, Farmacia Central" oninput="acLugar(this.value)" autocomplete="off"><div class="ac-list" id="ac-lugar"></div></div>
+    <div class="ac-wrap"><input id="er-c" placeholder="Ej: Don Gastón, Farmacia Central" oninput="acLugar(this.value)" onfocus="acFocusLugar()" onblur="closeAllAC()" autocomplete="off"><div class="ac-list" id="ac-lugar"></div></div>
   </div>
   <div class="fr"><label>Descripción del ítem</label>
-    <div class="ac-wrap"><input id="er-d" placeholder="Ej: Milanesas, Leche La Serenísima" oninput="acDesc(this.value)" autocomplete="off"><div class="ac-list" id="ac-desc"></div></div>
+    <div class="ac-wrap"><input id="er-d" placeholder="Ej: Milanesas, Leche" oninput="acDesc(this.value)" onfocus="acFocusDesc()" onblur="closeAllAC()" autocomplete="off"><div class="ac-list" id="ac-desc"></div></div>
   </div>
-  <div class="f2"><div class="fr"><label>Marca <span style="font-weight:400;text-transform:none">(opcional)</span></label>
-    <div class="ac-wrap"><input id="er-marca" placeholder="Ej: Nucrem, Arcor" oninput="acMarca(this.value)" autocomplete="off"><div class="ac-list" id="ac-marca"></div></div>
+  <div class="f2">
+    <div class="fr"><label>Marca <span style="font-weight:400;text-transform:none">(opcional)</span></label>
+      <div class="ac-wrap"><input id="er-marca" placeholder="Ej: Nucrem, Arcor" oninput="acMarca(this.value)" onfocus="acFocusMarca()" onblur="closeAllAC()" autocomplete="off"><div class="ac-list" id="ac-marca"></div></div>
+    </div>
+    <div class="fr"><label>Categoría</label><select id="er-cat"></select></div>
   </div>
-  <div class="fr"><label>Categoría</label><select id="er-cat"></select></div></div>
-  <div class="f2"><div class="fr"><label>Moneda</label><select id="er-m"><option value="ARS">ARS $</option><option value="USD">USD</option></select></div><div class="fr"><label>Monto total</label><input id="er-v" type="number" inputmode="decimal" placeholder="0"></div></div>
-  <div class="f2"><div class="fr"><label>Cantidad <span style="font-weight:400;text-transform:none">(opcional)</span></label><input id="er-cant" type="number" inputmode="decimal" placeholder="Ej: 2"></div><div class="fr"><label>Unidad</label><select id="er-uni"><option value="">—</option><option>kg</option><option>g</option><option>lt</option><option>ml</option><option>unidad</option><option>docena</option><option>paquete</option><option>otro</option></select></div></div>
+  <div class="f2">
+    <div class="fr"><label>Moneda</label><select id="er-m" onchange="calcPUnit()"><option value="ARS">ARS $</option><option value="USD">USD</option></select></div>
+    <div class="fr"><label>Monto total</label><input id="er-v" type="number" inputmode="decimal" placeholder="0" oninput="calcPUnit()"></div>
+  </div>
+  <div class="fr"><label>Unidad</label><select id="er-uni" onchange="calcPUnit()"><option value="">— sin unidad —</option><option>kg</option><option>g</option><option>lt</option><option>ml</option><option>unidad</option><option>docena</option><option>paquete</option><option>otro</option></select></div>
+  <div class="f2" id="er-punit-wrap" style="display:none">
+    <div class="fr">
+      <label>Cantidad</label>
+      <input id="er-cant" type="number" inputmode="decimal" placeholder="Ej: 2" oninput="calcDesdeQty()">
+    </div>
+    <div class="fr">
+      <label>Precio por unidad</label>
+      <input id="er-punit" type="number" inputmode="decimal" placeholder="Ej: 7500" oninput="calcDesdePunit()">
+    </div>
+  </div>
+  <div id="er-punit-ref" style="font-size:var(--sz-xs);color:var(--acc);margin-top:-6px;margin-bottom:8px;display:none"></div>
   <div class="fr"><label>Observaciones</label><input id="er-o" placeholder="Opcional"></div>
   <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-er')">Cancelar</button><button class="btn b-acc" onclick="saveER()">Guardar</button></div>
 </div></div>
@@ -706,25 +722,61 @@ function popCats(){const cats=getCats();['pe-c','er-cat'].forEach(id=>{const el=
 function popFu(){const fu=getFu();['dl-f','dl-f2'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=fu.map(f=>`<option value="${f}">`).join('');});}
 
 // ════════════════════════════════════
-// AUTOCOMPLETADO
+// AUTOCOMPLETADO — funciona en mobile y desktop
 // ════════════════════════════════════
-function showAC(listId,items,onSelect){
+let acSelecting=false;
+
+function showAC(listId,items,inputId){
   const el=document.getElementById(listId);
   if(!items.length){el.classList.remove('open');return;}
-  el.innerHTML=items.slice(0,8).map(i=>`<div class="ac-item" onmousedown="event.preventDefault();selectAC('${listId}','${i.replace(/'/g,"\\'")}',${JSON.stringify(onSelect)})">${i}</div>`).join('');
+  el.innerHTML=items.slice(0,10).map(i=>{
+    const esc=i.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+    return`<div class="ac-item"
+      onmousedown="acSelecting=true"
+      onmouseup="selectAC('${inputId}','${esc}','${listId}')"
+      ontouchstart="acSelecting=true"
+      ontouchend="event.preventDefault();selectAC('${inputId}','${esc}','${listId}')"
+    >${i}</div>`;
+  }).join('');
   el.classList.add('open');
 }
-function selectAC(listId,val,fnName){
-  const el=document.getElementById(listId);
-  el.classList.remove('open');
-  if(fnName==='lugar'){document.getElementById('er-c').value=val;}
-  else if(fnName==='desc'){document.getElementById('er-d').value=val;}
-  else if(fnName==='marca'){document.getElementById('er-marca').value=val;}
+
+function selectAC(inputId,val,listId){
+  acSelecting=false;
+  document.getElementById(inputId).value=val;
+  document.getElementById(listId).classList.remove('open');
+  // Calcular precio unitario si corresponde
+  if(inputId==='er-d') calcPUnit();
 }
-function acLugar(v){if(!v){document.getElementById('ac-lugar').classList.remove('open');return;}const f=getLugares().filter(x=>x.toLowerCase().includes(v.toLowerCase()));showAC('ac-lugar',f,'lugar');}
-function acDesc(v){if(!v){document.getElementById('ac-desc').classList.remove('open');return;}const f=allDescs().filter(x=>x.toLowerCase().includes(v.toLowerCase()));showAC('ac-desc',f,'desc');}
-function acMarca(v){if(!v){document.getElementById('ac-marca').classList.remove('open');return;}const f=getMarcas().filter(x=>x.toLowerCase().includes(v.toLowerCase()));showAC('ac-marca',f,'marca');}
-document.addEventListener('click',()=>{document.querySelectorAll('.ac-list').forEach(el=>el.classList.remove('open'));});
+
+function closeAllAC(){
+  if(acSelecting)return;
+  document.querySelectorAll('.ac-list').forEach(el=>el.classList.remove('open'));
+}
+
+function acLugar(v){
+  const all=getLugares();
+  const f=v?all.filter(x=>x.toLowerCase().includes(v.toLowerCase())):all;
+  showAC('ac-lugar',f,'er-c');
+}
+function acDesc(v){
+  const all=allDescs();
+  const f=v?all.filter(x=>x.toLowerCase().includes(v.toLowerCase())):all;
+  showAC('ac-desc',f,'er-d');
+}
+function acMarca(v){
+  const all=getMarcas();
+  const f=v?all.filter(x=>x.toLowerCase().includes(v.toLowerCase())):all;
+  showAC('ac-marca',f,'er-marca');
+}
+
+// Mostrar lista completa al hacer focus
+function acFocusLugar(){acLugar(document.getElementById('er-c').value);}
+function acFocusDesc(){acDesc(document.getElementById('er-d').value);}
+function acFocusMarca(){acMarca(document.getElementById('er-marca').value);}
+
+document.addEventListener('mousedown',e=>{if(!e.target.closest('.ac-wrap'))closeAllAC();});
+document.addEventListener('touchstart',e=>{if(!e.target.closest('.ac-wrap'))closeAllAC();},{passive:true});
 
 // ════════════════════════════════════
 // CRUD — PRESUPUESTO INGRESOS
@@ -767,6 +819,53 @@ function saveIR(){const s=document.getElementById('ir-s').value.trim();const v=p
 function delIR(id){setIR(getIR().filter(r=>r.id!==id));refreshAll();}
 
 // ════════════════════════════════════
+// CÁLCULO CANTIDAD / PRECIO UNITARIO
+// ════════════════════════════════════
+function calcPUnit(){
+  const uni=document.getElementById('er-uni').value;
+  const wrap=document.getElementById('er-punit-wrap');
+  const ref=document.getElementById('er-punit-ref');
+  if(!uni){wrap.style.display='none';ref.style.display='none';return;}
+  wrap.style.display='';
+  const monto=parseFloat(document.getElementById('er-v').value)||0;
+  const cant=parseFloat(document.getElementById('er-cant').value)||0;
+  const punit=parseFloat(document.getElementById('er-punit').value)||0;
+  if(monto>0&&cant>0&&!punit){
+    const calc=monto/cant;
+    document.getElementById('er-punit').value=Math.round(calc*100)/100;
+    ref.textContent='Precio/'+uni+': '+fN(calc);ref.style.display='';
+  }else if(monto>0&&punit>0&&!cant){
+    const calc=monto/punit;
+    document.getElementById('er-cant').value=Math.round(calc*100)/100;
+    ref.textContent='Cantidad: '+Math.round(calc*100)/100+' '+uni;ref.style.display='';
+  }else if(monto>0&&cant>0&&punit>0){
+    ref.textContent='Total: '+fN(cant*punit)+' · P/'+uni+': '+fN(punit);ref.style.display='';
+  }else{ref.style.display='none';}
+}
+function calcDesdeQty(){
+  const monto=parseFloat(document.getElementById('er-v').value)||0;
+  const cant=parseFloat(document.getElementById('er-cant').value)||0;
+  const uni=document.getElementById('er-uni').value;
+  const ref=document.getElementById('er-punit-ref');
+  if(monto>0&&cant>0){
+    const calc=monto/cant;
+    document.getElementById('er-punit').value=Math.round(calc*100)/100;
+    ref.textContent='Precio/'+uni+': '+fN(calc);ref.style.display='';
+  }
+}
+function calcDesdePunit(){
+  const monto=parseFloat(document.getElementById('er-v').value)||0;
+  const punit=parseFloat(document.getElementById('er-punit').value)||0;
+  const uni=document.getElementById('er-uni').value;
+  const ref=document.getElementById('er-punit-ref');
+  if(monto>0&&punit>0){
+    const calc=monto/punit;
+    document.getElementById('er-cant').value=Math.round(calc*100)/100;
+    ref.textContent='Cantidad: '+Math.round(calc*100)/100+' '+uni;ref.style.display='';
+  }
+}
+
+// ════════════════════════════════════
 // CRUD — EGRESOS REALES
 // ════════════════════════════════════
 function saveER(){
@@ -782,7 +881,6 @@ function saveER(){
   const uni=document.getElementById('er-uni').value||null;
   const marca=document.getElementById('er-marca').value.trim()||null;
   const lugar=comp;
-  // Agregar lugar y marca nuevos si no existen
   if(lugar&&!getLugares().includes(lugar)){const l=getLugares();l.push(lugar);setGlobal('lugares',l);}
   if(marca&&!getMarcas().includes(marca)){const m=getMarcas();m.push(marca);setGlobal('marcas',m);}
   const cid='c'+Date.now();
@@ -793,8 +891,10 @@ function saveER(){
   items.push({id:'i'+Date.now(),compId:cid,item:desc,cat,mon,monto:v,cant,uni,marca,lugar,obs:document.getElementById('er-o').value});
   setItems(items);
   closeM('m-er');
-  ['er-c','er-d','er-v','er-o','er-cant','er-marca'].forEach(id=>document.getElementById(id).value='');
+  ['er-c','er-d','er-v','er-o','er-cant','er-marca','er-punit'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('er-uni').value='';
+  document.getElementById('er-punit-wrap').style.display='none';
+  document.getElementById('er-punit-ref').style.display='none';
   refreshAll();toast('✓ Egreso registrado');
 }
 function delComp(cid){setComps(getComps().filter(c=>c.id!==cid));setItems(getItems().filter(i=>i.compId!==cid));refreshAll();}
@@ -1125,9 +1225,12 @@ function renderEg(){
             ${i.marca?`<div style="font-size:var(--sz-xs);color:var(--acc);font-style:italic">${i.marca}</div>`:''}
             ${i.cant&&i.uni?`<div style="font-size:var(--sz-xs);color:var(--tx3)">${i.cant} ${i.uni}</div>`:''}
           </div>
-          <div style="text-align:right;flex-shrink:0">
-            <div style="font-size:14px;font-weight:700;color:var(--red)">${i.mon==='USD'?fU(i.monto):fN(i.monto)}</div>
-            ${pu?`<div style="font-size:var(--sz-xs);color:var(--acc)">${pu}</div>`:''}
+          <div style="text-align:right;flex-shrink:0;display:flex;align-items:center;gap:8px">
+            <div>
+              <div style="font-size:14px;font-weight:700;color:var(--red)">${i.mon==='USD'?fU(i.monto):fN(i.monto)}</div>
+              ${pu?`<div style="font-size:var(--sz-xs);color:var(--acc)">${pu}</div>`:''}
+            </div>
+            <button class="btn b-ghost b-xs" onclick="delComp('${cid}')" title="Eliminar">✕</button>
           </div>
         </div>`;
       }
