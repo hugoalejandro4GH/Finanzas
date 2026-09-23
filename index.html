@@ -652,7 +652,11 @@ async function loadFromDrive(){
       if(!DB.lugares)DB.lugares=DLUG;
       if(!DB.marcas)DB.marcas=DMARCAS;
       // Migración: normalizar persona de egresos a 'Hogar'
-      if(DB.meses){Object.values(DB.meses).forEach(md=>{(md.comps||[]).forEach(c=>{if(c.persona&&c.persona!=='Hogar')c.persona='Hogar';});});}
+      if(DB.meses){Object.values(DB.meses).forEach(md=>{
+        (md.comps||[]).forEach(c=>{if(c.persona&&c.persona!=='Hogar')c.persona='Hogar';});
+        // Migración: ítems sin categoría → 'Otros'
+        (md.items||[]).forEach(i=>{if(!i.cat)i.cat='Otros';});
+      });}
       tc=DB.tc||1200;
       document.getElementById('tcInput').value=tc;
       document.getElementById('drive-file-info').textContent='Archivo: '+FILE_NAME+' · Última sync: '+new Date(file.modifiedTime).toLocaleString('es-AR');
@@ -963,7 +967,6 @@ function editER(compId,itemId){
   document.getElementById('ere-c').value=comp.nombre||'';
   document.getElementById('ere-d').value=item.item||'';
   document.getElementById('ere-marca').value=item.marca||'';
-  document.getElementById('ere-cat').value=item.cat||'';
   document.getElementById('ere-m').value=item.mon||'ARS';
   document.getElementById('ere-v').value=item.monto||'';
   document.getElementById('ere-cant').value=item.cant||'';
@@ -971,6 +974,17 @@ function editER(compId,itemId){
   document.getElementById('ere-o').value=item.obs||'';
   document.getElementById('ere-comp-id').value=compId;
   document.getElementById('ere-item-id').value=itemId;
+  // Setear categoría después de que el select esté poblado
+  setTimeout(()=>{
+    const sel=document.getElementById('ere-cat');
+    sel.value=item.cat||'';
+    // Si no encontró la categoría, agregar opción temporal
+    if(sel.value!==item.cat&&item.cat){
+      const opt=document.createElement('option');
+      opt.value=item.cat;opt.textContent=item.cat;
+      sel.appendChild(opt);sel.value=item.cat;
+    }
+  },50);
   document.getElementById('m-er-edit').classList.add('open');
 }
 
@@ -1120,8 +1134,14 @@ function saveAgPago(){
 }
 function toggleAgPago(peId){
   const st=getAgendaStates();
-  if(!st[peId]){abrirAgPago(peId);}
-  else{st[peId]=false;DB.agenda[getAgendaKey()]=st;scheduleSave();renderAgenda();renderDash();}
+  if(!st[peId]){
+    // Pequeño delay para evitar conflicto con eventos touch
+    setTimeout(()=>abrirAgPago(peId),50);
+  } else {
+    st[peId]=false;
+    DB.agenda[getAgendaKey()]=st;
+    scheduleSave();renderAgenda();renderDash();
+  }
 }
 
 // ════════════════════════════════════
