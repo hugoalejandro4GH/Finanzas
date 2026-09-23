@@ -551,7 +551,8 @@ tr:hover td{background:rgba(42,138,90,.03);}
   <input type="hidden" id="ere-comp-id">
   <input type="hidden" id="ere-item-id">
   <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-er-edit')">Cancelar</button><button class="btn b-acc" onclick="saveEREdit()">Guardar cambios</button></div>
-</div></div><div class="modal"><h3>Registrar pago</h3>
+</div></div>
+<div class="mo" id="m-ag-pago"><div class="modal"><h3>Registrar pago</h3>
   <p style="font-size:var(--sz-sm);color:var(--tx3);margin-bottom:14px">Confirmá los datos. Podés ajustar el monto si difirió del presupuesto.</p>
   <div class="fr"><label>Fecha</label><input id="ag-f" type="date"></div>
   <div class="fr"><label>Comprobante</label><input id="ag-c" placeholder="Ej: Transferencia, CBU"></div>
@@ -759,7 +760,7 @@ function openM(id){
 function closeM(id){document.getElementById(id).classList.remove('open');}
 document.querySelectorAll('.mo').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');}));
 function toast(msg,dur=2400){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur);}
-function popCats(){const cats=getCats();['pe-c','er-cat'].forEach(id=>{const el=document.getElementById(id);if(!el)return;const prev=el.value;el.innerHTML=cats.map(c=>`<option>${c}</option>`).join('');if(cats.includes(prev))el.value=prev;});const fc=document.getElementById('fil-cat');if(fc){const prev=fc.value;fc.innerHTML='<option value="">Todas las categorías</option>'+cats.map(c=>`<option>${c}</option>`).join('');if(prev)fc.value=prev;}}
+function popCats(){const cats=getCats();['pe-c','er-cat','ere-cat'].forEach(id=>{const el=document.getElementById(id);if(!el)return;const prev=el.value;el.innerHTML=cats.map(c=>`<option>${c}</option>`).join('');if(cats.includes(prev))el.value=prev;});const fc=document.getElementById('fil-cat');if(fc){const prev=fc.value;fc.innerHTML='<option value="">Todas las categorías</option>'+cats.map(c=>`<option>${c}</option>`).join('');if(prev)fc.value=prev;}}
 function popFu(){const fu=getFu();['dl-f','dl-f2'].forEach(id=>{const el=document.getElementById(id);if(el)el.innerHTML=fu.map(f=>`<option value="${f}">`).join('');});}
 
 // ════════════════════════════════════
@@ -833,7 +834,7 @@ function savePE(){
   if(!v){toast('Ingresá un monto');return;}
   const vtoRaw=parseInt(document.getElementById('pe-vto').value);
   const vto=(vtoRaw>=1&&vtoRaw<=31)?vtoRaw:null;
-  const editId=parseInt(document.getElementById('pe-edit-id').value)||null;
+  const editId=parseFloat(document.getElementById('pe-edit-id').value)||null;
   const item={id:editId||Date.now(),cat:document.getElementById('pe-c').value,tipo:document.getElementById('pe-t').value,desc:document.getElementById('pe-d').value||document.getElementById('pe-c').value,mon:document.getElementById('pe-m').value,monto:v,vto,estado:'confirmado'};
   let d=getPE();
   if(editId){d=d.map(r=>r.id===editId?{...item,estado:'confirmado'}:r);toast('✓ Actualizado');}
@@ -1108,12 +1109,12 @@ function abrirAgPago(peId){
   document.getElementById('m-ag-pago').classList.add('open');
 }
 function soloTildar(){
-  const peId=parseInt(document.getElementById('ag-pe-id').value);
+  const peId=parseFloat(document.getElementById('ag-pe-id').value);
   const st=getAgendaStates();st[peId]=true;DB.agenda[getAgendaKey()]=st;
   closeM('m-ag-pago');scheduleSave();renderAgenda();renderDash();toast('✓ Marcado como pagado');
 }
 function saveAgPago(){
-  const peId=parseInt(document.getElementById('ag-pe-id').value);
+  const peId=parseFloat(document.getElementById('ag-pe-id').value);
   const desc=document.getElementById('ag-d').value;
   const mon=document.getElementById('ag-mon').value;
   const v=parseFloat(document.getElementById('ag-v').value);
