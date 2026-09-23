@@ -979,21 +979,24 @@ function saveEREdit(){
   const itemId=document.getElementById('ere-item-id').value;
   const v=parseFloat(document.getElementById('ere-v').value);
   if(!v){toast('Ingresá un monto');return;}
-  const comp=document.getElementById('ere-c').value.trim();
-  const desc=document.getElementById('ere-d').value.trim()||comp;
+  const compNombre=document.getElementById('ere-c').value.trim();
+  const desc=document.getElementById('ere-d').value.trim()||compNombre;
   const cat=document.getElementById('ere-cat').value;
-  const per='Hogar';
   const mon=document.getElementById('ere-m').value;
   const fecha=document.getElementById('ere-f').value;
   const cant=parseFloat(document.getElementById('ere-cant').value)||null;
   const uni=document.getElementById('ere-uni').value||null;
   const marca=document.getElementById('ere-marca').value.trim()||null;
-  // Actualizar comprobante
-  const comps=getComps().map(c=>c.id===compId?{...c,nombre:comp,fecha,persona:per,total:toARS(v,mon),cats:[cat],lugar:comp}:c);
-  setComps(comps);
-  // Actualizar ítem
-  const items=getItems().map(i=>i.id===itemId?{...i,item:desc,cat,mon,monto:v,cant,uni,marca,lugar:comp,obs:document.getElementById('ere-o').value}:i);
-  setItems(items);
+  const obs=document.getElementById('ere-o').value;
+  // Actualizar comprobante y ítem en un solo paso atómico sobre getMesData()
+  const md=getMesData();
+  md.comps=(md.comps||[]).map(c=>c.id===compId
+    ?{...c,nombre:compNombre,fecha,persona:'Hogar',total:toARS(v,mon),cats:[cat],lugar:compNombre}
+    :c);
+  md.items=(md.items||[]).map(i=>i.id===itemId
+    ?{...i,item:desc,cat,mon,monto:v,cant,uni,marca,lugar:compNombre,obs}
+    :i);
+  scheduleSave();
   closeM('m-er-edit');
   refreshAll();
   toast('✓ Egreso actualizado');
@@ -1051,22 +1054,23 @@ function saveER(){
   const v=parseFloat(document.getElementById('er-v').value);
   if(!v){toast('Ingresá un monto');return;}
   const cat=document.getElementById('er-cat').value;
-  const per='Hogar';
   const mon=document.getElementById('er-m').value;
   const fecha=document.getElementById('er-f').value;
   const cant=parseFloat(document.getElementById('er-cant').value)||null;
   const uni=document.getElementById('er-uni').value||null;
   const marca=document.getElementById('er-marca').value.trim()||null;
   const lugar=comp;
-  if(lugar&&!getLugares().includes(lugar)){const l=getLugares();l.push(lugar);setGlobal('lugares',l);}
-  if(marca&&!getMarcas().includes(marca)){const m=getMarcas();m.push(marca);setGlobal('marcas',m);}
+  // Agregar lugar y marca nuevos si no existen
+  if(lugar&&!getLugares().includes(lugar)){const l=getLugares();l.push(lugar);DB.lugares=l;}
+  if(marca&&!getMarcas().includes(marca)){const m=getMarcas();m.push(marca);DB.marcas=m;}
+  // Guardar comprobante e ítem en un solo paso atómico
   const cid='c'+Date.now();
-  const comps=getComps();
-  comps.push({id:cid,nombre:comp,fecha,persona:per,total:toARS(v,mon),cats:[cat],itemCount:1,lugar});
-  setComps(comps);
-  const items=getItems();
-  items.push({id:'i'+Date.now(),compId:cid,item:desc,cat,mon,monto:v,cant,uni,marca,lugar,obs:document.getElementById('er-o').value});
-  setItems(items);
+  const md=getMesData();
+  md.comps=md.comps||[];
+  md.items=md.items||[];
+  md.comps.push({id:cid,nombre:comp,fecha,persona:'Hogar',total:toARS(v,mon),cats:[cat],itemCount:1,lugar});
+  md.items.push({id:'i'+Date.now(),compId:cid,item:desc,cat,mon,monto:v,cant,uni,marca,lugar,obs:document.getElementById('er-o').value});
+  scheduleSave();
   closeM('m-er');
   ['er-c','er-d','er-v','er-o','er-cant','er-marca','er-punit'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('er-uni').value='';
@@ -1360,14 +1364,23 @@ function renderIR(){
 function renderEg(){
   const filCat=document.getElementById('fil-cat').value;
   popCats();
-  let comps=getComps();const items=getItems();
+  const comps=getComps();const items=getItems();
+
+  // Recalcular total de cada comprobante desde ítems reales
+  comps.forEach(comp=>{
+    const cItems=items.filter(i=>i.compId===comp.id);
+    if(cItems.length) comp.total=cItems.reduce((a,i)=>a+toARS(i.monto,i.mon),0);
+  });
+
   document.getElementById('er-tot').textContent=fN(comps.reduce((a,c)=>a+c.total,0));
   const list=document.getElementById('comp-list');
   if(!comps.length){list.innerHTML='<div class="empty"><p>Sin egresos registrados este mes</p></div>';return;}
 
-  const cats=filCat?[filCat]:getCats();
+  // Usar categorías reales de los ítems (no solo las de getCats())
+  const catsReales=filCat?[filCat]:[...new Set(items.filter(i=>comps.find(c=>c.id===i.compId)).map(i=>i.cat))].sort();
+
   const grupos=[];
-  cats.forEach(cat=>{
+  catsReales.forEach(cat=>{
     const itscat=items.filter(i=>i.cat===cat&&comps.find(c=>c.id===i.compId));
     if(!itscat.length)return;
     const porComp={};
