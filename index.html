@@ -176,6 +176,35 @@ tr:hover td{background:rgba(42,138,90,.03);}
 .alert-warn{background:rgba(212,136,10,.08);border:1px solid rgba(212,136,10,.3);color:var(--warn);}
 .alert-red{background:rgba(192,72,72,.08);border:1px solid rgba(192,72,72,.3);color:var(--red);}
 
+/* ── AGENDA CALENDARIO ── */
+.ag-cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;}
+.ag-dw{font-size:var(--sz-xs);color:var(--tx3);text-align:center;font-weight:700;padding:2px 0;}
+.ag-d{height:50px;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:16px;color:var(--tx);cursor:pointer;border:2px solid transparent;-webkit-tap-highlight-color:transparent;user-select:none;}
+.ag-d.pay{font-weight:800;}
+.ag-d.venc{background:rgba(192,72,72,.14);color:var(--red);}
+.ag-d.prox{background:rgba(212,136,10,.16);color:var(--warn);}
+.ag-d.pend{background:var(--s2);color:var(--tx2);}
+.ag-d.ok{background:rgba(30,128,80,.13);color:var(--green);}
+.ag-d.hoy{outline:2px solid var(--tx);outline-offset:-2px;}
+.ag-d.sel{border-color:var(--acc);}
+.ag-dots{display:flex;gap:3px;height:6px;}
+.ag-dots i{width:5px;height:5px;border-radius:50%;background:currentColor;display:block;}
+.ag-ley{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;font-size:var(--sz-xs);color:var(--tx2);}
+.ag-ley i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:0;}
+.ag-card{padding:13px 14px;border-bottom:1px solid var(--bd);}
+.ag-card:last-child{border-bottom:none;}
+
+/* ── DICTADO ── */
+.vz-f{display:flex;align-items:center;gap:10px;padding:11px 12px;border-bottom:1px solid var(--bd);cursor:pointer;}
+.vz-f:last-child{border-bottom:none;}
+.vz-ic{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px;border:2px solid var(--bd);color:var(--tx3);}
+.vz-f.done .vz-ic{background:rgba(30,128,80,.14);border-color:var(--green);color:var(--green);}
+.vz-f.cur{background:var(--acc-light);}
+.vz-f.cur .vz-ic{border-color:var(--acc);color:var(--acc);}
+.vz-lb{font-size:var(--sz-xs);color:var(--tx3);font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
+.vz-vl{font-size:var(--sz-sm);font-weight:700;}
+.vz-rec{animation:pulse 1s infinite;}
+
 /* ── CALCULADORA ── */
 .calc-wrap{position:relative;display:flex;gap:6px;}
 .calc-wrap input{flex:1;}
@@ -400,6 +429,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
         <div style="display:flex;gap:6px;align-items:center">
           <span style="font-size:var(--sz-sm);color:var(--tx3)">Total: <strong id="er-tot" class="red">$0</strong></span>
           <button class="btn b-ghost b-sm" onclick="exportEgresos()">📥 Excel</button>
+          <button class="btn b-green" onclick="vozAbrir()">🎤 Dictar</button>
           <button class="btn b-acc" onclick="openM('m-er')">+ Egreso</button>
         </div>
       </div>
@@ -414,9 +444,20 @@ tr:hover td{background:rgba(42,138,90,.03);}
           <h3>Agenda de pagos — <span id="ag-mes-lbl"></span></h3>
           <div style="font-size:var(--sz-xs);color:var(--tx3)" id="ag-resumen"></div>
         </div>
-        <div id="ag-list"><div class="empty"><p>No hay pagos con vencimiento configurado.<br>Agregá un "Día de vencimiento" a los egresos fijos del presupuesto.</p></div></div>
+        <div style="padding:12px 14px">
+          <div class="ag-cal" id="ag-cal"></div>
+          <div class="ag-ley">
+            <span><i style="background:var(--red)"></i>Vencido</span>
+            <span><i style="background:var(--warn)"></i>Hoy / próximo</span>
+            <span><i style="background:var(--tx3)"></i>Pendiente</span>
+            <span><i style="background:var(--green)"></i>Pagado</span>
+          </div>
+        </div>
       </div>
-      <div style="font-size:var(--sz-xs);color:var(--tx3);padding:0 4px;margin-top:-8px">Tildá cada pago a medida que lo realizás. Al tildar podés registrarlo como egreso directamente.</div>
+      <div class="card">
+        <div class="card-hd"><h3 id="ag-dia-lbl"></h3></div>
+        <div id="ag-list"></div>
+      </div>
     </div>
 
     <!-- BUSCAR -->
@@ -456,7 +497,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
       </div>
       <div class="card"><div class="card-hd"><h3>Importar egresos (Excel o CSV)</h3></div>
         <div style="padding:16px">
-          <div class="fr"><label>Nombre del comprobante</label><input id="csv-nom" placeholder="Ej: Don Gastón, Carrefour"></div>
+          <div class="fr"><label>Lugar de compra</label><input id="csv-nom" placeholder="Ej: Don Gastón, Carrefour"></div>
           <div class="fr"><label>Persona</label><select id="csv-per"><option>Clarisa</option><option>Alejandro</option><option>Ambos</option></select></div>
           <div class="csv-fmt">Fecha, Descripción, Marca, Categoría, Persona, Moneda, Monto, Cantidad, Unidad, Lugar</div>
           <div class="imp-area" onclick="document.getElementById('fCSV').click()">📋 Seleccionar archivo Excel o CSV</div>
@@ -499,7 +540,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
 
 <div class="mo" id="m-er"><div class="modal"><h3>Registrar egreso</h3>
   <div class="fr"><label>Fecha</label><input id="er-f" type="date"></div>
-  <div class="fr"><label>Comprobante / Lugar</label>
+  <div class="fr"><label>Lugar</label>
     <div class="ac-wrap"><input id="er-c" placeholder="Ej: Don Gastón, Farmacia Central" oninput="acLugar(this.value)" onfocus="acFocusLugar()" onblur="closeAllAC()" autocomplete="off"><div class="ac-list" id="ac-lugar"></div></div>
   </div>
   <div class="fr"><label>Descripción del ítem</label>
@@ -533,7 +574,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
 
 <div class="mo" id="m-er-edit"><div class="modal"><h3>Editar egreso</h3>
   <div class="fr"><label>Fecha</label><input id="ere-f" type="date"></div>
-  <div class="fr"><label>Comprobante / Lugar</label><input id="ere-c" placeholder="Ej: Don Gastón"></div>
+  <div class="fr"><label>Lugar</label><input id="ere-c" placeholder="Ej: Don Gastón"></div>
   <div class="fr"><label>Descripción</label><input id="ere-d" placeholder="Ej: Milanesas"></div>
   <div class="f2">
     <div class="fr"><label>Marca <span style="font-weight:400;text-transform:none">(opcional)</span></label><input id="ere-marca" placeholder="Ej: Nucrem"></div>
@@ -555,11 +596,21 @@ tr:hover td{background:rgba(42,138,90,.03);}
 <div class="mo" id="m-ag-pago"><div class="modal"><h3>Registrar pago</h3>
   <p style="font-size:var(--sz-sm);color:var(--tx3);margin-bottom:14px">Confirmá los datos. Podés ajustar el monto si difirió del presupuesto.</p>
   <div class="fr"><label>Fecha</label><input id="ag-f" type="date"></div>
-  <div class="fr"><label>Comprobante</label><input id="ag-c" placeholder="Ej: Transferencia, CBU"></div>
+  <div class="fr"><label>Lugar</label><input id="ag-c" placeholder="Ej: Samep, Transferencia"></div>
   <div class="fr"><label>Descripción</label><input id="ag-d" readonly style="color:var(--tx3)"></div>
   <div class="f2"><div class="fr"><label>Moneda</label><input id="ag-mon" readonly style="color:var(--tx3)"></div><div class="fr"><label>Monto real</label><input id="ag-v" type="number" inputmode="decimal" placeholder="0"></div></div>
   <input type="hidden" id="ag-pe-id">
   <div class="mfoot"><button class="btn b-ghost" onclick="soloTildar()">Solo tildar</button><button class="btn b-acc" onclick="saveAgPago()">Tildar y registrar egreso</button></div>
+</div></div>
+
+<div class="mo" id="m-voz"><div class="modal"><h3>🎤 Dictar gasto</h3>
+  <div id="voz-estado" style="font-size:var(--sz-sm);color:var(--tx2);margin-bottom:10px;min-height:20px"></div>
+  <div id="voz-plant" style="border:1px solid var(--bd);border-radius:10px;overflow:hidden"></div>
+  <div style="margin-top:12px;background:var(--s2);border-radius:10px;padding:10px">
+    <div style="font-size:var(--sz-xs);color:var(--tx3);margin-bottom:6px">¿No funciona el micrófono? Escribí lo que dirías:</div>
+    <div style="display:flex;gap:6px"><input id="voz-txt" style="flex:1;background:var(--s1);border:1px solid var(--bd);border-radius:6px;color:var(--tx);font-size:var(--sz-sm);padding:8px 10px;outline:none" placeholder="Ej: quince mil" onkeydown="if(event.key==='Enter')vozManual()"><button class="btn b-ghost" onclick="vozManual()">Enviar</button></div>
+  </div>
+  <div class="mfoot"><button class="btn b-ghost" onclick="vozCerrar()">Cancelar</button><button class="btn b-ghost" onclick="vozAtras()">↩ Anterior</button><button class="btn b-green" onclick="vozContinuar()">Continuar</button></div>
 </div></div>
 
 <div class="mo" id="m-ac"><div class="modal"><h3>Nueva categoría</h3>
@@ -1544,36 +1595,75 @@ function toggleDet(id,row){const d=document.getElementById(id);const c=row.query
 // ════════════════════════════════════
 // RENDER — AGENDA
 // ════════════════════════════════════
+let agSel=null,agSelKey='';
+function agDiasMes(){return new Date(anio,mes,0).getDate();}
+function agDia(r){return Math.min(r.vto,agDiasMes());}
+function agEstado(r,st){
+  if(st[r.id])return'ok';
+  const hoy=new Date();hoy.setHours(0,0,0,0);
+  const f=new Date(anio,mes-1,agDia(r));
+  const dif=Math.round((f-hoy)/86400000);
+  if(dif<0)return'venc';if(dif===0)return'hoy';if(dif<=5)return'prox';return'pend';
+}
+const AG_BADGE={ok:['ag-ok','✓ Pagado'],venc:['ag-venc','Vencido'],hoy:['ag-hoy','Vence hoy'],prox:['ag-prox','Próximo'],pend:['ag-pend','Pendiente']};
+function agSelDia(d){agSel=d;renderAgenda();}
 function renderAgenda(){
-  const pe=getPE().filter(r=>r.vto);const st=getAgendaStates();const hoy=new Date();const dHoy=hoy.getDate();
-  const esMesActual=(mes===hoy.getMonth()+1&&anio===hoy.getFullYear());
+  const pe=getPE().filter(r=>r.vto);const st=getAgendaStates();
+  const hoy=new Date();const esMesActual=(mes===hoy.getMonth()+1&&anio===hoy.getFullYear());
+  const nDias=agDiasMes();
   document.getElementById('ag-mes-lbl').textContent=MESES[mes-1]+' '+anio;
-  if(!pe.length){document.getElementById('ag-list').innerHTML='<div class="empty"><p>No hay pagos con vencimiento configurado.<br>Agregá un "Día de vencimiento" a los egresos fijos del presupuesto.</p></div>';document.getElementById('ag-resumen').textContent='';document.getElementById('ag-alert-box').innerHTML='';return;}
-  const sorted=[...pe].sort((a,b)=>a.vto-b.vto);
-  const pagados=sorted.filter(r=>st[r.id]).length,pendientes=sorted.length-pagados;
-  document.getElementById('ag-resumen').textContent=`${pagados} pagado${pagados!==1?'s':''} · ${pendientes} pendiente${pendientes!==1?'s':''}`;
-  if(esMesActual&&pendientes>0){
-    const vencidos=sorted.filter(r=>!st[r.id]&&r.vto<dHoy);const proximos=sorted.filter(r=>!st[r.id]&&r.vto>=dHoy&&r.vto<=dHoy+5);
-    let alertHTML='';
-    if(vencidos.length)alertHTML+=`<div class="alert-box alert-red">⚠️ ${vencidos.length} pago${vencidos.length!==1?'s':''} vencido${vencidos.length!==1?'s':''} sin registrar.</div>`;
-    else if(proximos.length)alertHTML+=`<div class="alert-box alert-warn">📅 ${proximos.length} pago${proximos.length!==1?'s':''} vence${proximos.length===1?'':'n'} en los próximos 5 días.</div>`;
-    document.getElementById('ag-alert-box').innerHTML=alertHTML;
-  }else{document.getElementById('ag-alert-box').innerHTML='';}
-  document.getElementById('ag-list').innerHTML=sorted.map(r=>{
-    const pagado=!!st[r.id];let badgeClass,badgeTxt;
-    if(pagado){badgeClass='ag-ok';badgeTxt='✓ Pagado';}
-    else if(!esMesActual){badgeClass='ag-pend';badgeTxt='Pendiente';}
-    else if(r.vto<dHoy){badgeClass='ag-venc';badgeTxt='Vencido';}
-    else if(r.vto===dHoy){badgeClass='ag-hoy';badgeTxt='Hoy';}
-    else if(r.vto<=dHoy+5){badgeClass='ag-prox';badgeTxt='Próximo';}
-    else{badgeClass='ag-pend';badgeTxt='Pendiente';}
-    const montoFmt=r.mon==='USD'?fU(r.monto):fN(r.monto);
-    return`<div class="ag-item" style="${pagado?'opacity:.5':''}">
-      <button class="ag-check${pagado?' done':''}" onclick="toggleAgPago(${r.id})" title="${pagado?'Deshacer':'Registrar pago'}">${pagado?'✓':''}</button>
-      <div style="text-align:center;flex-shrink:0;width:36px"><div class="ag-dia" style="color:${pagado?'var(--tx3)':r.vto<dHoy&&esMesActual?'var(--red)':'var(--tx)'}">${r.vto}</div><div class="ag-dia-lbl">día</div></div>
-      <div class="ag-info"><div class="ag-nom" style="${pagado?'text-decoration:line-through;color:var(--tx3)':''}">${r.desc}</div><div class="ag-monto">${montoFmt} · ${r.cat}</div></div>
-      <span class="ag-badge ${badgeClass}">${badgeTxt}</span>
-    </div>`;}).join('');
+  // Día seleccionado por defecto: hoy (si es el mes actual) o el primer día con pagos
+  const key=anio+'_'+mes;
+  if(agSelKey!==key||!agSel||agSel>nDias){agSelKey=key;agSel=esMesActual?hoy.getDate():(pe.length?Math.min(...pe.map(agDia)):1);}
+  // Agrupar por día
+  const porDia={};pe.forEach(r=>{const d=agDia(r);(porDia[d]=porDia[d]||[]).push(r);});
+  const pagados=pe.filter(r=>st[r.id]).length,pendientes=pe.length-pagados;
+  document.getElementById('ag-resumen').textContent=pe.length?`${pagados} pagado${pagados!==1?'s':''} · ${pendientes} pendiente${pendientes!==1?'s':''}`:'';
+  // Alerta
+  const vencidos=pe.filter(r=>agEstado(r,st)==='venc'),proximos=pe.filter(r=>['hoy','prox'].includes(agEstado(r,st)));
+  let alertHTML='';
+  if(vencidos.length)alertHTML=`<div class="alert-box alert-red">⚠️ ${vencidos.length} pago${vencidos.length!==1?'s':''} vencido${vencidos.length!==1?'s':''} sin registrar.</div>`;
+  else if(proximos.length)alertHTML=`<div class="alert-box alert-warn">📅 ${proximos.length} pago${proximos.length!==1?'s':''} vence${proximos.length===1?'':'n'} en los próximos 5 días.</div>`;
+  document.getElementById('ag-alert-box').innerHTML=alertHTML;
+  // Calendario
+  const ini=(new Date(anio,mes-1,1).getDay()+6)%7;
+  let cal=['L','M','M','J','V','S','D'].map(x=>`<div class="ag-dw">${x}</div>`).join('')+'<div></div>'.repeat(ini);
+  for(let d=1;d<=nDias;d++){
+    const its=porDia[d];let cls='ag-d';
+    if(its){
+      const est=its.map(r=>agEstado(r,st));
+      const peor=['venc','hoy','prox','pend','ok'].find(k=>est.includes(k));
+      cls+=' pay '+(peor==='hoy'?'prox':peor);
+    }
+    if(esMesActual&&d===hoy.getDate())cls+=' hoy';
+    if(d===agSel)cls+=' sel';
+    const dots=its?`<div class="ag-dots">${'<i></i>'.repeat(Math.min(its.length,4))}</div>`:'<div class="ag-dots"></div>';
+    cal+=`<div class="${cls}" data-dia="${d}" onclick="agSelDia(${d})">${d}${dots}</div>`;
+  }
+  document.getElementById('ag-cal').innerHTML=cal;
+  // Lista del día seleccionado
+  const esHoy=esMesActual&&agSel===hoy.getDate();
+  document.getElementById('ag-dia-lbl').textContent=(esHoy?'Hoy, ':'')+agSel+' de '+MESES[mes-1].toLowerCase();
+  const lista=document.getElementById('ag-list');
+  if(!pe.length){lista.innerHTML='<div class="empty"><p>No hay pagos con vencimiento este mes.<br>Agregá un "Día de vencimiento" a los egresos fijos del presupuesto.</p></div>';return;}
+  const delDia=porDia[agSel]||[];
+  if(!delDia.length){lista.innerHTML='<div class="empty"><p>No hay pagos este día.</p></div>';return;}
+  lista.innerHTML=delDia.map(r=>{
+    const e=agEstado(r,st),b=AG_BADGE[e],pagado=e==='ok';
+    const monto=r.mon==='USD'?fU(r.monto):fN(r.monto);
+    return`<div class="ag-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <div style="min-width:0">
+          <div class="ag-nom" style="${pagado?'text-decoration:line-through;color:var(--tx3)':''}">${r.desc}</div>
+          <div class="ag-monto">${monto} · ${r.cat}</div>
+        </div>
+        <span class="ag-badge ${b[0]}">${b[1]}</span>
+      </div>
+      ${pagado
+        ?`<button class="btn b-ghost" style="width:100%;margin-top:10px" onclick="toggleAgPago(${r.id})">Deshacer pago</button>`
+        :`<button class="btn b-green" style="width:100%;margin-top:10px" onclick="toggleAgPago(${r.id})">✓ Confirmar pago</button>`}
+    </div>`;
+  }).join('');
 }
 
 // ════════════════════════════════════
@@ -1719,6 +1809,100 @@ function exportEgresos(){
 // ════════════════════════════════════
 // REFRESH GLOBAL
 // ════════════════════════════════════
+// ════════════════════════════════════
+// DICTADO POR VOZ
+// ════════════════════════════════════
+const VOZ_F=[{k:'lugar',l:'Lugar',ej:'Carnicería'},{k:'desc',l:'Descripción',ej:'milanesas'},{k:'cat',l:'Categoría',ej:'alimentación'},{k:'monto',l:'Monto',ej:'quince mil'},{k:'cant',l:'Cantidad',ej:'dos kilos'}];
+let vozV={},vozI=-1,vozActivo=false,vozRec=null;
+const VozSR=window.SpeechRecognition||window.webkitSpeechRecognition;
+const vozNorm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[.,;!?]+$/,'').trim();
+const VOZ_NUM={cero:0,un:1,uno:1,una:1,dos:2,tres:3,cuatro:4,cinco:5,seis:6,siete:7,ocho:8,nueve:9,diez:10,once:11,doce:12,trece:13,catorce:14,quince:15,dieciseis:16,diecisiete:17,dieciocho:18,diecinueve:19,veinte:20,veintiun:21,veintiuno:21,veintidos:22,veintitres:23,veinticuatro:24,veinticinco:25,veintiseis:26,veintisiete:27,veintiocho:28,veintinueve:29,treinta:30,cuarenta:40,cincuenta:50,sesenta:60,setenta:70,ochenta:80,noventa:90,cien:100,ciento:100,doscientos:200,doscientas:200,trescientos:300,trescientas:300,cuatrocientos:400,quinientos:500,quinientas:500,seiscientos:600,setecientos:700,ochocientos:800,novecientos:900};
+function vozNum(s){
+  s=vozNorm(s).replace(/\$|pesos?/g,'').trim();
+  const d=s.match(/\d[\d.,]*/);
+  if(d){let t=d[0];const c=t.lastIndexOf(','),p=t.lastIndexOf('.');
+    if(c>-1&&p>-1)t=c>p?t.replace(/\./g,'').replace(',','.'):t.replace(/,/g,'');
+    else if(c>-1)t=t.replace(',','.');
+    else if(p>-1&&/\.\d{3}$/.test(t))t=t.replace(/\./g,'');
+    let n=parseFloat(t);if(/\bmil\b/.test(s))n*=1000;if(/y medi[oa]/.test(s))n+=.5;return n;}
+  s=s.replace(/^(kilo|litro|docena|paquete)s?\b/,'uno $1');
+  let tot=0,cur=0,hay=false;
+  for(const w of s.split(/\s+/)){
+    if(w in VOZ_NUM){cur+=VOZ_NUM[w];hay=true;}
+    else if(w==='mil'){tot+=(cur||1)*1000;cur=0;hay=true;}
+    else if(/^millon/.test(w)){tot=(tot+(cur||1))*1e6;cur=0;hay=true;}
+    else if(w==='medio'||w==='media'){cur+=.5;hay=true;}
+  }
+  return hay?tot+cur:NaN;
+}
+function vozUnidad(s){s=vozNorm(s);
+  if(/kilo|kg/.test(s))return'kg';if(/mililitro|\bml\b/.test(s))return'ml';if(/litro|\blt\b/.test(s))return'lt';
+  if(/gramo|\bgr?\b/.test(s))return'g';if(/docena/.test(s))return'docena';if(/paquete/.test(s))return'paquete';return'unidad';}
+function vozParecido(v,lista){const n=vozNorm(v);return lista.find(x=>vozNorm(x)===n)||lista.find(x=>{const y=vozNorm(x);return y.startsWith(n)||n.startsWith(y);})||null;}
+const vozCap=s=>s.charAt(0).toUpperCase()+s.slice(1);
+function vozMsg(s,err){document.getElementById('voz-estado').innerHTML=`<span style="color:${err?'var(--red)':'var(--tx2)'}">${s}</span>`;}
+function vozPintar(){
+  document.getElementById('voz-plant').innerHTML=VOZ_F.map((f,j)=>{
+    const hecho=j<vozI,v=vozV[f.k];let cls='vz-f',ic='·',val=`<div style="font-size:var(--sz-xs);color:var(--tx3)">ej: ${f.ej}</div>`;
+    if(hecho&&v){cls+=' done';ic='✓';val=`<div class="vz-vl">${v.t}${v.nuevo?' <span class="badge b-wa">nuevo</span>':''}</div>`;}
+    else if(hecho){cls+=' done';ic='—';val=`<div style="font-size:var(--sz-xs);color:var(--tx3)">${f.k==='cat'?'Otros':'sin dato'}</div>`;}
+    else if(j===vozI){cls+=' cur';ic=`<span class="${vozActivo?'vz-rec':''}">🎤</span>`;}
+    return`<div class="${cls}" data-campo="${f.k}" onclick="vozRedictar(${j})"><div class="vz-ic">${ic}</div><div style="flex:1;min-width:0"><div class="vz-lb">${f.l}</div>${val}</div></div>`;
+  }).join('');
+}
+function vozEscuchar(){
+  if(!VozSR||!vozActivo||vozI>=VOZ_F.length)return;
+  try{vozRec&&vozRec.abort();}catch(e){}
+  vozRec=new VozSR();vozRec.lang='es-AR';vozRec.interimResults=false;vozRec.maxAlternatives=1;
+  vozRec.onresult=e=>vozProcesar(e.results[0][0].transcript);
+  vozRec.onerror=e=>{if(e.error==='not-allowed'||e.error==='service-not-allowed'){vozActivo=false;vozPintar();vozMsg('No hay permiso para el micrófono. Podés escribir abajo.',1);}};
+  try{vozRec.start();}catch(e){}
+}
+function vozProcesar(txt){
+  if(vozI<0||vozI>=VOZ_F.length)return;
+  const f=VOZ_F[vozI],t=String(txt).trim(),n=vozNorm(t);
+  if(!t)return;
+  if(/^(nada|no|no se|saltar|siguiente|ninguno|ninguna)$/.test(n)){vozV[f.k]=null;return vozAvanzar();}
+  if(f.k==='lugar'){const m=vozParecido(t,getLugares());vozV.lugar={t:m||vozCap(t),nuevo:!m};}
+  else if(f.k==='desc'){const m=allDescs().find(x=>vozNorm(x)===n);vozV.desc={t:m||vozCap(t)};}
+  else if(f.k==='cat'){const m=vozParecido(t,getCats());if(!m){vozMsg(`No encontré la categoría "${t}". Repetila o decí "nada".`,1);vozEscuchar();return;}vozV.cat={t:m};}
+  else if(f.k==='monto'){const x=vozNum(t);if(!(x>0)){vozMsg(`No entendí el monto "${t}". Probá de nuevo.`,1);vozEscuchar();return;}vozV.monto={t:fN(x),n:x};}
+  else if(f.k==='cant'){const x=vozNum(t),u=vozUnidad(t);if(!(x>0)){vozMsg(`No entendí la cantidad "${t}". Probá de nuevo.`,1);vozEscuchar();return;}vozV.cant={t:(Math.round(x*100)/100)+' '+u,n:x,u};}
+  vozAvanzar();
+}
+function vozAvanzar(){
+  vozI++;vozPintar();
+  if(vozI>=VOZ_F.length){vozActivo=false;try{vozRec&&vozRec.abort();}catch(e){}
+    vozPintar();vozMsg(vozV.monto?'Listo. Tocá un campo para corregirlo o "Continuar" para revisar y guardar.':'Falta el monto: tocá "Monto" para dictarlo.',!vozV.monto);return;}
+  vozMsg(`Decí: ${VOZ_F[vozI].l.toLowerCase()} (o "nada")`);vozEscuchar();
+}
+function vozAbrir(){
+  vozV={};vozI=0;vozActivo=!!VozSR;document.getElementById('voz-txt').value='';
+  document.getElementById('m-voz').classList.add('open');vozPintar();
+  vozMsg(VozSR?'Escuchando… decí el lugar (o "nada")':'Este navegador no permite dictado. Podés escribir abajo.',!VozSR);vozEscuchar();
+}
+function vozCerrar(){vozActivo=false;try{vozRec&&vozRec.abort();}catch(e){}closeM('m-voz');}
+function vozManual(){const t=document.getElementById('voz-txt');if(!t.value.trim())return;vozProcesar(t.value);t.value='';}
+function vozAtras(){if(vozI<=0)return;vozI=Math.min(vozI,VOZ_F.length)-1;delete vozV[VOZ_F[vozI].k];vozActivo=!!VozSR;vozPintar();vozMsg(`Decí de nuevo: ${VOZ_F[vozI].l.toLowerCase()}`);vozEscuchar();}
+function vozRedictar(j){if(vozI<0)return;vozI=j;delete vozV[VOZ_F[j].k];vozActivo=!!VozSR;vozPintar();vozMsg(`Decí de nuevo: ${VOZ_F[j].l.toLowerCase()}`);vozEscuchar();}
+function vozContinuar(){
+  if(vozI<VOZ_F.length){vozMsg('Terminá de completar los campos (decí "nada" para saltear).',1);return;}
+  if(!vozV.monto){vozMsg('Falta el monto: tocá "Monto" para dictarlo.',1);return;}
+  const V=vozV;vozCerrar();openM('m-er');
+  document.getElementById('er-c').value=V.lugar?V.lugar.t:'';
+  document.getElementById('er-d').value=V.desc?V.desc.t:'';
+  const sel=document.getElementById('er-cat'),cat=V.cat?V.cat.t:'Otros';
+  if(![...sel.options].some(o=>o.value===cat)){const o=document.createElement('option');o.value=cat;o.textContent=cat;sel.appendChild(o);}
+  sel.value=cat;
+  document.getElementById('er-m').value='ARS';
+  document.getElementById('er-v').value=Math.round(V.monto.n*100)/100;
+  document.getElementById('er-punit').value='';
+  document.getElementById('er-uni').value=V.cant?V.cant.u:'';
+  document.getElementById('er-cant').value=V.cant?Math.round(V.cant.n*100)/100:'';
+  calcPUnit();
+  toast('Revisá los datos y tocá Guardar');
+}
+
 function refreshAll(){renderPres();renderIR();renderEg();renderDash();renderCats();renderAgenda();}
 
 // ════════════════════════════════════
