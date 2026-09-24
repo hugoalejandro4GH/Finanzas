@@ -481,9 +481,9 @@ tr:hover td{background:rgba(42,138,90,.03);}
 <div class="mo" id="m-pe"><div class="modal"><h3 id="m-pe-title">Egreso presupuestado</h3>
   <div class="f2"><div class="fr"><label>Categoría</label><select id="pe-c"></select></div><div class="fr"><label>Tipo</label><select id="pe-t"><option value="Fijo">Fijo</option><option value="Variable">Variable</option></select></div></div>
   <div class="fr"><label>Descripción</label><input id="pe-d" placeholder="Ej: Cablevisión, Escuela Franco"></div>
-  <div class="f2"><div class="fr"><label>Moneda</label><select id="pe-m"><option value="ARS">ARS $</option><option value="USD">USD</option></select></div><div class="fr"><label>Monto</label><input id="pe-v" type="number" inputmode="decimal" placeholder="0"></div></div>
+  <div class="f2"><div class="fr"><label>Moneda</label><select id="pe-m"><option value="ARS">ARS $</option><option value="USD">USD</option></select></div><div class="fr"><label>Monto</label><div class="calc-wrap"><input id="pe-v" type="number" inputmode="decimal" placeholder="0"><button type="button" class="calc-btn" onclick="openCalc('pe-v',this)">🧮</button><div class="calc-pop" id="calc-pe-v"></div></div></div></div>
   <div class="fr"><label>Día de vencimiento <span style="font-weight:400;text-transform:none">(opcional)</span></label><input id="pe-vto" type="number" inputmode="numeric" min="1" max="31" placeholder="Ej: 10"></div>
-  <div class="fr"><label>Monto</label><div class="calc-wrap"><input id="pe-v" type="number" inputmode="decimal" placeholder="0"><button type="button" class="calc-btn" onclick="openCalc('pe-v',this)">🧮</button><div class="calc-pop" id="calc-pe-v"></div></div></div>
+  <div class="fr"><label>Observaciones <span style="font-weight:400;text-transform:none">(opcional)</span></label><input id="pe-obs" placeholder="Ej: aumenta en noviembre, pagar por CBU"></div>
   <input type="hidden" id="pe-edit-id">
   <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-pe')">Cancelar</button><button class="btn b-warn" onclick="savePE()">Guardar</button></div>
 </div></div>
@@ -753,7 +753,7 @@ function openM(id){
   const td=new Date().toISOString().split('T')[0];
   if(id==='m-ir')document.getElementById('ir-f').value=td;
   if(id==='m-er')document.getElementById('er-f').value=td;
-  if(id==='m-pe'){document.getElementById('m-pe-title').textContent='Egreso presupuestado';document.getElementById('pe-edit-id').value='';}
+  if(id==='m-pe'){document.getElementById('m-pe-title').textContent='Egreso presupuestado';document.getElementById('pe-edit-id').value='';['pe-d','pe-v','pe-vto','pe-obs'].forEach(i=>document.getElementById(i).value='');}
   popCats();popFu();
   document.getElementById(id).classList.add('open');
 }
@@ -835,12 +835,12 @@ function savePE(){
   const vtoRaw=parseInt(document.getElementById('pe-vto').value);
   const vto=(vtoRaw>=1&&vtoRaw<=31)?vtoRaw:null;
   const editId=parseFloat(document.getElementById('pe-edit-id').value)||null;
-  const item={id:editId||Date.now(),cat:document.getElementById('pe-c').value,tipo:document.getElementById('pe-t').value,desc:document.getElementById('pe-d').value||document.getElementById('pe-c').value,mon:document.getElementById('pe-m').value,monto:v,vto,estado:'confirmado'};
+  const item={id:editId||Date.now(),cat:document.getElementById('pe-c').value,tipo:document.getElementById('pe-t').value,desc:document.getElementById('pe-d').value||document.getElementById('pe-c').value,mon:document.getElementById('pe-m').value,monto:v,vto,obs:document.getElementById('pe-obs').value.trim(),estado:'confirmado'};
   let d=getPE();
   if(editId){d=d.map(r=>r.id===editId?{...item,estado:'confirmado'}:r);toast('✓ Actualizado');}
   else{d.push(item);toast('✓ Guardado');}
   setPE(d);closeM('m-pe');
-  ['pe-d','pe-v','pe-vto'].forEach(id=>document.getElementById(id).value='');
+  ['pe-d','pe-v','pe-vto','pe-obs'].forEach(id=>document.getElementById(id).value='');
   document.getElementById('pe-edit-id').value='';
   refreshAll();
 }
@@ -848,7 +848,7 @@ function editPE(id){
   const r=getPE().find(x=>x.id===id);if(!r)return;
   popCats();
   document.getElementById('m-pe-title').textContent='Editar egreso presupuestado';
-  document.getElementById('pe-c').value=r.cat;document.getElementById('pe-t').value=r.tipo;document.getElementById('pe-d').value=r.desc;document.getElementById('pe-m').value=r.mon;document.getElementById('pe-v').value=r.monto;document.getElementById('pe-vto').value=r.vto||'';document.getElementById('pe-edit-id').value=r.id;
+  document.getElementById('pe-c').value=r.cat;document.getElementById('pe-t').value=r.tipo;document.getElementById('pe-d').value=r.desc;document.getElementById('pe-m').value=r.mon;document.getElementById('pe-v').value=r.monto;document.getElementById('pe-vto').value=r.vto||'';document.getElementById('pe-obs').value=r.obs||'';document.getElementById('pe-edit-id').value=r.id;
   document.getElementById('m-pe').classList.add('open');
 }
 function confirmarPE(id){const d=getPE();const idx=d.findIndex(r=>r.id===id);if(idx>=0){d[idx].estado='confirmado';setPE(d);refreshAll();toast('✓ Confirmado');}}
@@ -1356,7 +1356,7 @@ function renderPres(){
       return`<div class="cat-item ${pend?'pendiente':'confirmado'}">
         ${pend?`<button class="btn b-warn b-xs" onclick="confirmarPE(${r.id})" title="Confirmar monto" style="flex-shrink:0">✓</button>`:'<div style="width:34px;flex-shrink:0"></div>'}
         <div class="cat-item-info">
-          <div class="cat-item-desc">${r.desc}</div>
+          <div class="cat-item-desc">${r.desc}</div>${r.obs?`<div style="font-size:var(--sz-xs);color:var(--tx2);font-style:italic;margin-top:2px">📝 ${r.obs}</div>`:''}
           <div class="cat-item-sub"><span class="badge ${r.tipo==='Fijo'?'b-fi':'b-va'}">${r.tipo}</span>${pend?'<span class="badge b-pend" style="margin-left:5px">A confirmar</span>':''}${r.vto?`<span style="font-size:var(--sz-xs);color:var(--tx3);margin-left:6px">· Vence día ${r.vto}</span>`:''}</div>
         </div>
         <div class="cat-item-monto">${r.mon==='USD'?fU(r.monto):fN(r.monto)}</div>
