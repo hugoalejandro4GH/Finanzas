@@ -454,13 +454,13 @@ tr:hover td{background:rgba(42,138,90,.03);}
           <div id="drive-file-info" style="margin-top:12px;font-size:var(--sz-xs);color:var(--tx3)"></div>
         </div>
       </div>
-      <div class="card"><div class="card-hd"><h3>Importar egresos desde CSV</h3></div>
+      <div class="card"><div class="card-hd"><h3>Importar egresos (Excel o CSV)</h3></div>
         <div style="padding:16px">
           <div class="fr"><label>Nombre del comprobante</label><input id="csv-nom" placeholder="Ej: Don Gastón, Carrefour"></div>
           <div class="fr"><label>Persona</label><select id="csv-per"><option>Clarisa</option><option>Alejandro</option><option>Ambos</option></select></div>
           <div class="csv-fmt">Fecha, Descripción, Marca, Categoría, Persona, Moneda, Monto, Cantidad, Unidad, Lugar</div>
-          <div class="imp-area" onclick="document.getElementById('fCSV').click()">📋 Seleccionar archivo CSV</div>
-          <input type="file" id="fCSV" accept=".csv" style="display:none" onchange="importCSV(this)">
+          <div class="imp-area" onclick="document.getElementById('fCSV').click()">📋 Seleccionar archivo Excel o CSV</div>
+          <input type="file" id="fCSV" accept=".csv,.xlsx,.xls" style="display:none" onchange="importCSV(this)">
           <div id="csv-res" style="margin-top:10px;font-size:var(--sz-sm);display:none"></div>
         </div>
       </div>
@@ -1192,28 +1192,73 @@ function copiarMesAnt(){
 // ════════════════════════════════════
 // IMPORT CSV CON NORMALIZACIÓN
 // ════════════════════════════════════
+// ── Lectura de archivos: Excel (.xlsx/.xls) y CSV (UTF-8 o Windows, coma o punto y coma)
+function parseNum(v){
+  if(typeof v==='number')return v;
+  let s=String(v||'').replace(/[$\s]/g,'').replace(/^U\$S/i,'');
+  if(!s)return NaN;
+  const c=s.lastIndexOf(','),d=s.lastIndexOf('.');
+  if(c>-1&&d>-1){ s=c>d? s.replace(/\./g,'').replace(',','.') : s.replace(/,/g,''); }
+  else if(c>-1){ s=s.replace(',','.'); }
+  return parseFloat(s);
+}
+function esFecha(v){return Object.prototype.toString.call(v)==='[object Date]'&&!isNaN(v);}
+function fechaISO(v){
+  if(esFecha(v)){const y=v.getFullYear(),m=String(v.getMonth()+1).padStart(2,'0'),dd=String(v.getDate()).padStart(2,'0');return`${y}-${m}-${dd}`;}
+  const s=String(v||'').trim();
+  const m=s.match(/^(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{2,4})$/);
+  if(m){let y=m[3];if(y.length===2)y='20'+y;return`${y}-${m[2].padStart(2,'0')}-${m[1].padStart(2,'0')}`;}
+  return s;
+}
+function leerExcel(buf){
+  const wb=XLSX.read(new Uint8Array(buf),{type:'array',cellDates:true});
+  const ws=wb.Sheets[wb.SheetNames[0]];
+  return XLSX.utils.sheet_to_json(ws,{header:1,raw:true,defval:''});
+}
+function leerCSV(buf){
+  const bytes=new Uint8Array(buf);let txt;
+  try{txt=new TextDecoder('utf-8',{fatal:true}).decode(bytes);}
+  catch(e){txt=new TextDecoder('windows-1252').decode(bytes);}
+  txt=txt.replace(/^\uFEFF/,'');
+  const lines=txt.split(/\r?\n/).filter(l=>l.trim());
+  if(!lines.length)return[];
+  const sep=(lines[0].split(';').length>lines[0].split(',').length)?';':',';
+  return lines.map(line=>{
+    const cols=[];let cur='',inQ=false;
+    for(let i=0;i<line.length;i++){const ch=line[i];if(ch==='"'){inQ=!inQ;}else if(ch===sep&&!inQ){cols.push(cur.trim());cur='';}else cur+=ch;}
+    cols.push(cur.trim());return cols;
+  });
+}
+function filasAEgresos(rows,nombre,persona){
+  const out=[];
+  rows.forEach(r=>{
+    const cols=r.map(x=>esFecha(x)?x:String(x??'').trim());
+    if(cols.length<7)return;
+    const desc=String(cols[1]||'').replace(/^"|"$/g,'').trim();
+    if(/^fecha$/i.test(String(cols[0]))||!desc||/^(sub)?total\b/i.test(desc))return;
+    const monto=parseNum(cols[6]);
+    if(isNaN(monto)||monto<=0)return;
+    const cant=parseNum(cols[7]);
+    out.push({
+      fecha:fechaISO(cols[0]),desc,marca:String(cols[2]||'').trim(),
+      cat:String(cols[3]||'').trim()||'Otros',per:String(cols[4]||'').trim()||persona,
+      mon:(String(cols[5]||'').trim().toUpperCase()==='USD')?'USD':'ARS',
+      monto,cant:isNaN(cant)||cant<=0?null:cant,
+      uni:String(cols[8]||'').trim()||null,lugar:String(cols[9]||'').trim()||nombre
+    });
+  });
+  return out;
+}
 function importCSV(input){
   const file=input.files[0];if(!file)return;
-  const nombre=(document.getElementById('csv-nom').value.trim()||file.name.replace('.csv','')).substring(0,40);
+  const nombre=(document.getElementById('csv-nom').value.trim()||file.name.replace(/\.(csv|xlsx?)$/i,'')).substring(0,40);
   const persona=document.getElementById('csv-per').value;
+  const esExcel=/\.xlsx?$/i.test(file.name);
   const reader=new FileReader();
   reader.onload=e=>{
-    const lines=e.target.result.split(/\r?\n/).filter(l=>l.trim()&&!/^fecha/i.test(l.trim()));
-    const parsed=[];
-    lines.forEach(line=>{
-      const cols=[];let cur='',inQ=false;
-      for(let i=0;i<line.length;i++){const c=line[i];if(c==='"'){inQ=!inQ;}else if(c===','&&!inQ){cols.push(cur.trim());cur='';}else cur+=c;}
-      cols.push(cur.trim());
-      if(cols.length<6)return;
-      parsed.push({
-        fecha:cols[0].trim(),desc:(cols[1]||'').replace(/^"|"$/g,'').trim(),
-        marca:(cols[2]||'').trim(),cat:(cols[3]||'Otros').trim(),
-        per:(cols[4]||persona).trim(),mon:(cols[5]||'ARS').trim(),
-        monto:parseFloat((cols[6]||'0').replace(',','.')),
-        cant:cols[7]?parseFloat(cols[7].replace(',','.'))||null:null,
-        uni:cols[8]?cols[8].trim():null,lugar:(cols[9]||nombre).trim()
-      });
-    });
+    let parsed=[];
+    try{ parsed=filasAEgresos(esExcel?leerExcel(e.target.result):leerCSV(e.target.result),nombre,persona); }
+    catch(err){showCSVRes('No se pudo leer el archivo: '+err.message,'red');input.value='';return;}
     if(!parsed.length){showCSVRes('No se encontraron datos válidos','red');input.value='';return;}
     // Detectar conflictos de normalización
     const conflicts=[];
@@ -1231,7 +1276,7 @@ function importCSV(input){
     }
     input.value='';
   };
-  reader.readAsText(file,'UTF-8');
+  reader.readAsArrayBuffer(file);
 }
 
 function mostrarNormalizacion(conflicts){
