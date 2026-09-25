@@ -176,6 +176,17 @@ tr:hover td{background:rgba(42,138,90,.03);}
 .alert-warn{background:rgba(212,136,10,.08);border:1px solid rgba(212,136,10,.3);color:var(--warn);}
 .alert-red{background:rgba(192,72,72,.08);border:1px solid rgba(192,72,72,.3);color:var(--red);}
 
+/* ── TARJETAS ── */
+.tj-card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:13px 15px;margin-bottom:8px;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.tj-card.sel{border:2px solid var(--acc);}
+.tj-cu{padding:12px 14px;border-bottom:1px solid var(--bd);}
+.tj-cu:last-child{border-bottom:none;}
+.tj-dots{display:flex;gap:4px;flex-wrap:wrap;margin-top:7px;}
+.tj-dots i{width:10px;height:10px;border-radius:50%;display:block;background:var(--bd);}
+.tj-dots i.p{background:var(--green);}
+.tj-dots i.a{background:var(--warn);}
+.tj-tabs{display:flex;gap:6px;}
+
 /* ── AGENDA CALENDARIO ── */
 .ag-cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;}
 .ag-dw{font-size:var(--sz-xs);color:var(--tx3);text-align:center;font-weight:700;padding:2px 0;}
@@ -322,6 +333,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
     <div class="ni" onclick="nav(this,'ingresos')">💰 Ingresos</div>
     <div class="ni" onclick="nav(this,'egresos')">💳 Egresos</div>
     <div class="ni" onclick="nav(this,'agenda')">📅 Agenda de pagos</div>
+    <div class="ni" onclick="nav(this,'tarjetas')">🏦 Tarjetas</div>
     <div class="ns">Herramientas</div>
     <div class="ni" onclick="nav(this,'buscar')">🔍 Buscar producto</div>
     <div class="ns">Configuración</div>
@@ -458,6 +470,16 @@ tr:hover td{background:rgba(42,138,90,.03);}
         <div class="card-hd"><h3 id="ag-dia-lbl"></h3></div>
         <div id="ag-list"></div>
       </div>
+    </div>
+
+    <!-- TARJETAS -->
+    <div class="view" id="view-tarjetas">
+      <div class="toolbar">
+        <div class="tj-tabs"><button id="tj-b1" class="btn b-sm b-acc" onclick="tjVista('det')">Tarjetas</button><button id="tj-b2" class="btn b-sm b-ghost" onclick="tjVista('proy')">Próximos meses</button></div>
+        <div style="display:flex;gap:6px"><button class="btn b-ghost b-sm" onclick="tjAbrirTarjeta()">+ Tarjeta</button><button class="btn b-acc b-sm" onclick="tjAbrirCuota()">+ Compra en cuotas</button></div>
+      </div>
+      <div id="tj-ref" style="font-size:var(--sz-xs);color:var(--tx3);margin:-6px 2px 10px"></div>
+      <div id="tj-cont"></div>
     </div>
 
     <!-- BUSCAR -->
@@ -613,6 +635,36 @@ tr:hover td{background:rgba(42,138,90,.03);}
   <div class="mfoot"><button class="btn b-ghost" onclick="vozCerrar()">Cancelar</button><button class="btn b-ghost" onclick="vozAtras()">↩ Anterior</button><button class="btn b-green" onclick="vozContinuar()">Continuar</button></div>
 </div></div>
 
+<div class="mo" id="m-tarjeta"><div class="modal"><h3 id="mtj-tit">Nueva tarjeta</h3>
+  <div class="fr"><label>Nombre</label><input id="tjf-nom" placeholder="Ej: Visa Santander"></div>
+  <div class="f2"><div class="fr"><label>Titular</label><select id="tjf-tit"><option>Alejandro</option><option>Clarisa</option></select></div>
+  <div class="fr"><label>Débito automático</label><select id="tjf-deb"><option value="no">No</option><option value="si">Sí</option></select></div></div>
+  <div class="f2"><div class="fr"><label>Día de cierre</label><input id="tjf-cie" type="number" inputmode="numeric" placeholder="Ej: 1"></div>
+  <div class="fr"><label>Día de vencimiento</label><input id="tjf-vto" type="number" inputmode="numeric" placeholder="Ej: 9"></div></div>
+  <input type="hidden" id="tjf-id">
+  <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-tarjeta')">Cancelar</button><button class="btn b-acc" onclick="tjGuardarTarjeta()">Guardar</button></div>
+</div></div>
+
+<div class="mo" id="m-cuota"><div class="modal"><h3 id="mcu-tit">Nueva compra en cuotas</h3>
+  <div class="fr"><label>Tarjeta</label><select id="cuf-tj"></select></div>
+  <div class="fr"><label>Descripción</label><input id="cuf-desc" placeholder="Ej: Heladera, Seguro auto"></div>
+  <div class="f2"><div class="fr"><label>Moneda</label><select id="cuf-mon"><option value="ARS">ARS $</option><option value="USD">USD</option></select></div>
+  <div class="fr"><label>Valor de la cuota</label><div class="calc-wrap"><input id="cuf-val" type="number" inputmode="decimal" placeholder="0"><button type="button" class="calc-btn" onclick="openCalc('cuf-val',this)">🧮</button><div class="calc-pop"></div></div></div></div>
+  <div class="f2"><div class="fr"><label>Cuota actual</label><input id="cuf-n" type="number" inputmode="numeric" placeholder="Ej: 3"></div>
+  <div class="fr"><label>Total de cuotas</label><input id="cuf-t" type="number" inputmode="numeric" placeholder="Ej: 6"></div></div>
+  <div class="fr-note">Según el resumen de <strong id="cuf-ref"></strong>. Por ejemplo, si dice "Cuota 03/06", poné 3 y 6.</div>
+  <input type="hidden" id="cuf-id">
+  <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-cuota')">Cancelar</button><button class="btn b-acc" onclick="tjGuardarCuota()">Guardar</button></div>
+</div></div>
+
+<div class="mo" id="m-tjpe"><div class="modal"><h3 id="tjpe-tit">Tarjeta</h3>
+  <div style="display:flex;justify-content:space-between;padding:10px 12px;background:var(--s2);border-radius:8px;margin-bottom:12px"><span style="color:var(--tx2)">Cuotas del mes (automático)</span><strong id="tjpe-cuotas"></strong></div>
+  <div class="fr"><label>Otros consumos del resumen</label><div class="calc-wrap"><input id="tjpe-extra" type="number" inputmode="decimal" placeholder="0" oninput="tjpeTotal()"><button type="button" class="calc-btn" onclick="openCalc('tjpe-extra',this)">🧮</button><div class="calc-pop"></div></div></div>
+  <div style="display:flex;justify-content:space-between;padding:10px 12px;border-top:2px solid var(--bd);margin-top:6px"><span style="font-weight:700">Total a pagar</span><strong id="tjpe-total" style="font-size:18px"></strong></div>
+  <input type="hidden" id="tjpe-id">
+  <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-tjpe')">Cancelar</button><button class="btn b-acc" onclick="tjSavePE()">Guardar y confirmar</button></div>
+</div></div>
+
 <div class="mo" id="m-ac"><div class="modal"><h3>Nueva categoría</h3>
   <div class="fr"><label>Nombre</label><input id="ac-v" placeholder="Ej: Mascotas"></div>
   <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-ac')">Cancelar</button><button class="btn b-acc" onclick="addCat()">Agregar</button></div>
@@ -703,6 +755,7 @@ async function loadFromDrive(){
       if(!DB.agenda)DB.agenda={};
       if(!DB.lugares)DB.lugares=DLUG;
       if(!DB.marcas)DB.marcas=DMARCAS;
+      tjInit();
       // Migración: normalizar persona de egresos a 'Hogar'
       if(DB.meses){Object.values(DB.meses).forEach(md=>{
         (md.comps||[]).forEach(c=>{if(c.persona&&c.persona!=='Hogar')c.persona='Hogar';});
@@ -789,7 +842,7 @@ function pb(r,p){if(!p)return'';const x=Math.min(r/p*100,100);const c=x>100?'var
 // ════════════════════════════════════
 // NAVEGACIÓN
 // ════════════════════════════════════
-const TTLS={dashboard:'Dashboard',presupuesto:'Presupuesto del mes',ingresos:'Ingresos',egresos:'Egresos',agenda:'Agenda de pagos',buscar:'Buscar producto',categorias:'Categorías',datos:'Datos'};
+const TTLS={dashboard:'Dashboard',presupuesto:'Presupuesto del mes',ingresos:'Ingresos',egresos:'Egresos',agenda:'Agenda de pagos',tarjetas:'Tarjetas',buscar:'Buscar producto',categorias:'Categorías',datos:'Datos'};
 function nav(el,v){document.querySelectorAll('.ni').forEach(n=>n.classList.remove('on'));el.classList.add('on');document.querySelectorAll('.view').forEach(vv=>vv.classList.remove('on'));document.getElementById('view-'+v).classList.add('on');document.getElementById('topTitle').textContent=TTLS[v]||v;closeSB();refreshAll();}
 function navToAgenda(){const el=document.querySelector('.ni[onclick*="agenda"]');if(el)nav(el,'agenda');}
 function toggleSB(){document.getElementById('sb').classList.toggle('open');document.getElementById('sov').classList.toggle('open');}
@@ -896,6 +949,7 @@ function savePE(){
   refreshAll();
 }
 function editPE(id){
+  if(getPE().some(x=>x.id===id&&x.tj)){tjEditPE(id);return;}
   const r=getPE().find(x=>x.id===id);if(!r)return;
   popCats();
   document.getElementById('m-pe-title').textContent='Editar egreso presupuestado';
@@ -903,7 +957,7 @@ function editPE(id){
   document.getElementById('m-pe').classList.add('open');
 }
 function confirmarPE(id){const d=getPE();const idx=d.findIndex(r=>r.id===id);if(idx>=0){d[idx].estado='confirmado';setPE(d);refreshAll();toast('✓ Confirmado');}}
-function delPE(id){setPE(getPE().filter(r=>r.id!==id));refreshAll();}
+function delPE(id){if(getPE().some(r=>r.id===id&&r.tj)){toast('Este ítem se arma desde Tarjetas');return;}setPE(getPE().filter(r=>r.id!==id));refreshAll();}
 
 // ════════════════════════════════════
 // CRUD — INGRESOS REALES
@@ -1235,7 +1289,7 @@ function copiarMesAnt(){
   const md=getMesData();
   md.pi=(prev.pi||[]).map(r=>({...r,id:Date.now()+Math.random()}));
   // Marcar egresos como "a confirmar"
-  md.pe=(prev.pe||[]).map(r=>({...r,id:Date.now()+Math.random(),estado:'pendiente'}));
+  md.pe=(prev.pe||[]).filter(r=>!r.tj).map(r=>({...r,id:Date.now()+Math.random(),estado:'pendiente'}));
   scheduleSave();refreshAll();
   toast('✓ Presupuesto copiado — revisá y confirmá cada egreso');
 }
@@ -1453,10 +1507,10 @@ function renderPres(){
         ${pend?`<button class="btn b-warn b-xs" onclick="confirmarPE(${r.id})" title="Confirmar monto" style="flex-shrink:0">✓</button>`:'<div style="width:34px;flex-shrink:0"></div>'}
         <div class="cat-item-info">
           <div class="cat-item-desc">${r.desc}</div>${r.obs?`<div style="font-size:var(--sz-xs);color:var(--tx2);font-style:italic;margin-top:2px">📝 ${r.obs}</div>`:''}
-          <div class="cat-item-sub"><span class="badge ${r.tipo==='Fijo'?'b-fi':'b-va'}">${r.tipo}</span>${pend?'<span class="badge b-pend" style="margin-left:5px">A confirmar</span>':''}${r.vto?`<span style="font-size:var(--sz-xs);color:var(--tx3);margin-left:6px">· Vence día ${r.vto}</span>`:''}</div>
+          <div class="cat-item-sub"><span class="badge ${r.tipo==='Fijo'?'b-fi':'b-va'}">${r.tipo}</span>${pend?'<span class="badge b-pend" style="margin-left:5px">A confirmar</span>':''}${r.vto?`<span style="font-size:var(--sz-xs);color:var(--tx3);margin-left:6px">· Vence día ${r.vto}</span>`:(r.tj?'<span style="font-size:var(--sz-xs);color:var(--warn);margin-left:6px">· sin día de vencimiento</span>':'')}</div>${r.tj?`<div style="font-size:var(--sz-xs);color:var(--tx2);margin-top:2px">🏦 Cuotas ${r.mon==='USD'?fU(r.cuotas||0):fN(r.cuotas||0)} + otros ${r.mon==='USD'?fU(r.extra||0):fN(r.extra||0)}</div>`:''}
         </div>
         <div class="cat-item-monto">${r.mon==='USD'?fU(r.monto):fN(r.monto)}</div>
-        <div class="cat-item-btns"><button class="btn b-ghost b-icon" onclick="editPE(${r.id})" title="Editar">✏️</button><button class="btn b-ghost b-icon" onclick="delPE(${r.id})" title="Eliminar">✕</button></div>
+        <div class="cat-item-btns"><button class="btn b-ghost b-icon" onclick="editPE(${r.id})" title="Editar">✏️</button>${r.tj?'':`<button class="btn b-ghost b-icon" onclick="delPE(${r.id})" title="Eliminar">✕</button>`}</div>
       </div>`;}).join('')}</div></div>`;}).join('');}
   document.getElementById('pe-tot').textContent=fN(tE);document.getElementById('pe-sum').textContent=fN(tE);
   const ah=tI-tE;const aEl=document.getElementById('p-ahorro');aEl.textContent=fN(ah);aEl.style.color=ah>=0?'var(--green)':'var(--red)';
@@ -1903,7 +1957,219 @@ function vozContinuar(){
   toast('Revisá los datos y tocá Guardar');
 }
 
-function refreshAll(){renderPres();renderIR();renderEg();renderDash();renderCats();renderAgenda();}
+// ════════════════════════════════════
+// TARJETAS (compras en cuotas → presupuesto)
+// ════════════════════════════════════
+let tjSel=null,tjModo='det';
+const tjIdx=(y,m)=>y*12+m-1;
+function tjRef(){return tjIdx(anio,mes);}
+function getTarjetas(){return DB.tarjetas||[];}
+function getCuotas(){return DB.cuotas||[];}
+const tjRound=n=>Math.round(n*100)/100;
+const tjFmt=(v,mon)=>mon==='USD'?fU(v):fN(v);
+function tjMesTxt(i){return MESES[((i%12)+12)%12].slice(0,3).toLowerCase()+' '+Math.floor(i/12);}
+function tjInit(){
+  if(DB.tarjetas!==undefined)return;
+  DB.tarjetas=[
+    {id:'tj1',nombre:'Visa Santander',titular:'Alejandro',cierre:1,vto:9,debito:false},
+    {id:'tj2',nombre:'Visa Banco del Chaco',titular:'Clarisa',cierre:null,vto:null,debito:true},
+    {id:'tj3',nombre:'Tuya Banco del Chaco',titular:'Clarisa',cierre:null,vto:null,debito:true}];
+  DB.cuotas=[{id:'cu1',tarjetaId:'tj1',desc:'Seguro El Cobertizo',valor:17783.17,mon:'ARS',total:6,y:2026,m:9}];
+}
+function tjEst(c,ref){
+  ref=ref??tjRef();const s=tjIdx(c.y,c.m),n=ref-s+1;
+  return{n,actual:Math.min(Math.max(n,0),c.total),rest:Math.max(0,Math.min(c.total,c.total-(n-1))),
+    term:n>c.total,noEmp:n<1,ultima:n===c.total,fin:s+c.total-1,ini:s};
+}
+function tjCuotasMes(tId,mon,ref){
+  ref=ref??tjRef();
+  return getCuotas().filter(c=>c.tarjetaId===tId&&c.mon===mon).reduce((a,c)=>{const s=tjIdx(c.y,c.m);return a+(ref>=s&&ref<s+c.total?c.valor:0);},0);
+}
+function tjSaldo(tId,mon){const ref=tjRef();return getCuotas().filter(c=>c.tarjetaId===tId&&c.mon===mon).reduce((a,c)=>a+tjEst(c,ref).rest*c.valor,0);}
+
+// Mantiene en el presupuesto del mes un ítem por tarjeta (y otro en USD si hay cuotas en dólares)
+function syncTarjetasPE(){
+  if(!DB.tarjetas)return;
+  const md=getMesData();md.pe=md.pe||[];
+  const hoy=new Date(),hoyIdx=tjIdx(hoy.getFullYear(),hoy.getMonth()+1);
+  if(tjRef()<hoyIdx&&!md.pe.some(r=>r.tj))return; // no crear en meses pasados sin datos
+  let cambio=false;
+  if(!getCats().includes('Tarjetas')){DB.cats=[...getCats(),'Tarjetas'];cambio=true;}
+  const ids=getTarjetas().map(t=>t.id),antes=md.pe.length;
+  md.pe=md.pe.filter(r=>!r.tj||ids.includes(r.tj));
+  if(md.pe.length!==antes)cambio=true;
+  const st=getAgendaStates();
+  getTarjetas().forEach(t=>{
+    ['ARS','USD'].forEach(mon=>{
+      const cuotas=tjRound(tjCuotasMes(t.id,mon));
+      const desc=t.nombre+(mon==='USD'?' (dólares)':'');
+      const it=md.pe.find(r=>r.tj===t.id&&r.tjMon===mon);
+      if(!it){
+        if(mon==='USD'&&!cuotas)return;
+        md.pe.push({id:Date.now()+Math.random(),cat:'Tarjetas',tipo:'Fijo',desc,mon,monto:cuotas,vto:t.vto||null,tj:t.id,tjMon:mon,cuotas,extra:0,estado:'pendiente'});
+        cambio=true;return;
+      }
+      if(mon==='USD'&&!cuotas&&!it.extra&&!st[it.id]){md.pe=md.pe.filter(r=>r!==it);cambio=true;return;}
+      const monto=tjRound(cuotas+(it.extra||0)),vto=t.vto||null;
+      if(it.cuotas!==cuotas||it.monto!==monto||it.desc!==desc||it.vto!==vto){Object.assign(it,{cuotas,monto,desc,vto});cambio=true;}
+    });
+  });
+  if(cambio)scheduleSave();
+}
+
+// Ítem de tarjeta en el presupuesto: cuotas (automático) + otros consumos
+function tjEditPE(id){
+  const r=getPE().find(x=>x.id===id);if(!r)return;
+  document.getElementById('tjpe-tit').textContent=r.desc;
+  document.getElementById('tjpe-cuotas').textContent=tjFmt(r.cuotas||0,r.mon);
+  document.getElementById('tjpe-extra').value=r.extra||'';
+  document.getElementById('tjpe-id').value=r.id;
+  tjpeTotal();
+  document.getElementById('m-tjpe').classList.add('open');
+}
+function tjpeTotal(){
+  const r=getPE().find(x=>x.id===parseFloat(document.getElementById('tjpe-id').value));if(!r)return;
+  const ex=parseFloat(document.getElementById('tjpe-extra').value)||0;
+  document.getElementById('tjpe-total').textContent=tjFmt((r.cuotas||0)+ex,r.mon);
+}
+function tjSavePE(){
+  const id=parseFloat(document.getElementById('tjpe-id').value);
+  const r=getMesData().pe.find(x=>x.id===id);if(!r)return;
+  const ex=parseFloat(document.getElementById('tjpe-extra').value)||0;
+  if(ex<0){toast('El monto no puede ser negativo');return;}
+  r.extra=tjRound(ex);r.monto=tjRound((r.cuotas||0)+r.extra);r.estado='confirmado';
+  scheduleSave();closeM('m-tjpe');refreshAll();toast('✓ Tarjeta actualizada');
+}
+
+// Alta / edición de tarjetas
+function tjAbrirTarjeta(id){
+  const t=getTarjetas().find(x=>x.id===id);
+  document.getElementById('mtj-tit').textContent=t?'Editar tarjeta':'Nueva tarjeta';
+  document.getElementById('tjf-nom').value=t?t.nombre:'';
+  document.getElementById('tjf-tit').value=t?t.titular:'Alejandro';
+  document.getElementById('tjf-cie').value=t&&t.cierre?t.cierre:'';
+  document.getElementById('tjf-vto').value=t&&t.vto?t.vto:'';
+  document.getElementById('tjf-deb').value=t&&t.debito?'si':'no';
+  document.getElementById('tjf-id').value=t?t.id:'';
+  document.getElementById('m-tarjeta').classList.add('open');
+}
+function tjGuardarTarjeta(){
+  const nom=document.getElementById('tjf-nom').value.trim();
+  if(!nom){toast('Poné un nombre para la tarjeta');return;}
+  const vto=parseInt(document.getElementById('tjf-vto').value),cie=parseInt(document.getElementById('tjf-cie').value);
+  if(document.getElementById('tjf-vto').value&&!(vto>=1&&vto<=31)){toast('El día de vencimiento va de 1 a 31');return;}
+  const id=document.getElementById('tjf-id').value||('tj'+Date.now());
+  const t={id,nombre:nom,titular:document.getElementById('tjf-tit').value,cierre:cie>=1&&cie<=31?cie:null,vto:vto>=1&&vto<=31?vto:null,debito:document.getElementById('tjf-deb').value==='si'};
+  DB.tarjetas=getTarjetas();DB.cuotas=getCuotas();
+  const i=DB.tarjetas.findIndex(x=>x.id===id);if(i>=0)DB.tarjetas[i]=t;else DB.tarjetas.push(t);
+  tjSel=id;scheduleSave();closeM('m-tarjeta');refreshAll();toast('✓ Tarjeta guardada');
+}
+function tjBorrarTarjeta(id){
+  if(getCuotas().some(c=>c.tarjetaId===id&&!tjEst(c).term)){toast('Tiene cuotas pendientes: eliminalas primero');return;}
+  DB.tarjetas=getTarjetas().filter(t=>t.id!==id);DB.cuotas=getCuotas().filter(c=>c.tarjetaId!==id);
+  if(tjSel===id)tjSel=null;scheduleSave();refreshAll();toast('Tarjeta eliminada');
+}
+
+// Alta / edición de compras en cuotas ("cuota N de T" según el resumen del mes que estás viendo)
+function tjAbrirCuota(id){
+  if(!getTarjetas().length){toast('Primero agregá una tarjeta');return;}
+  const sel=document.getElementById('cuf-tj');
+  sel.innerHTML=getTarjetas().map(t=>`<option value="${t.id}">${t.nombre}</option>`).join('');
+  const c=getCuotas().find(x=>x.id===id);
+  document.getElementById('mcu-tit').textContent=c?'Editar compra en cuotas':'Nueva compra en cuotas';
+  sel.value=c?c.tarjetaId:(tjSel||getTarjetas()[0].id);
+  document.getElementById('cuf-desc').value=c?c.desc:'';
+  document.getElementById('cuf-mon').value=c?c.mon:'ARS';
+  document.getElementById('cuf-val').value=c?c.valor:'';
+  document.getElementById('cuf-t').value=c?c.total:'';
+  const n=c?tjEst(c).n:'';
+  const nEl=document.getElementById('cuf-n');nEl.value=n;nEl.dataset.orig=String(n);
+  document.getElementById('cuf-ref').textContent=MESES[mes-1]+' '+anio;
+  document.getElementById('cuf-id').value=c?c.id:'';
+  document.getElementById('m-cuota').classList.add('open');
+}
+function tjGuardarCuota(){
+  const id=document.getElementById('cuf-id').value;
+  const desc=document.getElementById('cuf-desc').value.trim();
+  const val=parseFloat(document.getElementById('cuf-val').value);
+  const tot=parseInt(document.getElementById('cuf-t').value);
+  const nEl=document.getElementById('cuf-n'),n=parseInt(nEl.value);
+  if(!desc){toast('Poné una descripción');return;}
+  if(!(val>0)){toast('Ingresá el valor de la cuota');return;}
+  if(!(tot>=1)){toast('Ingresá el total de cuotas');return;}
+  const orig=getCuotas().find(x=>x.id===id);
+  let y,m;
+  if(orig&&nEl.value===nEl.dataset.orig){y=orig.y;m=orig.m;}
+  else{
+    if(!(n>=1&&n<=tot)){toast('La cuota actual tiene que estar entre 1 y '+tot);return;}
+    const s=tjRef()-(n-1);y=Math.floor(s/12);m=s%12+1;
+  }
+  const c={id:id||('cu'+Date.now()),tarjetaId:document.getElementById('cuf-tj').value,desc,valor:tjRound(val),mon:document.getElementById('cuf-mon').value,total:tot,y,m};
+  DB.cuotas=getCuotas();
+  const i=DB.cuotas.findIndex(x=>x.id===c.id);if(i>=0)DB.cuotas[i]=c;else DB.cuotas.push(c);
+  tjSel=c.tarjetaId;scheduleSave();closeM('m-cuota');refreshAll();toast('✓ Compra guardada');
+}
+function tjBorrarCuota(id){DB.cuotas=getCuotas().filter(c=>c.id!==id);scheduleSave();refreshAll();toast('Compra eliminada');}
+
+// Vista
+function tjVista(v){tjModo=v;renderTarjetas();}
+function tjSelec(id){tjSel=id;renderTarjetas();}
+function renderTarjetas(){
+  const el=document.getElementById('tj-cont');if(!el)return;
+  document.getElementById('tj-b1').className='btn b-sm '+(tjModo==='det'?'b-acc':'b-ghost');
+  document.getElementById('tj-b2').className='btn b-sm '+(tjModo==='proy'?'b-acc':'b-ghost');
+  document.getElementById('tj-ref').textContent='Situación a '+MESES[mes-1].toLowerCase()+' '+anio;
+  const ts=getTarjetas(),ref=tjRef();
+  if(!ts.length){el.innerHTML='<div class="card"><div class="empty"><p>Agregá tus tarjetas con "+ Tarjeta".</p></div></div>';return;}
+  if(!tjSel||!ts.find(t=>t.id===tjSel))tjSel=ts[0].id;
+  if(tjModo==='proy'){
+    const ms=[0,1,2,3,4,5].map(k=>ref+k);
+    const celda=(a,u)=>`<td class="tr" style="${a||u?'':'color:var(--tx3)'}">${a?fN(a):(u?'':'—')}${u?`<div style="font-size:var(--sz-xs);color:var(--acc)">${fU(u)}</div>`:''}</td>`;
+    let h=`<div class="card"><div style="overflow-x:auto"><table><thead><tr><th>Tarjeta</th>${ms.map(i=>`<th class="tr">${tjMesTxt(i).split(' ')[0]}</th>`).join('')}</tr></thead><tbody>`;
+    ts.forEach(t=>{h+=`<tr><td style="font-weight:600">${t.nombre}</td>${ms.map(i=>celda(tjCuotasMes(t.id,'ARS',i),tjCuotasMes(t.id,'USD',i))).join('')}</tr>`;});
+    h+=`<tr><td style="font-weight:800">Total</td>${ms.map(i=>{let a=0,u=0;ts.forEach(t=>{a+=tjCuotasMes(t.id,'ARS',i);u+=tjCuotasMes(t.id,'USD',i);});return celda(a,u).replace('<td class="tr"','<td class="tr" style="font-weight:800"');}).join('')}</tr>`;
+    el.innerHTML=h+'</tbody></table></div></div><div style="font-size:var(--sz-xs);color:var(--tx3);padding:0 4px">Solo cuotas. Los consumos de una sola vez se suman en el presupuesto como "otros consumos".</div>';
+    return;
+  }
+  let h=ts.map(t=>{
+    const a=tjSaldo(t.id,'ARS'),u=tjSaldo(t.id,'USD');
+    const act=getCuotas().filter(c=>c.tarjetaId===t.id&&!tjEst(c,ref).term).length;
+    const saldo=!act?'<span class="badge b-ok">Sin deuda en cuotas</span>'
+      :`<div style="font-size:18px;font-weight:800">${fN(a)}</div>${u?`<div style="font-size:var(--sz-xs);color:var(--acc);font-weight:700">+ ${fU(u)}</div>`:''}<div style="font-size:var(--sz-xs);color:var(--tx3)">pendiente</div>`;
+    return`<div class="tj-card${t.id===tjSel?' sel':''}" data-tj="${t.id}" onclick="tjSelec('${t.id}')">
+      <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start">
+        <div style="min-width:0">
+          <div style="font-size:var(--sz);font-weight:700">${t.nombre}</div>
+          <div style="font-size:var(--sz-xs);color:var(--tx3)">${t.titular} · ${t.vto?'vence el '+t.vto:'<span style="color:var(--warn)">⚠️ sin día de vencimiento</span>'} · ${t.debito?'débito automático':'pago manual'}</div>
+          ${act?`<div style="font-size:var(--sz-xs);color:var(--tx2)">${act} compra${act>1?'s':''} en cuotas</div>`:''}
+        </div>
+        <div style="text-align:right;flex-shrink:0">${saldo}</div>
+      </div></div>`;
+  }).join('');
+  const t=ts.find(x=>x.id===tjSel);
+  const cs=getCuotas().filter(c=>c.tarjetaId===t.id).sort((x,y)=>tjEst(x,ref).term-tjEst(y,ref).term);
+  h+=`<div class="card" style="margin-top:14px"><div class="card-hd"><h3>Cuotas de ${t.nombre}</h3>
+      <div style="display:flex;gap:6px"><button class="btn b-ghost b-xs" onclick="tjAbrirTarjeta('${t.id}')">✏️ Tarjeta</button><button class="btn b-ghost b-xs" onclick="tjBorrarTarjeta('${t.id}')">✕</button></div></div>`;
+  if(!cs.length)h+='<div class="empty"><p>No hay compras en cuotas en esta tarjeta.</p></div>';
+  h+=cs.map(c=>{
+    const e=tjEst(c,ref);
+    const tag=e.term?['b-ok','Terminada']:e.noEmp?['b-ne','Empieza '+tjMesTxt(e.ini)]:e.ultima?['b-wa','Última cuota']:['b-ne','Termina '+tjMesTxt(e.fin)];
+    const dots=Array.from({length:c.total},(_,k)=>`<i class="${k<e.actual-1?'p':k===e.actual-1&&!e.term?'a':e.term?'p':''}"></i>`).join('');
+    return`<div class="tj-cu" style="${e.term?'opacity:.55':''}">
+      <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
+        <div style="min-width:0"><div style="font-size:var(--sz-sm);font-weight:700">${c.desc}</div>
+        <div style="font-size:var(--sz-xs);color:var(--tx3)">${e.noEmp?'Todavía no empezó':e.term?'Pagada completa':'Cuota '+e.actual+' de '+c.total} · ${tjFmt(c.valor,c.mon)} por mes</div></div>
+        <div style="display:flex;gap:4px;align-items:center;flex-shrink:0"><span class="badge ${tag[0]}">${tag[1]}</span>
+        <button class="btn b-ghost b-xs" onclick="tjAbrirCuota('${c.id}')">✏️</button><button class="btn b-ghost b-xs" onclick="tjBorrarCuota('${c.id}')">✕</button></div>
+      </div>
+      <div class="tj-dots">${dots}</div>
+      ${e.term?'':`<div style="font-size:var(--sz-xs);color:var(--tx2);margin-top:4px">Falta pagar: <strong>${tjFmt(e.rest*c.valor,c.mon)}</strong> (${e.rest} cuota${e.rest!==1?'s':''})</div>`}
+    </div>`;
+  }).join('');
+  el.innerHTML=h+'</div>';
+}
+
+function refreshAll(){syncTarjetasPE();renderPres();renderIR();renderEg();renderDash();renderCats();renderAgenda();renderTarjetas();}
 
 // ════════════════════════════════════
 // INIT
