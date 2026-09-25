@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Finanzas del Hogar — Familia Fernandez Soto</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#2a8a5a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Finanzas">
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
@@ -647,12 +655,13 @@ tr:hover td{background:rgba(42,138,90,.03);}
 
 <div class="mo" id="m-cuota"><div class="modal"><h3 id="mcu-tit">Nueva compra en cuotas</h3>
   <div class="fr"><label>Tarjeta</label><select id="cuf-tj"></select></div>
-  <div class="fr"><label>Descripción</label><input id="cuf-desc" placeholder="Ej: Heladera, Seguro auto"></div>
+  <div class="fr"><label>Descripción</label><input id="cuf-desc" placeholder="Ej: El Cobertizo, Frávega"></div>
+  <div class="fr"><label>Detalle <span style="font-weight:400;text-transform:none">(opcional)</span></label><input id="cuf-det" placeholder="Ej: Amoladora"></div>
   <div class="f2"><div class="fr"><label>Moneda</label><select id="cuf-mon"><option value="ARS">ARS $</option><option value="USD">USD</option></select></div>
   <div class="fr"><label>Valor de la cuota</label><div class="calc-wrap"><input id="cuf-val" type="number" inputmode="decimal" placeholder="0"><button type="button" class="calc-btn" onclick="openCalc('cuf-val',this)">🧮</button><div class="calc-pop"></div></div></div></div>
   <div class="f2"><div class="fr"><label>Cuota actual</label><input id="cuf-n" type="number" inputmode="numeric" placeholder="Ej: 3"></div>
   <div class="fr"><label>Total de cuotas</label><input id="cuf-t" type="number" inputmode="numeric" placeholder="Ej: 6"></div></div>
-  <div class="fr-note">Según el resumen de <strong id="cuf-ref"></strong>. Por ejemplo, si dice "Cuota 03/06", poné 3 y 6.</div>
+  <div class="fr-note">Según el resumen que pagás en <strong id="cuf-ref"></strong>. Por ejemplo, si dice "Cuota 03/06", poné 3 y 6.</div>
   <input type="hidden" id="cuf-id">
   <div class="mfoot"><button class="btn b-ghost" onclick="closeM('m-cuota')">Cancelar</button><button class="btn b-acc" onclick="tjGuardarCuota()">Guardar</button></div>
 </div></div>
@@ -725,7 +734,7 @@ function onGoogleLogin(response){
   document.getElementById('sync-user').textContent=userEmail;
   document.getElementById('login-status').textContent='Conectando con Drive...';
   tokenClient=google.accounts.oauth2.initTokenClient({
-    client_id:CLIENT_ID, scope:SCOPES,
+    client_id:CLIENT_ID, scope:SCOPES, hint:userEmail,
     callback:(tr)=>{
       if(tr.error){document.getElementById('login-status').textContent='Error: '+tr.error;return;}
       accessToken=tr.access_token;
@@ -734,7 +743,7 @@ function onGoogleLogin(response){
       loadFromDrive();
     }
   });
-  setTimeout(()=>tokenClient.requestAccessToken({prompt:''}),300);
+  setTimeout(()=>tokenClient.requestAccessToken({prompt:'',hint:userEmail,login_hint:userEmail}),300);
 }
 function signOut(){accessToken=null;driveFileId=null;document.getElementById('login-screen').classList.add('show');setSyncStatus('off','Sin conexión');toast('Sesión cerrada');}
 
@@ -1974,7 +1983,7 @@ function tjInit(){
     {id:'tj1',nombre:'Visa Santander',titular:'Alejandro',cierre:1,vto:9,debito:false},
     {id:'tj2',nombre:'Visa Banco del Chaco',titular:'Clarisa',cierre:null,vto:null,debito:true},
     {id:'tj3',nombre:'Tuya Banco del Chaco',titular:'Clarisa',cierre:null,vto:null,debito:true}];
-  DB.cuotas=[{id:'cu1',tarjetaId:'tj1',desc:'Seguro El Cobertizo',valor:17783.17,mon:'ARS',total:6,y:2026,m:9}];
+  DB.cuotas=[{id:'cu1',tarjetaId:'tj1',desc:'El Cobertizo',detalle:'Amoladora',valor:17783.17,mon:'ARS',total:6,y:2026,m:9}];
 }
 function tjEst(c,ref){
   ref=ref??tjRef();const s=tjIdx(c.y,c.m),n=ref-s+1;
@@ -2079,6 +2088,7 @@ function tjAbrirCuota(id){
   document.getElementById('mcu-tit').textContent=c?'Editar compra en cuotas':'Nueva compra en cuotas';
   sel.value=c?c.tarjetaId:(tjSel||getTarjetas()[0].id);
   document.getElementById('cuf-desc').value=c?c.desc:'';
+  document.getElementById('cuf-det').value=c&&c.detalle?c.detalle:'';
   document.getElementById('cuf-mon').value=c?c.mon:'ARS';
   document.getElementById('cuf-val').value=c?c.valor:'';
   document.getElementById('cuf-t').value=c?c.total:'';
@@ -2104,7 +2114,7 @@ function tjGuardarCuota(){
     if(!(n>=1&&n<=tot)){toast('La cuota actual tiene que estar entre 1 y '+tot);return;}
     const s=tjRef()-(n-1);y=Math.floor(s/12);m=s%12+1;
   }
-  const c={id:id||('cu'+Date.now()),tarjetaId:document.getElementById('cuf-tj').value,desc,valor:tjRound(val),mon:document.getElementById('cuf-mon').value,total:tot,y,m};
+  const c={id:id||('cu'+Date.now()),tarjetaId:document.getElementById('cuf-tj').value,desc,detalle:document.getElementById('cuf-det').value.trim(),valor:tjRound(val),mon:document.getElementById('cuf-mon').value,total:tot,y,m};
   DB.cuotas=getCuotas();
   const i=DB.cuotas.findIndex(x=>x.id===c.id);if(i>=0)DB.cuotas[i]=c;else DB.cuotas.push(c);
   tjSel=c.tarjetaId;scheduleSave();closeM('m-cuota');refreshAll();toast('✓ Compra guardada');
@@ -2157,7 +2167,7 @@ function renderTarjetas(){
     const dots=Array.from({length:c.total},(_,k)=>`<i class="${k<e.actual-1?'p':k===e.actual-1&&!e.term?'a':e.term?'p':''}"></i>`).join('');
     return`<div class="tj-cu" style="${e.term?'opacity:.55':''}">
       <div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start">
-        <div style="min-width:0"><div style="font-size:var(--sz-sm);font-weight:700">${c.desc}</div>
+        <div style="min-width:0"><div style="font-size:var(--sz-sm);font-weight:700">${c.desc}</div>${c.detalle?`<div style="font-size:var(--sz-xs);color:var(--tx2);font-style:italic">📝 ${c.detalle}</div>`:''}
         <div style="font-size:var(--sz-xs);color:var(--tx3)">${e.noEmp?'Todavía no empezó':e.term?'Pagada completa':'Cuota '+e.actual+' de '+c.total} · ${tjFmt(c.valor,c.mon)} por mes</div></div>
         <div style="display:flex;gap:4px;align-items:center;flex-shrink:0"><span class="badge ${tag[0]}">${tag[1]}</span>
         <button class="btn b-ghost b-xs" onclick="tjAbrirCuota('${c.id}')">✏️</button><button class="btn b-ghost b-xs" onclick="tjBorrarCuota('${c.id}')">✕</button></div>
@@ -2174,6 +2184,7 @@ function refreshAll(){syncTarjetasPE();renderPres();renderIR();renderEg();render
 // ════════════════════════════════════
 // INIT
 // ════════════════════════════════════
+if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{});});}
 (function(){
   const now=new Date();mes=now.getMonth()+1;anio=now.getFullYear();
   document.getElementById('selMes').value=mes;document.getElementById('selAnio').value=anio;
