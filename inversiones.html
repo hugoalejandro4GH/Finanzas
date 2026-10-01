@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Inversiones</title>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
 :root {
   --verde-oscuro: #0F4D38;
@@ -953,23 +954,23 @@ function spinner(show) {
    GOOGLE IDENTITY SERVICES
 ═══════════════════════════════════════════════ */
 function loginGoogle() {
-  const script = document.createElement('script');
-  script.src = 'https://accounts.google.com/gsi/client';
-  script.onload = () => {
-    tokenClient = google.accounts.oauth2.initTokenClient({
-      client_id: CLIENT_ID,
-      scope: SCOPES,
-      callback: async (resp) => {
-        if (resp.error) { alert('Error de autenticación: ' + resp.error); return; }
-        accessToken = resp.access_token;
-        spinner(true);
-        await iniciarApp();
-        spinner(false);
-      }
-    });
-    tokenClient.requestAccessToken({ prompt: 'consent' });
-  };
-  document.head.appendChild(script);
+  if (typeof google === 'undefined' || !google.accounts) {
+    // GIS todavía no cargó, esperar y reintentar
+    setTimeout(loginGoogle, 300);
+    return;
+  }
+  tokenClient = google.accounts.oauth2.initTokenClient({
+    client_id: CLIENT_ID,
+    scope: SCOPES,
+    callback: async (resp) => {
+      if (resp.error) { alert('Error de autenticación: ' + resp.error); return; }
+      accessToken = resp.access_token;
+      spinner(true);
+      await iniciarApp();
+      spinner(false);
+    }
+  });
+  tokenClient.requestAccessToken({ prompt: 'consent' });
 }
 
 async function reautenticar() {
@@ -2139,6 +2140,6 @@ document.querySelectorAll('.modal-overlay').forEach(m => {
 });
 </script>
 
-<!-- Google Identity Services se carga al hacer clic en "Entrar" -->
+
 </body>
 </html>
