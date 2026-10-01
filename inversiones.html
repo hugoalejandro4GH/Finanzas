@@ -4,7 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Inversiones</title>
+<link rel="manifest" href="inversiones-manifest.json">
+<meta name="theme-color" content="#145C43">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Inversiones">
+<link rel="apple-touch-icon" href="icono-inv-192.png">
 <script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./inversiones-sw.js')
+      .catch(err => console.warn('SW no registrado:', err));
+  });
+}
+</script>
 <style>
 :root {
   --verde-oscuro: #0F4D38;
