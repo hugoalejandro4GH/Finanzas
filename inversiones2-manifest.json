@@ -1,0 +1,26 @@
+{
+  "name": "Inversiones",
+  "short_name": "Inversiones",
+  "description": "Seguimiento de cartera — Familia Fernandez Soto",
+  "start_url": "https://hugoalejandro4gh.github.io/Finanzas/inversiones2.html",
+  "scope": "https://hugoalejandro4gh.github.io/Finanzas/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0D0D0D",
+  "theme_color": "#0D0D0D",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "icono-inv2-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icono-inv2-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
