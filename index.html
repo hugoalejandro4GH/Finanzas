@@ -1756,10 +1756,47 @@ function renderDash(){
   items.forEach(i=>{if(!byCatER[i.cat])byCatER[i.cat]=0;byCatER[i.cat]+=toARS(i.monto,i.mon);});
   const allC=[...new Set([...Object.keys(byCatPE),...Object.keys(byCatER)])].sort();
   const dc=document.getElementById('d-cats');
+  const hoy2=new Date(),dHoy2=hoy2.getDate(),diasMes=new Date(anio,mes,0).getDate();
+  const avanceMes=(mes===hoy2.getMonth()+1&&anio===hoy2.getFullYear())?dHoy2/diasMes:1;
+  const peMap={};getPE().forEach(r=>{peMap[r.cat]={...(peMap[r.cat]||{}),tipo:r.tipo,vto:r.vto,tj:r.tj,id:r.id,monto:(peMap[r.cat]?.monto||0)+toARS(r.monto,r.mon)};});
+  const agSt=getAgendaStates();
   if(!allC.length){dc.innerHTML='<div class="empty"><p>Sin datos aún</p></div>';}
-  else{dc.innerHTML=`<table><thead><tr><th>Categoría</th><th class="tr">Presup.</th><th class="tr">Real</th><th class="hm">Ejecución</th></tr></thead><tbody>`+
-    allC.map(c=>{const p=byCatPE[c]||0,r=byCatER[c]||0;return`<tr><td>${c}</td><td class="tr" style="color:var(--tx3)">${p?fN(p):'—'}</td><td class="tr" style="font-weight:700">${fN(r)}</td><td class="hm">${p?pb(r,p)+' '+bdD(r,p):'<span style="font-size:var(--sz-xs);color:var(--tx3)">Sin pres.</span>'}</td></tr>`;}).join('')+'</tbody></table>';}
-  const movs=[...[...comps].map(c=>({n:c.nombre,f:c.fecha,t:c.total,tipo:'eg'})),...ir.map(r=>({n:r.fuente,f:r.fecha,t:toARS(r.monto,r.mon),tipo:'ing'}))].sort((a,b)=>(b.f||'').localeCompare(a.f||'')).slice(0,8);
+  else{dc.innerHTML='<table><thead><tr><th>Categoría</th><th class="tr">Presup.</th><th class="tr">Real</th><th>Indicador</th></tr></thead><tbody>'+
+    allC.map(cat=>{
+      const p=byCatPE[cat]||0,r=byCatER[cat]||0;
+      const pm=peMap[cat];
+      const esFijo=pm&&(pm.tipo==='Fijo'||pm.tj);
+      let ind;
+      if(!p){ind='<span style="font-size:var(--sz-xs);color:var(--tx3)">Sin presupuesto</span>';}
+      else if(esFijo){
+        const peid=pm.id||getPE().find(x=>x.cat===cat&&(x.tipo==='Fijo'||x.tj))?.id;
+        const pagado=peid&&agSt[peid];
+        const vto=pm.vto;
+        if(pagado)ind='<span class="badge b-ok">✓ Pagado</span>';
+        else if(r>0)ind='<span class="badge b-ok">✓ Pagado</span>';
+        else ind=`<span class="badge b-wa">${vto?'Vence el '+vto:'Pendiente'}</span>`;
+      } else {
+        const pct=Math.round(r/p*100);
+        const avPct=Math.round(avanceMes*100);
+        const dif=pct-avPct;
+        const pbW=Math.min(pct,100),mW=Math.min(avPct,100);
+        const col=dif>15?'var(--red)':'var(--green)';
+        const barHTML=`<div style="position:relative;height:6px;background:var(--bd);border-radius:3px;margin:4px 0"><div style="position:absolute;top:0;left:0;height:6px;border-radius:3px;background:${col};width:${pbW}%"></div><div style="position:absolute;top:-3px;left:${mW}%;width:2px;height:12px;background:var(--tx);border-radius:1px"></div></div>`;
+        let badge;
+        if(pct===0)badge='<span class="badge b-ne">Sin gastos aún</span>';
+        else if(dif>15)badge=`<span class="badge b-re">${pct}% · acelerado</span>`;
+        else if(dif<-20)badge=`<span class="badge b-fi">${pct}% · por debajo</span>`;
+        else badge=`<span class="badge b-ok">${pct}% · en ritmo</span>`;
+        ind=`<div>${barHTML}${badge}</div>`;
+      }
+      return`<tr><td style="font-weight:600">${cat}</td><td class="tr" style="color:var(--tx3)">${p?fN(p):'—'}</td><td class="tr" style="font-weight:700">${fN(r)}</td><td>${ind}</td></tr>`;
+    }).join('')+'</tbody></table>';}
+  const egMovs=[...comps].map(c=>{
+    const cItems=items.filter(i=>i.compId===c.id);
+    const desc=cItems.length===1?cItems[0].item:cItems.length>1?cItems[0].item+' + '+(cItems.length-1)+' más':c.nombre;
+    return{n:desc,f:c.fecha,t:c.total,tipo:'eg'};
+  });
+  const movs=[...egMovs,...ir.map(r=>({n:r.fuente,f:r.fecha,t:toARS(r.monto,r.mon),tipo:'ing'}))].sort((a,b)=>(b.f||'').localeCompare(a.f||'')).slice(0,8);
   const dm=document.getElementById('d-movs');
   if(!movs.length){dm.innerHTML='<div class="empty"><p>Sin movimientos</p></div>';}
   else{dm.innerHTML='<table><thead><tr><th>Fecha</th><th>Concepto</th><th class="tr">Monto</th></tr></thead><tbody>'+movs.map(r=>`<tr><td style="color:var(--tx3)">${r.f||'—'}</td><td>${r.n}</td><td class="tr" style="font-weight:700;color:${r.tipo==='ing'?'var(--green)':'var(--red)'}">${r.tipo==='ing'?'+':'-'}${fN(r.t)}</td></tr>`).join('')+'</tbody></table>';}
