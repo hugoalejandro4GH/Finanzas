@@ -2651,10 +2651,21 @@
           "id": "c1791663073486",
           "nombre": "Seguridad del barrio",
           "fecha": "2026-10-10",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 43707,
           "cats": [
             "Servicios"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1791663487822",
+          "nombre": "YPF",
+          "fecha": "2026-10-09",
+          "persona": "Ambos",
+          "total": 30500,
+          "cats": [
+            "Casa"
           ],
           "itemCount": 1
         }
@@ -3170,6 +3181,14 @@
           "cat": "Servicios",
           "mon": "ARS",
           "monto": 43707
+        },
+        {
+          "id": "i1791663487822",
+          "compId": "c1791663487822",
+          "item": "Gas",
+          "cat": "Casa",
+          "mon": "ARS",
+          "monto": 30500
         }
       ]
     }
@@ -3211,7 +3230,8 @@
       "1790206473416.587": true,
       "1790206473416.6865": false,
       "1790206473416.1697": true,
-      "1790206473416.4043": true
+      "1790206473416.4043": true,
+      "1790212993952": true
     }
   },
   "lugares": [
