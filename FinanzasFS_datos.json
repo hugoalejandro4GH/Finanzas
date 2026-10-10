@@ -2680,6 +2680,18 @@
           ],
           "itemCount": 1,
           "lugar": "Pampers Srl"
+        },
+        {
+          "id": "c1791664066519",
+          "nombre": "Pampers Srl",
+          "fecha": "2026-10-09",
+          "persona": "Hogar",
+          "total": 3700,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Pampers Srl"
         }
       ],
       "items": [
@@ -3206,6 +3218,19 @@
           "id": "i1791664031070",
           "compId": "c1791664031070",
           "item": "Ravioles de Ricota",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3700,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": "Pamp",
+          "lugar": "Pampers Srl",
+          "obs": ""
+        },
+        {
+          "id": "i1791664066519",
+          "compId": "c1791664066519",
+          "item": "Ravioles de Verdura",
           "cat": "Alimentación",
           "mon": "ARS",
           "monto": 3700,
