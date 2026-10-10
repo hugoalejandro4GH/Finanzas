@@ -2704,6 +2704,18 @@
           ],
           "itemCount": 1,
           "lugar": "Pampers Srl"
+        },
+        {
+          "id": "c1791664197985",
+          "nombre": "Pampers Srl",
+          "fecha": "2026-10-09",
+          "persona": "Hogar",
+          "total": 1600,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Pampers Srl"
         }
       ],
       "items": [
@@ -3256,6 +3268,19 @@
           "id": "i1791664105850",
           "compId": "c1791664105850",
           "item": "Tapa de empanada para horno",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1600,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": "Pamp",
+          "lugar": "Pampers Srl",
+          "obs": ""
+        },
+        {
+          "id": "i1791664197985",
+          "compId": "c1791664197985",
+          "item": "Tapa de empanada para freir",
           "cat": "Alimentación",
           "mon": "ARS",
           "monto": 1600,
