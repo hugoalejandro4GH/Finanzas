@@ -798,7 +798,7 @@ async function loadFromGitHub(){
     const meta=await r.json();
     ghFileSha=meta.sha;
     const content=meta.content.replace(/\n/g,'');
-    const data=JSON.parse(atob(content));
+    const data=JSON.parse(decodeURIComponent(escape(atob(content))));
     DB=data;
     if(!DB.agenda)DB.agenda={};
     if(!DB.lugares)DB.lugares=DLUG;
