@@ -1,0 +1,3355 @@
+{
+  "cats": [
+    "Vivienda",
+    "Servicios",
+    "Transporte",
+    "Educación",
+    "Alimentación",
+    "Limpieza e Higiene",
+    "Deporte y Salud",
+    "Tarjetas",
+    "Inversión",
+    "Otros",
+    "Donación",
+    "Casa",
+    "Ropa"
+  ],
+  "fu": [
+    "Sueldo Alejandro",
+    "Sueldo Clarisa",
+    "Honorarios",
+    "Tuya Recargable",
+    "Inversión",
+    "Alquiler",
+    "Otros ingresos"
+  ],
+  "tc": 1550,
+  "meses": {
+    "2026_9": {
+      "pi": [
+        {
+          "id": 1789951224830,
+          "fuente": "Sueldo Alejandro",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 1960600
+        },
+        {
+          "id": 1789988661783,
+          "fuente": "Sueldo Clarisa",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 1500000
+        },
+        {
+          "id": 1789988692670,
+          "fuente": "Tuya Recargable",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 32000
+        }
+      ],
+      "pe": [
+        {
+          "id": 1789700318595,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Escuela Ramiro",
+          "mon": "ARS",
+          "monto": 280800,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789700352642,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Inglés Ramiro",
+          "mon": "ARS",
+          "monto": 64000,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789700382043,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Inglés Franco",
+          "mon": "ARS",
+          "monto": 64000,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789700398935,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Inglés Clarisa",
+          "mon": "ARS",
+          "monto": 30000,
+          "vto": 10
+        },
+        {
+          "id": 1789905647152,
+          "cat": "Vivienda",
+          "tipo": "Fijo",
+          "desc": "Cuota Casa",
+          "mon": "ARS",
+          "monto": 3079.13,
+          "vto": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789905751082,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Luz",
+          "mon": "ARS",
+          "monto": 104580.17,
+          "vto": 5,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789905786143,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Agua",
+          "mon": "ARS",
+          "monto": 24100.58,
+          "vto": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789905864060,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Seguridad del barrio",
+          "mon": "ARS",
+          "monto": 44995,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789906036358,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Celular Ale",
+          "mon": "ARS",
+          "monto": 44634.02,
+          "vto": 5,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789906096359,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Celular Clari",
+          "mon": "ARS",
+          "monto": 37000,
+          "vto": 5,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789906386391,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Internet + Flow",
+          "mon": "ARS",
+          "monto": 88821,
+          "vto": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789906444037,
+          "cat": "Transporte",
+          "tipo": "Fijo",
+          "desc": "Patente UP",
+          "mon": "ARS",
+          "monto": 8440,
+          "vto": null,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789906495142,
+          "cat": "Transporte",
+          "tipo": "Fijo",
+          "desc": "Seguro UP",
+          "mon": "ARS",
+          "monto": 65000,
+          "vto": null,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789906524849,
+          "cat": "Transporte",
+          "tipo": "Fijo",
+          "desc": "Seguro Moto",
+          "mon": "ARS",
+          "monto": 18000,
+          "vto": 30,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789906638498,
+          "cat": "Transporte",
+          "tipo": "Fijo",
+          "desc": "Nafta Moto",
+          "mon": "ARS",
+          "monto": 30000,
+          "vto": null,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789906690406,
+          "cat": "Transporte",
+          "tipo": "Fijo",
+          "desc": "Nafta UP",
+          "mon": "ARS",
+          "monto": 200000,
+          "vto": null,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789906759203,
+          "cat": "Deporte y Salud",
+          "tipo": "Fijo",
+          "desc": "Basquet Ramiro",
+          "mon": "ARS",
+          "monto": 71500,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789906882496,
+          "cat": "Deporte y Salud",
+          "tipo": "Fijo",
+          "desc": "Gimnasio Franco ",
+          "mon": "ARS",
+          "monto": 48000,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789906918834,
+          "cat": "Deporte y Salud",
+          "tipo": "Fijo",
+          "desc": "Gimnasio Clari",
+          "mon": "ARS",
+          "monto": 48000,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789928995178,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Cuota inscripción Ramiro 2027 ( 1 de 2)",
+          "mon": "ARS",
+          "monto": 145000,
+          "vto": 25,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789988594423,
+          "cat": "Donación",
+          "tipo": "Fijo",
+          "desc": "Aporte Clari",
+          "mon": "ARS",
+          "monto": 15000,
+          "vto": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789988631597,
+          "cat": "Donación",
+          "tipo": "Fijo",
+          "desc": "Aporte médicos sin frentera",
+          "mon": "ARS",
+          "monto": 14000,
+          "vto": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789995563020,
+          "cat": "Inversión",
+          "tipo": "Fijo",
+          "desc": "Programa ECI",
+          "mon": "ARS",
+          "monto": 35500,
+          "vto": 24,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1789995635102,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Suscripción Claude",
+          "mon": "USD",
+          "monto": 20,
+          "vto": 7,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790335634371.717,
+          "cat": "Tarjetas",
+          "tipo": "Fijo",
+          "desc": "Visa Santander",
+          "mon": "ARS",
+          "monto": 17783.17,
+          "vto": 9,
+          "tj": "tj1",
+          "tjMon": "ARS",
+          "cuotas": 17783.17,
+          "extra": 0,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1790335634371.9749,
+          "cat": "Tarjetas",
+          "tipo": "Fijo",
+          "desc": "Visa Banco del Chaco",
+          "mon": "ARS",
+          "monto": 96796.31,
+          "vto": null,
+          "tj": "tj2",
+          "tjMon": "ARS",
+          "cuotas": 96796.31,
+          "extra": 0,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1790335634371.7573,
+          "cat": "Tarjetas",
+          "tipo": "Fijo",
+          "desc": "Tuya Banco del Chaco",
+          "mon": "ARS",
+          "monto": 0,
+          "vto": null,
+          "tj": "tj3",
+          "tjMon": "ARS",
+          "cuotas": 0,
+          "extra": 0,
+          "estado": "pendiente"
+        }
+      ],
+      "ir": [
+        {
+          "id": 1790075433900,
+          "fecha": "2026-09-07",
+          "fuente": "Sueldo Alejandro",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 1500000,
+          "obs": "Deposito bancario "
+        },
+        {
+          "id": 1790075484471,
+          "fecha": "2026-09-09",
+          "fuente": "Sueldo Alejandro",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 460000,
+          "obs": "Efectivo "
+        },
+        {
+          "id": 1790075511102,
+          "fecha": "2026-09-22",
+          "fuente": "Otros ingresos",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 32434,
+          "obs": "Anses"
+        }
+      ],
+      "comps": [
+        {
+          "id": "c1789693782399",
+          "nombre": "ticket_dongaston_09092026 (1)",
+          "fecha": "09/09/2026",
+          "persona": "Hogar",
+          "total": 111949.86999999997,
+          "cats": [
+            "Alimentación",
+            "Limpieza e Higiene"
+          ],
+          "itemCount": 28
+        },
+        {
+          "id": "c1789701519241",
+          "nombre": "dongaston_17092026-2",
+          "fecha": "17/09/2026",
+          "persona": "Hogar",
+          "total": 22874.030000000002,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 7
+        },
+        {
+          "id": "c1789737106545",
+          "nombre": "",
+          "fecha": "2026-09-18",
+          "persona": "Hogar",
+          "total": 1000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": ""
+        },
+        {
+          "id": "c1789907244591",
+          "nombre": "Fibertel",
+          "fecha": "2026-09-01",
+          "persona": "Hogar",
+          "total": 88821,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1,
+          "lugar": "Fibertel"
+        },
+        {
+          "id": "c1789907298036",
+          "nombre": "Transferencia",
+          "fecha": "2026-09-15",
+          "persona": "Hogar",
+          "total": 44634.02,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1789907327428",
+          "nombre": "UP",
+          "fecha": "2026-09-10",
+          "persona": "Hogar",
+          "total": 280000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "UP"
+        },
+        {
+          "id": "c1789907391955",
+          "nombre": "Trasferencia",
+          "fecha": "2026-09-20",
+          "persona": "Hogar",
+          "total": 44995,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1789907467451",
+          "nombre": "Luz",
+          "fecha": "2026-09-10",
+          "persona": "Hogar",
+          "total": 104580.17,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1789988254726",
+          "nombre": "Transferencia",
+          "fecha": "2026-09-21",
+          "persona": "Hogar",
+          "total": 3079.13,
+          "cats": [
+            "Vivienda"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1789988271811",
+          "nombre": "Tranferencia",
+          "fecha": "2026-09-21",
+          "persona": "Hogar",
+          "total": 24100.58,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1,
+          "lugar": "Tranferencia"
+        },
+        {
+          "id": "c1789988286996",
+          "nombre": "Instituto HEI",
+          "fecha": "2026-09-10",
+          "persona": "Hogar",
+          "total": 64000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "Instituto HEI"
+        },
+        {
+          "id": "c1789988313758",
+          "nombre": "On line",
+          "fecha": "2026-09-10",
+          "persona": "Hogar",
+          "total": 30000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "On line"
+        },
+        {
+          "id": "c1789988323252",
+          "nombre": "Basquet Ramiro",
+          "fecha": "2026-09-10",
+          "persona": "Hogar",
+          "total": 71500,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1789988340583",
+          "nombre": "Efectivo",
+          "fecha": "2026-09-10",
+          "persona": "Hogar",
+          "total": 48000,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1789988347608",
+          "nombre": "Efectivo",
+          "fecha": "2026-09-21",
+          "persona": "Hogar",
+          "total": 48000,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1,
+          "lugar": "Efectivo"
+        },
+        {
+          "id": "c1789988361565",
+          "nombre": "Celular Clari",
+          "fecha": "2026-09-16",
+          "persona": "Hogar",
+          "total": 37000,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1789988867365",
+          "nombre": "Transferencia",
+          "fecha": "2026-09-01",
+          "persona": "Hogar",
+          "total": 15000,
+          "cats": [
+            "Donación"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1789988879130",
+          "nombre": "Debito",
+          "fecha": "2026-09-01",
+          "persona": "Hogar",
+          "total": 14000,
+          "cats": [
+            "Donación"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1790036968621",
+          "nombre": "Sameep",
+          "fecha": "2026-09-21",
+          "persona": "Hogar",
+          "total": 4272.36,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1,
+          "lugar": "Sameep"
+        },
+        {
+          "id": "c1790037056699",
+          "nombre": "Sameep",
+          "fecha": "2026-09-22",
+          "persona": "Hogar",
+          "total": 4347.56,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1,
+          "lugar": "Sameep"
+        },
+        {
+          "id": "c1790037180156",
+          "nombre": "Sameep",
+          "fecha": "2025-09-20",
+          "persona": "Hogar",
+          "total": 4422.76,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1,
+          "lugar": "Sameep"
+        },
+        {
+          "id": "c1790037315668",
+          "nombre": "Pampers Srl",
+          "fecha": "2026-09-22",
+          "persona": "Hogar",
+          "total": 5600,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Pampers Srl"
+        },
+        {
+          "id": "c1790037473077",
+          "nombre": "Familia Bercomat",
+          "fecha": "2026-09-22",
+          "persona": "Hogar",
+          "total": 6359.45,
+          "cats": [
+            "Casa"
+          ],
+          "itemCount": 1,
+          "lugar": "Familia Bercomat"
+        },
+        {
+          "id": "c1790037540847",
+          "nombre": "Del Campo Herrajes",
+          "fecha": "2026-09-22",
+          "persona": "Hogar",
+          "total": 14864.48,
+          "cats": [
+            "Casa"
+          ],
+          "itemCount": 1,
+          "lugar": "Del Campo Herrajes"
+        },
+        {
+          "id": "c1790037618367",
+          "nombre": "Nut Mirasoles Pasteler",
+          "fecha": "2026-09-22",
+          "persona": "Hogar",
+          "total": 129000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Nut Mirasoles Pasteler"
+        },
+        {
+          "id": "c1790037755461",
+          "nombre": "Pizza Ya",
+          "fecha": "2026-09-22",
+          "persona": "Hogar",
+          "total": 3750,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Pizza Ya"
+        },
+        {
+          "id": "c1790037832809",
+          "nombre": "Shell",
+          "fecha": "2026-09-04",
+          "persona": "Hogar",
+          "total": 5834,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Shell"
+        },
+        {
+          "id": "c1790073406208",
+          "nombre": "Tarjeta",
+          "fecha": "2026-09-15",
+          "persona": "Hogar",
+          "total": 31000,
+          "cats": [
+            "Inversión"
+          ],
+          "itemCount": 1,
+          "lugar": "Tarjeta"
+        },
+        {
+          "id": "c1790076045642",
+          "nombre": "YPF",
+          "fecha": "2026-09-14",
+          "persona": "Hogar",
+          "total": 45000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "YPF"
+        },
+        {
+          "id": "c1790108420753",
+          "nombre": "Carniceria WIN",
+          "fecha": "2026-09-21",
+          "persona": "Hogar",
+          "total": 15000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Carniceria WIN"
+        },
+        {
+          "id": "c1790167254222",
+          "nombre": "Gasto",
+          "fecha": "2026-09-23",
+          "persona": "Hogar",
+          "total": 2000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Gasto"
+        },
+        {
+          "id": "c1790207544404",
+          "nombre": "Instituto HEI",
+          "fecha": "2026-09-23",
+          "persona": "Hogar",
+          "total": 64000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "Instituto HEI"
+        },
+        {
+          "id": "c1790282090655",
+          "nombre": "Delito mercado pago Alejandro",
+          "fecha": "2026-09-24",
+          "persona": "Hogar",
+          "total": 35500,
+          "cats": [
+            "Inversión"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1790283616924",
+          "nombre": "Supermercados Impulso",
+          "fecha": "2026-09-24",
+          "persona": "Hogar",
+          "total": 4222.9,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Supermercados Impulso"
+        },
+        {
+          "id": "c1790351291907",
+          "nombre": "UP",
+          "fecha": "2026-09-25",
+          "persona": "Hogar",
+          "total": 280000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "UP"
+        },
+        {
+          "id": "c1790380747223",
+          "nombre": "La casa del queso",
+          "fecha": "2026-09-25",
+          "persona": "Hogar",
+          "total": 7548,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "La casa del queso"
+        },
+        {
+          "id": "c1790380876537",
+          "nombre": "Avícola Josefina",
+          "fecha": "2026-09-26",
+          "persona": "Hogar",
+          "total": 30500,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Avícola Josefina"
+        },
+        {
+          "id": "c1790381077823",
+          "nombre": "Esem motos",
+          "fecha": "2026-09-26",
+          "persona": "Hogar",
+          "total": 7000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Esem motos"
+        },
+        {
+          "id": "c1790389180339",
+          "nombre": "Verdulería Xiomara",
+          "fecha": "2026-09-26",
+          "persona": "Hogar",
+          "total": 3500,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Verdulería Xiomara"
+        },
+        {
+          "id": "c1790644770067",
+          "nombre": "Pampers Srl",
+          "fecha": "2026-09-29",
+          "persona": "Hogar",
+          "total": 2400,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Pampers Srl"
+        },
+        {
+          "id": "c1790644826385",
+          "nombre": "Pampers Srl",
+          "fecha": "2026-09-29",
+          "persona": "Hogar",
+          "total": 1600,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Pampers Srl"
+        },
+        {
+          "id": "c1790644945775",
+          "nombre": "Municipalidad de Resistencia",
+          "fecha": "2026-09-29",
+          "persona": "Hogar",
+          "total": 10200,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1,
+          "lugar": "Municipalidad de Resistencia"
+        },
+        {
+          "id": "c1790645009247",
+          "nombre": "Municipalidad de Resistencia",
+          "fecha": "2026-09-29",
+          "persona": "Hogar",
+          "total": 1105.36,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1,
+          "lugar": "Municipalidad de Resistencia"
+        },
+        {
+          "id": "c1790722015324",
+          "nombre": "La llave del Chaco",
+          "fecha": "2026-09-29",
+          "persona": "Hogar",
+          "total": 1600,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "La llave del Chaco"
+        },
+        {
+          "id": "c1790722130430",
+          "nombre": "La llave del Chaco",
+          "fecha": "2026-09-29",
+          "persona": "Hogar",
+          "total": 4620,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "La llave del Chaco"
+        },
+        {
+          "id": "c1790722169051",
+          "nombre": "La llave del Chaco",
+          "fecha": "2026-09-29",
+          "persona": "Hogar",
+          "total": 500,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "La llave del Chaco"
+        },
+        {
+          "id": "c1790722235443",
+          "nombre": "Carniceria WIN",
+          "fecha": "2026-09-29",
+          "persona": "Hogar",
+          "total": 15000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Carniceria WIN"
+        }
+      ],
+      "items": [
+        {
+          "id": "i17896937824000.4518957539961902",
+          "compId": "c1789693782399",
+          "item": "Aquarius Naranja x2.25L",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2395,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.11307198854631872",
+          "compId": "c1789693782399",
+          "item": "Aquarius Pomelo x2.25L",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2395,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.0031754815854423413",
+          "compId": "c1789693782399",
+          "item": "Arroz Maria Largo Fino x500gr",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1979.85,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.29802131596360726",
+          "compId": "c1789693782399",
+          "item": "Bananas Ecuatorianas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 8288.8,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.4265974481408459",
+          "compId": "c1789693782399",
+          "item": "BC Mermelada Durazno x390gr",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2975,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.12771631668407835",
+          "compId": "c1789693782399",
+          "item": "Cafe Morenita Brasil x250g",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 8975,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.9358466404152493",
+          "compId": "c1789693782399",
+          "item": "Cebolla",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3893.77,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.8293262104214799",
+          "compId": "c1789693782399",
+          "item": "Coca Cola x2250cc",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3795,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.3746221080199562",
+          "compId": "c1789693782399",
+          "item": "Dual Pack Coca-Fanta x2.25L",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6985,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.8119404756368842",
+          "compId": "c1789693782399",
+          "item": "Exquisita Bizcocho Fortif Choco x540g",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2495,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.42426825966158555",
+          "compId": "c1789693782399",
+          "item": "Fanacoa Mostaza x250g",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 789.95,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.24348491705283037",
+          "compId": "c1789693782399",
+          "item": "Galletitas Diversion x400gr",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2495,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.6865978871268732",
+          "compId": "c1789693782399",
+          "item": "Hellmanns Mayonesa Clasica x475gr",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 8085,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.04309653509718647",
+          "compId": "c1789693782399",
+          "item": "Jamon Cocido Genuino",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 10257.65,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.7730800215437538",
+          "compId": "c1789693782399",
+          "item": "Mauri Vainilla x80gr",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1151.9,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.7921111661325679",
+          "compId": "c1789693782399",
+          "item": "Mermelada BC Frutilla x390gr",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3895,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.2717724650650907",
+          "compId": "c1789693782399",
+          "item": "Naranja Ombligo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4119.53,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.5545346613315248",
+          "compId": "c1789693782399",
+          "item": "Pan Dulce Panino Nuevo x400gr",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2159.95,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.7170253875904287",
+          "compId": "c1789693782399",
+          "item": "Papas Blancas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5450.25,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.05864658751897378",
+          "compId": "c1789693782399",
+          "item": "Picadillo Carne Safra x90g",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1759.9,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.5565968574354484",
+          "compId": "c1789693782399",
+          "item": "Pindy x306g",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1259.95,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.2920964041452586",
+          "compId": "c1789693782399",
+          "item": "Queso Cremon Cremoso",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 9447.1,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.33167407131958937",
+          "compId": "c1789693782399",
+          "item": "Salsa Golf Hellmanns 125g",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1395,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.784483189525887",
+          "compId": "c1789693782399",
+          "item": "Suave Jabon Liquido Frutos Rojos x220ml",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 2390,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.7511587069059557",
+          "compId": "c1789693782399",
+          "item": "Surtido Bagley x400gr",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2895,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.5072771871802543",
+          "compId": "c1789693782399",
+          "item": "Tomate Triturado Tiempo Libre x950g",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2195,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.819132767681294",
+          "compId": "c1789693782399",
+          "item": "Zanahoria",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2933.87,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17896937824000.8437931082092851",
+          "compId": "c1789693782399",
+          "item": "Zapallo Brasilero",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5092.4,
+          "cant": null,
+          "uni": null
+        },
+        {
+          "id": "i17897015194060.48712675627341495",
+          "compId": "c1789701519241",
+          "item": "Aquarius Pera 2.25lt",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2695,
+          "cant": 6,
+          "uni": "unidad"
+        },
+        {
+          "id": "i17897015194060.3047469844370525",
+          "compId": "c1789701519241",
+          "item": "Bananas Ecuatorianas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5100.8,
+          "cant": 1.28,
+          "uni": "kg"
+        },
+        {
+          "id": "i17897015194060.9128128657374008",
+          "compId": "c1789701519241",
+          "item": "Coca-Fanta 2.25lt Pack x3",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 7395,
+          "cant": 3,
+          "uni": "unidad"
+        },
+        {
+          "id": "i17897015194060.06944440286015452",
+          "compId": "c1789701519241",
+          "item": "Maíz Pisingallo Khunpay",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 879.95,
+          "cant": 400,
+          "uni": "g"
+        },
+        {
+          "id": "i17897015194060.8630983747542951",
+          "compId": "c1789701519241",
+          "item": "Naranja Ombligo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2037.33,
+          "cant": 1.14,
+          "uni": "kg"
+        },
+        {
+          "id": "i17897015194060.6700204437274163",
+          "compId": "c1789701519241",
+          "item": "Pan Dulce Panino Nuevo 400gr",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3970,
+          "cant": 2,
+          "uni": "unidad"
+        },
+        {
+          "id": "i17897015194060.9882069806061513",
+          "compId": "c1789701519241",
+          "item": "Pisingallo Monarca",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 795.95,
+          "cant": 400,
+          "uni": "g"
+        },
+        {
+          "id": "i1789737106545",
+          "compId": "c1789737106545",
+          "item": "Turrones",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1000,
+          "cant": 3,
+          "uni": "unidad",
+          "obs": "",
+          "marca": "Arcor",
+          "lugar": ""
+        },
+        {
+          "id": "i1789907244591",
+          "compId": "c1789907244591",
+          "item": "Internet + Flow",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 88821,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Fibertel",
+          "obs": ""
+        },
+        {
+          "id": "i1789907298036",
+          "compId": "c1789907298036",
+          "item": "Celular Ale",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 44634.02
+        },
+        {
+          "id": "i1789907327428",
+          "compId": "c1789907327428",
+          "item": "Escuela Ramiro",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 280000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "UP",
+          "obs": ""
+        },
+        {
+          "id": "i1789907391955",
+          "compId": "c1789907391955",
+          "item": "Seguridad del barrio",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 44995
+        },
+        {
+          "id": "i1789907467451",
+          "compId": "c1789907467451",
+          "item": "Luz",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 104580.17
+        },
+        {
+          "id": "i1789988254727",
+          "compId": "c1789988254726",
+          "item": "Cuota Casa",
+          "cat": "Vivienda",
+          "mon": "ARS",
+          "monto": 3079.13
+        },
+        {
+          "id": "i1789988271811",
+          "compId": "c1789988271811",
+          "item": "Agua",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 24100.58,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Tranferencia",
+          "obs": "Cliente 211501-1"
+        },
+        {
+          "id": "i1789988286996",
+          "compId": "c1789988286996",
+          "item": "Inglés Ramiro",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 64000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Instituto HEI",
+          "obs": ""
+        },
+        {
+          "id": "i1789988313758",
+          "compId": "c1789988313758",
+          "item": "Inglés Clarisa",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 30000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "On line",
+          "obs": ""
+        },
+        {
+          "id": "i1789988323252",
+          "compId": "c1789988323252",
+          "item": "Basquet Ramiro",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 71500
+        },
+        {
+          "id": "i1789988340583",
+          "compId": "c1789988340583",
+          "item": "Gimnasio Franco ",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 48000
+        },
+        {
+          "id": "i1789988347608",
+          "compId": "c1789988347608",
+          "item": "Gimnasio Clari",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 48000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Efectivo",
+          "obs": ""
+        },
+        {
+          "id": "i1789988361565",
+          "compId": "c1789988361565",
+          "item": "Celular Clari",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 37000
+        },
+        {
+          "id": "i1789988867365",
+          "compId": "c1789988867365",
+          "item": "Aporte Clari",
+          "cat": "Donación",
+          "mon": "ARS",
+          "monto": 15000
+        },
+        {
+          "id": "i1789988879130",
+          "compId": "c1789988879130",
+          "item": "Aporte médicos sin frentera",
+          "cat": "Donación",
+          "mon": "ARS",
+          "monto": 14000
+        },
+        {
+          "id": "i1790036968621",
+          "compId": "c1790036968621",
+          "item": "Agua (Pago de facturas atrasadas)",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 4272.36,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Sameep",
+          "obs": "Cliente 211501-1"
+        },
+        {
+          "id": "i1790037056700",
+          "compId": "c1790037056699",
+          "item": "Pago de facturas atrasadas",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 4347.56,
+          "cant": 1,
+          "uni": null,
+          "marca": null,
+          "lugar": "Sameep",
+          "obs": ""
+        },
+        {
+          "id": "i1790037180157",
+          "compId": "c1790037180156",
+          "item": "Agua (Pago de Facturas Atrasadas)",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 4422.76,
+          "cant": 1,
+          "uni": null,
+          "marca": null,
+          "lugar": "Sameep",
+          "obs": ""
+        },
+        {
+          "id": "i1790037315668",
+          "compId": "c1790037315668",
+          "item": "Fideo Spaguetti",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5600,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": "Pamp",
+          "lugar": "Pampers Srl",
+          "obs": ""
+        },
+        {
+          "id": "i1790037473077",
+          "compId": "c1790037473077",
+          "item": "Planchuela 1/2 \"",
+          "cat": "Casa",
+          "mon": "ARS",
+          "monto": 6359.45,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Familia Bercomat",
+          "obs": ""
+        },
+        {
+          "id": "i1790037540847",
+          "compId": "c1790037540847",
+          "item": "Ruedas y Tornillos",
+          "cat": "Casa",
+          "mon": "ARS",
+          "monto": 14864.48,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Del Campo Herrajes",
+          "obs": ""
+        },
+        {
+          "id": "i1790037618368",
+          "compId": "c1790037618367",
+          "item": "Cumpleaños de Franco",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 129000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Nut Mirasoles Pasteler",
+          "obs": ""
+        },
+        {
+          "id": "i1790037755461",
+          "compId": "c1790037755461",
+          "item": "Empanadas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3750,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Pizza Ya",
+          "obs": ""
+        },
+        {
+          "id": "i1790037832809",
+          "compId": "c1790037832809",
+          "item": "Nafta",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 5834,
+          "cant": null,
+          "uni": null,
+          "marca": "V Power",
+          "lugar": "Shell",
+          "obs": ""
+        },
+        {
+          "id": "i1790073406208",
+          "compId": "c1790073406208",
+          "item": "Suscripción Claude",
+          "cat": "Inversión",
+          "mon": "USD",
+          "monto": 20,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Tarjeta",
+          "obs": ""
+        },
+        {
+          "id": "i1790076045643",
+          "compId": "c1790076045642",
+          "item": "Nafta Infinia",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 45000,
+          "cant": 19.75,
+          "uni": "lt",
+          "marca": null,
+          "lugar": "YPF",
+          "obs": "Incluye descuento del 10%"
+        },
+        {
+          "id": "i1790108420753",
+          "compId": "c1790108420753",
+          "item": "Carne molida",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 15000,
+          "cant": 1.01,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Carniceria WIN",
+          "obs": "Efectivo "
+        },
+        {
+          "id": "i1790167254222",
+          "compId": "c1790167254222",
+          "item": "Turrones",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2000,
+          "cant": 6,
+          "uni": "unidad",
+          "marca": "Arcor",
+          "lugar": "Gasto",
+          "obs": ""
+        },
+        {
+          "id": "i1790207544404",
+          "compId": "c1790207544404",
+          "item": "Inglés Franco",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 64000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Instituto HEI",
+          "obs": ""
+        },
+        {
+          "id": "i1790282090655",
+          "compId": "c1790282090655",
+          "item": "Programa ECI",
+          "cat": "Inversión",
+          "mon": "ARS",
+          "monto": 35500
+        },
+        {
+          "id": "i1790283616924",
+          "compId": "c1790283616924",
+          "item": "Pan negro",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4222.9,
+          "cant": 1.21,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Supermercados Impulso",
+          "obs": ""
+        },
+        {
+          "id": "i1790351291907",
+          "compId": "c1790351291907",
+          "item": "Inscripción Ramiro 2027",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 280000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "UP",
+          "obs": ""
+        },
+        {
+          "id": "i1790380747223",
+          "compId": "c1790380747223",
+          "item": "Salame criollo picado fino",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 7548,
+          "cant": 0.37,
+          "uni": "kg",
+          "marca": "Fox",
+          "lugar": "La casa del queso",
+          "obs": ""
+        },
+        {
+          "id": "i1790380876537",
+          "compId": "c1790380876537",
+          "item": "Milanesa de pollo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 30500,
+          "cant": 4.07,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Avícola Josefina",
+          "obs": ""
+        },
+        {
+          "id": "i1790381077823",
+          "compId": "c1790381077823",
+          "item": "Repuestos varios",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 7000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Esem motos",
+          "obs": "Aceite para cadena, cepillo para cadena"
+        },
+        {
+          "id": "i1790389180339",
+          "compId": "c1790389180339",
+          "item": "Tomate Cherry",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3500,
+          "cant": 0.41,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Verdulería Xiomara",
+          "obs": ""
+        },
+        {
+          "id": "i1790644770067",
+          "compId": "c1790644770067",
+          "item": "Fideo Spaguetti",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2400,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": "Pamp",
+          "lugar": "Pampers Srl",
+          "obs": ""
+        },
+        {
+          "id": "i1790644826385",
+          "compId": "c1790644826385",
+          "item": "Tapa de empanada para horno",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1600,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": "Pamp",
+          "lugar": "Pampers Srl",
+          "obs": ""
+        },
+        {
+          "id": "i1790644945775",
+          "compId": "c1790644945775",
+          "item": "Tasas y servicios",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 10200,
+          "cant": null,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Municipalidad de Resistencia",
+          "obs": "Pago de la primera cuota del plan"
+        },
+        {
+          "id": "i1790645009247",
+          "compId": "c1790645009247",
+          "item": "Tasas y servicios",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 1105.36,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Municipalidad de Resistencia",
+          "obs": "Pago de la cuota 4 del 2026"
+        },
+        {
+          "id": "i1790722015324",
+          "compId": "c1790722015324",
+          "item": "Birome cristal gruesa color negro",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 1600,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": "Bic",
+          "lugar": "La llave del Chaco",
+          "obs": ""
+        },
+        {
+          "id": "i1790722130430",
+          "compId": "c1790722130430",
+          "item": "Corrector cinta",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 4620,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": "Filgo",
+          "lugar": "La llave del Chaco",
+          "obs": ""
+        },
+        {
+          "id": "i1790722169051",
+          "compId": "c1790722169051",
+          "item": "Cartulina negra",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 500,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "La llave del Chaco",
+          "obs": ""
+        },
+        {
+          "id": "i1790722235444",
+          "compId": "c1790722235443",
+          "item": "Carne molida",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 15000,
+          "cant": 1.01,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Carniceria WIN",
+          "obs": ""
+        }
+      ]
+    },
+    "2026_10": {
+      "pi": [
+        {
+          "id": 1790206473416.9785,
+          "fuente": "Sueldo Alejandro",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 1960600
+        },
+        {
+          "id": 1790206473416.099,
+          "fuente": "Tuya Recargable",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 32000
+        },
+        {
+          "id": 1790529518620,
+          "fuente": "Sueldo Clarisa",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 1800000
+        }
+      ],
+      "pe": [
+        {
+          "id": 1790206473416.3323,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Escuela Ramiro",
+          "mon": "ARS",
+          "monto": 280800,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.076,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Inglés Ramiro",
+          "mon": "ARS",
+          "monto": 64000,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.6318,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Inglés Franco",
+          "mon": "ARS",
+          "monto": 64000,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.1294,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Inglés Clarisa",
+          "mon": "ARS",
+          "monto": 30000,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.4727,
+          "cat": "Vivienda",
+          "tipo": "Fijo",
+          "desc": "Cuota Casa",
+          "mon": "ARS",
+          "monto": 3079.13,
+          "vto": 15,
+          "obs": "",
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.6562,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Luz",
+          "mon": "ARS",
+          "monto": 111609.54,
+          "vto": 5,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.3625,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Agua",
+          "mon": "ARS",
+          "monto": 24100.58,
+          "vto": 2,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.4043,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Seguridad del barrio",
+          "mon": "ARS",
+          "monto": 44995,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.9043,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Celular Ale",
+          "mon": "ARS",
+          "monto": 44460,
+          "vto": 5,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.433,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Celular Clari",
+          "mon": "ARS",
+          "monto": 37791,
+          "vto": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.9727,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Internet + Flow",
+          "mon": "ARS",
+          "monto": 91573.99,
+          "vto": 1,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.244,
+          "cat": "Transporte",
+          "tipo": "Fijo",
+          "desc": "Patente UP",
+          "mon": "ARS",
+          "monto": 8440,
+          "vto": null,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.4272,
+          "cat": "Transporte",
+          "tipo": "Fijo",
+          "desc": "Seguro UP",
+          "mon": "ARS",
+          "monto": 78000,
+          "vto": null,
+          "obs": "",
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.7812,
+          "cat": "Transporte",
+          "tipo": "Fijo",
+          "desc": "Seguro Moto",
+          "mon": "ARS",
+          "monto": 18000,
+          "vto": 2,
+          "obs": "",
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.277,
+          "cat": "Transporte",
+          "tipo": "Fijo",
+          "desc": "Nafta Moto",
+          "mon": "ARS",
+          "monto": 32000,
+          "vto": null,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.7104,
+          "cat": "Transporte",
+          "tipo": "Variable",
+          "desc": "Nafta UP",
+          "mon": "ARS",
+          "monto": 200000,
+          "vto": null,
+          "obs": "",
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.6587,
+          "cat": "Deporte y Salud",
+          "tipo": "Fijo",
+          "desc": "Basquet Ramiro",
+          "mon": "ARS",
+          "monto": 71500,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.1697,
+          "cat": "Deporte y Salud",
+          "tipo": "Fijo",
+          "desc": "Gimnasio Franco ",
+          "mon": "ARS",
+          "monto": 48000,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.587,
+          "cat": "Deporte y Salud",
+          "tipo": "Fijo",
+          "desc": "Gimnasio Clari",
+          "mon": "ARS",
+          "monto": 48000,
+          "vto": 10,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.6865,
+          "cat": "Donación",
+          "tipo": "Fijo",
+          "desc": "Aporte Clari",
+          "mon": "ARS",
+          "monto": 15000,
+          "vto": 10,
+          "obs": "",
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.0662,
+          "cat": "Donación",
+          "tipo": "Fijo",
+          "desc": "Aporte médicos sin frentera",
+          "mon": "ARS",
+          "monto": 14000,
+          "vto": 3,
+          "obs": "",
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790206473416.1702,
+          "cat": "Inversión",
+          "tipo": "Fijo",
+          "desc": "Programa ECI",
+          "mon": "ARS",
+          "monto": 42000,
+          "vto": 24,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790212993952,
+          "cat": "Casa",
+          "tipo": "Fijo",
+          "desc": "Gas",
+          "mon": "ARS",
+          "monto": 32000,
+          "vto": 12,
+          "obs": "",
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790336496865.408,
+          "cat": "Tarjetas",
+          "tipo": "Fijo",
+          "desc": "Visa Santander",
+          "mon": "ARS",
+          "monto": 17783.17,
+          "vto": 9,
+          "tj": "tj1",
+          "tjMon": "ARS",
+          "cuotas": 17783.17,
+          "extra": 0,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790336496865.589,
+          "cat": "Tarjetas",
+          "tipo": "Fijo",
+          "desc": "Visa Banco del Chaco",
+          "mon": "ARS",
+          "monto": 181127.31,
+          "vto": null,
+          "tj": "tj2",
+          "tjMon": "ARS",
+          "cuotas": 181127.31,
+          "extra": 0,
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790336496865.9526,
+          "cat": "Tarjetas",
+          "tipo": "Fijo",
+          "desc": "Tuya Banco del Chaco",
+          "mon": "ARS",
+          "monto": 0,
+          "vto": null,
+          "tj": "tj3",
+          "tjMon": "ARS",
+          "cuotas": 0,
+          "extra": 0,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1790529726291,
+          "cat": "Alimentación",
+          "tipo": "Variable",
+          "desc": "Previsión de alimentos por poner alguna cosa",
+          "mon": "ARS",
+          "monto": 800000,
+          "vto": null,
+          "obs": "Estimados de alimentación del mes",
+          "estado": "confirmado"
+        },
+        {
+          "id": 1790620795230,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Plan de pago deuda tasas y servicios ",
+          "mon": "ARS",
+          "monto": 7936.85,
+          "vto": 15,
+          "obs": "",
+          "estado": "confirmado"
+        }
+      ],
+      "ir": [
+        {
+          "id": 1791210800641,
+          "fecha": "2026-10-02",
+          "fuente": "Sueldo Clarisa",
+          "per": "Clarisa",
+          "mon": "ARS",
+          "monto": 1805160.87,
+          "obs": ""
+        },
+        {
+          "id": 1791544882414,
+          "fecha": "2026-10-09",
+          "fuente": "Sueldo Alejandro",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 1607702.68,
+          "obs": ""
+        },
+        {
+          "id": 1791544946995,
+          "fecha": "2026-10-09",
+          "fuente": "Otros ingresos",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 32974,
+          "obs": "ANSES"
+        }
+      ],
+      "comps": [
+        {
+          "id": "c1790852569303",
+          "nombre": "Fibertel",
+          "fecha": "2026-10-01",
+          "persona": "Hogar",
+          "total": 91573.99,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1790852618447",
+          "nombre": "Sameep",
+          "fecha": "2026-10-01",
+          "persona": "Hogar",
+          "total": 24100.58,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1,
+          "lugar": "Sameep"
+        },
+        {
+          "id": "c1790892547700",
+          "nombre": "Celular Clari",
+          "fecha": "2026-10-01",
+          "persona": "Hogar",
+          "total": 37791,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1790973100445",
+          "nombre": "Supermercados Impulso",
+          "fecha": "2026-10-02",
+          "persona": "Hogar",
+          "total": 6892.75,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Supermercados Impulso"
+        },
+        {
+          "id": "c1790978483610",
+          "nombre": "La casa del queso",
+          "fecha": "2026-10-02",
+          "persona": "Hogar",
+          "total": 6359.97,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "La casa del queso"
+        },
+        {
+          "id": "c1790978570823",
+          "nombre": "La casa del queso",
+          "fecha": "2026-10-02",
+          "persona": "Hogar",
+          "total": 7632.5,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "La casa del queso"
+        },
+        {
+          "id": "c1790978634990",
+          "nombre": "Verdulería Xiomara",
+          "fecha": "2026-10-02",
+          "persona": "Hogar",
+          "total": 4000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Verdulería Xiomara"
+        },
+        {
+          "id": "c1790978724874",
+          "nombre": "Feria Av. Lavalle",
+          "fecha": "2026-10-02",
+          "persona": "Hogar",
+          "total": 9000,
+          "cats": [
+            "Ropa"
+          ],
+          "itemCount": 1,
+          "lugar": "Feria Av. Lavalle"
+        },
+        {
+          "id": "c1790987078178",
+          "nombre": "Gasto",
+          "fecha": "2026-10-01",
+          "persona": "Hogar",
+          "total": 2000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Gasto"
+        },
+        {
+          "id": "c1791029401670",
+          "nombre": "Feria de las Heras",
+          "fecha": "2026-10-02",
+          "persona": "Hogar",
+          "total": 40000,
+          "cats": [
+            "Ropa"
+          ],
+          "itemCount": 1,
+          "lugar": "Feria de las Heras"
+        },
+        {
+          "id": "c1791029640384",
+          "nombre": "Vivero",
+          "fecha": "2026-10-02",
+          "persona": "Hogar",
+          "total": 24000,
+          "cats": [
+            "Otros"
+          ],
+          "itemCount": 1,
+          "lugar": "Vivero"
+        },
+        {
+          "id": "c1791029873412",
+          "nombre": "Feria de las Heras",
+          "fecha": "2026-10-02",
+          "persona": "Hogar",
+          "total": 28000,
+          "cats": [
+            "Otros"
+          ],
+          "itemCount": 1,
+          "lugar": "Feria de las Heras"
+        },
+        {
+          "id": "c1791052330752",
+          "nombre": "La Segunda",
+          "fecha": "2026-10-03",
+          "persona": "Hogar",
+          "total": 18000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1791059882325",
+          "nombre": "Panadería Marcelo",
+          "fecha": "2026-10-03",
+          "persona": "Hogar",
+          "total": 3000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Panadería Marcelo"
+        },
+        {
+          "id": "c1791059908356",
+          "nombre": "Panadería Marcelo",
+          "fecha": "2026-10-03",
+          "persona": "Hogar",
+          "total": 1000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Panadería Marcelo"
+        },
+        {
+          "id": "c1791059936858",
+          "nombre": "Panadería Marcelo",
+          "fecha": "2026-10-03",
+          "persona": "Hogar",
+          "total": 17199,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Panadería Marcelo"
+        },
+        {
+          "id": "c1791060069074",
+          "nombre": "Panadería Marcelo",
+          "fecha": "2026-10-03",
+          "persona": "Hogar",
+          "total": 5500,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Panadería Marcelo"
+        },
+        {
+          "id": "c1791202392829",
+          "nombre": "Personal",
+          "fecha": "2026-10-05",
+          "persona": "Hogar",
+          "total": 44460,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1791202492928",
+          "nombre": "Aporte médicos sin frentera",
+          "fecha": "2026-10-05",
+          "persona": "Hogar",
+          "total": 14000,
+          "cats": [
+            "Donación"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1791204027690",
+          "nombre": "Luz",
+          "fecha": "2026-10-05",
+          "persona": "Hogar",
+          "total": 111609.54,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1791223702598",
+          "nombre": "Gasto",
+          "fecha": "2026-10-05",
+          "persona": "Hogar",
+          "total": 45000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Gasto"
+        },
+        {
+          "id": "c1791237748048",
+          "nombre": "Electrolíneas",
+          "fecha": "2026-10-05",
+          "persona": "Hogar",
+          "total": 6588,
+          "cats": [
+            "Casa"
+          ],
+          "itemCount": 1,
+          "lugar": "Electrolíneas"
+        },
+        {
+          "id": "c1791245889411",
+          "nombre": "Lo de Chachi",
+          "fecha": "2026-10-06",
+          "persona": "Hogar",
+          "total": 1400,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Lo de Chachi"
+        },
+        {
+          "id": "c1791544305183",
+          "nombre": "Santander Río",
+          "fecha": "2026-10-08",
+          "persona": "Hogar",
+          "total": 54574,
+          "cats": [
+            "Tarjetas"
+          ],
+          "itemCount": 1,
+          "lugar": "Santander Río"
+        },
+        {
+          "id": "c1791544346103",
+          "nombre": "Santander Río",
+          "fecha": "2026-10-08",
+          "persona": "Hogar",
+          "total": 9284.5,
+          "cats": [
+            "Tarjetas"
+          ],
+          "itemCount": 1,
+          "lugar": "Santander Río"
+        },
+        {
+          "id": "c1791544712569",
+          "nombre": "Ypf de la sabin",
+          "fecha": "2026-10-07",
+          "persona": "Hogar",
+          "total": 45000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Ypf de la sabin"
+        },
+        {
+          "id": "c1791544773954",
+          "nombre": "Banco del Chaco",
+          "fecha": "2026-10-09",
+          "persona": "Hogar",
+          "total": 197931.78,
+          "cats": [
+            "Tarjetas"
+          ],
+          "itemCount": 1,
+          "lugar": "Banco del Chaco"
+        },
+        {
+          "id": "c1791545758572",
+          "nombre": "Shell 25 de Mayo",
+          "fecha": "2026-10-05",
+          "persona": "Hogar",
+          "total": 5000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Shell 25 de Mayo"
+        },
+        {
+          "id": "c1791546969571",
+          "nombre": "Gasto",
+          "fecha": "2026-10-06",
+          "persona": "Hogar",
+          "total": 2000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Gasto"
+        },
+        {
+          "id": "c1791547054208",
+          "nombre": "Gasto",
+          "fecha": "2026-10-05",
+          "persona": "Hogar",
+          "total": 10000,
+          "cats": [
+            "Otros"
+          ],
+          "itemCount": 1,
+          "lugar": "Gasto"
+        },
+        {
+          "id": "c1791547097817",
+          "nombre": "San Antonio",
+          "fecha": "2026-10-04",
+          "persona": "Hogar",
+          "total": 7000,
+          "cats": [
+            "Otros"
+          ],
+          "itemCount": 1,
+          "lugar": "San Antonio"
+        },
+        {
+          "id": "c1791547224943",
+          "nombre": "Feria de las Heras",
+          "fecha": "2026-10-02",
+          "persona": "Hogar",
+          "total": 15000,
+          "cats": [
+            "Otros"
+          ],
+          "itemCount": 1,
+          "lugar": "Feria de las Heras"
+        },
+        {
+          "id": "c1791547383941",
+          "nombre": "Shell 25 de mayo y calle 8",
+          "fecha": "2026-10-02",
+          "persona": "Hogar",
+          "total": 10000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Shell 25 de mayo y calle 8"
+        },
+        {
+          "id": "c1791547492844",
+          "nombre": "Ypf Luminium",
+          "fecha": "2026-10-02",
+          "persona": "Hogar",
+          "total": 34001.04,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Ypf Luminium"
+        },
+        {
+          "id": "c1791550856543",
+          "nombre": "Verdulería Xiomara",
+          "fecha": "2026-10-09",
+          "persona": "Hogar",
+          "total": 2200,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Verdulería Xiomara"
+        },
+        {
+          "id": "c1791550953955",
+          "nombre": "Verdulería Xiomara",
+          "fecha": "2026-10-09",
+          "persona": "Hogar",
+          "total": 6100,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Verdulería Xiomara"
+        },
+        {
+          "id": "c1791594728389",
+          "nombre": "Gimnasio Clari",
+          "fecha": "2026-10-09",
+          "persona": "Hogar",
+          "total": 48000,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1,
+          "lugar": "Gimnasio Clari"
+        },
+        {
+          "id": "c1791594740016",
+          "nombre": "Gimnasio Franco",
+          "fecha": "2026-10-09",
+          "persona": "Hogar",
+          "total": 48000,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1,
+          "lugar": "Gimnasio Franco"
+        },
+        {
+          "id": "c1791594828590",
+          "nombre": "Verdulería Xiomara",
+          "fecha": "2026-10-09",
+          "persona": "Hogar",
+          "total": 4500,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Verdulería Xiomara"
+        },
+        {
+          "id": "c1791595364649",
+          "nombre": "Bonafide",
+          "fecha": "2026-10-07",
+          "persona": "Hogar",
+          "total": 17500,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Bonafide"
+        },
+        {
+          "id": "c1791595408964",
+          "nombre": "Colombraro",
+          "fecha": "2026-10-05",
+          "persona": "Hogar",
+          "total": 12000,
+          "cats": [
+            "Casa"
+          ],
+          "itemCount": 1,
+          "lugar": "Colombraro"
+        }
+      ],
+      "items": [
+        {
+          "id": "i1790852569303",
+          "compId": "c1790852569303",
+          "item": "Internet + Flow",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 91573.99
+        },
+        {
+          "id": "i1790852618447",
+          "compId": "c1790852618447",
+          "item": "Agua",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 24100.58,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Sameep",
+          "obs": "Incluído en el plan de pago"
+        },
+        {
+          "id": "i1790892547700",
+          "compId": "c1790892547700",
+          "item": "Celular Clari",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 37791
+        },
+        {
+          "id": "i1790973100445",
+          "compId": "c1790973100445",
+          "item": "Pan negro",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6892.75,
+          "cant": 1.98,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Supermercados Impulso",
+          "obs": ""
+        },
+        {
+          "id": "i1790978483611",
+          "compId": "c1790978483610",
+          "item": "Choclo cremoso en lata",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6359.97,
+          "cant": 3,
+          "uni": "unidad",
+          "marca": "Arcor",
+          "lugar": "La casa del queso",
+          "obs": ""
+        },
+        {
+          "id": "i1790978570823",
+          "compId": "c1790978570823",
+          "item": "Salame criollo picado fino",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 7632.5,
+          "cant": 0.36,
+          "uni": "kg",
+          "marca": "Fox",
+          "lugar": "La casa del queso",
+          "obs": ""
+        },
+        {
+          "id": "i1790978634990",
+          "compId": "c1790978634990",
+          "item": "Tomate Cherry",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4000,
+          "cant": 0.5,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Verdulería Xiomara",
+          "obs": ""
+        },
+        {
+          "id": "i1790978724874",
+          "compId": "c1790978724874",
+          "item": "Ojota",
+          "cat": "Ropa",
+          "mon": "ARS",
+          "monto": 9000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": "Ipanema",
+          "lugar": "Feria Av. Lavalle",
+          "obs": "Talle 41"
+        },
+        {
+          "id": "i1790987078178",
+          "compId": "c1790987078178",
+          "item": "Torta frita",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2000,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Gasto",
+          "obs": ""
+        },
+        {
+          "id": "i1791029401670",
+          "compId": "c1791029401670",
+          "item": "Botin para Franco",
+          "cat": "Ropa",
+          "mon": "ARS",
+          "monto": 40000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Feria de las Heras",
+          "obs": ""
+        },
+        {
+          "id": "i1791029640384",
+          "compId": "c1791029640384",
+          "item": "Planta de Azaleas",
+          "cat": "Otros",
+          "mon": "ARS",
+          "monto": 24000,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Vivero",
+          "obs": ""
+        },
+        {
+          "id": "i1791029873412",
+          "compId": "c1791029873412",
+          "item": "Auriculares",
+          "cat": "Otros",
+          "mon": "ARS",
+          "monto": 28000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Feria de las Heras",
+          "obs": "Regalo de Cumpleaños Franco "
+        },
+        {
+          "id": "i1791052330752",
+          "compId": "c1791052330752",
+          "item": "Seguro Moto",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 18000
+        },
+        {
+          "id": "i1791059882325",
+          "compId": "c1791059882325",
+          "item": "Churros",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3000,
+          "cant": 3,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Panadería Marcelo",
+          "obs": ""
+        },
+        {
+          "id": "i1791059908356",
+          "compId": "c1791059908356",
+          "item": "Bola de fraile",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Panadería Marcelo",
+          "obs": ""
+        },
+        {
+          "id": "i1791059936858",
+          "compId": "c1791059936858",
+          "item": "Torta",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 17199,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Panadería Marcelo",
+          "obs": ""
+        },
+        {
+          "id": "i1791060069074",
+          "compId": "c1791060069074",
+          "item": "Coca Cola x2250cc",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5500,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": "Coca Cola",
+          "lugar": "Panadería Marcelo",
+          "obs": ""
+        },
+        {
+          "id": "i1791202392829",
+          "compId": "c1791202392829",
+          "item": "Celular Ale",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 44460
+        },
+        {
+          "id": "i1791202492928",
+          "compId": "c1791202492928",
+          "item": "Aporte médicos sin frentera",
+          "cat": "Donación",
+          "mon": "ARS",
+          "monto": 14000
+        },
+        {
+          "id": "i1791204027690",
+          "compId": "c1791204027690",
+          "item": "Luz",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 111609.54
+        },
+        {
+          "id": "i1791223702598",
+          "compId": "c1791223702598",
+          "item": "Pata muslo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 45000,
+          "cant": 15,
+          "uni": "kg",
+          "marca": "Indivisa",
+          "lugar": "Gasto",
+          "obs": "Caja de 15 kg"
+        },
+        {
+          "id": "i1791237748048",
+          "compId": "c1791237748048",
+          "item": "Reflector led de 10 w",
+          "cat": "Casa",
+          "mon": "ARS",
+          "monto": 6588,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": "Lion",
+          "lugar": "Electrolíneas",
+          "obs": ""
+        },
+        {
+          "id": "i1791245889411",
+          "compId": "c1791245889411",
+          "item": "Pan para pancho",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1400,
+          "cant": 1,
+          "uni": "paquete",
+          "marca": "La Reina",
+          "lugar": "Lo de Chachi",
+          "obs": ""
+        },
+        {
+          "id": "i1791544305183",
+          "compId": "c1791544305183",
+          "item": "Tarjeta en pesos",
+          "cat": "Tarjetas",
+          "mon": "ARS",
+          "monto": 54574,
+          "cant": 1,
+          "uni": null,
+          "marca": null,
+          "lugar": "Santander Río",
+          "obs": ""
+        },
+        {
+          "id": "i1791544346103",
+          "compId": "c1791544346103",
+          "item": "Pago de tarjeta en dólares",
+          "cat": "Tarjetas",
+          "mon": "USD",
+          "monto": 5.99,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Santander Río",
+          "obs": "Solo el saldo porque los $20 quedaron del mes pasado"
+        },
+        {
+          "id": "i1791544712569",
+          "compId": "c1791544712569",
+          "item": "Nafta Infinia",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 45000,
+          "cant": 22,
+          "uni": "lt",
+          "marca": "YPF",
+          "lugar": "Ypf de la sabin",
+          "obs": "Incluye un descuento del 10%"
+        },
+        {
+          "id": "i1791544773954",
+          "compId": "c1791544773954",
+          "item": "Tarjeta Visa",
+          "cat": "Tarjetas",
+          "mon": "ARS",
+          "monto": 197931.78,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Banco del Chaco",
+          "obs": ""
+        },
+        {
+          "id": "i1791545758572",
+          "compId": "c1791545758572",
+          "item": "Nafta Super",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 5000,
+          "cant": 2.28,
+          "uni": "lt",
+          "marca": "Shell",
+          "lugar": "Shell 25 de Mayo",
+          "obs": ""
+        },
+        {
+          "id": "i1791546969571",
+          "compId": "c1791546969571",
+          "item": "Torta frita",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2000,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Gasto",
+          "obs": ""
+        },
+        {
+          "id": "i1791547054208",
+          "compId": "c1791547054208",
+          "item": "Rifas",
+          "cat": "Otros",
+          "mon": "ARS",
+          "monto": 10000,
+          "cant": 5,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Gasto",
+          "obs": ""
+        },
+        {
+          "id": "i1791547097817",
+          "compId": "c1791547097817",
+          "item": "Rifas",
+          "cat": "Otros",
+          "mon": "ARS",
+          "monto": 7000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "San Antonio",
+          "obs": ""
+        },
+        {
+          "id": "i1791547224943",
+          "compId": "c1791547224943",
+          "item": "Regalo",
+          "cat": "Otros",
+          "mon": "ARS",
+          "monto": 15000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Feria de las Heras",
+          "obs": "Regalo cumple de Ramiro"
+        },
+        {
+          "id": "i1791547383941",
+          "compId": "c1791547383941",
+          "item": "Nafta Super",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 10000,
+          "cant": null,
+          "uni": null,
+          "marca": "Shell",
+          "lugar": "Shell 25 de mayo y calle 8",
+          "obs": ""
+        },
+        {
+          "id": "i1791547492844",
+          "compId": "c1791547492844",
+          "item": "Nafta Infinia",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 34001.04,
+          "cant": null,
+          "uni": null,
+          "marca": "YPF",
+          "lugar": "Ypf Luminium",
+          "obs": ""
+        },
+        {
+          "id": "i1791550856543",
+          "compId": "c1791550856543",
+          "item": "Tomate Cherry",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2200,
+          "cant": 0.28,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Verdulería Xiomara",
+          "obs": ""
+        },
+        {
+          "id": "i1791550953955",
+          "compId": "c1791550953955",
+          "item": "Papas Blancas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6100,
+          "cant": 3.05,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Verdulería Xiomara",
+          "obs": ""
+        },
+        {
+          "id": "i1791594728389",
+          "compId": "c1791594728389",
+          "item": "Gimnasio Clari",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 48000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Gimnasio Clari",
+          "obs": ""
+        },
+        {
+          "id": "i1791594740017",
+          "compId": "c1791594740016",
+          "item": "Gimnasio Franco",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 48000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Gimnasio Franco",
+          "obs": ""
+        },
+        {
+          "id": "i1791594828590",
+          "compId": "c1791594828590",
+          "item": "Cebolla+ bananas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4500,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Verdulería Xiomara",
+          "obs": ""
+        },
+        {
+          "id": "i1791595364650",
+          "compId": "c1791595364649",
+          "item": "Desayuno",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 17500,
+          "cant": null,
+          "uni": null,
+          "marca": "Bonafide",
+          "lugar": "Bonafide",
+          "obs": ""
+        },
+        {
+          "id": "i1791595408964",
+          "compId": "c1791595408964",
+          "item": "Palangana",
+          "cat": "Casa",
+          "mon": "ARS",
+          "monto": 12000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": "Colombraro",
+          "lugar": "Colombraro",
+          "obs": ""
+        }
+      ]
+    }
+  },
+  "agenda": {
+    "ag_2026_9": {
+      "1789662394997": false,
+      "1789686224184": true,
+      "1789687222343": false,
+      "1789906386391": true,
+      "1789906036358": true,
+      "1789700318595": true,
+      "1789905864060": true,
+      "1789905751082": true,
+      "1789905647152": true,
+      "1789905786143": true,
+      "1789700352642": true,
+      "1789700382043": true,
+      "1789700398935": true,
+      "1789906759203": true,
+      "1789906882496": true,
+      "1789906918834": true,
+      "1789906096359": true,
+      "1789988594423": true,
+      "1789988631597": true,
+      "1789995635102": true,
+      "1789995563020": true,
+      "1789928995178": true
+    },
+    "ag_2026_10": {
+      "1790206473416.9727": true,
+      "1790206473416.3625": true,
+      "1790206473416.433": true,
+      "1790206473416.7812": true,
+      "1790206473416.9043": true,
+      "1790206473416.0662": true,
+      "1790206473416.6562": true,
+      "1790336496865.408": true,
+      "1790206473416.587": true,
+      "1790206473416.6865": false,
+      "1790206473416.1697": true
+    }
+  },
+  "lugares": [
+    "Don Gastón",
+    "Carrefour",
+    "Changomas",
+    "Farmacity",
+    "Sameep",
+    "Pampers Srl",
+    "Familia Bercomat",
+    "Del Campo Herrajes",
+    "Nut Mirasoles Pasteler",
+    "Pizza Ya",
+    "Shell",
+    "YPF",
+    "Carniceria WIN",
+    "Gasto",
+    "Supermercados Impulso",
+    "La casa del queso",
+    "Avícola Josefina",
+    "Esem motos",
+    "Verdulería Xiomara",
+    "Municipalidad de Resistencia",
+    "La llave del Chaco",
+    "Feria Av. Lavalle",
+    "Feria de las Heras",
+    "Vivero",
+    "Panadería Marcelo",
+    "Electrolíneas",
+    "Lo de Chachi",
+    "Santander Río",
+    "Ypf de la sabin",
+    "Banco del Chaco",
+    "Shell 25 de Mayo",
+    "San Antonio",
+    "Shell 25 de mayo y calle 8",
+    "Ypf Luminium",
+    "Bonafide",
+    "Colombraro"
+  ],
+  "marcas": [
+    "Pamp",
+    "Arcor",
+    "Fox",
+    "Bic",
+    "Filgo",
+    "Ipanema",
+    "Coca Cola",
+    "Indivisa",
+    "Lion",
+    "La Reina",
+    "YPF",
+    "Shell",
+    "Bonafide",
+    "Colombraro"
+  ],
+  "tarjetas": [
+    {
+      "id": "tj1",
+      "nombre": "Visa Santander",
+      "titular": "Alejandro",
+      "cierre": 1,
+      "vto": 9,
+      "debito": false
+    },
+    {
+      "id": "tj2",
+      "nombre": "Visa Banco del Chaco",
+      "titular": "Clarisa",
+      "cierre": null,
+      "vto": null,
+      "debito": true
+    },
+    {
+      "id": "tj3",
+      "nombre": "Tuya Banco del Chaco",
+      "titular": "Clarisa",
+      "cierre": null,
+      "vto": null,
+      "debito": true
+    }
+  ],
+  "cuotas": [
+    {
+      "id": "cu1",
+      "tarjetaId": "tj1",
+      "desc": "El Cobertizo",
+      "valor": 17783.17,
+      "mon": "ARS",
+      "total": 6,
+      "y": 2026,
+      "m": 9
+    },
+    {
+      "id": "cu1790713708456",
+      "tarjetaId": "tj2",
+      "desc": "PSA",
+      "detalle": "Equipo para hacer soda",
+      "valor": 22920,
+      "mon": "ARS",
+      "total": 15,
+      "y": 2026,
+      "m": 1
+    },
+    {
+      "id": "cu1790713769172",
+      "tarjetaId": "tj2",
+      "desc": "PSA",
+      "detalle": "Filtro de agua",
+      "valor": 31840.87,
+      "mon": "ARS",
+      "total": 24,
+      "y": 2026,
+      "m": 8
+    },
+    {
+      "id": "cu1790713823465",
+      "tarjetaId": "tj2",
+      "desc": "Spotify",
+      "detalle": "Abono mensual",
+      "valor": 5999,
+      "mon": "ARS",
+      "total": 1,
+      "y": 2026,
+      "m": 10
+    },
+    {
+      "id": "cu1790713866052",
+      "tarjetaId": "tj2",
+      "desc": "San Cristóbal",
+      "detalle": "Seguro UP",
+      "valor": 78332,
+      "mon": "ARS",
+      "total": 1,
+      "y": 2026,
+      "m": 10
+    },
+    {
+      "id": "cu1790713973000",
+      "tarjetaId": "tj2",
+      "desc": "DONCAR",
+      "detalle": "Servicie UP",
+      "valor": 26195.44,
+      "mon": "ARS",
+      "total": 6,
+      "y": 2026,
+      "m": 8
+    },
+    {
+      "id": "cu1790714043474",
+      "tarjetaId": "tj2",
+      "desc": "Tarjeta",
+      "detalle": "Cargo anual",
+      "valor": 15840,
+      "mon": "ARS",
+      "total": 6,
+      "y": 2026,
+      "m": 5
+    }
+  ]
+}
