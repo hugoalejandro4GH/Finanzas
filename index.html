@@ -12,6 +12,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Finanzas">
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
@@ -324,11 +325,11 @@ tr:hover td{background:rgba(42,138,90,.03);}
     <div class="login-logo">🏠</div>
     <h2>Finanzas del Hogar</h2>
     <p>Familia Fernandez Soto<br><br>Ingresá el código de acceso para sincronizar los datos.</p>
-    <div style="margin-top:20px;width:280px">
-      <input type="password" id="gh-token-input" placeholder="Código de acceso" style="width:100%;padding:11px 14px;border:1px solid var(--bd);border-radius:8px;font-size:15px;font-family:var(--font);background:var(--s2);color:var(--tx);outline:none;margin-bottom:10px;">
-      <button class="btn b-acc" onclick="ghLogin()" style="width:100%;padding:11px;font-size:15px;">Ingresar</button>
-    </div>
-    <div id="login-status" style="margin-top:14px;font-size:13px;color:var(--tx3)"></div>
+    <input type="password" id="gh-token-input" placeholder="Código de acceso"
+      onkeypress="if(event.key==='Enter')ghLogin()"
+      style="width:100%;padding:11px 14px;border:1px solid var(--bd);border-radius:8px;font-size:15px;font-family:var(--font);background:var(--s2);color:var(--tx);outline:none;margin-bottom:10px;margin-top:10px;">
+    <button class="btn b-acc" onclick="ghLogin()" style="width:100%;padding:11px;font-size:15px;">Ingresar</button>
+    <div id="login-status" style="margin-top:14px;font-size:13px;color:var(--red);min-height:20px;font-weight:600;"></div>
   </div>
 </div>
 
@@ -355,7 +356,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
   </div>
   <div class="sync-box">
     <div class="sync-status"><div class="sync-dot dot-off" id="sync-dot"></div><span id="sync-lbl" style="font-size:12px;color:var(--tx3)">Sin conexión</span></div>
-    <button class="btn b-ghost b-sm" style="width:100%" onclick="syncNow()">☁ Sync GitHub</button>
+    <button class="btn b-ghost b-sm" style="width:100%" onclick="syncNow()">☁ Guardar ahora</button>
     <div style="margin-top:8px;font-size:11px;color:var(--tx3)" id="sync-user"></div>
   </div>
   <div class="tc-box">
@@ -521,14 +522,13 @@ tr:hover td{background:rgba(42,138,90,.03);}
 
     <!-- DATOS -->
     <div class="view" id="view-datos">
-      <div class="card"><div class="card-hd"><h3>Sincronización con GitHub</h3></div>
+      <div class="card"><div class="card-hd"><h3>Sincronización</h3></div>
         <div style="padding:16px">
-          <p style="font-size:var(--sz-sm);color:var(--tx2);margin-bottom:14px">Los datos se guardan automáticamente en <strong>FinanzasFS_datos.json</strong> en el repositorio GitHub.</p>
+          <p style="font-size:var(--sz-sm);color:var(--tx2);margin-bottom:14px">Los datos se guardan automáticamente en <strong>FinanzasFS_datos.json</strong> en GitHub.</p>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
-            <button class="btn b-acc" onclick="syncNow()">☁ Sincronizar ahora</button>
+            <button class="btn b-acc" onclick="syncNow()">☁ Guardar ahora</button>
             <button class="btn b-ghost" onclick="signOut()">Cerrar sesión</button>
           </div>
-          <div id="drive-file-info" style="margin-top:12px;font-size:var(--sz-xs);color:var(--tx3)"></div>
         </div>
       </div>
       <div class="card"><div class="card-hd"><h3>Importar egresos (Excel o CSV)</h3></div>
@@ -713,10 +713,13 @@ tr:hover td{background:rgba(42,138,90,.03);}
 // CONFIGURACIÓN
 // ════════════════════════════════════
 // GitHub storage
-const GH_OWNER   = 'hugoalejandro4gh';
-const GH_REPO    = 'Finanzas';
-const GH_FILE    = 'FinanzasFS_datos.json';
-const FILE_NAME  = GH_FILE; // alias para compatibilidad
+const GH_OWNER = 'hugoalejandro4gh';
+const GH_REPO  = 'Finanzas';
+const GH_FILE  = 'FinanzasFS_datos.json';
+const FILE_NAME = GH_FILE;
+const GH_API   = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
+const GH_HDR   = ()=>({Authorization:`token ${ghToken}`,Accept:'application/vnd.github.v3+json','Content-Type':'application/json'});
+
 const DCATS  = ['Vivienda','Servicios','Transporte','Educación','Alimentación','Limpieza e Higiene','Deporte y Salud','Tarjetas','Inversión','Otros'];
 const DFU    = ['Sueldo Alejandro','Sueldo Clarisa','Honorarios','Tuya Recargable','Inversión','Alquiler','Otros ingresos'];
 const DLUG   = ['Don Gastón','Carrefour','Changomas','Farmacity'];
@@ -739,51 +742,63 @@ let DB={cats:DCATS,fu:DFU,lugares:DLUG,marcas:DMARCAS,tc:1200,meses:{},agenda:{}
 function setSyncStatus(t,m){document.getElementById('sync-dot').className='sync-dot dot-'+t;document.getElementById('sync-lbl').textContent=m;}
 
 function ghLogin(){
-  const tk=document.getElementById('gh-token-input').value.trim();
-  if(!tk){document.getElementById('login-status').textContent='Ingresá el código de acceso';return;}
-  ghToken=tk;
-  localStorage.setItem('ghToken',tk);
-  document.getElementById('login-status').textContent='Conectando...';
-  loadFromGitHub();
+  try{
+    const tk=document.getElementById('gh-token-input').value.trim();
+    const st=document.getElementById('login-status');
+    if(!tk){st.textContent='Ingresá el código de acceso';return;}
+    ghToken=tk;
+    localStorage.setItem('ghToken',tk);
+    st.textContent='Conectando...';
+    st.style.color='var(--tx3)';
+    loadFromGitHub();
+  }catch(e){
+    document.getElementById('login-status').textContent='Error: '+(e.message||e);
+  }
 }
 
 function ghAutoLogin(){
-  const saved=localStorage.getItem('ghToken');
-  if(saved){ghToken=saved;loadFromGitHub();}
+  try{
+    const saved=localStorage.getItem('ghToken');
+    if(saved){ghToken=saved;loadFromGitHub();}
+  }catch(e){}
 }
 
 function signOut(){
   ghToken=null;ghFileSha=null;
-  localStorage.removeItem('ghToken');
+  try{localStorage.removeItem('ghToken');}catch(e){}
   document.getElementById('login-screen').classList.add('show');
   setSyncStatus('off','Sin conexión');
   toast('Sesión cerrada');
 }
 
-// ════════════════════════════════════
-// GITHUB API
-// ════════════════════════════════════
-const GH_API=`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
-const GH_HDR=()=>({Authorization:`token ${ghToken}`,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'});
-
 async function loadFromGitHub(){
   setSyncStatus('sync','Cargando...');
+  const st=document.getElementById('login-status');
   try{
     const r=await fetch(GH_API,{headers:GH_HDR()});
-    if(r.status===401){ghToken=null;localStorage.removeItem('ghToken');document.getElementById('login-screen').classList.add('show');document.getElementById('login-status').textContent='Código incorrecto, intentá de nuevo';setSyncStatus('off','Sin conexión');return;}
+    if(r.status===401){
+      ghToken=null;
+      try{localStorage.removeItem('ghToken');}catch(e){}
+      document.getElementById('login-screen').classList.add('show');
+      st.textContent='Código incorrecto, intentá de nuevo';
+      st.style.color='var(--red)';
+      setSyncStatus('off','Sin conexión');
+      return;
+    }
     if(r.status===404){
-      // archivo no existe aún
       ghFileSha=null;
       document.getElementById('login-screen').classList.remove('show');
       document.getElementById('sync-user').textContent=GH_OWNER;
-      setSyncStatus('ok','Archivo nuevo');toast('Archivo nuevo — se creará al guardar datos');
-      refreshAll();return;
+      setSyncStatus('ok','Archivo nuevo');
+      toast('Archivo nuevo — se creará al guardar datos');
+      refreshAll();
+      return;
     }
     if(!r.ok)throw new Error('HTTP '+r.status);
     const meta=await r.json();
     ghFileSha=meta.sha;
-    const data=JSON.parse(atob(meta.content.replace(/
-/g,'')));
+    const content=meta.content.replace(/\n/g,'');
+    const data=JSON.parse(atob(content));
     DB=data;
     if(!DB.agenda)DB.agenda={};
     if(!DB.lugares)DB.lugares=DLUG;
@@ -797,11 +812,15 @@ async function loadFromGitHub(){
     document.getElementById('tcInput').value=tc;
     document.getElementById('login-screen').classList.remove('show');
     document.getElementById('sync-user').textContent=GH_OWNER;
-    const fecha=meta.encoding?new Date().toLocaleString('es-AR'):'—';
-    document.getElementById('drive-file-info').textContent='Archivo: '+GH_FILE+' · Última sync: '+new Date().toLocaleString('es-AR');
-    setSyncStatus('ok','Sincronizado');toast('✓ Datos cargados');
+    setSyncStatus('ok','Sincronizado');
+    toast('✓ Datos cargados');
     refreshAll();
-  }catch(e){setSyncStatus('err','Error de conexión');toast('Error: '+(e.message||e));}
+  }catch(e){
+    setSyncStatus('err','Error de conexión');
+    st.textContent='Error: '+(e.message||e);
+    st.style.color='var(--red)';
+    toast('Error: '+(e.message||e));
+  }
 }
 
 async function saveToGitHub(){
@@ -809,7 +828,7 @@ async function saveToGitHub(){
   setSyncStatus('sync','Guardando...');
   DB.tc=tc;
   const body=JSON.stringify(DB,null,2);
-  const payload={message:'sync datos finanzas',content:btoa(unescape(encodeURIComponent(body)))};
+  const payload={message:'sync finanzas',content:btoa(unescape(encodeURIComponent(body)))};
   if(ghFileSha)payload.sha=ghFileSha;
   try{
     const r=await fetch(GH_API,{method:'PUT',headers:GH_HDR(),body:JSON.stringify(payload)});
@@ -2285,7 +2304,8 @@ if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.s
 (function(){
   const now=new Date();mes=now.getMonth()+1;anio=now.getFullYear();
   document.getElementById('selMes').value=mes;
-  ghAutoLogin();document.getElementById('selAnio').value=anio;
+  document.getElementById('selAnio').value=anio;
+  ghAutoLogin();
 })();
 </script>
 </body>
