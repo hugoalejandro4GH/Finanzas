@@ -2646,6 +2646,17 @@
           ],
           "itemCount": 1,
           "lugar": "Colombraro"
+        },
+        {
+          "id": "c1791663073486",
+          "nombre": "Seguridad del barrio",
+          "fecha": "2026-10-10",
+          "persona": "Ambos",
+          "total": 43707,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -3151,6 +3162,14 @@
           "marca": "Colombraro",
           "lugar": "Colombraro",
           "obs": ""
+        },
+        {
+          "id": "i1791663073486",
+          "compId": "c1791663073486",
+          "item": "Seguridad del barrio",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 43707
         }
       ]
     }
@@ -3191,7 +3210,8 @@
       "1790336496865.408": true,
       "1790206473416.587": true,
       "1790206473416.6865": false,
-      "1790206473416.1697": true
+      "1790206473416.1697": true,
+      "1790206473416.4043": true
     }
   },
   "lugares": [
