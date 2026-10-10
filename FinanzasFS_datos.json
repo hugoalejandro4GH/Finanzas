@@ -2662,12 +2662,24 @@
           "id": "c1791663487822",
           "nombre": "YPF",
           "fecha": "2026-10-09",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 30500,
           "cats": [
             "Casa"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1791664031070",
+          "nombre": "Pampers Srl",
+          "fecha": "2026-10-09",
+          "persona": "Hogar",
+          "total": 3700,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Pampers Srl"
         }
       ],
       "items": [
@@ -3189,6 +3201,19 @@
           "cat": "Casa",
           "mon": "ARS",
           "monto": 30500
+        },
+        {
+          "id": "i1791664031070",
+          "compId": "c1791664031070",
+          "item": "Ravioles de Ricota",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3700,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": "Pamp",
+          "lugar": "Pampers Srl",
+          "obs": ""
         }
       ]
     }
