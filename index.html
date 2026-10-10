@@ -12,7 +12,6 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Finanzas">
-<script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <style>
@@ -324,9 +323,11 @@ tr:hover td{background:rgba(42,138,90,.03);}
   <div class="login-card">
     <div class="login-logo">🏠</div>
     <h2>Finanzas del Hogar</h2>
-    <p>Familia Fernandez Soto<br><br>Iniciá sesión con tu cuenta de Google para sincronizar los datos en todos tus dispositivos.</p>
-    <div id="g_id_onload" data-client_id="185520780134-7ur7mafoeiorbhhli5sadhcqqauf3s2l.apps.googleusercontent.com" data-callback="onGoogleLogin" data-auto_prompt="false"></div>
-    <div class="g_id_signin" data-type="standard" data-size="large" data-theme="filled_blue" data-text="signin_with" data-shape="rectangular" data-locale="es" data-width="280"></div>
+    <p>Familia Fernandez Soto<br><br>Ingresá el código de acceso para sincronizar los datos.</p>
+    <div style="margin-top:20px;width:280px">
+      <input type="password" id="gh-token-input" placeholder="Código de acceso" style="width:100%;padding:11px 14px;border:1px solid var(--bd);border-radius:8px;font-size:15px;font-family:var(--font);background:var(--s2);color:var(--tx);outline:none;margin-bottom:10px;">
+      <button class="btn b-acc" onclick="ghLogin()" style="width:100%;padding:11px;font-size:15px;">Ingresar</button>
+    </div>
     <div id="login-status" style="margin-top:14px;font-size:13px;color:var(--tx3)"></div>
   </div>
 </div>
@@ -354,7 +355,7 @@ tr:hover td{background:rgba(42,138,90,.03);}
   </div>
   <div class="sync-box">
     <div class="sync-status"><div class="sync-dot dot-off" id="sync-dot"></div><span id="sync-lbl" style="font-size:12px;color:var(--tx3)">Sin conexión</span></div>
-    <button class="btn b-ghost b-sm" style="width:100%" onclick="syncNow()">☁ Sincronizar ahora</button>
+    <button class="btn b-ghost b-sm" style="width:100%" onclick="syncNow()">☁ Sync GitHub</button>
     <div style="margin-top:8px;font-size:11px;color:var(--tx3)" id="sync-user"></div>
   </div>
   <div class="tc-box">
@@ -520,9 +521,9 @@ tr:hover td{background:rgba(42,138,90,.03);}
 
     <!-- DATOS -->
     <div class="view" id="view-datos">
-      <div class="card"><div class="card-hd"><h3>Sincronización con Google Drive</h3></div>
+      <div class="card"><div class="card-hd"><h3>Sincronización con GitHub</h3></div>
         <div style="padding:16px">
-          <p style="font-size:var(--sz-sm);color:var(--tx2);margin-bottom:14px">Los datos se guardan automáticamente en <strong>FinanzasFS_datos.json</strong> en tu Google Drive.</p>
+          <p style="font-size:var(--sz-sm);color:var(--tx2);margin-bottom:14px">Los datos se guardan automáticamente en <strong>FinanzasFS_datos.json</strong> en el repositorio GitHub.</p>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
             <button class="btn b-acc" onclick="syncNow()">☁ Sincronizar ahora</button>
             <button class="btn b-ghost" onclick="signOut()">Cerrar sesión</button>
@@ -711,9 +712,11 @@ tr:hover td{background:rgba(42,138,90,.03);}
 // ════════════════════════════════════
 // CONFIGURACIÓN
 // ════════════════════════════════════
-const CLIENT_ID = '185520780134-7ur7mafoeiorbhhli5sadhcqqauf3s2l.apps.googleusercontent.com';
-const SCOPES    = 'https://www.googleapis.com/auth/drive.file';
-const FILE_NAME = 'FinanzasFS_datos.json';
+// GitHub storage
+const GH_OWNER   = 'hugoalejandro4gh';
+const GH_REPO    = 'Finanzas';
+const GH_FILE    = 'FinanzasFS_datos.json';
+const FILE_NAME  = GH_FILE; // alias para compatibilidad
 const DCATS  = ['Vivienda','Servicios','Transporte','Educación','Alimentación','Limpieza e Higiene','Deporte y Salud','Tarjetas','Inversión','Otros'];
 const DFU    = ['Sueldo Alejandro','Sueldo Clarisa','Honorarios','Tuya Recargable','Inversión','Alquiler','Otros ingresos'];
 const DLUG   = ['Don Gastón','Carrefour','Changomas','Farmacity'];
@@ -725,78 +728,99 @@ const COLORES= ['#2a8a5a','#1e8050','#d4880a','#c04848','#4a7a5a','#38a870','#b0
 // ESTADO
 // ════════════════════════════════════
 let mes=new Date().getMonth()+1, anio=new Date().getFullYear();
-let tc=1200, accessToken=null, driveFileId=null, userEmail='', syncTimer=null, tokenClient=null;
+let tc=1200, ghToken=null, ghFileSha=null, syncTimer=null;
 let chartDonut=null, chartBars=null;
 let pendingImport=null;
 let DB={cats:DCATS,fu:DFU,lugares:DLUG,marcas:DMARCAS,tc:1200,meses:{},agenda:{}};
 
 // ════════════════════════════════════
-// GOOGLE AUTH — UN SOLO FLUJO
-// ════════════════════════════════════
-function onGoogleLogin(response){
-  const payload=JSON.parse(atob(response.credential.split('.')[1]));
-  userEmail=payload.email;
-  document.getElementById('sync-user').textContent=userEmail;
-  document.getElementById('login-status').textContent='Conectando con Drive...';
-  tokenClient=google.accounts.oauth2.initTokenClient({
-    client_id:CLIENT_ID, scope:SCOPES, hint:userEmail,
-    callback:(tr)=>{
-      if(tr.error){document.getElementById('login-status').textContent='Error: '+tr.error;return;}
-      accessToken=tr.access_token;
-      document.getElementById('login-screen').classList.remove('show');
-      setSyncStatus('sync','Conectando...');
-      loadFromDrive();
-    }
-  });
-  setTimeout(()=>tokenClient.requestAccessToken({prompt:'',hint:userEmail,login_hint:userEmail}),300);
-}
-function signOut(){accessToken=null;driveFileId=null;document.getElementById('login-screen').classList.add('show');setSyncStatus('off','Sin conexión');toast('Sesión cerrada');}
-
-// ════════════════════════════════════
-// DRIVE
+// GITHUB AUTH + STORAGE
 // ════════════════════════════════════
 function setSyncStatus(t,m){document.getElementById('sync-dot').className='sync-dot dot-'+t;document.getElementById('sync-lbl').textContent=m;}
-async function findDriveFile(){const r=await fetch(`https://www.googleapis.com/drive/v3/files?q=name='${FILE_NAME}'+and+trashed=false&fields=files(id,name,modifiedTime)`,{headers:{Authorization:'Bearer '+accessToken}});const d=await r.json();return(d.files&&d.files.length)?d.files[0]:null;}
-async function loadFromDrive(){
+
+function ghLogin(){
+  const tk=document.getElementById('gh-token-input').value.trim();
+  if(!tk){document.getElementById('login-status').textContent='Ingresá el código de acceso';return;}
+  ghToken=tk;
+  localStorage.setItem('ghToken',tk);
+  document.getElementById('login-status').textContent='Conectando...';
+  loadFromGitHub();
+}
+
+function ghAutoLogin(){
+  const saved=localStorage.getItem('ghToken');
+  if(saved){ghToken=saved;loadFromGitHub();}
+}
+
+function signOut(){
+  ghToken=null;ghFileSha=null;
+  localStorage.removeItem('ghToken');
+  document.getElementById('login-screen').classList.add('show');
+  setSyncStatus('off','Sin conexión');
+  toast('Sesión cerrada');
+}
+
+// ════════════════════════════════════
+// GITHUB API
+// ════════════════════════════════════
+const GH_API=`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
+const GH_HDR=()=>({Authorization:`token ${ghToken}`,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'});
+
+async function loadFromGitHub(){
   setSyncStatus('sync','Cargando...');
   try{
-    const file=await findDriveFile();
-    if(file){
-      driveFileId=file.id;
-      const r=await fetch(`https://www.googleapis.com/drive/v3/files/${file.id}?alt=media`,{headers:{Authorization:'Bearer '+accessToken}});
-      const data=await r.json();
-      DB=data;
-      if(!DB.agenda)DB.agenda={};
-      if(!DB.lugares)DB.lugares=DLUG;
-      if(!DB.marcas)DB.marcas=DMARCAS;
-      tjInit();
-      // Migración: normalizar persona de egresos a 'Hogar'
-      if(DB.meses){Object.values(DB.meses).forEach(md=>{
-        (md.comps||[]).forEach(c=>{if(c.persona&&c.persona!=='Hogar')c.persona='Hogar';});
-        // Migración: ítems sin categoría → 'Otros'
-        (md.items||[]).forEach(i=>{if(!i.cat)i.cat='Otros';});
-      });}
-      tc=DB.tc||1200;
-      document.getElementById('tcInput').value=tc;
-      document.getElementById('drive-file-info').textContent='Archivo: '+FILE_NAME+' · Última sync: '+new Date(file.modifiedTime).toLocaleString('es-AR');
-      setSyncStatus('ok','Sincronizado');toast('✓ Datos cargados');
-    }else{setSyncStatus('ok','Archivo nuevo');toast('Archivo nuevo — se creará al guardar datos');}
+    const r=await fetch(GH_API,{headers:GH_HDR()});
+    if(r.status===401){ghToken=null;localStorage.removeItem('ghToken');document.getElementById('login-screen').classList.add('show');document.getElementById('login-status').textContent='Código incorrecto, intentá de nuevo';setSyncStatus('off','Sin conexión');return;}
+    if(r.status===404){
+      // archivo no existe aún
+      ghFileSha=null;
+      document.getElementById('login-screen').classList.remove('show');
+      document.getElementById('sync-user').textContent=GH_OWNER;
+      setSyncStatus('ok','Archivo nuevo');toast('Archivo nuevo — se creará al guardar datos');
+      refreshAll();return;
+    }
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const meta=await r.json();
+    ghFileSha=meta.sha;
+    const data=JSON.parse(atob(meta.content.replace(/
+/g,'')));
+    DB=data;
+    if(!DB.agenda)DB.agenda={};
+    if(!DB.lugares)DB.lugares=DLUG;
+    if(!DB.marcas)DB.marcas=DMARCAS;
+    tjInit();
+    if(DB.meses){Object.values(DB.meses).forEach(md=>{
+      (md.comps||[]).forEach(c=>{if(c.persona&&c.persona!=='Hogar')c.persona='Hogar';});
+      (md.items||[]).forEach(i=>{if(!i.cat)i.cat='Otros';});
+    });}
+    tc=DB.tc||1200;
+    document.getElementById('tcInput').value=tc;
+    document.getElementById('login-screen').classList.remove('show');
+    document.getElementById('sync-user').textContent=GH_OWNER;
+    const fecha=meta.encoding?new Date().toLocaleString('es-AR'):'—';
+    document.getElementById('drive-file-info').textContent='Archivo: '+GH_FILE+' · Última sync: '+new Date().toLocaleString('es-AR');
+    setSyncStatus('ok','Sincronizado');toast('✓ Datos cargados');
     refreshAll();
-  }catch(e){setSyncStatus('err','Error de conexión');toast('Error al conectar con Drive');}
+  }catch(e){setSyncStatus('err','Error de conexión');toast('Error: '+(e.message||e));}
 }
-async function saveToDrive(){
-  if(!accessToken)return;
+
+async function saveToGitHub(){
+  if(!ghToken)return;
   setSyncStatus('sync','Guardando...');
   DB.tc=tc;
   const body=JSON.stringify(DB,null,2);
+  const payload={message:'sync datos finanzas',content:btoa(unescape(encodeURIComponent(body)))};
+  if(ghFileSha)payload.sha=ghFileSha;
   try{
-    if(driveFileId){await fetch(`https://www.googleapis.com/upload/drive/v3/files/${driveFileId}?uploadType=media`,{method:'PATCH',headers:{Authorization:'Bearer '+accessToken,'Content-Type':'application/json'},body});}
-    else{const meta=await fetch('https://www.googleapis.com/drive/v3/files',{method:'POST',headers:{Authorization:'Bearer '+accessToken,'Content-Type':'application/json'},body:JSON.stringify({name:FILE_NAME,mimeType:'application/json'})});const mj=await meta.json();driveFileId=mj.id;await fetch(`https://www.googleapis.com/upload/drive/v3/files/${driveFileId}?uploadType=media`,{method:'PATCH',headers:{Authorization:'Bearer '+accessToken,'Content-Type':'application/json'},body});}
+    const r=await fetch(GH_API,{method:'PUT',headers:GH_HDR(),body:JSON.stringify(payload)});
+    if(!r.ok){const e=await r.json();throw new Error(e.message||r.status);}
+    const rj=await r.json();
+    ghFileSha=rj.content.sha;
     setSyncStatus('ok','Sincronizado · '+new Date().toLocaleTimeString('es-AR'));
-  }catch(e){setSyncStatus('err','Error al guardar');}
+  }catch(e){setSyncStatus('err','Error al guardar');toast('Error guardando: '+(e.message||e));}
 }
-function scheduleSave(){clearTimeout(syncTimer);syncTimer=setTimeout(saveToDrive,2000);}
-function syncNow(){if(!accessToken){toast('Sin sesión activa');return;}saveToDrive();}
+function scheduleSave(){clearTimeout(syncTimer);syncTimer=setTimeout(saveToGitHub,2000);}
+function syncNow(){if(!ghToken){toast('Sin sesión activa');return;}saveToGitHub();}
 
 // ════════════════════════════════════
 // DB HELPERS
@@ -2260,7 +2284,8 @@ function refreshAll(){syncTarjetasPE();renderPres();renderIR();renderEg();render
 if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{});});}
 (function(){
   const now=new Date();mes=now.getMonth()+1;anio=now.getFullYear();
-  document.getElementById('selMes').value=mes;document.getElementById('selAnio').value=anio;
+  document.getElementById('selMes').value=mes;
+  ghAutoLogin();document.getElementById('selAnio').value=anio;
 })();
 </script>
 </body>
