@@ -2783,6 +2783,18 @@
             "Donación"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1791725323676",
+          "nombre": "Capilla Guadalupe",
+          "fecha": "2026-10-10",
+          "persona": "Hogar",
+          "total": 16000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Capilla Guadalupe"
         }
       ],
       "items": [
@@ -3409,6 +3421,19 @@
           "cat": "Donación",
           "mon": "ARS",
           "monto": 15000.11
+        },
+        {
+          "id": "i1791725323676",
+          "compId": "c1791725323676",
+          "item": "Pastafrola + budín",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 16000,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Capilla Guadalupe",
+          "obs": ""
         }
       ]
     }
@@ -3494,7 +3519,8 @@
     "Shell 25 de mayo y calle 8",
     "Ypf Luminium",
     "Bonafide",
-    "Colombraro"
+    "Colombraro",
+    "Capilla Guadalupe"
   ],
   "marcas": [
     "Pamp",
