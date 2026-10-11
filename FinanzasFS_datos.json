@@ -2739,6 +2739,17 @@
             "Educación"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1791725051620",
+          "nombre": "Inglés Ramiro",
+          "fecha": "2026-10-11",
+          "persona": "Ambos",
+          "total": 64000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -3333,6 +3344,14 @@
           "cat": "Educación",
           "mon": "ARS",
           "monto": 280800
+        },
+        {
+          "id": "i1791725051620",
+          "compId": "c1791725051620",
+          "item": "Inglés Ramiro",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 64000
         }
       ]
     }
@@ -3376,7 +3395,8 @@
       "1790206473416.1697": true,
       "1790206473416.4043": true,
       "1790212993952": true,
-      "1790206473416.3323": true
+      "1790206473416.3323": true,
+      "1790206473416.076": true
     }
   },
   "lugares": [
