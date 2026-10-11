@@ -2761,6 +2761,17 @@
             "Educación"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1791725077989",
+          "nombre": "Inglés Clarisa",
+          "fecha": "2026-10-10",
+          "persona": "Ambos",
+          "total": 30000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -3371,6 +3382,14 @@
           "cat": "Educación",
           "mon": "ARS",
           "monto": 64000
+        },
+        {
+          "id": "i1791725077989",
+          "compId": "c1791725077989",
+          "item": "Inglés Clarisa",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 30000
         }
       ]
     }
@@ -3416,7 +3435,8 @@
       "1790212993952": true,
       "1790206473416.3323": true,
       "1790206473416.076": true,
-      "1790206473416.6318": true
+      "1790206473416.6318": true,
+      "1790206473416.1294": true
     }
   },
   "lugares": [
