@@ -2750,6 +2750,17 @@
             "Educación"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1791725055354",
+          "nombre": "Inglés Franco",
+          "fecha": "2026-10-11",
+          "persona": "Ambos",
+          "total": 64000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -3352,6 +3363,14 @@
           "cat": "Educación",
           "mon": "ARS",
           "monto": 64000
+        },
+        {
+          "id": "i1791725055354",
+          "compId": "c1791725055354",
+          "item": "Inglés Franco",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 64000
         }
       ]
     }
@@ -3396,7 +3415,8 @@
       "1790206473416.4043": true,
       "1790212993952": true,
       "1790206473416.3323": true,
-      "1790206473416.076": true
+      "1790206473416.076": true,
+      "1790206473416.6318": true
     }
   },
   "lugares": [
