@@ -2728,6 +2728,17 @@
           ],
           "itemCount": 1,
           "lugar": "Pampers Srl"
+        },
+        {
+          "id": "c1791725020133",
+          "nombre": "Escuela Ramiro",
+          "fecha": "2026-10-11",
+          "persona": "Ambos",
+          "total": 280800,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -3314,6 +3325,14 @@
           "marca": "Pamp",
           "lugar": "Pampers Srl",
           "obs": ""
+        },
+        {
+          "id": "i1791725020134",
+          "compId": "c1791725020133",
+          "item": "Escuela Ramiro",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 280800
         }
       ]
     }
@@ -3356,7 +3375,8 @@
       "1790206473416.6865": false,
       "1790206473416.1697": true,
       "1790206473416.4043": true,
-      "1790212993952": true
+      "1790212993952": true,
+      "1790206473416.3323": true
     }
   },
   "lugares": [
