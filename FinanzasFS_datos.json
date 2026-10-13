@@ -987,6 +987,20 @@
           ],
           "itemCount": 24,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1791865208707",
+          "nombre": "ticket_dongaston_30092026",
+          "fecha": "2026-09-30",
+          "persona": "Clarisa",
+          "total": 75397.94,
+          "cats": [
+            "Limpieza e Higiene",
+            "Alimentación",
+            "Deporte y Salud"
+          ],
+          "itemCount": 13,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -2629,6 +2643,162 @@
           "mon": "ARS",
           "monto": 3790,
           "cant": 2,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918652087070.07001316957502568",
+          "compId": "c1791865208707",
+          "item": "Afeitadora Bic Comfort Advance x4",
+          "marca": "Bic",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 3895,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918652087070.35097324731154433",
+          "compId": "c1791865208707",
+          "item": "Bananas ecuatorianas",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 10799.35,
+          "cant": 2.71,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918652087070.8236641360346858",
+          "compId": "c1791865208707",
+          "item": "Cebolla",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3734.55,
+          "cant": 1.29,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918652087070.4589650708115499",
+          "compId": "c1791865208707",
+          "item": "Jabón líquido Popeye Aroma Relax x200cc",
+          "marca": "Popeye",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 3790,
+          "cant": 2,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918652087070.07835217727101418",
+          "compId": "c1791865208707",
+          "item": "Jabón líquido Palmolive Nutrimilk x200cc",
+          "marca": "Palmolive",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 1895,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918652087070.5550862947641167",
+          "compId": "c1791865208707",
+          "item": "Desodorante Nivea Deo Aero Sensitive Men x150ml",
+          "marca": "Nivea",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 10185,
+          "cant": 3,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918652087070.10505649529235384",
+          "compId": "c1791865208707",
+          "item": "Pan dulce Panino Nuevo x400g",
+          "marca": "Panino",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1895,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918652087070.19467994803942312",
+          "compId": "c1791865208707",
+          "item": "Papas blancas",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 8985.93,
+          "cant": 3.22,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918652087070.8464788661052137",
+          "compId": "c1791865208707",
+          "item": "Queso barra",
+          "marca": "Tres Niñas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2505.91,
+          "cant": 0.22,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918652087070.8745479859895372",
+          "compId": "c1791865208707",
+          "item": "Queso barra",
+          "marca": "Tres Niñas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 17932.2,
+          "cant": 1.56,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918652087070.39004836802132237",
+          "compId": "c1791865208707",
+          "item": "Salsa golf x125g",
+          "marca": "Hellmann's",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1395,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918652087070.25259974260424556",
+          "compId": "c1791865208707",
+          "item": "Seven Up x3 litros",
+          "marca": "Seven Up",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6590,
+          "cant": 2,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918652087070.5041395802142178",
+          "compId": "c1791865208707",
+          "item": "Sidra x710cc",
+          "marca": "La Farruca",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1795,
+          "cant": 1,
           "uni": "unidad",
           "lugar": "Don Gastón"
         }
@@ -4401,7 +4571,11 @@
     "Natura",
     "Tacural",
     "Monarca",
-    "Tiempo Libre"
+    "Tiempo Libre",
+    "Popeye",
+    "Palmolive",
+    "Nivea",
+    "La Farruca"
   ],
   "tarjetas": [
     {
