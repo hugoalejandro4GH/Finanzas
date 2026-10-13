@@ -931,7 +931,7 @@
           "id": "c1791862963591",
           "nombre": "ticket_dongaston_18092026",
           "fecha": "2026-09-18",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 29644.69,
           "cats": [
             "Alimentación"
@@ -943,7 +943,7 @@
           "id": "c1791863202657",
           "nombre": "ticket_dongaston_29092026",
           "fecha": "2026-09-29",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 7150,
           "cats": [
             "Alimentación"
@@ -955,7 +955,7 @@
           "id": "c1791863467880",
           "nombre": "ticket_dongaston_25092026",
           "fecha": "2026-09-25",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 26679.15,
           "cats": [
             "Alimentación"
@@ -967,7 +967,7 @@
           "id": "c1791863991468",
           "nombre": "ticket_frutosnoa_30092026",
           "fecha": "2026-09-30",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 11750,
           "cats": [
             "Alimentación"
@@ -979,7 +979,7 @@
           "id": "c1791864552977",
           "nombre": "ticket_dongaston_27092026",
           "fecha": "2026-09-27",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 121648.87999999999,
           "cats": [
             "Alimentación",
@@ -992,7 +992,7 @@
           "id": "c1791865208707",
           "nombre": "ticket_dongaston_30092026",
           "fecha": "2026-09-30",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 75397.94,
           "cats": [
             "Limpieza e Higiene",
@@ -3158,6 +3158,15 @@
           "mon": "ARS",
           "monto": 32974,
           "obs": "ANSES"
+        },
+        {
+          "id": 1791892769255,
+          "fecha": "2026-10-13",
+          "fuente": "Sueldo Alejandro",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 389279.32,
+          "obs": ""
         }
       ],
       "comps": [
@@ -3800,7 +3809,7 @@
           "id": "c1791865656160",
           "nombre": "ticket_dongaston_05102026",
           "fecha": "2026-10-05",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 36726.049999999996,
           "cats": [
             "Alimentación",
@@ -3813,7 +3822,7 @@
           "id": "c1791865739620",
           "nombre": "ticket_dongaston_07102026",
           "fecha": "2026-10-07",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 19290.95,
           "cats": [
             "Alimentación"
