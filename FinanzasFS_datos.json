@@ -950,6 +950,18 @@
           ],
           "itemCount": 2,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1791863467880",
+          "nombre": "ticket_dongaston_25092026",
+          "fecha": "2026-09-25",
+          "persona": "Clarisa",
+          "total": 26679.15,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 11,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -2099,6 +2111,138 @@
           "cat": "Alimentación",
           "mon": "ARS",
           "monto": 1195,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918634678800.13400709825762347",
+          "compId": "c1791863467880",
+          "item": "Aquarius naranja x2,25L",
+          "marca": "Aquarius",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2695,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918634678800.3829664694998015",
+          "compId": "c1791863467880",
+          "item": "Aquarius pomelo rosado x2,25L",
+          "marca": "Aquarius",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2695,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918634678800.2645016518180374",
+          "compId": "c1791863467880",
+          "item": "Galletitas 7 semillas x189g",
+          "marca": "Hogareñas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1395,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918634678800.32287436447450457",
+          "compId": "c1791863467880",
+          "item": "Galletitas salvado x185g",
+          "marca": "Hogareñas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1495,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918634678800.7313865119108066",
+          "compId": "c1791863467880",
+          "item": "Pan dulce Panino Nuevo x400g",
+          "marca": "Panino",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3790,
+          "cant": 2,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918634678800.9005659458954737",
+          "compId": "c1791863467880",
+          "item": "Galletitas con membrillo x500g",
+          "marca": "9 de Oro",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2395,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918634678800.408101436043359",
+          "compId": "c1791863467880",
+          "item": "Seven Up x3 litros",
+          "marca": "Seven Up",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3295,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918634678800.684271146050538",
+          "compId": "c1791863467880",
+          "item": "Surtido galletitas x400g",
+          "marca": "Bagley",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2695,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918634678800.1878995189913768",
+          "compId": "c1791863467880",
+          "item": "Crackers queso x96g",
+          "marca": "Traviata",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1579.9,
+          "cant": 2,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918634678800.8431504057805009",
+          "compId": "c1791863467880",
+          "item": "Turrones x25g",
+          "marca": "Misky",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2849.25,
+          "cant": 15,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918634678800.059546384748005665",
+          "compId": "c1791863467880",
+          "item": "Yerba mate 4 Flex x500g",
+          "marca": "Unión",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1795,
           "cant": 1,
           "uni": "unidad",
           "lugar": "Don Gastón"
@@ -3850,7 +3994,14 @@
     "Unión",
     "La Casona",
     "Tres Niñas",
-    "Lario"
+    "Lario",
+    "Aquarius",
+    "Hogareñas",
+    "Panino",
+    "9 de Oro",
+    "Seven Up",
+    "Traviata",
+    "Misky"
   ],
   "tarjetas": [
     {
