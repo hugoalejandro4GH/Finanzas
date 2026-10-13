@@ -2733,7 +2733,7 @@
           "id": "c1791725020133",
           "nombre": "Escuela Ramiro",
           "fecha": "2026-10-11",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 280800,
           "cats": [
             "Educación"
@@ -2744,7 +2744,7 @@
           "id": "c1791725051620",
           "nombre": "Inglés Ramiro",
           "fecha": "2026-10-11",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 64000,
           "cats": [
             "Educación"
@@ -2755,7 +2755,7 @@
           "id": "c1791725055354",
           "nombre": "Inglés Franco",
           "fecha": "2026-10-11",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 64000,
           "cats": [
             "Educación"
@@ -2766,7 +2766,7 @@
           "id": "c1791725077989",
           "nombre": "Inglés Clarisa",
           "fecha": "2026-10-10",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 30000,
           "cats": [
             "Educación"
@@ -2777,7 +2777,7 @@
           "id": "c1791725117664",
           "nombre": "Aporte Clari",
           "fecha": "2026-10-10",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 15000.11,
           "cats": [
             "Donación"
@@ -2795,6 +2795,19 @@
           ],
           "itemCount": 1,
           "lugar": "Capilla Guadalupe"
+        },
+        {
+          "id": "c1791860618201",
+          "nombre": "ticket_dongaston_21092026",
+          "fecha": "2026-09-21",
+          "persona": "Clarisa",
+          "total": 73059.28,
+          "cats": [
+            "Alimentación",
+            "Limpieza e Higiene"
+          ],
+          "itemCount": 16,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -3434,6 +3447,198 @@
           "marca": null,
           "lugar": "Capilla Guadalupe",
           "obs": ""
+        },
+        {
+          "id": "i17918606182010.010187996175057945",
+          "compId": "c1791860618201",
+          "item": "Arvejas Molto Tetra Recar",
+          "marca": "Molto",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2359.8,
+          "cant": 4,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.5880178432241413",
+          "compId": "c1791860618201",
+          "item": "Bananas ecuatorianas",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6874.12,
+          "cant": 1.73,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.45598883178309824",
+          "compId": "c1791860618201",
+          "item": "Choclo entero amarillo",
+          "marca": "Arcor",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1895,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.05172648867148211",
+          "compId": "c1791860618201",
+          "item": "Fécula de mandioca",
+          "marca": "Femag",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2795,
+          "cant": 1,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.15853003853147252",
+          "compId": "c1791860618201",
+          "item": "Huevos maple x30",
+          "marca": "Sta. Ana",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5895,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.35764285924969763",
+          "compId": "c1791860618201",
+          "item": "Jamón cocido",
+          "marca": "Genuino",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 11515.4,
+          "cant": 0.82,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.5327094260215253",
+          "compId": "c1791860618201",
+          "item": "Morrón rojo",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4212.33,
+          "cant": 0.85,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.9257950078581332",
+          "compId": "c1791860618201",
+          "item": "Naranja",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3000.15,
+          "cant": 1.77,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.6918552175519974",
+          "compId": "c1791860618201",
+          "item": "Pote crema doble 200cc",
+          "marca": "Ilolay",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1895,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.1770519125995299",
+          "compId": "c1791860618201",
+          "item": "Queso cremoso",
+          "marca": "LS Cremon",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 16083.21,
+          "cant": 1.52,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.7644594497862613",
+          "compId": "c1791860618201",
+          "item": "Sal fina x500g",
+          "marca": "Celusal",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 1575,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.49084337625063423",
+          "compId": "c1791860618201",
+          "item": "Surtido galletitas x400g",
+          "marca": "Bagley",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2895,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.8824903961785538",
+          "compId": "c1791860618201",
+          "item": "Yerba con jengibre x500g",
+          "marca": "Cbse",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1795,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.7187004647323956",
+          "compId": "c1791860618201",
+          "item": "Yerba mate 4 Flex x500g",
+          "marca": "Unión",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1795,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.83881186626853",
+          "compId": "c1791860618201",
+          "item": "Zanahoria",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3041.65,
+          "cant": 1.27,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918606182010.5876277442350832",
+          "compId": "c1791860618201",
+          "item": "Zapallo brasilero",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5432.62,
+          "cant": 2.48,
+          "uni": "kg",
+          "lugar": "Don Gastón"
         }
       ]
     }
@@ -3536,7 +3741,17 @@
     "YPF",
     "Shell",
     "Bonafide",
-    "Colombraro"
+    "Colombraro",
+    "Molto",
+    "Femag",
+    "Sta. Ana",
+    "Genuino",
+    "Ilolay",
+    "LS Cremon",
+    "Celusal",
+    "Bagley",
+    "Cbse",
+    "Unión"
   ],
   "tarjetas": [
     {
