@@ -919,14 +919,13 @@
           "id": "c1791861352943",
           "nombre": "ticket_dongaston_21092026",
           "fecha": "2026-09-21",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 73059.28,
           "cats": [
-            "Alimentación",
-            "Limpieza e Higiene"
+            "Alimentación"
           ],
           "itemCount": 16,
-          "lugar": "Don Gastón"
+          "lugar": "ticket_dongaston_21092026"
         }
       ],
       "items": [
@@ -1940,12 +1939,13 @@
           "compId": "c1791861352943",
           "item": "Sal fina x500g",
           "marca": "Celusal",
-          "cat": "Limpieza e Higiene",
+          "cat": "Alimentación",
           "mon": "ARS",
           "monto": 1575,
           "cant": 1,
           "uni": "unidad",
-          "lugar": "Don Gastón"
+          "lugar": "ticket_dongaston_21092026",
+          "obs": ""
         },
         {
           "id": "i17918613529430.7497787968269862",
