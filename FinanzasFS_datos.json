@@ -3808,6 +3808,18 @@
           ],
           "itemCount": 10,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1791865739620",
+          "nombre": "ticket_dongaston_07102026",
+          "fecha": "2026-10-07",
+          "persona": "Clarisa",
+          "total": 19290.95,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 5,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -4567,6 +4579,66 @@
           "cant": 3,
           "uni": "unidad",
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918657396200.986322852963594",
+          "compId": "c1791865739620",
+          "item": "Crema de leche x200cc",
+          "marca": "Tremblay",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1895,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918657396200.007268456753836139",
+          "compId": "c1791865739620",
+          "item": "Huevos maple x30",
+          "marca": "Sta. Ana",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5895,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918657396200.18436242164511907",
+          "compId": "c1791865739620",
+          "item": "Naranja",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3051,
+          "cant": 1.8,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918657396200.4428178531649518",
+          "compId": "c1791865739620",
+          "item": "Pan dulce Panino Nuevo x400g",
+          "marca": "Panino",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1859.95,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918657396200.30810840757317437",
+          "compId": "c1791865739620",
+          "item": "Seven Up x3 litros",
+          "marca": "Seven Up",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6590,
+          "cant": 2,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
         }
       ]
     }
@@ -4712,7 +4784,8 @@
     "Cañuelas",
     "Matarazzo",
     "Elite",
-    "Terrabusi"
+    "Terrabusi",
+    "Tremblay"
   ],
   "tarjetas": [
     {
