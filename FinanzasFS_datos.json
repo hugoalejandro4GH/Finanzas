@@ -962,6 +962,18 @@
           ],
           "itemCount": 11,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1791863991468",
+          "nombre": "ticket_frutosnoa_30092026",
+          "fecha": "2026-09-30",
+          "persona": "Clarisa",
+          "total": 11750,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 6,
+          "lugar": "Frutos del NOA"
         }
       ],
       "items": [
@@ -2246,6 +2258,78 @@
           "cant": 1,
           "uni": "unidad",
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918639914680.4793233356458245",
+          "compId": "c1791863991468",
+          "item": "Nuez entera blanca extra light",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2360,
+          "cant": 100,
+          "uni": "g",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17918639914680.9474723298172939",
+          "compId": "c1791863991468",
+          "item": "Almohaditas de frutilla",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1475,
+          "cant": 150,
+          "uni": "g",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17918639914680.786623293190665",
+          "compId": "c1791863991468",
+          "item": "Almohaditas de chocolate negro",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1650,
+          "cant": 150,
+          "uni": "g",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17918639914680.8070609927984713",
+          "compId": "c1791863991468",
+          "item": "Copos de maíz sin azúcar",
+          "marca": "Lasfor",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1560,
+          "cant": 250,
+          "uni": "g",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17918639914680.43946145319575636",
+          "compId": "c1791863991468",
+          "item": "Maní japonés clásico",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1535,
+          "cant": 250,
+          "uni": "g",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17918639914680.1832589450609079",
+          "compId": "c1791863991468",
+          "item": "Almendras",
+          "marca": "Carmel",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3170,
+          "cant": 100,
+          "uni": "g",
+          "lugar": "Frutos del NOA"
         }
       ]
     },
@@ -3965,7 +4049,8 @@
     "Ypf Luminium",
     "Bonafide",
     "Colombraro",
-    "Capilla Guadalupe"
+    "Capilla Guadalupe",
+    "Frutos del NOA"
   ],
   "marcas": [
     "Pamp",
@@ -4001,7 +4086,9 @@
     "9 de Oro",
     "Seven Up",
     "Traviata",
-    "Misky"
+    "Misky",
+    "Lasfor",
+    "Carmel"
   ],
   "tarjetas": [
     {
