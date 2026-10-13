@@ -3795,6 +3795,19 @@
           ],
           "itemCount": 1,
           "lugar": "Capilla Guadalupe"
+        },
+        {
+          "id": "c1791865656160",
+          "nombre": "ticket_dongaston_05102026",
+          "fecha": "2026-10-05",
+          "persona": "Clarisa",
+          "total": 36726.049999999996,
+          "cats": [
+            "Alimentación",
+            "Limpieza e Higiene"
+          ],
+          "itemCount": 10,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -4434,6 +4447,126 @@
           "marca": null,
           "lugar": "Capilla Guadalupe",
           "obs": ""
+        },
+        {
+          "id": "i17918656561600.03725971434918507",
+          "compId": "c1791865656160",
+          "item": "Banana",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1306.02,
+          "cant": 0.6,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918656561600.22186976702103622",
+          "compId": "c1791865656160",
+          "item": "Harina 000 x1kg",
+          "marca": "Cañuelas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 849.95,
+          "cant": 1,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918656561600.05700378585240229",
+          "compId": "c1791865656160",
+          "item": "Harina leudante con vitamina D x1kg",
+          "marca": "Pureza",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1259.95,
+          "cant": 1,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918656561600.3357235379017385",
+          "compId": "c1791865656160",
+          "item": "Jamón cocido",
+          "marca": "Genuino",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3270.15,
+          "cant": 0.23,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918656561600.692744897742564",
+          "compId": "c1791865656160",
+          "item": "Jamón cocido",
+          "marca": "Genuino",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 7183.15,
+          "cant": 0.51,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918656561600.4524142673920085",
+          "compId": "c1791865656160",
+          "item": "Fideos lasagna x250g",
+          "marca": "Matarazzo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1695,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918656561600.0872627143178798",
+          "compId": "c1791865656160",
+          "item": "Naranja",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3093.38,
+          "cant": 1.83,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918656561600.6945489843911132",
+          "compId": "c1791865656160",
+          "item": "Papel higiénico Elite HS x4 50m",
+          "marca": "Elite",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 11940,
+          "cant": 4,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918656561600.43572060807159996",
+          "compId": "c1791865656160",
+          "item": "Queso barra",
+          "marca": "Tres Niñas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3218.6,
+          "cant": 0.28,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918656561600.8241092146590696",
+          "compId": "c1791865656160",
+          "item": "Tallarín x500g",
+          "marca": "Terrabusi",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2909.85,
+          "cant": 3,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
         }
       ]
     }
@@ -4575,7 +4708,11 @@
     "Popeye",
     "Palmolive",
     "Nivea",
-    "La Farruca"
+    "La Farruca",
+    "Cañuelas",
+    "Matarazzo",
+    "Elite",
+    "Terrabusi"
   ],
   "tarjetas": [
     {
