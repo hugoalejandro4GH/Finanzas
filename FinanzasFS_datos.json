@@ -926,6 +926,18 @@
           ],
           "itemCount": 16,
           "lugar": "ticket_dongaston_21092026"
+        },
+        {
+          "id": "c1791862963591",
+          "nombre": "ticket_dongaston_18092026",
+          "fecha": "2026-09-18",
+          "persona": "Clarisa",
+          "total": 29644.69,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 4,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -2005,6 +2017,54 @@
           "monto": 5432.62,
           "cant": 2.48,
           "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918629635910.6621918496897123",
+          "compId": "c1791862963591",
+          "item": "Jamón cocido horma chica",
+          "marca": "La Casona",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 7104.38,
+          "cant": 0.51,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918629635910.9752488095267933",
+          "compId": "c1791862963591",
+          "item": "Queso barra",
+          "marca": "Tres Niñas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 15541.24,
+          "cant": 1.35,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918629635910.6373442818803184",
+          "compId": "c1791862963591",
+          "item": "Salamín P.F. Tandil",
+          "marca": "Lario",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4204.07,
+          "cant": 0.15,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918629635910.5109920917092622",
+          "compId": "c1791862963591",
+          "item": "Tomates cherry x250g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2795,
+          "cant": 1,
+          "uni": "unidad",
           "lugar": "Don Gastón"
         }
       ]
@@ -3751,7 +3811,10 @@
     "Celusal",
     "Bagley",
     "Cbse",
-    "Unión"
+    "Unión",
+    "La Casona",
+    "Tres Niñas",
+    "Lario"
   ],
   "tarjetas": [
     {
