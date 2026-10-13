@@ -3820,18 +3820,6 @@
           ],
           "itemCount": 5,
           "lugar": "Don Gastón"
-        },
-        {
-          "id": "c1791865777250",
-          "nombre": "ticket_dongaston_07102026",
-          "fecha": "2026-10-07",
-          "persona": "Clarisa",
-          "total": 19290.95,
-          "cats": [
-            "Alimentación"
-          ],
-          "itemCount": 5,
-          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -4643,66 +4631,6 @@
         {
           "id": "i17918657396200.30810840757317437",
           "compId": "c1791865739620",
-          "item": "Seven Up x3 litros",
-          "marca": "Seven Up",
-          "cat": "Alimentación",
-          "mon": "ARS",
-          "monto": 6590,
-          "cant": 2,
-          "uni": "unidad",
-          "lugar": "Don Gastón"
-        },
-        {
-          "id": "i17918657772500.0011671835025450772",
-          "compId": "c1791865777250",
-          "item": "Crema de leche x200cc",
-          "marca": "Tremblay",
-          "cat": "Alimentación",
-          "mon": "ARS",
-          "monto": 1895,
-          "cant": 1,
-          "uni": "unidad",
-          "lugar": "Don Gastón"
-        },
-        {
-          "id": "i17918657772500.04198381421694919",
-          "compId": "c1791865777250",
-          "item": "Huevos maple x30",
-          "marca": "Sta. Ana",
-          "cat": "Alimentación",
-          "mon": "ARS",
-          "monto": 5895,
-          "cant": 1,
-          "uni": "unidad",
-          "lugar": "Don Gastón"
-        },
-        {
-          "id": "i17918657772500.9607783033050725",
-          "compId": "c1791865777250",
-          "item": "Naranja",
-          "marca": null,
-          "cat": "Alimentación",
-          "mon": "ARS",
-          "monto": 3051,
-          "cant": 1.8,
-          "uni": "kg",
-          "lugar": "Don Gastón"
-        },
-        {
-          "id": "i17918657772500.7060971273794517",
-          "compId": "c1791865777250",
-          "item": "Pan dulce Panino Nuevo x400g",
-          "marca": "Panino",
-          "cat": "Alimentación",
-          "mon": "ARS",
-          "monto": 1859.95,
-          "cant": 1,
-          "uni": "unidad",
-          "lugar": "Don Gastón"
-        },
-        {
-          "id": "i17918657772500.31079404682158884",
-          "compId": "c1791865777250",
           "item": "Seven Up x3 litros",
           "marca": "Seven Up",
           "cat": "Alimentación",
