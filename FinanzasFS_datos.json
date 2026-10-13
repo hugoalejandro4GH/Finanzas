@@ -938,6 +938,18 @@
           ],
           "itemCount": 4,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1791863202657",
+          "nombre": "ticket_dongaston_29092026",
+          "fecha": "2026-09-29",
+          "persona": "Clarisa",
+          "total": 7150,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 2,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -2063,6 +2075,30 @@
           "cat": "Alimentación",
           "mon": "ARS",
           "monto": 2795,
+          "cant": 1,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918632026570.5866009563745022",
+          "compId": "c1791863202657",
+          "item": "Leche parcialmente descremada x1L",
+          "marca": "Ilolay",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5955,
+          "cant": 3,
+          "uni": "unidad",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17918632026570.39866681669954884",
+          "compId": "c1791863202657",
+          "item": "Yogur natural x140g",
+          "marca": "Ilolay",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1195,
           "cant": 1,
           "uni": "unidad",
           "lugar": "Don Gastón"
