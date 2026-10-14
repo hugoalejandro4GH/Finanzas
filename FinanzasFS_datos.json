@@ -3841,6 +3841,18 @@
           ],
           "itemCount": 31,
           "lugar": "ticket_dongaston_13102026"
+        },
+        {
+          "id": "c1791943333593",
+          "nombre": "Gasto",
+          "fecha": "2026-10-14",
+          "persona": "Hogar",
+          "total": 1000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Gasto"
         }
       ],
       "items": [
@@ -5034,6 +5046,19 @@
           "cant": 2,
           "uni": "unidad",
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "i1791943333593",
+          "compId": "c1791943333593",
+          "item": "Turrones",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1000,
+          "cant": 3,
+          "uni": "unidad",
+          "marca": "Arcor",
+          "lugar": "Gasto",
+          "obs": ""
         }
       ]
     }
