@@ -3865,6 +3865,17 @@
           ],
           "itemCount": 1,
           "lugar": "Sabores de la abuela"
+        },
+        {
+          "id": "c1791949554688",
+          "nombre": "Villa San Martín",
+          "fecha": "2026-10-14",
+          "persona": "Ambos",
+          "total": 71500,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -5084,6 +5095,14 @@
           "marca": null,
           "lugar": "Sabores de la abuela",
           "obs": ""
+        },
+        {
+          "id": "i1791949554689",
+          "compId": "c1791949554688",
+          "item": "Basquet Ramiro",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 71500
         }
       ]
     }
@@ -5130,7 +5149,8 @@
       "1790206473416.3323": true,
       "1790206473416.076": true,
       "1790206473416.6318": true,
-      "1790206473416.1294": true
+      "1790206473416.1294": true,
+      "1790206473416.6587": true
     }
   },
   "lugares": [
