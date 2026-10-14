@@ -3876,6 +3876,17 @@
             "Deporte y Salud"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1791949700909",
+          "nombre": "IPDUV",
+          "fecha": "2026-10-14",
+          "persona": "Ambos",
+          "total": 3079.13,
+          "cats": [
+            "Vivienda"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -5103,6 +5114,14 @@
           "cat": "Deporte y Salud",
           "mon": "ARS",
           "monto": 71500
+        },
+        {
+          "id": "i1791949700920",
+          "compId": "c1791949700909",
+          "item": "Cuota Casa",
+          "cat": "Vivienda",
+          "mon": "ARS",
+          "monto": 3079.13
         }
       ]
     }
@@ -5150,7 +5169,8 @@
       "1790206473416.076": true,
       "1790206473416.6318": true,
       "1790206473416.1294": true,
-      "1790206473416.6587": true
+      "1790206473416.6587": true,
+      "1790206473416.4727": true
     }
   },
   "lugares": [
