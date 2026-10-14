@@ -3853,6 +3853,18 @@
           ],
           "itemCount": 1,
           "lugar": "Gasto"
+        },
+        {
+          "id": "c1791943384524",
+          "nombre": "Sabores de la abuela",
+          "fecha": "2026-10-14",
+          "persona": "Hogar",
+          "total": 2000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Sabores de la abuela"
         }
       ],
       "items": [
@@ -5059,6 +5071,19 @@
           "marca": "Arcor",
           "lugar": "Gasto",
           "obs": ""
+        },
+        {
+          "id": "i1791943384524",
+          "compId": "c1791943384524",
+          "item": "Torta frita",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2000,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Sabores de la abuela",
+          "obs": ""
         }
       ]
     }
@@ -5146,7 +5171,8 @@
     "Bonafide",
     "Colombraro",
     "Capilla Guadalupe",
-    "Frutos del NOA"
+    "Frutos del NOA",
+    "Sabores de la abuela"
   ],
   "marcas": [
     "Pamp",
