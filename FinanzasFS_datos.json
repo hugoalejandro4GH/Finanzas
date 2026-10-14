@@ -3834,14 +3834,13 @@
           "id": "c1791943123349",
           "nombre": "ticket_dongaston_13102026",
           "fecha": "2026-10-13",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 155826.92,
           "cats": [
-            "Alimentación",
-            "Otros"
+            "Limpieza e Higiene"
           ],
           "itemCount": 31,
-          "lugar": "Don Gastón"
+          "lugar": "ticket_dongaston_13102026"
         }
       ],
       "items": [
@@ -4833,14 +4832,15 @@
         {
           "id": "i17919431233500.0030296903012086984",
           "compId": "c1791943123349",
-          "item": "Agua saborizada limón x500ml",
+          "item": "Detergente limón x500ml",
           "marca": "Magistral",
-          "cat": "Alimentación",
+          "cat": "Limpieza e Higiene",
           "mon": "ARS",
           "monto": 7190,
           "cant": 2,
           "uni": "unidad",
-          "lugar": "Don Gastón"
+          "lugar": "ticket_dongaston_13102026",
+          "obs": ""
         },
         {
           "id": "i17919431233500.2250217859258803",
