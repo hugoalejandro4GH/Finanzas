@@ -3837,7 +3837,7 @@
           "persona": "Hogar",
           "total": 155826.92,
           "cats": [
-            "Limpieza e Higiene"
+            "Casa"
           ],
           "itemCount": 31,
           "lugar": "ticket_dongaston_13102026"
@@ -4919,12 +4919,13 @@
           "compId": "c1791943123349",
           "item": "Plato llano labrado 23cm",
           "marca": null,
-          "cat": "Otros",
+          "cat": "Casa",
           "mon": "ARS",
           "monto": 1795,
           "cant": 1,
           "uni": "unidad",
-          "lugar": "Don Gastón"
+          "lugar": "ticket_dongaston_13102026",
+          "obs": ""
         },
         {
           "id": "i17919431233500.4064308115773676",
