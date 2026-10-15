@@ -3923,6 +3923,18 @@
           ],
           "itemCount": 1,
           "lugar": "Ypf de la sabin"
+        },
+        {
+          "id": "c1792034308151",
+          "nombre": "ticket_frutosnoa_14102026 (1)",
+          "fecha": "2026-10-14",
+          "persona": "Clarisa",
+          "total": 26080,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 6,
+          "lugar": "Frutos del NOA"
         }
       ],
       "items": [
@@ -5197,6 +5209,78 @@
           "marca": null,
           "lugar": "Ypf de la sabin",
           "obs": ""
+        },
+        {
+          "id": "i17920343081510.09444498509452359",
+          "compId": "c1792034308151",
+          "item": "Copos de maíz sin azúcar x500g",
+          "marca": "Redzy",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2395,
+          "cant": 500,
+          "uni": "g",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17920343081510.9774874527199804",
+          "compId": "c1792034308151",
+          "item": "Castañas enteras x200g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 9580,
+          "cant": 200,
+          "uni": "g",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17920343081510.923565200538413",
+          "compId": "c1792034308151",
+          "item": "Almohaditas de frutilla x150g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1590,
+          "cant": 150,
+          "uni": "g",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17920343081510.013068721822584894",
+          "compId": "c1792034308151",
+          "item": "Nuez entera blanca extra light x200g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4680,
+          "cant": 200,
+          "uni": "g",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17920343081510.6597691413203828",
+          "compId": "c1792034308151",
+          "item": "Almendras x200g",
+          "marca": "Carmel",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6300,
+          "cant": 200,
+          "uni": "g",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17920343081510.011595383806520698",
+          "compId": "c1792034308151",
+          "item": "Maní japonés sabor queso x250g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1535,
+          "cant": 250,
+          "uni": "g",
+          "lugar": "Frutos del NOA"
         }
       ]
     }
@@ -5356,7 +5440,8 @@
     "Safra",
     "Prodeman",
     "La Paulina",
-    "Vigente"
+    "Vigente",
+    "Redzy"
   ],
   "tarjetas": [
     {
