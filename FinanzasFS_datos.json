@@ -3947,6 +3947,18 @@
           ],
           "itemCount": 1,
           "lugar": "Verdulería La Sin Rival"
+        },
+        {
+          "id": "c1792034610475",
+          "nombre": "Verdulería La Sin Rival",
+          "fecha": "2026-10-15",
+          "persona": "Hogar",
+          "total": 3000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Verdulería La Sin Rival"
         }
       ],
       "items": [
@@ -5298,6 +5310,19 @@
           "id": "i1792034584218",
           "compId": "c1792034584217",
           "item": "Mani con cascara",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3000,
+          "cant": 1,
+          "uni": "paquete",
+          "marca": null,
+          "lugar": "Verdulería La Sin Rival",
+          "obs": ""
+        },
+        {
+          "id": "i1792034610475",
+          "compId": "c1792034610475",
+          "item": "Espinacas",
           "cat": "Alimentación",
           "mon": "ARS",
           "monto": 3000,
