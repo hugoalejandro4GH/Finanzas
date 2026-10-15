@@ -3870,7 +3870,7 @@
           "id": "c1791949554688",
           "nombre": "Villa San Martín",
           "fecha": "2026-10-14",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 71500,
           "cats": [
             "Deporte y Salud"
@@ -3881,12 +3881,24 @@
           "id": "c1791949700909",
           "nombre": "IPDUV",
           "fecha": "2026-10-14",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 3079.13,
           "cats": [
             "Vivienda"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1792024303654",
+          "nombre": "Avícola Josefina",
+          "fecha": "2026-10-15",
+          "persona": "Hogar",
+          "total": 24600,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Avícola Josefina"
         }
       ],
       "items": [
@@ -5122,6 +5134,19 @@
           "cat": "Vivienda",
           "mon": "ARS",
           "monto": 3079.13
+        },
+        {
+          "id": "i1792024303654",
+          "compId": "c1792024303654",
+          "item": "Milanesa de pollo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 24600,
+          "cant": 3.28,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Avícola Josefina",
+          "obs": ""
         }
       ]
     }
