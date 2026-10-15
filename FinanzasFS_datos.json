@@ -3899,6 +3899,18 @@
           ],
           "itemCount": 1,
           "lugar": "Avícola Josefina"
+        },
+        {
+          "id": "c1792024476728",
+          "nombre": "Acuarela",
+          "fecha": "2026-10-15",
+          "persona": "Hogar",
+          "total": 3000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "Acuarela"
         }
       ],
       "items": [
@@ -5147,6 +5159,19 @@
           "marca": null,
           "lugar": "Avícola Josefina",
           "obs": ""
+        },
+        {
+          "id": "i1792024476728",
+          "compId": "c1792024476728",
+          "item": "Hojas negras NRO 6",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 3000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Acuarela",
+          "obs": ""
         }
       ]
     }
@@ -5237,7 +5262,8 @@
     "Colombraro",
     "Capilla Guadalupe",
     "Frutos del NOA",
-    "Sabores de la abuela"
+    "Sabores de la abuela",
+    "Acuarela"
   ],
   "marcas": [
     "Pamp",
