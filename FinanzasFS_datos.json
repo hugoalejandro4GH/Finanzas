@@ -3935,6 +3935,18 @@
           ],
           "itemCount": 6,
           "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "c1792034584217",
+          "nombre": "Verdulería La Sin Rival",
+          "fecha": "2026-10-15",
+          "persona": "Hogar",
+          "total": 3000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Verdulería La Sin Rival"
         }
       ],
       "items": [
@@ -5281,6 +5293,19 @@
           "cant": 250,
           "uni": "g",
           "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i1792034584218",
+          "compId": "c1792034584217",
+          "item": "Mani con cascara",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3000,
+          "cant": 1,
+          "uni": "paquete",
+          "marca": null,
+          "lugar": "Verdulería La Sin Rival",
+          "obs": ""
         }
       ]
     }
@@ -5372,7 +5397,8 @@
     "Capilla Guadalupe",
     "Frutos del NOA",
     "Sabores de la abuela",
-    "Acuarela"
+    "Acuarela",
+    "Verdulería La Sin Rival"
   ],
   "marcas": [
     "Pamp",
