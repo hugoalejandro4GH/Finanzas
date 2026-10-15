@@ -3911,6 +3911,18 @@
           ],
           "itemCount": 1,
           "lugar": "Acuarela"
+        },
+        {
+          "id": "c1792024596652",
+          "nombre": "Ypf de la sabin",
+          "fecha": "2026-10-15",
+          "persona": "Hogar",
+          "total": 50000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Ypf de la sabin"
         }
       ],
       "items": [
@@ -5171,6 +5183,19 @@
           "uni": "unidad",
           "marca": null,
           "lugar": "Acuarela",
+          "obs": ""
+        },
+        {
+          "id": "i1792024596652",
+          "compId": "c1792024596652",
+          "item": "Nafta Infinia",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 50000,
+          "cant": 21700,
+          "uni": "lt",
+          "marca": null,
+          "lugar": "Ypf de la sabin",
           "obs": ""
         }
       ]
