@@ -3976,7 +3976,7 @@
           "id": "c1792124561396",
           "nombre": "Municipalidad de Resistencia",
           "fecha": "2026-10-15",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 7936.85,
           "cats": [
             "Servicios"
@@ -3994,6 +3994,18 @@
           ],
           "itemCount": 1,
           "lugar": "Shell 25 de Mayo"
+        },
+        {
+          "id": "c1792168463899",
+          "nombre": "Feria de la plaza",
+          "fecha": "2026-10-16",
+          "persona": "Hogar",
+          "total": 3000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Feria de la plaza"
         }
       ],
       "items": [
@@ -5400,6 +5412,19 @@
           "marca": "Shell",
           "lugar": "Shell 25 de Mayo",
           "obs": ""
+        },
+        {
+          "id": "i1792168463899",
+          "compId": "c1792168463899",
+          "item": "Espinacas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3000,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Feria de la plaza",
+          "obs": ""
         }
       ]
     }
@@ -5494,7 +5519,8 @@
     "Sabores de la abuela",
     "Acuarela",
     "Verdulería La Sin Rival",
-    "Betiana PSA"
+    "Betiana PSA",
+    "Feria de la plaza"
   ],
   "marcas": [
     "Pamp",
