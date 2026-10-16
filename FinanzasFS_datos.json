@@ -4018,6 +4018,18 @@
           ],
           "itemCount": 1,
           "lugar": "Feria de la plaza"
+        },
+        {
+          "id": "c1792168851851",
+          "nombre": "ticket_carniceriafriar_16102026",
+          "fecha": "2026-10-16",
+          "persona": "Clarisa",
+          "total": 69315,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 3,
+          "lugar": "Carnicería Friar"
         }
       ],
       "items": [
@@ -5450,6 +5462,42 @@
           "marca": null,
           "lugar": "Feria de la plaza",
           "obs": ""
+        },
+        {
+          "id": "i17921688518520.5058738734315076",
+          "compId": "c1792168851851",
+          "item": "Vacío",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 42660,
+          "cant": 2.37,
+          "uni": "kg",
+          "lugar": "Carnicería Friar"
+        },
+        {
+          "id": "i17921688518520.6648045908456127",
+          "compId": "c1792168851851",
+          "item": "Pechito",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 10030,
+          "cant": 1.18,
+          "uni": "kg",
+          "lugar": "Carnicería Friar"
+        },
+        {
+          "id": "i17921688518520.2716444165490598",
+          "compId": "c1792168851851",
+          "item": "Costilla sel. especial",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 16625,
+          "cant": 1.33,
+          "uni": "kg",
+          "lugar": "Carnicería Friar"
         }
       ]
     }
@@ -5545,7 +5593,8 @@
     "Acuarela",
     "Verdulería La Sin Rival",
     "Betiana PSA",
-    "Feria de la plaza"
+    "Feria de la plaza",
+    "Carnicería Friar"
   ],
   "marcas": [
     "Pamp",
