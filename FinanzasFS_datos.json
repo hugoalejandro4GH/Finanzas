@@ -4030,6 +4030,18 @@
           ],
           "itemCount": 3,
           "lugar": "Carnicería Friar"
+        },
+        {
+          "id": "c1792168887998",
+          "nombre": "ticket_dongaston_16102026",
+          "fecha": "2026-10-16",
+          "persona": "Clarisa",
+          "total": 25435.840000000004,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 4,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -5498,6 +5510,54 @@
           "cant": 1.33,
           "uni": "kg",
           "lugar": "Carnicería Friar"
+        },
+        {
+          "id": "i17921688879980.9937221054635759",
+          "compId": "c1792168887998",
+          "item": "Chorizo especial",
+          "marca": "Paladini",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 14536.34,
+          "cant": 1.37,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17921688879980.18493550166512995",
+          "compId": "c1792168887998",
+          "item": "Naranja",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2661.15,
+          "cant": 1.57,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17921688879980.11546167253932049",
+          "compId": "c1792168887998",
+          "item": "Morcilla parrillera",
+          "marca": "Paladini",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6957.02,
+          "cant": 0.92,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17921688879980.2810303224707179",
+          "compId": "c1792168887998",
+          "item": "Zanahoria",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1281.33,
+          "cant": 0.54,
+          "uni": "kg",
+          "lugar": "Don Gastón"
         }
       ]
     }
@@ -5664,7 +5724,8 @@
     "La Paulina",
     "Vigente",
     "Redzy",
-    "PSA"
+    "PSA",
+    "Paladini"
   ],
   "tarjetas": [
     {
