@@ -3917,7 +3917,7 @@
           "nombre": "Ypf de la sabin",
           "fecha": "2026-10-15",
           "persona": "Hogar",
-          "total": 50000,
+          "total": 45000,
           "cats": [
             "Transporte"
           ],
@@ -5250,7 +5250,7 @@
           "item": "Nafta Infinia",
           "cat": "Transporte",
           "mon": "ARS",
-          "monto": 50000,
+          "monto": 45000,
           "cant": 21.7,
           "uni": "lt",
           "marca": null,
