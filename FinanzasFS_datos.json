@@ -4006,6 +4006,18 @@
           ],
           "itemCount": 1,
           "lugar": "Feria de la plaza"
+        },
+        {
+          "id": "c1792168494995",
+          "nombre": "Feria de la plaza",
+          "fecha": "2026-10-16",
+          "persona": "Hogar",
+          "total": 1000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Feria de la plaza"
         }
       ],
       "items": [
@@ -5421,6 +5433,19 @@
           "mon": "ARS",
           "monto": 3000,
           "cant": 2,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Feria de la plaza",
+          "obs": ""
+        },
+        {
+          "id": "i1792168494995",
+          "compId": "c1792168494995",
+          "item": "Remolacha",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1000,
+          "cant": 1,
           "uni": "unidad",
           "marca": null,
           "lugar": "Feria de la plaza",
