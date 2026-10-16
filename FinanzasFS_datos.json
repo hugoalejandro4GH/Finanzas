@@ -3982,6 +3982,18 @@
             "Servicios"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1792124749431",
+          "nombre": "Shell 25 de Mayo",
+          "fecha": "2026-10-16",
+          "persona": "Hogar",
+          "total": 3000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Shell 25 de Mayo"
         }
       ],
       "items": [
@@ -5375,6 +5387,19 @@
           "cat": "Servicios",
           "mon": "ARS",
           "monto": 7936.85
+        },
+        {
+          "id": "i1792124749431",
+          "compId": "c1792124749431",
+          "item": "Nafta Super",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 3000,
+          "cant": 1.37,
+          "uni": "lt",
+          "marca": "Shell",
+          "lugar": "Shell 25 de Mayo",
+          "obs": ""
         }
       ]
     }
