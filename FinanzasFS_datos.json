@@ -3928,7 +3928,7 @@
           "id": "c1792034308151",
           "nombre": "ticket_frutosnoa_14102026 (1)",
           "fecha": "2026-10-14",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 26080,
           "cats": [
             "Alimentación"
@@ -3959,6 +3959,18 @@
           ],
           "itemCount": 1,
           "lugar": "Verdulería La Sin Rival"
+        },
+        {
+          "id": "c1792113585143",
+          "nombre": "Betiana PSA",
+          "fecha": "2026-10-16",
+          "persona": "Hogar",
+          "total": 26000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Betiana PSA"
         }
       ],
       "items": [
@@ -5331,6 +5343,19 @@
           "marca": null,
           "lugar": "Verdulería La Sin Rival",
           "obs": ""
+        },
+        {
+          "id": "i1792113585143",
+          "compId": "c1792113585143",
+          "item": "Tubo para soda",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 26000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": "PSA",
+          "lugar": "Betiana PSA",
+          "obs": ""
         }
       ]
     }
@@ -5423,7 +5448,8 @@
     "Frutos del NOA",
     "Sabores de la abuela",
     "Acuarela",
-    "Verdulería La Sin Rival"
+    "Verdulería La Sin Rival",
+    "Betiana PSA"
   ],
   "marcas": [
     "Pamp",
@@ -5492,7 +5518,8 @@
     "Prodeman",
     "La Paulina",
     "Vigente",
-    "Redzy"
+    "Redzy",
+    "PSA"
   ],
   "tarjetas": [
     {
