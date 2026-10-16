@@ -3971,6 +3971,17 @@
           ],
           "itemCount": 1,
           "lugar": "Betiana PSA"
+        },
+        {
+          "id": "c1792124561396",
+          "nombre": "Municipalidad de Resistencia",
+          "fecha": "2026-10-15",
+          "persona": "Ambos",
+          "total": 7936.85,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -5356,6 +5367,14 @@
           "marca": "PSA",
           "lugar": "Betiana PSA",
           "obs": ""
+        },
+        {
+          "id": "i1792124561396",
+          "compId": "c1792124561396",
+          "item": "Plan de pago deuda tasas y servicios ",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 7936.85
         }
       ]
     }
@@ -5404,7 +5423,8 @@
       "1790206473416.6318": true,
       "1790206473416.1294": true,
       "1790206473416.6587": true,
-      "1790206473416.4727": true
+      "1790206473416.4727": true,
+      "1790620795230": true
     }
   },
   "lugares": [
