@@ -4066,6 +4066,18 @@
           ],
           "itemCount": 1,
           "lugar": "La casa del queso"
+        },
+        {
+          "id": "c1792198800058",
+          "nombre": "Pastilandia",
+          "fecha": "2026-10-17",
+          "persona": "Hogar",
+          "total": 12000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Pastilandia"
         }
       ],
       "items": [
@@ -5608,6 +5620,19 @@
           "marca": "Fox",
           "lugar": "La casa del queso",
           "obs": ""
+        },
+        {
+          "id": "i1792198800058",
+          "compId": "c1792198800058",
+          "item": "Pastelitos",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 12000,
+          "cant": 4,
+          "uni": "unidad",
+          "marca": "Pastilandia",
+          "lugar": "Pastilandia",
+          "obs": ""
         }
       ]
     }
@@ -5704,7 +5729,8 @@
     "Verdulería La Sin Rival",
     "Betiana PSA",
     "Feria de la plaza",
-    "Carnicería Friar"
+    "Carnicería Friar",
+    "Pastilandia"
   ],
   "marcas": [
     "Pamp",
@@ -5776,7 +5802,8 @@
     "Redzy",
     "PSA",
     "Paladini",
-    "Tonutti"
+    "Tonutti",
+    "Pastilandia"
   ],
   "tarjetas": [
     {
