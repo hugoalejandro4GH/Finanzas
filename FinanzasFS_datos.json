@@ -3986,7 +3986,7 @@
         {
           "id": "c1792124749431",
           "nombre": "Shell 25 de Mayo",
-          "fecha": "2026-10-16",
+          "fecha": "2026-10-15",
           "persona": "Hogar",
           "total": 3000,
           "cats": [
@@ -4023,7 +4023,7 @@
           "id": "c1792168851851",
           "nombre": "ticket_carniceriafriar_16102026",
           "fecha": "2026-10-16",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 69315,
           "cats": [
             "Alimentación"
@@ -4035,7 +4035,7 @@
           "id": "c1792168887998",
           "nombre": "ticket_dongaston_16102026",
           "fecha": "2026-10-16",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 25435.840000000004,
           "cats": [
             "Alimentación"
