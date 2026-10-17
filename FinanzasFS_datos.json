@@ -4042,18 +4042,6 @@
           ],
           "itemCount": 4,
           "lugar": "Don Gastón"
-        },
-        {
-          "id": "c1792196049121",
-          "nombre": "Gasto",
-          "fecha": "2026-10-17",
-          "persona": "Hogar",
-          "total": -15000,
-          "cats": [
-            "Vivienda"
-          ],
-          "itemCount": 1,
-          "lugar": "Gasto"
         }
       ],
       "items": [
@@ -5570,19 +5558,6 @@
           "cant": 0.54,
           "uni": "kg",
           "lugar": "Don Gastón"
-        },
-        {
-          "id": "i1792196049121",
-          "compId": "c1792196049121",
-          "item": "Gasto",
-          "cat": "Vivienda",
-          "mon": "ARS",
-          "monto": -15000,
-          "cant": null,
-          "uni": null,
-          "marca": null,
-          "lugar": "Gasto",
-          "obs": ""
         }
       ]
     }
