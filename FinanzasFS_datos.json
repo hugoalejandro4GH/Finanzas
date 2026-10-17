@@ -2826,6 +2826,13 @@
           "per": "Alejandro",
           "mon": "ARS",
           "monto": 1800000
+        },
+        {
+          "id": 1792199355898,
+          "fuente": "Bono Clarisa",
+          "per": "Clarisa",
+          "mon": "ARS",
+          "monto": 100000
         }
       ],
       "pe": [
