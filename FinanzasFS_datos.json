@@ -995,12 +995,10 @@
           "persona": "Hogar",
           "total": 75397.94,
           "cats": [
-            "Limpieza e Higiene",
-            "Alimentación",
-            "Deporte y Salud"
+            "Limpieza e Higiene"
           ],
           "itemCount": 13,
-          "lugar": "Don Gastón"
+          "lugar": "ticket_dongaston_30092026"
         }
       ],
       "items": [
@@ -2711,12 +2709,13 @@
           "compId": "c1791865208707",
           "item": "Desodorante Nivea Deo Aero Sensitive Men x150ml",
           "marca": "Nivea",
-          "cat": "Deporte y Salud",
+          "cat": "Limpieza e Higiene",
           "mon": "ARS",
           "monto": 10185,
           "cant": 3,
           "uni": "unidad",
-          "lugar": "Don Gastón"
+          "lugar": "ticket_dongaston_30092026",
+          "obs": ""
         },
         {
           "id": "i17918652087070.10505649529235384",
