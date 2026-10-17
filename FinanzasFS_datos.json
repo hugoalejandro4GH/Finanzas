@@ -3167,6 +3167,15 @@
           "mon": "ARS",
           "monto": 389279.32,
           "obs": ""
+        },
+        {
+          "id": 1792199419804,
+          "fecha": "2026-10-14",
+          "fuente": "Bono Clarisa",
+          "per": "Clarisa",
+          "mon": "ARS",
+          "monto": 100000,
+          "obs": ""
         }
       ],
       "comps": [
