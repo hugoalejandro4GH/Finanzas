@@ -4090,6 +4090,18 @@
           ],
           "itemCount": 1,
           "lugar": "Óptica Bosquetti"
+        },
+        {
+          "id": "c1792198997582",
+          "nombre": "Verdulería las palmeras",
+          "fecha": "2026-10-17",
+          "persona": "Hogar",
+          "total": 2000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Verdulería las palmeras"
         }
       ],
       "items": [
@@ -5658,6 +5670,19 @@
           "marca": null,
           "lugar": "Óptica Bosquetti",
           "obs": ""
+        },
+        {
+          "id": "i1792198997582",
+          "compId": "c1792198997582",
+          "item": "Tomate Cherry",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2000,
+          "cant": 0.29,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Verdulería las palmeras",
+          "obs": ""
         }
       ]
     }
@@ -5756,7 +5781,8 @@
     "Feria de la plaza",
     "Carnicería Friar",
     "Pastilandia",
-    "Óptica Bosquetti"
+    "Óptica Bosquetti",
+    "Verdulería las palmeras"
   ],
   "marcas": [
     "Pamp",
