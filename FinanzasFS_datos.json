@@ -4042,6 +4042,18 @@
           ],
           "itemCount": 4,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1792198622531",
+          "nombre": "La casa del queso",
+          "fecha": "2026-10-17",
+          "persona": "Hogar",
+          "total": 17077.4,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "La casa del queso"
         }
       ],
       "items": [
@@ -5558,6 +5570,19 @@
           "cant": 0.54,
           "uni": "kg",
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "i1792198622531",
+          "compId": "c1792198622531",
+          "item": "Queso cremoso",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 17077.4,
+          "cant": 1.48,
+          "uni": "kg",
+          "marca": "Tonutti",
+          "lugar": "La casa del queso",
+          "obs": ""
         }
       ]
     }
@@ -5725,7 +5750,8 @@
     "Vigente",
     "Redzy",
     "PSA",
-    "Paladini"
+    "Paladini",
+    "Tonutti"
   ],
   "tarjetas": [
     {
