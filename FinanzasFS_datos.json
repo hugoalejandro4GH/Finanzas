@@ -4054,6 +4054,18 @@
           ],
           "itemCount": 1,
           "lugar": "La casa del queso"
+        },
+        {
+          "id": "c1792198692751",
+          "nombre": "La casa del queso",
+          "fecha": "2026-10-17",
+          "persona": "Hogar",
+          "total": 6557.87,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "La casa del queso"
         }
       ],
       "items": [
@@ -5581,6 +5593,19 @@
           "cant": 1.48,
           "uni": "kg",
           "marca": "Tonutti",
+          "lugar": "La casa del queso",
+          "obs": ""
+        },
+        {
+          "id": "i1792198692751",
+          "compId": "c1792198692751",
+          "item": "Salame criollo picado fino",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6557.87,
+          "cant": 0.31,
+          "uni": "kg",
+          "marca": "Fox",
           "lugar": "La casa del queso",
           "obs": ""
         }
