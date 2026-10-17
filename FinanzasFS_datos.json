@@ -4078,6 +4078,18 @@
           ],
           "itemCount": 1,
           "lugar": "Pastilandia"
+        },
+        {
+          "id": "c1792198924142",
+          "nombre": "Óptica Bosquetti",
+          "fecha": "2026-10-17",
+          "persona": "Hogar",
+          "total": 51000,
+          "cats": [
+            "Otros"
+          ],
+          "itemCount": 1,
+          "lugar": "Óptica Bosquetti"
         }
       ],
       "items": [
@@ -5633,6 +5645,19 @@
           "marca": "Pastilandia",
           "lugar": "Pastilandia",
           "obs": ""
+        },
+        {
+          "id": "i1792198924142",
+          "compId": "c1792198924142",
+          "item": "Anteojos de Sol",
+          "cat": "Otros",
+          "mon": "ARS",
+          "monto": 51000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Óptica Bosquetti",
+          "obs": ""
         }
       ]
     }
@@ -5730,7 +5755,8 @@
     "Betiana PSA",
     "Feria de la plaza",
     "Carnicería Friar",
-    "Pastilandia"
+    "Pastilandia",
+    "Óptica Bosquetti"
   ],
   "marcas": [
     "Pamp",
