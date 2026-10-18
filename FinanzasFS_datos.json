@@ -5996,10 +5996,10 @@
           "tipo": "Variable",
           "desc": "Previsión de alimentos por poner alguna cosa",
           "mon": "ARS",
-          "monto": 800000,
+          "monto": 900000,
           "vto": null,
           "obs": "Estimados de alimentación del mes",
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": 1792282006986.0535,
