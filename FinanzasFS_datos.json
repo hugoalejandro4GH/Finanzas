@@ -4122,6 +4122,18 @@
           ],
           "itemCount": 1,
           "lugar": "Todo deportes"
+        },
+        {
+          "id": "c1792281829787",
+          "nombre": "Santiago",
+          "fecha": "2026-10-17",
+          "persona": "Hogar",
+          "total": 7200,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Santiago"
         }
       ],
       "items": [
@@ -5716,6 +5728,19 @@
           "marca": null,
           "lugar": "Todo deportes",
           "obs": "Regalo de mamá"
+        },
+        {
+          "id": "i1792281829787",
+          "compId": "c1792281829787",
+          "item": "Chipasitos",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 7200,
+          "cant": 0.2,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Santiago",
+          "obs": ""
         }
       ]
     }
@@ -5816,7 +5841,8 @@
     "Pastilandia",
     "Óptica Bosquetti",
     "Verdulería las palmeras",
-    "Todo deportes"
+    "Todo deportes",
+    "Santiago"
   ],
   "marcas": [
     "Pamp",
