@@ -5868,9 +5868,10 @@
           "tipo": "Fijo",
           "desc": "Celular Clari",
           "mon": "ARS",
-          "monto": 37791,
-          "vto": 1,
-          "estado": "pendiente"
+          "monto": 41393.77,
+          "vto": 2,
+          "obs": "",
+          "estado": "confirmado"
         },
         {
           "id": 1792282006986.6858,
