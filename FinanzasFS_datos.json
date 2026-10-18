@@ -6012,10 +6012,10 @@
           "tipo": "Fijo",
           "desc": "Plan de pago deuda tasas y servicios ",
           "mon": "ARS",
-          "monto": 7936.85,
+          "monto": 9182.85,
           "vto": 15,
           "obs": "",
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": 1792282006986.9895,
