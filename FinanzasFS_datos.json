@@ -4134,6 +4134,18 @@
           ],
           "itemCount": 1,
           "lugar": "Santiago"
+        },
+        {
+          "id": "c1792285686619",
+          "nombre": "Mercado libre",
+          "fecha": "2026-10-17",
+          "persona": "Hogar",
+          "total": 129999,
+          "cats": [
+            "Casa"
+          ],
+          "itemCount": 1,
+          "lugar": "Mercado libre"
         }
       ],
       "items": [
@@ -5741,6 +5753,19 @@
           "marca": null,
           "lugar": "Santiago",
           "obs": ""
+        },
+        {
+          "id": "i1792285686619",
+          "compId": "c1792285686619",
+          "item": "Freidora de aire",
+          "cat": "Casa",
+          "mon": "ARS",
+          "monto": 129999,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": "Atma",
+          "lugar": "Mercado libre",
+          "obs": ""
         }
       ]
     },
@@ -6158,7 +6183,8 @@
     "Óptica Bosquetti",
     "Verdulería las palmeras",
     "Todo deportes",
-    "Santiago"
+    "Santiago",
+    "Mercado libre"
   ],
   "marcas": [
     "Pamp",
@@ -6231,7 +6257,8 @@
     "PSA",
     "Paladini",
     "Tonutti",
-    "Pastilandia"
+    "Pastilandia",
+    "Atma"
   ],
   "tarjetas": [
     {
