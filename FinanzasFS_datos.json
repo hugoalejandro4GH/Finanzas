@@ -5777,7 +5777,7 @@
           "mon": "ARS",
           "monto": 280800,
           "vto": 10,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": 1792282006986.5872,
@@ -5787,7 +5787,7 @@
           "mon": "ARS",
           "monto": 64000,
           "vto": 10,
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": 1792282006986.1772,
