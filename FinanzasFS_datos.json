@@ -4110,6 +4110,18 @@
           ],
           "itemCount": 1,
           "lugar": "Verdulería las palmeras"
+        },
+        {
+          "id": "c1792281715848",
+          "nombre": "Todo deportes",
+          "fecha": "2026-10-18",
+          "persona": "Hogar",
+          "total": 25000,
+          "cats": [
+            "Otros"
+          ],
+          "itemCount": 1,
+          "lugar": "Todo deportes"
         }
       ],
       "items": [
@@ -5691,6 +5703,19 @@
           "marca": null,
           "lugar": "Verdulería las palmeras",
           "obs": ""
+        },
+        {
+          "id": "i1792281715848",
+          "compId": "c1792281715848",
+          "item": "Remera",
+          "cat": "Otros",
+          "mon": "ARS",
+          "monto": 25000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Todo deportes",
+          "obs": "Regalo de mamá"
         }
       ]
     }
@@ -5790,7 +5815,8 @@
     "Carnicería Friar",
     "Pastilandia",
     "Óptica Bosquetti",
-    "Verdulería las palmeras"
+    "Verdulería las palmeras",
+    "Todo deportes"
   ],
   "marcas": [
     "Pamp",
