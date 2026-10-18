@@ -5882,16 +5882,6 @@
           "estado": "pendiente"
         },
         {
-          "id": 1792282006986.117,
-          "cat": "Transporte",
-          "tipo": "Fijo",
-          "desc": "Patente UP",
-          "mon": "ARS",
-          "monto": 8440,
-          "vto": null,
-          "estado": "pendiente"
-        },
-        {
           "id": 1792282006986.3936,
           "cat": "Transporte",
           "tipo": "Fijo",
