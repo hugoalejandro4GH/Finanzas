@@ -5743,6 +5743,56 @@
           "obs": ""
         }
       ]
+    },
+    "2026_11": {
+      "pi": [],
+      "pe": [
+        {
+          "id": 1792281872735.3926,
+          "cat": "Tarjetas",
+          "tipo": "Fijo",
+          "desc": "Visa Santander",
+          "mon": "ARS",
+          "monto": 17783.17,
+          "vto": 9,
+          "tj": "tj1",
+          "tjMon": "ARS",
+          "cuotas": 17783.17,
+          "extra": 0,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1792281872735.9773,
+          "cat": "Tarjetas",
+          "tipo": "Fijo",
+          "desc": "Visa Banco del Chaco",
+          "mon": "ARS",
+          "monto": 80956.31,
+          "vto": null,
+          "tj": "tj2",
+          "tjMon": "ARS",
+          "cuotas": 80956.31,
+          "extra": 0,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1792281872735.3767,
+          "cat": "Tarjetas",
+          "tipo": "Fijo",
+          "desc": "Tuya Banco del Chaco",
+          "mon": "ARS",
+          "monto": 0,
+          "vto": null,
+          "tj": "tj3",
+          "tjMon": "ARS",
+          "cuotas": 0,
+          "extra": 0,
+          "estado": "pendiente"
+        }
+      ],
+      "ir": [],
+      "comps": [],
+      "items": []
     }
   },
   "agenda": {
@@ -5791,7 +5841,8 @@
       "1790206473416.6587": true,
       "1790206473416.4727": true,
       "1790620795230": true
-    }
+    },
+    "ag_2026_11": {}
   },
   "lugares": [
     "Don Gastón",
