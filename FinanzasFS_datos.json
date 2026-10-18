@@ -4146,6 +4146,18 @@
           ],
           "itemCount": 1,
           "lugar": "Mercado libre"
+        },
+        {
+          "id": "c1792285794567",
+          "nombre": "Mercado libre",
+          "fecha": "2026-10-17",
+          "persona": "Hogar",
+          "total": 14835,
+          "cats": [
+            "Casa"
+          ],
+          "itemCount": 1,
+          "lugar": "Mercado libre"
         }
       ],
       "items": [
@@ -5764,6 +5776,19 @@
           "cant": 1,
           "uni": "unidad",
           "marca": "Atma",
+          "lugar": "Mercado libre",
+          "obs": ""
+        },
+        {
+          "id": "i1792285794567",
+          "compId": "c1792285794567",
+          "item": "Organizador de cajón de ropa interior",
+          "cat": "Casa",
+          "mon": "ARS",
+          "monto": 14835,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
           "lugar": "Mercado libre",
           "obs": ""
         }
