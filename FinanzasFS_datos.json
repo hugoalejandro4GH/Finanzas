@@ -5826,9 +5826,10 @@
           "tipo": "Fijo",
           "desc": "Luz",
           "mon": "ARS",
-          "monto": 111609.54,
+          "monto": 138625.11,
           "vto": 5,
-          "estado": "pendiente"
+          "obs": "",
+          "estado": "confirmado"
         },
         {
           "id": 1792282006986.6245,
