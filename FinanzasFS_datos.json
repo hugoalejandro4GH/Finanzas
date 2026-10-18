@@ -5964,7 +5964,7 @@
           "monto": 15000,
           "vto": 10,
           "obs": "",
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": 1792282006986.5068,
@@ -5975,7 +5975,7 @@
           "monto": 14000,
           "vto": 3,
           "obs": "",
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": 1792282006986.977,
