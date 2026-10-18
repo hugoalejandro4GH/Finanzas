@@ -5836,9 +5836,10 @@
           "tipo": "Fijo",
           "desc": "Agua",
           "mon": "ARS",
-          "monto": 24100.58,
+          "monto": 28421.82,
           "vto": 2,
-          "estado": "pendiente"
+          "obs": "Cuota de octubre 2026",
+          "estado": "confirmado"
         },
         {
           "id": 1792282006986.0024,
