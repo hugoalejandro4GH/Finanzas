@@ -4170,6 +4170,18 @@
           ],
           "itemCount": 1,
           "lugar": "Gasto"
+        },
+        {
+          "id": "c1792440457115",
+          "nombre": "Shell 25 de Mayo",
+          "fecha": "2026-10-19",
+          "persona": "Hogar",
+          "total": 3381,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Shell 25 de Mayo"
         }
       ],
       "items": [
@@ -5815,6 +5827,19 @@
           "uni": "unidad",
           "marca": null,
           "lugar": "Gasto",
+          "obs": ""
+        },
+        {
+          "id": "i1792440457115",
+          "compId": "c1792440457115",
+          "item": "Nafta Super",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 3381,
+          "cant": 1.54,
+          "uni": "lt",
+          "marca": "Shell",
+          "lugar": "Shell 25 de Mayo",
           "obs": ""
         }
       ]
