@@ -4182,6 +4182,18 @@
           ],
           "itemCount": 1,
           "lugar": "Shell 25 de Mayo"
+        },
+        {
+          "id": "c1792452876860",
+          "nombre": "Don Gastón",
+          "fecha": "2026-10-19",
+          "persona": "Hogar",
+          "total": 6415.85,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -5840,6 +5852,19 @@
           "uni": "lt",
           "marca": "Shell",
           "lugar": "Shell 25 de Mayo",
+          "obs": ""
+        },
+        {
+          "id": "i1792452876860",
+          "compId": "c1792452876860",
+          "item": "Bananas Ecuatorianas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6415.85,
+          "cant": 1.61,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Don Gastón",
           "obs": ""
         }
       ]
