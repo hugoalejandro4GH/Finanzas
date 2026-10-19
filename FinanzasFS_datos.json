@@ -4206,6 +4206,18 @@
           ],
           "itemCount": 1,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1792453011866",
+          "nombre": "Don Gastón",
+          "fecha": "2026-10-18",
+          "persona": "Hogar",
+          "total": 2795,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -5889,6 +5901,19 @@
           "cant": 1,
           "uni": "unidad",
           "marca": "Cif",
+          "lugar": "Don Gastón",
+          "obs": ""
+        },
+        {
+          "id": "i1792453011867",
+          "compId": "c1792453011866",
+          "item": "Seven Up x3 litros",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2795,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": "Seven Up",
           "lugar": "Don Gastón",
           "obs": ""
         }
