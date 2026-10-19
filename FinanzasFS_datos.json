@@ -4158,6 +4158,18 @@
           ],
           "itemCount": 1,
           "lugar": "Mercado libre"
+        },
+        {
+          "id": "c1792440326017",
+          "nombre": "Gasto",
+          "fecha": "2026-10-19",
+          "persona": "Hogar",
+          "total": 3000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Gasto"
         }
       ],
       "items": [
@@ -5790,6 +5802,19 @@
           "uni": "unidad",
           "marca": null,
           "lugar": "Mercado libre",
+          "obs": ""
+        },
+        {
+          "id": "i1792440326017",
+          "compId": "c1792440326017",
+          "item": "Pastelitos",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3000,
+          "cant": 6,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Gasto",
           "obs": ""
         }
       ]
