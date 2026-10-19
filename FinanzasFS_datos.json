@@ -4230,6 +4230,18 @@
           ],
           "itemCount": 1,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1792453190419",
+          "nombre": "Grido",
+          "fecha": "2026-10-18",
+          "persona": "Hogar",
+          "total": 33000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Grido"
         }
       ],
       "items": [
@@ -5941,6 +5953,19 @@
           "marca": "Milkaut",
           "lugar": "Don Gastón",
           "obs": ""
+        },
+        {
+          "id": "i1792453190419",
+          "compId": "c1792453190419",
+          "item": "Torta helada",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 33000,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": "Grido",
+          "lugar": "Grido",
+          "obs": ""
         }
       ]
     },
@@ -6359,7 +6384,8 @@
     "Verdulería las palmeras",
     "Todo deportes",
     "Santiago",
-    "Mercado libre"
+    "Mercado libre",
+    "Grido"
   ],
   "marcas": [
     "Pamp",
@@ -6434,7 +6460,8 @@
     "Tonutti",
     "Pastilandia",
     "Atma",
-    "Cif"
+    "Cif",
+    "Grido"
   ],
   "tarjetas": [
     {
