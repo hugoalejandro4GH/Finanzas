@@ -4194,6 +4194,18 @@
           ],
           "itemCount": 1,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1792452936342",
+          "nombre": "Don Gastón",
+          "fecha": "2026-10-19",
+          "persona": "Hogar",
+          "total": 1795,
+          "cats": [
+            "Limpieza e Higiene"
+          ],
+          "itemCount": 1,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -5866,6 +5878,19 @@
           "marca": null,
           "lugar": "Don Gastón",
           "obs": ""
+        },
+        {
+          "id": "i1792452936342",
+          "compId": "c1792452936342",
+          "item": "Limpiador para baño",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 1795,
+          "cant": null,
+          "uni": "unidad",
+          "marca": "Cif",
+          "lugar": "Don Gastón",
+          "obs": ""
         }
       ]
     },
@@ -6358,7 +6383,8 @@
     "Paladini",
     "Tonutti",
     "Pastilandia",
-    "Atma"
+    "Atma",
+    "Cif"
   ],
   "tarjetas": [
     {
