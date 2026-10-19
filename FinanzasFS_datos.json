@@ -4218,6 +4218,18 @@
           ],
           "itemCount": 1,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1792453061550",
+          "nombre": "Don Gastón",
+          "fecha": "2026-10-18",
+          "persona": "Hogar",
+          "total": 1895,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -5914,6 +5926,19 @@
           "cant": 1,
           "uni": "unidad",
           "marca": "Seven Up",
+          "lugar": "Don Gastón",
+          "obs": ""
+        },
+        {
+          "id": "i1792453061550",
+          "compId": "c1792453061550",
+          "item": "Yogur natural",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1895,
+          "cant": 10.53,
+          "uni": "g",
+          "marca": "Milkaut",
           "lugar": "Don Gastón",
           "obs": ""
         }
