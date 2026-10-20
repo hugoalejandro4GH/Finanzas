@@ -4254,6 +4254,18 @@
           ],
           "itemCount": 1,
           "lugar": "Supermercados Impulso"
+        },
+        {
+          "id": "c1792536881059",
+          "nombre": "Gasto",
+          "fecha": "2026-10-20",
+          "persona": "Hogar",
+          "total": 1000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Gasto"
         }
       ],
       "items": [
@@ -5990,6 +6002,19 @@
           "uni": "kg",
           "marca": null,
           "lugar": "Supermercados Impulso",
+          "obs": ""
+        },
+        {
+          "id": "i1792536881059",
+          "compId": "c1792536881059",
+          "item": "Turrones",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1000,
+          "cant": 3,
+          "uni": "unidad",
+          "marca": "Arcor",
+          "lugar": "Gasto",
           "obs": ""
         }
       ]
