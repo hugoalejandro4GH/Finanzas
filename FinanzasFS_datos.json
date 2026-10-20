@@ -4242,6 +4242,18 @@
           ],
           "itemCount": 1,
           "lugar": "Grido"
+        },
+        {
+          "id": "c1792536845795",
+          "nombre": "Supermercados Impulso",
+          "fecha": "2026-10-20",
+          "persona": "Hogar",
+          "total": 2966.5,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Supermercados Impulso"
         }
       ],
       "items": [
@@ -5965,6 +5977,19 @@
           "uni": "unidad",
           "marca": "Grido",
           "lugar": "Grido",
+          "obs": ""
+        },
+        {
+          "id": "i1792536845795",
+          "compId": "c1792536845795",
+          "item": "Pan negro",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2966.5,
+          "cant": 0.85,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Supermercados Impulso",
           "obs": ""
         }
       ]
