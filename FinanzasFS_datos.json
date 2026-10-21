@@ -6169,9 +6169,10 @@
           "tipo": "Fijo",
           "desc": "Internet + Flow",
           "mon": "ARS",
-          "monto": 91573.99,
-          "vto": 1,
-          "estado": "pendiente"
+          "monto": 93506,
+          "vto": 2,
+          "obs": "",
+          "estado": "confirmado"
         },
         {
           "id": 1792282006986.3936,
