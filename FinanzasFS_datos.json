@@ -4280,6 +4280,18 @@
           ],
           "itemCount": 1,
           "lugar": "Gasto"
+        },
+        {
+          "id": "c1792623355378",
+          "nombre": "Farmacity",
+          "fecha": "2026-10-17",
+          "persona": "Hogar",
+          "total": 26394,
+          "cats": [
+            "Otros"
+          ],
+          "itemCount": 1,
+          "lugar": "Farmacity"
         }
       ],
       "items": [
@@ -6030,6 +6042,19 @@
           "marca": "Arcor",
           "lugar": "Gasto",
           "obs": ""
+        },
+        {
+          "id": "i1792623355378",
+          "compId": "c1792623355378",
+          "item": "Base liquida para rostro",
+          "cat": "Otros",
+          "mon": "ARS",
+          "monto": 26394,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Farmacity",
+          "obs": "Regalo día madre Mariela "
         }
       ]
     },
