@@ -3128,6 +3128,20 @@
           "vto": 15,
           "obs": "",
           "estado": "confirmado"
+        },
+        {
+          "id": 1792584642251.1248,
+          "cat": "Tarjetas",
+          "tipo": "Fijo",
+          "desc": "Visa Santander (dólares)",
+          "mon": "USD",
+          "monto": 20,
+          "vto": 9,
+          "tj": "tj1",
+          "tjMon": "USD",
+          "cuotas": 20,
+          "extra": 0,
+          "estado": "pendiente"
         }
       ],
       "ir": [
@@ -6615,6 +6629,17 @@
       "total": 6,
       "y": 2026,
       "m": 5
+    },
+    {
+      "id": "cu1792584642251",
+      "tarjetaId": "tj1",
+      "desc": "Suscripción Claude",
+      "detalle": "Suscripción Claude",
+      "valor": 20,
+      "mon": "USD",
+      "total": 1,
+      "y": 2026,
+      "m": 10
     }
   ]
 }
