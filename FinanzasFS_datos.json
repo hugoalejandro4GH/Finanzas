@@ -4309,7 +4309,7 @@
           "id": "c1792668350563",
           "nombre": "ticket_dongaston_21102026 (1)",
           "fecha": "2026-10-21",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 112949.76000000001,
           "cats": [
             "Limpieza e Higiene",
@@ -4318,6 +4318,18 @@
           ],
           "itemCount": 17,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1792708296542",
+          "nombre": "Consultorios Posadas",
+          "fecha": "2026-10-22",
+          "persona": "Hogar",
+          "total": 40000,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1,
+          "lugar": "Consultorios Posadas"
         }
       ],
       "items": [
@@ -6298,6 +6310,19 @@
           "cant": 1,
           "uni": "un",
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "i1792708296543",
+          "compId": "c1792708296542",
+          "item": "Atención Médica",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 40000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Consultorios Posadas",
+          "obs": ""
         }
       ]
     },
@@ -6718,7 +6743,8 @@
     "Todo deportes",
     "Santiago",
     "Mercado libre",
-    "Grido"
+    "Grido",
+    "Consultorios Posadas"
   ],
   "marcas": [
     "Pamp",
