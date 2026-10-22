@@ -4292,6 +4292,18 @@
           ],
           "itemCount": 1,
           "lugar": "Farmacity"
+        },
+        {
+          "id": "c1792633289550",
+          "nombre": "Ypf de la sabin",
+          "fecha": "2026-10-22",
+          "persona": "Hogar",
+          "total": 45000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Ypf de la sabin"
         }
       ],
       "items": [
@@ -6055,6 +6067,19 @@
           "marca": null,
           "lugar": "Farmacity",
           "obs": "Regalo día madre Mariela "
+        },
+        {
+          "id": "i1792633289550",
+          "compId": "c1792633289550",
+          "item": "Nafta Infinia",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 45000,
+          "cant": 21700,
+          "uni": "lt",
+          "marca": "YPF",
+          "lugar": "Ypf de la sabin",
+          "obs": ""
         }
       ]
     },
