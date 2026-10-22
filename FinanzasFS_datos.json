@@ -4304,6 +4304,20 @@
           ],
           "itemCount": 1,
           "lugar": "Ypf de la sabin"
+        },
+        {
+          "id": "c1792668350563",
+          "nombre": "ticket_dongaston_21102026 (1)",
+          "fecha": "2026-10-21",
+          "persona": "Clarisa",
+          "total": 112949.76000000001,
+          "cats": [
+            "Limpieza e Higiene",
+            "Alimentación",
+            "Casa"
+          ],
+          "itemCount": 17,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -6080,6 +6094,210 @@
           "marca": "YPF",
           "lugar": "Ypf de la sabin",
           "obs": ""
+        },
+        {
+          "id": "i17926683505630.2981311965883522",
+          "compId": "c1792668350563",
+          "item": "Jabón en barra ecolavado 2x200g",
+          "marca": "Ala",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 2595,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505630.393912888280633",
+          "compId": "c1792668350563",
+          "item": "Líq. lav. ropa ecolavado DP x3lts",
+          "marca": "Ala",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 8295,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505630.8697297562891465",
+          "compId": "c1792668350563",
+          "item": "Arroz Danubio 5/0 x500g",
+          "marca": "Danubio",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1579.9,
+          "cant": 2,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505630.42185551104964203",
+          "compId": "c1792668350563",
+          "item": "Suavizante ropa colores x700ml",
+          "marca": "Ayudín",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 4395,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505630.529380869385126",
+          "compId": "c1792668350563",
+          "item": "Bananas ecuatorianas",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3128.22,
+          "cant": 0.79,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505630.6595990384698311",
+          "compId": "c1792668350563",
+          "item": "Shampoo Hidra Hialurónico x200ml",
+          "marca": "Elvive",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 4995,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505630.7217312564463647",
+          "compId": "c1792668350563",
+          "item": "Huevos maple x30u",
+          "marca": "Sta. Ana",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5895,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505630.7970742223195076",
+          "compId": "c1792668350563",
+          "item": "Jamón cocido genuino",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 11063.01,
+          "cant": 0.76,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505630.6042772276175645",
+          "compId": "c1792668350563",
+          "item": "Kiwi",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2842.2,
+          "cant": 0.36,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505640.8283681603590143",
+          "compId": "c1792668350563",
+          "item": "Papel higiénico 4x80m",
+          "marca": "Higienol",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 7190,
+          "cant": 2,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505640.0007739006043560037",
+          "compId": "c1792668350563",
+          "item": "Queso cremoso",
+          "marca": "La serenísima",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 13611.43,
+          "cant": 1.15,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505640.3944096923858206",
+          "compId": "c1792668350563",
+          "item": "Paños blancos clásicos x6",
+          "marca": "Sussex",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 6790,
+          "cant": 2,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505640.7185172386739216",
+          "compId": "c1792668350563",
+          "item": "Acondicionador liso perfecto x190ml",
+          "marca": "Sedal",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 2495,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505640.6482760608972649",
+          "compId": "c1792668350563",
+          "item": "Cuchillos Dynamic blister x12u",
+          "marca": "Tramontina",
+          "cat": "Casa",
+          "mon": "ARS",
+          "monto": 18595,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505640.4417815567194223",
+          "compId": "c1792668350563",
+          "item": "Pasta dental Total Océano x100g",
+          "marca": "Vim",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 7790,
+          "cant": 2,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505640.5497788818244469",
+          "compId": "c1792668350563",
+          "item": "Desodorante Rimblock Poder Citrus x50g",
+          "marca": "Vim",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 2895,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17926683505640.8382630387753224",
+          "compId": "c1792668350563",
+          "item": "Suavizante Clásico Intenso x3l",
+          "marca": "Vivere",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 8795,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
         }
       ]
     },
@@ -6576,7 +6794,16 @@
     "Pastilandia",
     "Atma",
     "Cif",
-    "Grido"
+    "Grido",
+    "Danubio",
+    "Elvive",
+    "Higienol",
+    "La serenísima",
+    "Sussex",
+    "Sedal",
+    "Tramontina",
+    "Vim",
+    "Vivere"
   ],
   "tarjetas": [
     {
