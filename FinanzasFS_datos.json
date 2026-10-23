@@ -4366,6 +4366,18 @@
           ],
           "itemCount": 1,
           "lugar": "Shell de Laprida"
+        },
+        {
+          "id": "c1792787371692",
+          "nombre": "Avícola Josefina",
+          "fecha": "2026-10-23",
+          "persona": "Hogar",
+          "total": 32720,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Avícola Josefina"
         }
       ],
       "items": [
@@ -6398,6 +6410,19 @@
           "marca": "Shell",
           "lugar": "Shell de Laprida",
           "obs": "3663,4 km"
+        },
+        {
+          "id": "i1792787371692",
+          "compId": "c1792787371692",
+          "item": "Milanesa de pollo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 32720,
+          "cant": 4.09,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Avícola Josefina",
+          "obs": ""
         }
       ]
     },
