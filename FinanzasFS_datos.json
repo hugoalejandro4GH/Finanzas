@@ -4342,6 +4342,18 @@
           ],
           "itemCount": 1,
           "lugar": "Sube"
+        },
+        {
+          "id": "c1792749138142",
+          "nombre": "Personal",
+          "fecha": "2026-10-23",
+          "persona": "Hogar",
+          "total": 6400,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1,
+          "lugar": "Personal"
         }
       ],
       "items": [
@@ -6348,6 +6360,19 @@
           "marca": null,
           "lugar": "Sube",
           "obs": ""
+        },
+        {
+          "id": "i1792749138142",
+          "compId": "c1792749138142",
+          "item": "Saldo línea alarma",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 6400,
+          "cant": null,
+          "uni": null,
+          "marca": "Personal",
+          "lugar": "Personal",
+          "obs": ""
         }
       ]
     },
@@ -6770,7 +6795,8 @@
     "Mercado libre",
     "Grido",
     "Consultorios Posadas",
-    "Sube"
+    "Sube",
+    "Personal"
   ],
   "marcas": [
     "Pamp",
@@ -6855,7 +6881,8 @@
     "Sedal",
     "Tramontina",
     "Vim",
-    "Vivere"
+    "Vivere",
+    "Personal"
   ],
   "tarjetas": [
     {
