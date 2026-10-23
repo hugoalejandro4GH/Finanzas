@@ -4354,6 +4354,18 @@
           ],
           "itemCount": 1,
           "lugar": "Personal"
+        },
+        {
+          "id": "c1792787024811",
+          "nombre": "Shell de Laprida",
+          "fecha": "2026-10-23",
+          "persona": "Hogar",
+          "total": 3000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Shell de Laprida"
         }
       ],
       "items": [
@@ -6373,6 +6385,19 @@
           "marca": "Personal",
           "lugar": "Personal",
           "obs": ""
+        },
+        {
+          "id": "i1792787024811",
+          "compId": "c1792787024811",
+          "item": "Nafta Super",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 3000,
+          "cant": 1.37,
+          "uni": "lt",
+          "marca": "Shell",
+          "lugar": "Shell de Laprida",
+          "obs": "3663,4 km"
         }
       ]
     },
@@ -6796,7 +6821,8 @@
     "Grido",
     "Consultorios Posadas",
     "Sube",
-    "Personal"
+    "Personal",
+    "Shell de Laprida"
   ],
   "marcas": [
     "Pamp",
