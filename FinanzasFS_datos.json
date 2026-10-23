@@ -4330,6 +4330,18 @@
           ],
           "itemCount": 1,
           "lugar": "Consultorios Posadas"
+        },
+        {
+          "id": "c1792749048233",
+          "nombre": "Sube",
+          "fecha": "2026-10-23",
+          "persona": "Hogar",
+          "total": 5000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Sube"
         }
       ],
       "items": [
@@ -6323,6 +6335,19 @@
           "marca": null,
           "lugar": "Consultorios Posadas",
           "obs": ""
+        },
+        {
+          "id": "i1792749048233",
+          "compId": "c1792749048233",
+          "item": "Carga Sube",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 5000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Sube",
+          "obs": ""
         }
       ]
     },
@@ -6744,7 +6769,8 @@
     "Santiago",
     "Mercado libre",
     "Grido",
-    "Consultorios Posadas"
+    "Consultorios Posadas",
+    "Sube"
   ],
   "marcas": [
     "Pamp",
