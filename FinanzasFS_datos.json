@@ -4390,6 +4390,18 @@
           ],
           "itemCount": 1,
           "lugar": "Verdulería Xiomara"
+        },
+        {
+          "id": "c1792790352303",
+          "nombre": "Verdulería Xiomara",
+          "fecha": "2026-10-23",
+          "persona": "Hogar",
+          "total": 1500,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Verdulería Xiomara"
         }
       ],
       "items": [
@@ -6444,6 +6456,19 @@
           "mon": "ARS",
           "monto": 2000,
           "cant": 0.4,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Verdulería Xiomara",
+          "obs": ""
+        },
+        {
+          "id": "i1792790352303",
+          "compId": "c1792790352303",
+          "item": "Cebolla",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1500,
+          "cant": 0.6,
           "uni": "kg",
           "marca": null,
           "lugar": "Verdulería Xiomara",
