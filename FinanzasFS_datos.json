@@ -4402,6 +4402,18 @@
           ],
           "itemCount": 1,
           "lugar": "Verdulería Xiomara"
+        },
+        {
+          "id": "c1792851107183",
+          "nombre": "Carniceria WIN",
+          "fecha": "2026-10-24",
+          "persona": "Hogar",
+          "total": 14900,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Carniceria WIN"
         }
       ],
       "items": [
@@ -6472,6 +6484,19 @@
           "uni": "kg",
           "marca": null,
           "lugar": "Verdulería Xiomara",
+          "obs": ""
+        },
+        {
+          "id": "i1792851107183",
+          "compId": "c1792851107183",
+          "item": "Costeleta",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 14900,
+          "cant": 0.96,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Carniceria WIN",
           "obs": ""
         }
       ]
