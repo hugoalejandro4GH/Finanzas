@@ -4414,6 +4414,18 @@
           ],
           "itemCount": 1,
           "lugar": "Carniceria WIN"
+        },
+        {
+          "id": "c1792851146907",
+          "nombre": "Verdulería Xiomara",
+          "fecha": "2026-10-24",
+          "persona": "Hogar",
+          "total": 6000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Verdulería Xiomara"
         }
       ],
       "items": [
@@ -6497,6 +6509,19 @@
           "uni": "kg",
           "marca": null,
           "lugar": "Carniceria WIN",
+          "obs": ""
+        },
+        {
+          "id": "i1792851146907",
+          "compId": "c1792851146907",
+          "item": "Papas Blancas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6000,
+          "cant": 2,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Verdulería Xiomara",
           "obs": ""
         }
       ]
