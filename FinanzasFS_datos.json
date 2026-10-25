@@ -4431,13 +4431,24 @@
           "id": "c1792900142498",
           "nombre": "ticket_dongaston_24102026",
           "fecha": "2026-10-24",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 45962.28,
           "cats": [
             "Alimentación"
           ],
           "itemCount": 8,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1792936100379",
+          "nombre": "Programa ECI",
+          "fecha": "2026-10-25",
+          "persona": "Ambos",
+          "total": 43500,
+          "cats": [
+            "Inversión"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -6631,6 +6642,14 @@
           "cant": 1,
           "uni": "un",
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "i1792936100379",
+          "compId": "c1792936100379",
+          "item": "Programa ECI",
+          "cat": "Inversión",
+          "mon": "ARS",
+          "monto": 43500
         }
       ]
     },
@@ -6996,7 +7015,8 @@
       "1790206473416.1294": true,
       "1790206473416.6587": true,
       "1790206473416.4727": true,
-      "1790620795230": true
+      "1790620795230": true,
+      "1790206473416.1702": true
     },
     "ag_2026_11": {}
   },
