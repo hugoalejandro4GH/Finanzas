@@ -4449,6 +4449,18 @@
             "Inversión"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1792936276891",
+          "nombre": "Maggi",
+          "fecha": "2026-10-25",
+          "persona": "Hogar",
+          "total": 15000,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1,
+          "lugar": "Maggi"
         }
       ],
       "items": [
@@ -6650,6 +6662,19 @@
           "cat": "Inversión",
           "mon": "ARS",
           "monto": 43500
+        },
+        {
+          "id": "i1792936276891",
+          "compId": "c1792936276891",
+          "item": "Corte de pelo",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 15000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Maggi",
+          "obs": "Franco"
         }
       ]
     },
@@ -7075,7 +7100,8 @@
     "Consultorios Posadas",
     "Sube",
     "Personal",
-    "Shell de Laprida"
+    "Shell de Laprida",
+    "Maggi"
   ],
   "marcas": [
     "Pamp",
