@@ -4473,6 +4473,18 @@
           ],
           "itemCount": 1,
           "lugar": "Maggi"
+        },
+        {
+          "id": "c1792936448221",
+          "nombre": "Gasto",
+          "fecha": "2026-10-25",
+          "persona": "Hogar",
+          "total": 20000,
+          "cats": [
+            "Ropa"
+          ],
+          "itemCount": 1,
+          "lugar": "Gasto"
         }
       ],
       "items": [
@@ -6700,6 +6712,19 @@
           "marca": null,
           "lugar": "Maggi",
           "obs": "Ramiro "
+        },
+        {
+          "id": "i1792936448221",
+          "compId": "c1792936448221",
+          "item": "Medias",
+          "cat": "Ropa",
+          "mon": "ARS",
+          "monto": 20000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Gasto",
+          "obs": ""
         }
       ]
     },
