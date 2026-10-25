@@ -6720,8 +6720,8 @@
           "cat": "Ropa",
           "mon": "ARS",
           "monto": 20000,
-          "cant": null,
-          "uni": null,
+          "cant": 3,
+          "uni": "unidad",
           "marca": null,
           "lugar": "Gasto",
           "obs": ""
