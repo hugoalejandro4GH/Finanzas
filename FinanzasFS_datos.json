@@ -4443,7 +4443,7 @@
           "id": "c1792936100379",
           "nombre": "Programa ECI",
           "fecha": "2026-10-25",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 43500,
           "cats": [
             "Inversión"
@@ -4458,6 +4458,18 @@
           "total": 15000,
           "cats": [
             "Deporte y Salud"
+          ],
+          "itemCount": 1,
+          "lugar": "Maggi"
+        },
+        {
+          "id": "c1792936365360",
+          "nombre": "Maggi",
+          "fecha": "2026-10-25",
+          "persona": "Hogar",
+          "total": 15000,
+          "cats": [
+            "Limpieza e Higiene"
           ],
           "itemCount": 1,
           "lugar": "Maggi"
@@ -6675,6 +6687,19 @@
           "marca": null,
           "lugar": "Maggi",
           "obs": "Franco"
+        },
+        {
+          "id": "i1792936365360",
+          "compId": "c1792936365360",
+          "item": "Corte de pelo",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 15000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Maggi",
+          "obs": "Ramiro "
         }
       ]
     },
