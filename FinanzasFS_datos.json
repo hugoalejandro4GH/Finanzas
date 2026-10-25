@@ -4426,6 +4426,18 @@
           ],
           "itemCount": 1,
           "lugar": "Verdulería Xiomara"
+        },
+        {
+          "id": "c1792900142498",
+          "nombre": "ticket_dongaston_24102026",
+          "fecha": "2026-10-24",
+          "persona": "Clarisa",
+          "total": 45962.28,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 8,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -6523,6 +6535,102 @@
           "marca": null,
           "lugar": "Verdulería Xiomara",
           "obs": ""
+        },
+        {
+          "id": "i17929001424980.07279677571460508",
+          "compId": "c1792900142498",
+          "item": "Harina integral x1kg",
+          "marca": "Pureza",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1795,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17929001424980.9182386590663361",
+          "compId": "c1792900142498",
+          "item": "Mayonesa liviana DP x475g",
+          "marca": "Hellmann's",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5590,
+          "cant": 2,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17929001424980.4563827150204266",
+          "compId": "c1792900142498",
+          "item": "Leche UAT entera caja x1lt",
+          "marca": "Milkaut",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 11370,
+          "cant": 6,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17929001424980.5085797462998158",
+          "compId": "c1792900142498",
+          "item": "Morrón rojo",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3592.23,
+          "cant": 0.46,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17929001424980.3402155709712026",
+          "compId": "c1792900142498",
+          "item": "Naranja",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2856.08,
+          "cant": 1.69,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17929001424980.01471292949238312",
+          "compId": "c1792900142498",
+          "item": "Queso barra",
+          "marca": "Tres Niñas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 15068.97,
+          "cant": 1.21,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17929001424980.6140087396252651",
+          "compId": "c1792900142498",
+          "item": "Seven Up x3lt",
+          "marca": "Seven Up",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2895,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17929001424980.5934330509350911",
+          "compId": "c1792900142498",
+          "item": "Tomate triturado x950g",
+          "marca": "Tiempo Libre",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2795,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
         }
       ]
     },
