@@ -4485,6 +4485,18 @@
           ],
           "itemCount": 1,
           "lugar": "Gasto"
+        },
+        {
+          "id": "c1793063272786",
+          "nombre": "Focolar",
+          "fecha": "2026-10-24",
+          "persona": "Hogar",
+          "total": 12000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Focolar"
         }
       ],
       "items": [
@@ -6725,6 +6737,19 @@
           "marca": null,
           "lugar": "Gasto",
           "obs": ""
+        },
+        {
+          "id": "i1793063272786",
+          "compId": "c1793063272786",
+          "item": "Almuerzo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 12000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Focolar",
+          "obs": "Gasto de almuerzo del retiro "
         }
       ]
     },
@@ -7151,7 +7176,8 @@
     "Sube",
     "Personal",
     "Shell de Laprida",
-    "Maggi"
+    "Maggi",
+    "Focolar"
   ],
   "marcas": [
     "Pamp",
