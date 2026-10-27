@@ -4551,7 +4551,7 @@
           "nombre": "Pampers Srl",
           "fecha": "2026-10-26",
           "persona": "Hogar",
-          "total": 5300,
+          "total": 3350,
           "cats": [
             "Alimentación"
           ],
@@ -6881,7 +6881,7 @@
           "item": "Tapa para tarta",
           "cat": "Alimentación",
           "mon": "ARS",
-          "monto": 5300,
+          "monto": 3350,
           "cant": 1,
           "uni": "unidad",
           "marca": "Pamp",
