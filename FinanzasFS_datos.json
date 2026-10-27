@@ -4509,6 +4509,18 @@
           ],
           "itemCount": 1,
           "lugar": "Jugueteria"
+        },
+        {
+          "id": "c1793063546956",
+          "nombre": "Vendedor ambulante",
+          "fecha": "2026-10-24",
+          "persona": "Hogar",
+          "total": 20000,
+          "cats": [
+            "Ropa"
+          ],
+          "itemCount": 1,
+          "lugar": "Vendedor ambulante"
         }
       ],
       "items": [
@@ -6775,6 +6787,19 @@
           "marca": null,
           "lugar": "Jugueteria",
           "obs": ""
+        },
+        {
+          "id": "i1793063546956",
+          "compId": "c1793063546956",
+          "item": "Tres medias",
+          "cat": "Ropa",
+          "mon": "ARS",
+          "monto": 20000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Vendedor ambulante",
+          "obs": ""
         }
       ]
     },
@@ -7203,7 +7228,8 @@
     "Shell de Laprida",
     "Maggi",
     "Focolar",
-    "Jugueteria"
+    "Jugueteria",
+    "Vendedor ambulante"
   ],
   "marcas": [
     "Pamp",
