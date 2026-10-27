@@ -4497,6 +4497,18 @@
           ],
           "itemCount": 1,
           "lugar": "Focolar"
+        },
+        {
+          "id": "c1793063420002",
+          "nombre": "Jugueteria",
+          "fecha": "2026-10-27",
+          "persona": "Hogar",
+          "total": 20000,
+          "cats": [
+            "Otros"
+          ],
+          "itemCount": 1,
+          "lugar": "Jugueteria"
         }
       ],
       "items": [
@@ -6750,6 +6762,19 @@
           "marca": null,
           "lugar": "Focolar",
           "obs": "Gasto de almuerzo del retiro "
+        },
+        {
+          "id": "i1793063420002",
+          "compId": "c1793063420002",
+          "item": "Regalo para Luchi",
+          "cat": "Otros",
+          "mon": "ARS",
+          "monto": 20000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Jugueteria",
+          "obs": ""
         }
       ]
     },
@@ -7177,7 +7202,8 @@
     "Personal",
     "Shell de Laprida",
     "Maggi",
-    "Focolar"
+    "Focolar",
+    "Jugueteria"
   ],
   "marcas": [
     "Pamp",
