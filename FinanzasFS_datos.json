@@ -4521,6 +4521,18 @@
           ],
           "itemCount": 1,
           "lugar": "Vendedor ambulante"
+        },
+        {
+          "id": "c1793139012391",
+          "nombre": "Proyecto",
+          "fecha": "2026-10-27",
+          "persona": "Hogar",
+          "total": 6300,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "Proyecto"
         }
       ],
       "items": [
@@ -6800,6 +6812,19 @@
           "marca": null,
           "lugar": "Vendedor ambulante",
           "obs": ""
+        },
+        {
+          "id": "i1793139012391",
+          "compId": "c1793139012391",
+          "item": "Lápiz blanco",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 6300,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": "Lyra",
+          "lugar": "Proyecto",
+          "obs": ""
         }
       ]
     },
@@ -7229,7 +7254,8 @@
     "Maggi",
     "Focolar",
     "Jugueteria",
-    "Vendedor ambulante"
+    "Vendedor ambulante",
+    "Proyecto"
   ],
   "marcas": [
     "Pamp",
@@ -7315,7 +7341,8 @@
     "Tramontina",
     "Vim",
     "Vivere",
-    "Personal"
+    "Personal",
+    "Lyra"
   ],
   "tarjetas": [
     {
