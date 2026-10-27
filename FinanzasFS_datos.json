@@ -4605,6 +4605,18 @@
           ],
           "itemCount": 1,
           "lugar": "Sabores de la abuela"
+        },
+        {
+          "id": "c1793139678821",
+          "nombre": "Iglesia",
+          "fecha": "2026-10-24",
+          "persona": "Hogar",
+          "total": 4000,
+          "cats": [
+            "Donación"
+          ],
+          "itemCount": 1,
+          "lugar": "Iglesia"
         }
       ],
       "items": [
@@ -6975,6 +6987,19 @@
           "marca": null,
           "lugar": "Sabores de la abuela",
           "obs": ""
+        },
+        {
+          "id": "i1793139678821",
+          "compId": "c1793139678821",
+          "item": "Colecta",
+          "cat": "Donación",
+          "mon": "ARS",
+          "monto": 4000,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Iglesia",
+          "obs": ""
         }
       ]
     },
@@ -7406,7 +7431,8 @@
     "Focolar",
     "Jugueteria",
     "Vendedor ambulante",
-    "Proyecto"
+    "Proyecto",
+    "Iglesia"
   ],
   "marcas": [
     "Pamp",
