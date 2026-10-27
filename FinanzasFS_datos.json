@@ -4557,6 +4557,18 @@
           ],
           "itemCount": 1,
           "lugar": "Pampers Srl"
+        },
+        {
+          "id": "c1793139215220",
+          "nombre": "Pampers Srl",
+          "fecha": "2026-10-26",
+          "persona": "Hogar",
+          "total": 2600,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Pampers Srl"
         }
       ],
       "items": [
@@ -6875,6 +6887,19 @@
           "marca": "Pamp",
           "lugar": "Pampers Srl",
           "obs": "6 unidades"
+        },
+        {
+          "id": "i1793139215220",
+          "compId": "c1793139215220",
+          "item": "Fideo al huevo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2600,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": "Pamp",
+          "lugar": "Pampers Srl",
+          "obs": ""
         }
       ]
     },
