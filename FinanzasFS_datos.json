@@ -4545,6 +4545,18 @@
           ],
           "itemCount": 1,
           "lugar": "Proyecto"
+        },
+        {
+          "id": "c1793139152077",
+          "nombre": "Pampers Srl",
+          "fecha": "2026-10-27",
+          "persona": "Hogar",
+          "total": 5300,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Pampers Srl"
         }
       ],
       "items": [
@@ -6850,6 +6862,19 @@
           "marca": "Pizzini",
           "lugar": "Proyecto",
           "obs": ""
+        },
+        {
+          "id": "i1793139152077",
+          "compId": "c1793139152077",
+          "item": "Tapa para tarta",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5300,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": "Pamp",
+          "lugar": "Pampers Srl",
+          "obs": "6 unidades"
         }
       ]
     },
