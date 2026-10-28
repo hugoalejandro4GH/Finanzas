@@ -4629,6 +4629,18 @@
           ],
           "itemCount": 1,
           "lugar": "Iglesia"
+        },
+        {
+          "id": "c1793211738434",
+          "nombre": "Focolar",
+          "fecha": "2026-10-27",
+          "persona": "Hogar",
+          "total": 12000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Focolar"
         }
       ],
       "items": [
@@ -7025,6 +7037,19 @@
           "marca": null,
           "lugar": "Iglesia",
           "obs": ""
+        },
+        {
+          "id": "i1793211738434",
+          "compId": "c1793211738434",
+          "item": "Cena con Kt",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 12000,
+          "cant": null,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Focolar",
+          "obs": "Comida, bebida y postre "
         }
       ]
     },
