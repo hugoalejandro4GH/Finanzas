@@ -4641,6 +4641,18 @@
           ],
           "itemCount": 1,
           "lugar": "Focolar"
+        },
+        {
+          "id": "c1793218199440",
+          "nombre": "Mercado libre",
+          "fecha": "2026-10-28",
+          "persona": "Hogar",
+          "total": 48420,
+          "cats": [
+            "Ropa"
+          ],
+          "itemCount": 1,
+          "lugar": "Mercado libre"
         }
       ],
       "items": [
@@ -7050,6 +7062,19 @@
           "marca": null,
           "lugar": "Focolar",
           "obs": "Comida, bebida y postre "
+        },
+        {
+          "id": "i1793218199440",
+          "compId": "c1793218199440",
+          "item": "Zapatillas",
+          "cat": "Ropa",
+          "mon": "ARS",
+          "monto": 48420,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": "Jaguar",
+          "lugar": "Mercado libre",
+          "obs": "Para Ramiro "
         }
       ]
     },
@@ -7570,7 +7595,8 @@
     "Vivere",
     "Personal",
     "Lyra",
-    "Pizzini"
+    "Pizzini",
+    "Jaguar"
   ],
   "tarjetas": [
     {
