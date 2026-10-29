@@ -4713,6 +4713,18 @@
           ],
           "itemCount": 1,
           "lugar": "Farmacity"
+        },
+        {
+          "id": "c1793233249818",
+          "nombre": "Farmacity",
+          "fecha": "2026-10-29",
+          "persona": "Hogar",
+          "total": 9989.07,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1,
+          "lugar": "Farmacity"
         }
       ],
       "items": [
@@ -7195,6 +7207,19 @@
           "cat": "Deporte y Salud",
           "mon": "ARS",
           "monto": 17545.5,
+          "cant": 100,
+          "uni": "ml",
+          "marca": null,
+          "lugar": "Farmacity",
+          "obs": ""
+        },
+        {
+          "id": "i1793233249818",
+          "compId": "c1793233249818",
+          "item": "Supritos",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 9989.07,
           "cant": 100,
           "uni": "ml",
           "marca": null,
