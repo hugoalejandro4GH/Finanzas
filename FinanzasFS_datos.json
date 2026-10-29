@@ -4749,6 +4749,18 @@
           ],
           "itemCount": 1,
           "lugar": "Dra Sersic"
+        },
+        {
+          "id": "c1793307873783",
+          "nombre": "Shell 25 de Mayo",
+          "fecha": "2026-10-29",
+          "persona": "Hogar",
+          "total": 6096,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Shell 25 de Mayo"
         }
       ],
       "items": [
@@ -7275,6 +7287,19 @@
           "marca": null,
           "lugar": "Dra Sersic",
           "obs": ""
+        },
+        {
+          "id": "i1793307873783",
+          "compId": "c1793307873783",
+          "item": "Nafta Super",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 6096,
+          "cant": 2.77,
+          "uni": "lt",
+          "marca": "Shell",
+          "lugar": "Shell 25 de Mayo",
+          "obs": "3758,5 km"
         }
       ]
     },
