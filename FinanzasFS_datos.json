@@ -4737,6 +4737,18 @@
           ],
           "itemCount": 1,
           "lugar": "Supermercados Impulso"
+        },
+        {
+          "id": "c1793234881840",
+          "nombre": "Dra Sersic",
+          "fecha": "2026-10-29",
+          "persona": "Hogar",
+          "total": 20000,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1,
+          "lugar": "Dra Sersic"
         }
       ],
       "items": [
@@ -7250,6 +7262,19 @@
           "marca": null,
           "lugar": "Supermercados Impulso",
           "obs": ""
+        },
+        {
+          "id": "i1793234881840",
+          "compId": "c1793234881840",
+          "item": "Plus médico",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 20000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Dra Sersic",
+          "obs": ""
         }
       ]
     },
@@ -7683,7 +7708,8 @@
     "Vendedor ambulante",
     "Proyecto",
     "Iglesia",
-    "Libremax"
+    "Libremax",
+    "Dra Sersic"
   ],
   "marcas": [
     "Pamp",
