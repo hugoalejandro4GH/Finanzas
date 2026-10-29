@@ -4653,6 +4653,18 @@
           ],
           "itemCount": 1,
           "lugar": "Mercado libre"
+        },
+        {
+          "id": "c1793232490251",
+          "nombre": "Proyecto",
+          "fecha": "2026-10-29",
+          "persona": "Hogar",
+          "total": 3300,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "Proyecto"
         }
       ],
       "items": [
@@ -7075,6 +7087,19 @@
           "marca": "Jaguar",
           "lugar": "Mercado libre",
           "obs": "Para Ramiro "
+        },
+        {
+          "id": "i1793232490251",
+          "compId": "c1793232490251",
+          "item": "Papel celofán",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 3300,
+          "cant": 3,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Proyecto",
+          "obs": ""
         }
       ]
     },
