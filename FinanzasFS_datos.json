@@ -7615,13 +7615,23 @@
           "estado": "pendiente"
         }
       ],
-      "ir": [],
+      "ir": [
+        {
+          "id": 1793619454589,
+          "fecha": "2026-11-01",
+          "fuente": "Sueldo Clarisa",
+          "per": "Clarisa",
+          "mon": "ARS",
+          "monto": 1780000,
+          "obs": ""
+        }
+      ],
       "comps": [
         {
           "id": "c1793617779699",
           "nombre": "Agua",
           "fecha": "2026-11-02",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 28421.82,
           "cats": [
             "Servicios"
@@ -7632,7 +7642,7 @@
           "id": "c1793617786566",
           "nombre": "Celular Clari",
           "fecha": "2026-11-02",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 41393.77,
           "cats": [
             "Servicios"
