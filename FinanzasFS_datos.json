@@ -7615,7 +7615,17 @@
           "estado": "pendiente"
         }
       ],
-      "ir": [],
+      "ir": [
+        {
+          "id": 1793619666036,
+          "fecha": "2026-11-01",
+          "fuente": "Sueldo Clarisa",
+          "per": "Clarisa",
+          "mon": "ARS",
+          "monto": 1781289.79,
+          "obs": ""
+        }
+      ],
       "comps": [
         {
           "id": "c1793617779699",
