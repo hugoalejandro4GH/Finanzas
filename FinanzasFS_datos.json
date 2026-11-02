@@ -7616,8 +7616,29 @@
         }
       ],
       "ir": [],
-      "comps": [],
-      "items": []
+      "comps": [
+        {
+          "id": "c1793617779699",
+          "nombre": "Agua",
+          "fecha": "2026-11-02",
+          "persona": "Ambos",
+          "total": 28421.82,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
+        }
+      ],
+      "items": [
+        {
+          "id": "i1793617779699",
+          "compId": "c1793617779699",
+          "item": "Agua",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 28421.82
+        }
+      ]
     }
   },
   "agenda": {
@@ -7669,7 +7690,9 @@
       "1790206473416.1702": true,
       "1792584642251.1248": true
     },
-    "ag_2026_11": {}
+    "ag_2026_11": {
+      "1792282006986.6245": true
+    }
   },
   "lugares": [
     "Don Gastón",
