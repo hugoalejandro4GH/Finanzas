@@ -7627,6 +7627,17 @@
             "Servicios"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1793617786566",
+          "nombre": "Celular Clari",
+          "fecha": "2026-11-02",
+          "persona": "Ambos",
+          "total": 41393.77,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -7637,6 +7648,14 @@
           "cat": "Servicios",
           "mon": "ARS",
           "monto": 28421.82
+        },
+        {
+          "id": "i1793617786566",
+          "compId": "c1793617786566",
+          "item": "Celular Clari",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 41393.77
         }
       ]
     }
@@ -7691,7 +7710,8 @@
       "1792584642251.1248": true
     },
     "ag_2026_11": {
-      "1792282006986.6245": true
+      "1792282006986.6245": true,
+      "1792282006986.4023": true
     }
   },
   "lugares": [
