@@ -7683,6 +7683,18 @@
           ],
           "itemCount": 1,
           "lugar": "Avícola Josefina"
+        },
+        {
+          "id": "c1793666958860",
+          "nombre": "Quain Radio",
+          "fecha": "2026-11-03",
+          "persona": "Hogar",
+          "total": 1914,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Quain Radio"
         }
       ],
       "items": [
@@ -7734,6 +7746,19 @@
           "uni": "kg",
           "marca": null,
           "lugar": "Avícola Josefina",
+          "obs": ""
+        },
+        {
+          "id": "i1793666958860",
+          "compId": "c1793666958860",
+          "item": "Lámpara",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1914,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": "Lion",
+          "lugar": "Quain Radio",
           "obs": ""
         }
       ]
@@ -7857,7 +7882,8 @@
     "Proyecto",
     "Iglesia",
     "Libremax",
-    "Dra Sersic"
+    "Dra Sersic",
+    "Quain Radio"
   ],
   "marcas": [
     "Pamp",
