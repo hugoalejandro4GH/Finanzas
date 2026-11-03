@@ -7712,10 +7712,21 @@
           "id": "c1793667065858",
           "nombre": "Seguro Moto",
           "fecha": "2026-11-03",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 18000,
           "cats": [
             "Transporte"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1793708404084",
+          "nombre": "Celular Ale",
+          "fecha": "2026-11-03",
+          "persona": "Ambos",
+          "total": 46039.92,
+          "cats": [
+            "Servicios"
           ],
           "itemCount": 1
         }
@@ -7804,6 +7815,14 @@
           "cat": "Transporte",
           "mon": "ARS",
           "monto": 18000
+        },
+        {
+          "id": "i1793708404086",
+          "compId": "c1793708404084",
+          "item": "Celular Ale",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 46039.92
         }
       ]
     }
@@ -7861,7 +7880,8 @@
       "1792282006986.6245": true,
       "1792282006986.4023": true,
       "1792282006986.6858": true,
-      "1792282006986.1096": true
+      "1792282006986.1096": true,
+      "1792282006986.3713": true
     }
   },
   "lugares": [
