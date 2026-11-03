@@ -7653,12 +7653,24 @@
           "id": "c1793633081818",
           "nombre": "Internet + Flow",
           "fecha": "2026-11-02",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 93506,
           "cats": [
             "Servicios"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1793666791901",
+          "nombre": "Avícola Josefina",
+          "fecha": "2026-11-03",
+          "persona": "Hogar",
+          "total": 19000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Avícola Josefina"
         }
       ],
       "items": [
@@ -7685,6 +7697,19 @@
           "cat": "Servicios",
           "mon": "ARS",
           "monto": 93506
+        },
+        {
+          "id": "i1793666791901",
+          "compId": "c1793666791901",
+          "item": "Milanesa de pollo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 19000,
+          "cant": 2.38,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Avícola Josefina",
+          "obs": ""
         }
       ]
     }
