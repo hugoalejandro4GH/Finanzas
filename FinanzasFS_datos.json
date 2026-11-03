@@ -7691,7 +7691,7 @@
           "persona": "Hogar",
           "total": 1914,
           "cats": [
-            "Alimentación"
+            "Donación"
           ],
           "itemCount": 1,
           "lugar": "Quain Radio"
@@ -7752,14 +7752,14 @@
           "id": "i1793666958860",
           "compId": "c1793666958860",
           "item": "Lámpara",
-          "cat": "Alimentación",
+          "cat": "Donación",
           "mon": "ARS",
           "monto": 1914,
           "cant": 1,
           "uni": "unidad",
           "marca": "Lion",
           "lugar": "Quain Radio",
-          "obs": ""
+          "obs": "Lámpara para la iglesia"
         }
       ]
     }
