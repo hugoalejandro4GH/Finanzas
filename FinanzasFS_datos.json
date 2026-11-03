@@ -7790,6 +7790,18 @@
           ],
           "itemCount": 1,
           "lugar": "Carnicería La esperanza"
+        },
+        {
+          "id": "c1793747136717",
+          "nombre": "Carnicería La esperanza",
+          "fecha": "2026-11-03",
+          "persona": "Hogar",
+          "total": 12358.45,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Carnicería La esperanza"
         }
       ],
       "items": [
@@ -7945,6 +7957,19 @@
           "mon": "ARS",
           "monto": 13193.98,
           "cant": 1.01,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Carnicería La esperanza",
+          "obs": ""
+        },
+        {
+          "id": "i1793747136717",
+          "compId": "c1793747136717",
+          "item": "Osobuco",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 12358.45,
+          "cant": 1.54,
           "uni": "kg",
           "marca": null,
           "lugar": "Carnicería La esperanza",
