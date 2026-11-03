@@ -7407,8 +7407,9 @@
           "tipo": "Fijo",
           "desc": "Seguridad del barrio",
           "mon": "ARS",
-          "monto": 44995,
+          "monto": 43407,
           "vto": 10,
+          "obs": "",
           "estado": "confirmado"
         },
         {
@@ -7723,7 +7724,7 @@
           "id": "c1793708404084",
           "nombre": "Celular Ale",
           "fecha": "2026-11-03",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 46039.92,
           "cats": [
             "Servicios"
