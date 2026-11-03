@@ -7695,6 +7695,18 @@
           ],
           "itemCount": 1,
           "lugar": "Quain Radio"
+        },
+        {
+          "id": "c1793667041771",
+          "nombre": "La llave del Chaco",
+          "fecha": "2026-11-03",
+          "persona": "Hogar",
+          "total": 3600.02,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "La llave del Chaco"
         }
       ],
       "items": [
@@ -7760,6 +7772,19 @@
           "marca": "Lion",
           "lugar": "Quain Radio",
           "obs": "Lámpara para la iglesia"
+        },
+        {
+          "id": "i1793667041771",
+          "compId": "c1793667041771",
+          "item": "Birome cristal gruesa color negro",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 3600.02,
+          "cant": 4,
+          "uni": "unidad",
+          "marca": "Bic",
+          "lugar": "La llave del Chaco",
+          "obs": ""
         }
       ]
     }
