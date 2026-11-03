@@ -7766,6 +7766,18 @@
           ],
           "itemCount": 1,
           "lugar": "La llave del Chaco"
+        },
+        {
+          "id": "c1793746838965",
+          "nombre": "La llave del Chaco",
+          "fecha": "2026-11-03",
+          "persona": "Hogar",
+          "total": 1699.99,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "La llave del Chaco"
         }
       ],
       "items": [
@@ -7899,6 +7911,19 @@
           "marca": "Acrilex",
           "lugar": "La llave del Chaco",
           "obs": "Dos blancas y una roja"
+        },
+        {
+          "id": "i1793746838965",
+          "compId": "c1793746838965",
+          "item": "Cartón gris N25",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 1699.99,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "La llave del Chaco",
+          "obs": ""
         }
       ]
     }
