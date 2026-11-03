@@ -7802,6 +7802,18 @@
           ],
           "itemCount": 1,
           "lugar": "Carnicería La esperanza"
+        },
+        {
+          "id": "c1793747204711",
+          "nombre": "IAP",
+          "fecha": "2026-11-03",
+          "persona": "Hogar",
+          "total": 40000,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1,
+          "lugar": "IAP"
         }
       ],
       "items": [
@@ -7974,6 +7986,19 @@
           "marca": null,
           "lugar": "Carnicería La esperanza",
           "obs": ""
+        },
+        {
+          "id": "i1793747204711",
+          "compId": "c1793747204711",
+          "item": "Plus Doctora Mariela",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 40000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "IAP",
+          "obs": ""
         }
       ]
     }
@@ -8100,7 +8125,8 @@
     "Libremax",
     "Dra Sersic",
     "Quain Radio",
-    "Carnicería La esperanza"
+    "Carnicería La esperanza",
+    "IAP"
   ],
   "marcas": [
     "Pamp",
