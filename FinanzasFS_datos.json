@@ -7736,7 +7736,7 @@
           "nombre": "La llave del Chaco",
           "fecha": "2026-11-03",
           "persona": "Hogar",
-          "total": 27001,
+          "total": 2700.1,
           "cats": [
             "Educación"
           ],
@@ -7843,8 +7843,8 @@
           "item": "Silicona líquida",
           "cat": "Educación",
           "mon": "ARS",
-          "monto": 27001,
-          "cant": 10,
+          "monto": 2700.1,
+          "cant": 1,
           "uni": "unidad",
           "marca": "Señorita",
           "lugar": "La llave del Chaco",
