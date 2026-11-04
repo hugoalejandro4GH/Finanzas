@@ -7826,6 +7826,18 @@
           ],
           "itemCount": 1,
           "lugar": "Farmacity"
+        },
+        {
+          "id": "c1793822988857",
+          "nombre": "YPF",
+          "fecha": "2026-11-04",
+          "persona": "Hogar",
+          "total": 45000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "YPF"
         }
       ],
       "items": [
@@ -8024,6 +8036,19 @@
           "marca": "SIEGFRIED",
           "lugar": "Farmacity",
           "obs": ""
+        },
+        {
+          "id": "i1793822988857",
+          "compId": "c1793822988857",
+          "item": "Nafta Infinia",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 45000,
+          "cant": 20.92,
+          "uni": "lt",
+          "marca": "YPF",
+          "lugar": "YPF",
+          "obs": "Descuento 10%"
         }
       ]
     }
