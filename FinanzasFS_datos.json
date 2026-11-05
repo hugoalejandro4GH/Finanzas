@@ -7860,6 +7860,18 @@
             "Tarjetas"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1793876232787",
+          "nombre": "Santander Río",
+          "fecha": "2026-11-05",
+          "persona": "Hogar",
+          "total": 31000,
+          "cats": [
+            "Vivienda"
+          ],
+          "itemCount": 1,
+          "lugar": "Santander Río"
         }
       ],
       "items": [
@@ -8087,6 +8099,19 @@
           "cat": "Tarjetas",
           "mon": "ARS",
           "monto": 37487.77
+        },
+        {
+          "id": "i1793876232787",
+          "compId": "c1793876232787",
+          "item": "Suscripción Claude",
+          "cat": "Vivienda",
+          "mon": "USD",
+          "monto": 20,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Santander Río",
+          "obs": ""
         }
       ]
     }
