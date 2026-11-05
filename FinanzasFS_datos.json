@@ -7901,13 +7901,25 @@
           "id": "c1793877782773",
           "nombre": "ticket_dongaston_04112026 (1)",
           "fecha": "2026-11-04",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 134978.61,
           "cats": [
             "Alimentación"
           ],
           "itemCount": 34,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1793878030069",
+          "nombre": "Indivisa",
+          "fecha": "2026-11-05",
+          "persona": "Hogar",
+          "total": 47000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Indivisa"
         }
       ],
       "items": [
@@ -8582,6 +8594,19 @@
           "cant": 0.37,
           "uni": "kg",
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "i1793878030069",
+          "compId": "c1793878030069",
+          "item": "Pata muslo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 47000,
+          "cant": 15,
+          "uni": "kg",
+          "marca": "Indivisa",
+          "lugar": "Indivisa",
+          "obs": ""
         }
       ]
     }
@@ -8712,7 +8737,8 @@
     "Quain Radio",
     "Carnicería La esperanza",
     "IAP",
-    "Colegio Simón de Iriondo"
+    "Colegio Simón de Iriondo",
+    "Indivisa"
   ],
   "marcas": [
     "Pamp",
