@@ -7884,6 +7884,18 @@
           ],
           "itemCount": 1,
           "lugar": "Colegio Simón de Iriondo"
+        },
+        {
+          "id": "c1793876408138",
+          "nombre": "Colegio Simón de Iriondo",
+          "fecha": "2026-11-05",
+          "persona": "Hogar",
+          "total": 4000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "Colegio Simón de Iriondo"
         }
       ],
       "items": [
@@ -8137,6 +8149,19 @@
           "marca": null,
           "lugar": "Colegio Simón de Iriondo",
           "obs": ""
+        },
+        {
+          "id": "i1793876408138",
+          "compId": "c1793876408138",
+          "item": "Aporte voluntario",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 4000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Colegio Simón de Iriondo",
+          "obs": "Limpieza de los AA"
         }
       ]
     }
