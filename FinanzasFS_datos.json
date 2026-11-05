@@ -7843,10 +7843,21 @@
           "id": "c1793823013556",
           "nombre": "Aporte médicos sin frentera",
           "fecha": "2026-11-04",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 14000,
           "cats": [
             "Donación"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1793876192311",
+          "nombre": "Visa Santander",
+          "fecha": "2026-11-05",
+          "persona": "Ambos",
+          "total": 37487.77,
+          "cats": [
+            "Tarjetas"
           ],
           "itemCount": 1
         }
@@ -8068,6 +8079,14 @@
           "cat": "Donación",
           "mon": "ARS",
           "monto": 14000
+        },
+        {
+          "id": "i1793876192311",
+          "compId": "c1793876192311",
+          "item": "Visa Santander",
+          "cat": "Tarjetas",
+          "mon": "ARS",
+          "monto": 37487.77
         }
       ]
     }
@@ -8127,7 +8146,8 @@
       "1792282006986.6858": true,
       "1792282006986.1096": true,
       "1792282006986.3713": true,
-      "1792282006986.5068": true
+      "1792282006986.5068": true,
+      "1792282006986.9895": true
     }
   },
   "lugares": [
