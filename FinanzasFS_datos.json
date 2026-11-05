@@ -7920,6 +7920,18 @@
           ],
           "itemCount": 1,
           "lugar": "Indivisa"
+        },
+        {
+          "id": "c1793894820796",
+          "nombre": "Shell 25 de Mayo",
+          "fecha": "2026-11-05",
+          "persona": "Hogar",
+          "total": 4000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Shell 25 de Mayo"
         }
       ],
       "items": [
@@ -8607,6 +8619,19 @@
           "marca": "Indivisa",
           "lugar": "Indivisa",
           "obs": ""
+        },
+        {
+          "id": "i1793894820796",
+          "compId": "c1793894820796",
+          "item": "Nafta Super",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 4000,
+          "cant": 1.82,
+          "uni": "lt",
+          "marca": "Shell",
+          "lugar": "Shell 25 de Mayo",
+          "obs": "3843.2 km"
         }
       ]
     }
