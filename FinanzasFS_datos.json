@@ -7625,6 +7625,15 @@
           "mon": "ARS",
           "monto": 1781289.79,
           "obs": ""
+        },
+        {
+          "id": 1793905167708,
+          "fecha": "2026-11-05",
+          "fuente": "Sueldo Alejandro",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 1620060.67,
+          "obs": "Deposito "
         }
       ],
       "comps": [
