@@ -7872,6 +7872,18 @@
           ],
           "itemCount": 1,
           "lugar": "Santander Río"
+        },
+        {
+          "id": "c1793876346063",
+          "nombre": "Colegio Simón de Iriondo",
+          "fecha": "2026-11-05",
+          "persona": "Hogar",
+          "total": 20000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "Colegio Simón de Iriondo"
         }
       ],
       "items": [
@@ -8112,6 +8124,19 @@
           "marca": null,
           "lugar": "Santander Río",
           "obs": ""
+        },
+        {
+          "id": "i1793876346063",
+          "compId": "c1793876346063",
+          "item": "Cuota Cooperadora",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 20000,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Colegio Simón de Iriondo",
+          "obs": ""
         }
       ]
     }
@@ -8241,7 +8266,8 @@
     "Dra Sersic",
     "Quain Radio",
     "Carnicería La esperanza",
-    "IAP"
+    "IAP",
+    "Colegio Simón de Iriondo"
   ],
   "marcas": [
     "Pamp",
