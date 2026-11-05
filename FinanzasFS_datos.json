@@ -7868,7 +7868,7 @@
           "persona": "Hogar",
           "total": 31000,
           "cats": [
-            "Vivienda"
+            "Inversión"
           ],
           "itemCount": 1,
           "lugar": "Santander Río"
@@ -8104,7 +8104,7 @@
           "id": "i1793876232787",
           "compId": "c1793876232787",
           "item": "Suscripción Claude",
-          "cat": "Vivienda",
+          "cat": "Inversión",
           "mon": "USD",
           "monto": 20,
           "cant": 1,
