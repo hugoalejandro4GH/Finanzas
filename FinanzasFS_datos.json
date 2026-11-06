@@ -7985,6 +7985,18 @@
           ],
           "itemCount": 1,
           "lugar": "La casa del queso"
+        },
+        {
+          "id": "c1793999282683",
+          "nombre": "La casa del queso",
+          "fecha": "2026-11-06",
+          "persona": "Hogar",
+          "total": 11986.46,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "La casa del queso"
         }
       ],
       "items": [
@@ -8715,6 +8727,19 @@
           "mon": "ARS",
           "monto": 21332.31,
           "cant": 1.85,
+          "uni": "kg",
+          "marca": "Tonutti",
+          "lugar": "La casa del queso",
+          "obs": ""
+        },
+        {
+          "id": "i1793999282683",
+          "compId": "c1793999282683",
+          "item": "Queso barra",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 11986.46,
+          "cant": 0.92,
           "uni": "kg",
           "marca": "Tonutti",
           "lugar": "La casa del queso",
