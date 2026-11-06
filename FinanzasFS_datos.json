@@ -8009,6 +8009,18 @@
           ],
           "itemCount": 1,
           "lugar": "Mega mundo $2"
+        },
+        {
+          "id": "c1793999527713",
+          "nombre": "Casa Goyo",
+          "fecha": "2026-11-06",
+          "persona": "Hogar",
+          "total": 18000,
+          "cats": [
+            "Casa"
+          ],
+          "itemCount": 1,
+          "lugar": "Casa Goyo"
         }
       ],
       "items": [
@@ -8769,6 +8781,19 @@
           "marca": null,
           "lugar": "Mega mundo $2",
           "obs": ""
+        },
+        {
+          "id": "i1793999527713",
+          "compId": "c1793999527713",
+          "item": "Tapa de olla",
+          "cat": "Casa",
+          "mon": "ARS",
+          "monto": 18000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Casa Goyo",
+          "obs": ""
         }
       ]
     }
@@ -8902,7 +8927,8 @@
     "IAP",
     "Colegio Simón de Iriondo",
     "Indivisa",
-    "Mega mundo $2"
+    "Mega mundo $2",
+    "Casa Goyo"
   ],
   "marcas": [
     "Pamp",
