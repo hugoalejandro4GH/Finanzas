@@ -7955,12 +7955,24 @@
           "id": "c1793917176364",
           "nombre": "Luz",
           "fecha": "2026-11-05",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 138625.11,
           "cats": [
             "Servicios"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1793999099301",
+          "nombre": "La casa del queso",
+          "fecha": "2026-11-06",
+          "persona": "Hogar",
+          "total": 2289.99,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "La casa del queso"
         }
       ],
       "items": [
@@ -8669,6 +8681,19 @@
           "cat": "Servicios",
           "mon": "ARS",
           "monto": 138625.11
+        },
+        {
+          "id": "i1793999099302",
+          "compId": "c1793999099301",
+          "item": "Choclo cremoso en lata",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2289.99,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": "Arcor",
+          "lugar": "La casa del queso",
+          "obs": ""
         }
       ]
     }
