@@ -7997,6 +7997,18 @@
           ],
           "itemCount": 1,
           "lugar": "La casa del queso"
+        },
+        {
+          "id": "c1793999351523",
+          "nombre": "Mega mundo $2",
+          "fecha": "2026-11-06",
+          "persona": "Hogar",
+          "total": 7500,
+          "cats": [
+            "Casa"
+          ],
+          "itemCount": 1,
+          "lugar": "Mega mundo $2"
         }
       ],
       "items": [
@@ -8744,6 +8756,19 @@
           "marca": "Tonutti",
           "lugar": "La casa del queso",
           "obs": ""
+        },
+        {
+          "id": "i1793999351523",
+          "compId": "c1793999351523",
+          "item": "Gas para encendedor",
+          "cat": "Casa",
+          "mon": "ARS",
+          "monto": 7500,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Mega mundo $2",
+          "obs": ""
         }
       ]
     }
@@ -8876,7 +8901,8 @@
     "Carnicería La esperanza",
     "IAP",
     "Colegio Simón de Iriondo",
-    "Indivisa"
+    "Indivisa",
+    "Mega mundo $2"
   ],
   "marcas": [
     "Pamp",
