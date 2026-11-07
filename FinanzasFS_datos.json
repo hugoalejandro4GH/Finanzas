@@ -4761,6 +4761,18 @@
           ],
           "itemCount": 1,
           "lugar": "Shell 25 de Mayo"
+        },
+        {
+          "id": "c1794064298817",
+          "nombre": "ticket_dongaston_30102026",
+          "fecha": "2026-10-30",
+          "persona": "Clarisa",
+          "total": 46812.079999999994,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 13,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -7300,6 +7312,162 @@
           "marca": "Shell",
           "lugar": "Shell 25 de Mayo",
           "obs": "3758,5 km"
+        },
+        {
+          "id": "i17940642988170.010785599039235039",
+          "compId": "c1794064298817",
+          "item": "Agua Aquarius naranja x2,25lt",
+          "marca": "Aquarius",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2695,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17940642988170.852425787255445",
+          "compId": "c1794064298817",
+          "item": "Bananas ecuatorianas",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5390.58,
+          "cant": 1.29,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17940642988170.007625586843676979",
+          "compId": "c1794064298817",
+          "item": "Choclo entero amarillo x300g",
+          "marca": "Arcor",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1985,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17940642988170.37674678856611743",
+          "compId": "c1794064298817",
+          "item": "Codito rayado x500g",
+          "marca": "Matarazzo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1695,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17940642988170.3098495136090754",
+          "compId": "c1794064298817",
+          "item": "Cerveza rubia x473cc",
+          "marca": "Isenbeck",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2119.9,
+          "cant": 2,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17940642988170.07127987259438995",
+          "compId": "c1794064298817",
+          "item": "Jamón cocido genuino",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 11004.63,
+          "cant": 0.75,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17940642988170.7680295577292308",
+          "compId": "c1794064298817",
+          "item": "Naranja",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2987.67,
+          "cant": 1.62,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17940642988170.5987777929136564",
+          "compId": "c1794064298817",
+          "item": "Pan dulce x400g",
+          "marca": "Panino Nuevo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5685,
+          "cant": 3,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17940642988170.16484002915511042",
+          "compId": "c1794064298817",
+          "item": "Papas blancas",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5104.35,
+          "cant": 1.71,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17940642988170.2420478882277709",
+          "compId": "c1794064298817",
+          "item": "Pepsi x3lt",
+          "marca": "Pepsi",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2795,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17940642988170.674516542077622",
+          "compId": "c1794064298817",
+          "item": "Seven Up x3lt",
+          "marca": "Seven Up",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2895,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17940642988170.19027697470793936",
+          "compId": "c1794064298817",
+          "item": "Codito x500g",
+          "marca": "Terrabusi",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1295,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17940642988170.2477214052849892",
+          "compId": "c1794064298817",
+          "item": "Tallarín x500g",
+          "marca": "Terrabusi",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1159.95,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
         }
       ]
     },
@@ -9027,7 +9195,9 @@
     "Panino Nuevo",
     "LS Cremón",
     "Union",
-    "Playadito"
+    "Playadito",
+    "Isenbeck",
+    "Pepsi"
   ],
   "tarjetas": [
     {
