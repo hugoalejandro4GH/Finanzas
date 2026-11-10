@@ -8236,6 +8236,19 @@
           ],
           "itemCount": 1,
           "lugar": "Electrolíneas"
+        },
+        {
+          "id": "c1794312759303",
+          "nombre": "ticket_dongaston_09112026",
+          "fecha": "2026-11-09",
+          "persona": "Clarisa",
+          "total": 12969.380000000001,
+          "cats": [
+            "Alimentación",
+            "Limpieza e Higiene"
+          ],
+          "itemCount": 4,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -9056,6 +9069,54 @@
           "marca": "Sica",
           "lugar": "Electrolíneas",
           "obs": ""
+        },
+        {
+          "id": "i17943127593030.6746382907484462",
+          "compId": "c1794312759303",
+          "item": "Agua Aquarius pomelo rosado x2,25lt",
+          "marca": "Aquarius",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2695,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17943127593030.6767769789300815",
+          "compId": "c1794312759303",
+          "item": "Naranja",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4384.38,
+          "cant": 2.37,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17943127593030.3568942526406613",
+          "compId": "c1794312759303",
+          "item": "Desodorante Rimblock Poder 4en1 Citrus x35g",
+          "marca": "Vim",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 2895,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17943127593030.4014371936865663",
+          "compId": "c1794312759303",
+          "item": "Yogur griego natural s/endulzar x300g",
+          "marca": "Yogurísimo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2995,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
         }
       ]
     }
@@ -9294,7 +9355,8 @@
     "Playadito",
     "Isenbeck",
     "Pepsi",
-    "Sica"
+    "Sica",
+    "Yogurísimo"
   ],
   "tarjetas": [
     {
