@@ -8212,6 +8212,18 @@
           ],
           "itemCount": 1,
           "lugar": "Dr. Muchutti"
+        },
+        {
+          "id": "c1794309420640",
+          "nombre": "Electrolíneas",
+          "fecha": "2026-11-10",
+          "persona": "Hogar",
+          "total": 33429,
+          "cats": [
+            "Casa"
+          ],
+          "itemCount": 1,
+          "lugar": "Electrolíneas"
         }
       ],
       "items": [
@@ -9006,6 +9018,19 @@
           "marca": null,
           "lugar": "Dr. Muchutti",
           "obs": ""
+        },
+        {
+          "id": "i1794309420640",
+          "compId": "c1794309420640",
+          "item": "Reflector led de 10 watts",
+          "cat": "Casa",
+          "mon": "ARS",
+          "monto": 33429,
+          "cant": 6,
+          "uni": "unidad",
+          "marca": "Sica",
+          "lugar": "Electrolíneas",
+          "obs": ""
         }
       ]
     }
@@ -9243,7 +9268,8 @@
     "Union",
     "Playadito",
     "Isenbeck",
-    "Pepsi"
+    "Pepsi",
+    "Sica"
   ],
   "tarjetas": [
     {
