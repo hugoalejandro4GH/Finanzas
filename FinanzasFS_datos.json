@@ -8194,12 +8194,24 @@
           "id": "c1794308776928",
           "nombre": "Seguridad del barrio",
           "fecha": "2026-11-10",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 43407,
           "cats": [
             "Servicios"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1794309258082",
+          "nombre": "Dr. Muchutti",
+          "fecha": "2026-11-10",
+          "persona": "Hogar",
+          "total": 50000,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1,
+          "lugar": "Dr. Muchutti"
         }
       ],
       "items": [
@@ -8981,6 +8993,19 @@
           "cat": "Servicios",
           "mon": "ARS",
           "monto": 43407
+        },
+        {
+          "id": "i1794309258082",
+          "compId": "c1794309258082",
+          "item": "Ecografía",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 50000,
+          "cant": null,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Dr. Muchutti",
+          "obs": ""
         }
       ]
     }
@@ -9116,7 +9141,8 @@
     "Colegio Simón de Iriondo",
     "Indivisa",
     "Mega mundo $2",
-    "Casa Goyo"
+    "Casa Goyo",
+    "Dr. Muchutti"
   ],
   "marcas": [
     "Pamp",
