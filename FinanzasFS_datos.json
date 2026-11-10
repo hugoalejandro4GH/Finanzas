@@ -8241,7 +8241,7 @@
           "id": "c1794312759303",
           "nombre": "ticket_dongaston_09112026",
           "fecha": "2026-11-09",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 12969.380000000001,
           "cats": [
             "Alimentación",
@@ -8249,6 +8249,18 @@
           ],
           "itemCount": 4,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1794312812488",
+          "nombre": "ticket_frutosnoa_04112026",
+          "fecha": "2026-11-04",
+          "persona": "Clarisa",
+          "total": 26135,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 8,
+          "lugar": "Frutos del NOA"
         }
       ],
       "items": [
@@ -9117,6 +9129,102 @@
           "cant": 1,
           "uni": "un",
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17943128124880.9069779032433932",
+          "compId": "c1794312812488",
+          "item": "Maní japonés sabor queso x250g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1535,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17943128124880.0014396720071766511",
+          "compId": "c1794312812488",
+          "item": "Copos de maíz sin azúcar x250g",
+          "marca": "Redzy",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1255,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17943128124880.0014440918533363822",
+          "compId": "c1794312812488",
+          "item": "Castañas enteras x200g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4790,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17943128124880.1558909756581296",
+          "compId": "c1794312812488",
+          "item": "Nuez entera blanca extra light x200g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4680,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17943128124880.29671369333698017",
+          "compId": "c1794312812488",
+          "item": "Castañas enteras x100g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2400,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17943128124880.35478531429353444",
+          "compId": "c1794312812488",
+          "item": "Almendras non pareil x200g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 8105,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17943128124880.9236125018997166",
+          "compId": "c1794312812488",
+          "item": "Almohaditas de frutilla x150g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1590,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17943128124880.4868051373813743",
+          "compId": "c1794312812488",
+          "item": "Almohaditas de chocolate negro x150g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1780,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
         }
       ]
     }
