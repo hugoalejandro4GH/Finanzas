@@ -8224,6 +8224,18 @@
           ],
           "itemCount": 1,
           "lugar": "Electrolíneas"
+        },
+        {
+          "id": "c1794309481200",
+          "nombre": "Electrolíneas",
+          "fecha": "2026-11-10",
+          "persona": "Hogar",
+          "total": 5572,
+          "cats": [
+            "Donación"
+          ],
+          "itemCount": 1,
+          "lugar": "Electrolíneas"
         }
       ],
       "items": [
@@ -9027,6 +9039,19 @@
           "mon": "ARS",
           "monto": 33429,
           "cant": 6,
+          "uni": "unidad",
+          "marca": "Sica",
+          "lugar": "Electrolíneas",
+          "obs": ""
+        },
+        {
+          "id": "i1794309481200",
+          "compId": "c1794309481200",
+          "item": "Reflector led de 10 w",
+          "cat": "Donación",
+          "mon": "ARS",
+          "monto": 5572,
+          "cant": 1,
           "uni": "unidad",
           "marca": "Sica",
           "lugar": "Electrolíneas",
