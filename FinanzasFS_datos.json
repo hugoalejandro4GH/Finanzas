@@ -4766,7 +4766,7 @@
           "id": "c1794064298817",
           "nombre": "ticket_dongaston_30102026",
           "fecha": "2026-10-30",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 46812.079999999994,
           "cats": [
             "Alimentación"
@@ -8189,6 +8189,17 @@
           ],
           "itemCount": 1,
           "lugar": "Casa Goyo"
+        },
+        {
+          "id": "c1794308776928",
+          "nombre": "Seguridad del barrio",
+          "fecha": "2026-11-10",
+          "persona": "Ambos",
+          "total": 43407,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -8962,6 +8973,14 @@
           "marca": null,
           "lugar": "Casa Goyo",
           "obs": ""
+        },
+        {
+          "id": "i1794308776928",
+          "compId": "c1794308776928",
+          "item": "Seguridad del barrio",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 43407
         }
       ]
     }
@@ -9023,7 +9042,8 @@
       "1792282006986.3713": true,
       "1792282006986.5068": true,
       "1792282006986.9895": true,
-      "1792282006986.017": true
+      "1792282006986.017": true,
+      "1792282006986.0024": true
     }
   },
   "lugares": [
