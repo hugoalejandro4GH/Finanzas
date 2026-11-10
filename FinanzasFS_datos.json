@@ -8261,6 +8261,18 @@
           ],
           "itemCount": 8,
           "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "c1794312915452",
+          "nombre": "Frutos del NOA",
+          "fecha": "2026-11-10",
+          "persona": "Hogar",
+          "total": -3136.2,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Frutos del NOA"
         }
       ],
       "items": [
@@ -9225,6 +9237,19 @@
           "cant": 1,
           "uni": "un",
           "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i1794312915452",
+          "compId": "c1794312915452",
+          "item": "Devolución compra 04/11/2026",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": -3136.2,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Frutos del NOA",
+          "obs": ""
         }
       ]
     }
