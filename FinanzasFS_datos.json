@@ -8254,7 +8254,7 @@
           "id": "c1794312812488",
           "nombre": "ticket_frutosnoa_04112026",
           "fecha": "2026-11-04",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 26135,
           "cats": [
             "Alimentación"
@@ -8273,6 +8273,17 @@
           ],
           "itemCount": 1,
           "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "c1794365838513",
+          "nombre": "Escuela Ramiro",
+          "fecha": "2026-11-11",
+          "persona": "Ambos",
+          "total": 280800,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -9250,6 +9261,14 @@
           "marca": null,
           "lugar": "Frutos del NOA",
           "obs": ""
+        },
+        {
+          "id": "i1794365838513",
+          "compId": "c1794365838513",
+          "item": "Escuela Ramiro",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 280800
         }
       ]
     }
@@ -9312,7 +9331,8 @@
       "1792282006986.5068": true,
       "1792282006986.9895": true,
       "1792282006986.017": true,
-      "1792282006986.0024": true
+      "1792282006986.0024": true,
+      "1792282006986.8472": true
     }
   },
   "lugares": [
