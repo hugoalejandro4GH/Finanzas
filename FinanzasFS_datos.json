@@ -8284,6 +8284,39 @@
             "Educación"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1794365842003",
+          "nombre": "Inglés Ramiro",
+          "fecha": "2026-11-11",
+          "persona": "Ambos",
+          "total": 64000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1794365844694",
+          "nombre": "Inglés Franco",
+          "fecha": "2026-11-11",
+          "persona": "Ambos",
+          "total": 64000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1794365847587",
+          "nombre": "Inglés Clarisa",
+          "fecha": "2026-11-11",
+          "persona": "Ambos",
+          "total": 30000,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -9269,6 +9302,30 @@
           "cat": "Educación",
           "mon": "ARS",
           "monto": 280800
+        },
+        {
+          "id": "i1794365842003",
+          "compId": "c1794365842003",
+          "item": "Inglés Ramiro",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 64000
+        },
+        {
+          "id": "i1794365844694",
+          "compId": "c1794365844694",
+          "item": "Inglés Franco",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 64000
+        },
+        {
+          "id": "i1794365847587",
+          "compId": "c1794365847587",
+          "item": "Inglés Clarisa",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 30000
         }
       ]
     }
@@ -9332,7 +9389,10 @@
       "1792282006986.9895": true,
       "1792282006986.017": true,
       "1792282006986.0024": true,
-      "1792282006986.8472": true
+      "1792282006986.8472": true,
+      "1792282006986.5872": true,
+      "1792282006986.1772": true,
+      "1792282006986.7527": true
     }
   },
   "lugares": [
