@@ -8278,7 +8278,7 @@
           "id": "c1794365838513",
           "nombre": "Escuela Ramiro",
           "fecha": "2026-11-11",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 280800,
           "cats": [
             "Educación"
@@ -8289,7 +8289,7 @@
           "id": "c1794365842003",
           "nombre": "Inglés Ramiro",
           "fecha": "2026-11-11",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 64000,
           "cats": [
             "Educación"
@@ -8300,7 +8300,7 @@
           "id": "c1794365844694",
           "nombre": "Inglés Franco",
           "fecha": "2026-11-11",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 64000,
           "cats": [
             "Educación"
@@ -8311,12 +8311,24 @@
           "id": "c1794365847587",
           "nombre": "Inglés Clarisa",
           "fecha": "2026-11-11",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 30000,
           "cats": [
             "Educación"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1794394613323",
+          "nombre": "Ypf Luminium",
+          "fecha": "2026-11-11",
+          "persona": "Hogar",
+          "total": 45000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Ypf Luminium"
         }
       ],
       "items": [
@@ -9326,6 +9338,19 @@
           "cat": "Educación",
           "mon": "ARS",
           "monto": 30000
+        },
+        {
+          "id": "i1794394613323",
+          "compId": "c1794394613323",
+          "item": "Nafta Infinia",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 45000,
+          "cant": 19.37,
+          "uni": "lt",
+          "marca": "YPF",
+          "lugar": "Ypf Luminium",
+          "obs": ""
         }
       ]
     }
