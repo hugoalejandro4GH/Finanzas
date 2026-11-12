@@ -8329,6 +8329,18 @@
           ],
           "itemCount": 1,
           "lugar": "Ypf Luminium"
+        },
+        {
+          "id": "c1794480316104",
+          "nombre": "ticket_dongaston_11112026",
+          "fecha": "2026-11-11",
+          "persona": "Clarisa",
+          "total": 9580,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 3,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -9351,6 +9363,42 @@
           "marca": "YPF",
           "lugar": "Ypf Luminium",
           "obs": ""
+        },
+        {
+          "id": "i17944803161050.3341024492269816",
+          "compId": "c1794480316104",
+          "item": "Mayonesa clásica DP x475g",
+          "marca": "Hellmann's",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2895,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17944803161050.4214287748496025",
+          "compId": "c1794480316104",
+          "item": "Leche UHT 0% lactosa p.desc x1lt",
+          "marca": "L3N",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3790,
+          "cant": 2,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17944803161050.5737901430786961",
+          "compId": "c1794480316104",
+          "item": "Crunch extra bol de chocolate x200g",
+          "marca": "Toddy",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2895,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
         }
       ]
     }
@@ -9594,7 +9642,9 @@
     "Isenbeck",
     "Pepsi",
     "Sica",
-    "Yogurísimo"
+    "Yogurísimo",
+    "L3N",
+    "Toddy"
   ],
   "tarjetas": [
     {
