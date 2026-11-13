@@ -8388,6 +8388,17 @@
             "Servicios"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1794570670107",
+          "nombre": "Basquet Ramiro",
+          "fecha": "2026-11-13",
+          "persona": "Ambos",
+          "total": 71500,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -9493,6 +9504,14 @@
           "cat": "Servicios",
           "mon": "ARS",
           "monto": 9182.85
+        },
+        {
+          "id": "i1794570670107",
+          "compId": "c1794570670107",
+          "item": "Basquet Ramiro",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 71500
         }
       ]
     }
@@ -9560,7 +9579,8 @@
       "1792282006986.5872": true,
       "1792282006986.1772": true,
       "1792282006986.7527": true,
-      "1792282006986.0535": true
+      "1792282006986.0535": true,
+      "1792282006986.4746": true
     }
   },
   "lugares": [
