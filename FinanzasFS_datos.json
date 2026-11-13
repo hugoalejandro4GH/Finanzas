@@ -8353,6 +8353,18 @@
           ],
           "itemCount": 1,
           "lugar": "Avícola Josefina"
+        },
+        {
+          "id": "c1794566647922",
+          "nombre": "Gasto",
+          "fecha": "2026-11-13",
+          "persona": "Hogar",
+          "total": 6500,
+          "cats": [
+            "Casa"
+          ],
+          "itemCount": 1,
+          "lugar": "Gasto"
         }
       ],
       "items": [
@@ -9423,6 +9435,19 @@
           "uni": "kg",
           "marca": null,
           "lugar": "Avícola Josefina",
+          "obs": ""
+        },
+        {
+          "id": "i1794566647922",
+          "compId": "c1794566647922",
+          "item": "Pintura blanca en aerosol",
+          "cat": "Casa",
+          "mon": "ARS",
+          "monto": 6500,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Gasto",
           "obs": ""
         }
       ]
