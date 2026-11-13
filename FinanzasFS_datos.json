@@ -8334,13 +8334,25 @@
           "id": "c1794480316104",
           "nombre": "ticket_dongaston_11112026",
           "fecha": "2026-11-11",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 9580,
           "cats": [
             "Alimentación"
           ],
           "itemCount": 3,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1794566609454",
+          "nombre": "Avícola Josefina",
+          "fecha": "2026-11-13",
+          "persona": "Hogar",
+          "total": 34440,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Avícola Josefina"
         }
       ],
       "items": [
@@ -9399,6 +9411,19 @@
           "cant": 1,
           "uni": "un",
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "i1794566609454",
+          "compId": "c1794566609454",
+          "item": "Milanesa de pollo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 34440,
+          "cant": 4.31,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Avícola Josefina",
+          "obs": ""
         }
       ]
     }
