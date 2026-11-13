@@ -8356,7 +8356,7 @@
         },
         {
           "id": "c1794566647922",
-          "nombre": "Gasto",
+          "nombre": "Pinturería Don Antonio",
           "fecha": "2026-11-13",
           "persona": "Hogar",
           "total": 6500,
@@ -8364,7 +8364,7 @@
             "Casa"
           ],
           "itemCount": 1,
-          "lugar": "Gasto"
+          "lugar": "Pinturería Don Antonio"
         }
       ],
       "items": [
@@ -9447,7 +9447,7 @@
           "cant": 1,
           "uni": "unidad",
           "marca": null,
-          "lugar": "Gasto",
+          "lugar": "Pinturería Don Antonio",
           "obs": ""
         }
       ]
