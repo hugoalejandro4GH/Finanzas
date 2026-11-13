@@ -8377,6 +8377,17 @@
           ],
           "itemCount": 1,
           "lugar": "Casa Aides"
+        },
+        {
+          "id": "c1794570633713",
+          "nombre": "Plan de pago deuda tasas y servicios ",
+          "fecha": "2026-11-13",
+          "persona": "Ambos",
+          "total": 9182.85,
+          "cats": [
+            "Servicios"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -9474,6 +9485,14 @@
           "marca": null,
           "lugar": "Casa Aides",
           "obs": ""
+        },
+        {
+          "id": "i1794570633713",
+          "compId": "c1794570633713",
+          "item": "Plan de pago deuda tasas y servicios ",
+          "cat": "Servicios",
+          "mon": "ARS",
+          "monto": 9182.85
         }
       ]
     }
@@ -9540,7 +9559,8 @@
       "1792282006986.8472": true,
       "1792282006986.5872": true,
       "1792282006986.1772": true,
-      "1792282006986.7527": true
+      "1792282006986.7527": true,
+      "1792282006986.0535": true
     }
   },
   "lugares": [
