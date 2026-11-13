@@ -8382,7 +8382,7 @@
           "id": "c1794570633713",
           "nombre": "Plan de pago deuda tasas y servicios ",
           "fecha": "2026-11-13",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 9182.85,
           "cats": [
             "Servicios"
@@ -8393,12 +8393,24 @@
           "id": "c1794570670107",
           "nombre": "Basquet Ramiro",
           "fecha": "2026-11-13",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 71500,
           "cats": [
             "Deporte y Salud"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1794570872240",
+          "nombre": "Dr de la Vega",
+          "fecha": "2026-11-12",
+          "persona": "Hogar",
+          "total": 20000,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1,
+          "lugar": "Dr de la Vega"
         }
       ],
       "items": [
@@ -9512,6 +9524,19 @@
           "cat": "Deporte y Salud",
           "mon": "ARS",
           "monto": 71500
+        },
+        {
+          "id": "i1794570872240",
+          "compId": "c1794570872240",
+          "item": "Consulta traumatólogo",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 20000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Dr de la Vega",
+          "obs": ""
         }
       ]
     }
@@ -9655,7 +9680,8 @@
     "Mega mundo $2",
     "Casa Goyo",
     "Dr. Muchutti",
-    "Casa Aides"
+    "Casa Aides",
+    "Dr de la Vega"
   ],
   "marcas": [
     "Pamp",
