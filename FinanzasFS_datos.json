@@ -8416,7 +8416,7 @@
           "id": "c1794656765218",
           "nombre": "ticket_dongaston_13112026",
           "fecha": "2026-11-13",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 79439.19,
           "cats": [
             "Limpieza e Higiene",
@@ -8424,6 +8424,18 @@
           ],
           "itemCount": 14,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1794658901217",
+          "nombre": "La chimenea",
+          "fecha": "2026-11-09",
+          "persona": "Hogar",
+          "total": 24000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "La chimenea"
         }
       ],
       "items": [
@@ -9718,6 +9730,19 @@
           "cant": 2,
           "uni": "un",
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "i1794658901218",
+          "compId": "c1794658901217",
+          "item": "Empanadas",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 24000,
+          "cant": 24,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "La chimenea",
+          "obs": ""
         }
       ]
     }
@@ -9862,7 +9887,8 @@
     "Casa Goyo",
     "Dr. Muchutti",
     "Casa Aides",
-    "Dr de la Vega"
+    "Dr de la Vega",
+    "La chimenea"
   ],
   "marcas": [
     "Pamp",
