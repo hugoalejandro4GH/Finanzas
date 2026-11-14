@@ -8411,6 +8411,19 @@
           ],
           "itemCount": 1,
           "lugar": "Dr de la Vega"
+        },
+        {
+          "id": "c1794656765218",
+          "nombre": "ticket_dongaston_13112026",
+          "fecha": "2026-11-13",
+          "persona": "Clarisa",
+          "total": 79439.19,
+          "cats": [
+            "Limpieza e Higiene",
+            "Alimentación"
+          ],
+          "itemCount": 14,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -9537,6 +9550,174 @@
           "marca": null,
           "lugar": "Dr de la Vega",
           "obs": ""
+        },
+        {
+          "id": "i17946567652180.158692106147021",
+          "compId": "c1794656765218",
+          "item": "Líq. lav. ropa ecolavado DP x3lts",
+          "marca": "Ala",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 8795,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17946567652180.5099535896255788",
+          "compId": "c1794656765218",
+          "item": "Banana",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3918.07,
+          "cant": 1.79,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17946567652180.22239679423174186",
+          "compId": "c1794656765218",
+          "item": "Café tostado molido x250g",
+          "marca": "Morenita Brasil",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 8975,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17946567652180.41132902083717326",
+          "compId": "c1794656765218",
+          "item": "Choclo entero amarillo x300g",
+          "marca": "Arcor",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3970,
+          "cant": 2,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17946567652190.6538164586079976",
+          "compId": "c1794656765218",
+          "item": "Dual pack Coca-Cola / Fanta x2,25lt",
+          "marca": "Coca Cola",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 14990,
+          "cant": 2,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17946567652190.12826187283771595",
+          "compId": "c1794656765218",
+          "item": "Lomo de atún en aceite x170g",
+          "marca": "GDC",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4395,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17946567652190.48281720049186316",
+          "compId": "c1794656765218",
+          "item": "Sardina en aceite x110g",
+          "marca": "GomesDaCosta",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3195,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17946567652190.8172415929307877",
+          "compId": "c1794656765218",
+          "item": "Naranja",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 5198.36,
+          "cant": 2.81,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17946567652190.5962759082400304",
+          "compId": "c1794656765218",
+          "item": "Pan lactal c/salvado",
+          "marca": "La Reina",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2195,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17946567652190.34703342193731523",
+          "compId": "c1794656765218",
+          "item": "Papas blancas",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 8059.5,
+          "cant": 2.7,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17946567652190.6713500337070014",
+          "compId": "c1794656765218",
+          "item": "Picadillo de carne x90g",
+          "marca": "Safra",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2687.85,
+          "cant": 3,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17946567652190.9536138386751535",
+          "compId": "c1794656765218",
+          "item": "Pote crema doble 200cc",
+          "marca": "Ilolay",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1895,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17946567652190.018708591136553987",
+          "compId": "c1794656765218",
+          "item": "Queso barra Danbo",
+          "marca": "Tremblay",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 7195.41,
+          "cant": 0.56,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17946567652190.459388572847819",
+          "compId": "c1794656765218",
+          "item": "Salchicha x6u",
+          "marca": "Lario",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3970,
+          "cant": 2,
+          "uni": "un",
+          "lugar": "Don Gastón"
         }
       ]
     }
@@ -9786,7 +9967,10 @@
     "Sica",
     "Yogurísimo",
     "L3N",
-    "Toddy"
+    "Toddy",
+    "Morenita Brasil",
+    "GDC",
+    "GomesDaCosta"
   ],
   "tarjetas": [
     {
