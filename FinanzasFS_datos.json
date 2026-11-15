@@ -8453,10 +8453,21 @@
           "id": "c1794711400776",
           "nombre": "Cuota Casa",
           "fecha": "2026-11-15",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 3079.13,
           "cats": [
             "Vivienda"
+          ],
+          "itemCount": 1
+        },
+        {
+          "id": "c1794711669360",
+          "nombre": "Aporte Clari",
+          "fecha": "2026-11-15",
+          "persona": "Ambos",
+          "total": 15000,
+          "cats": [
+            "Donación"
           ],
           "itemCount": 1
         }
@@ -9787,6 +9798,14 @@
           "cat": "Vivienda",
           "mon": "ARS",
           "monto": 3079.13
+        },
+        {
+          "id": "i1794711669360",
+          "compId": "c1794711669360",
+          "item": "Aporte Clari",
+          "cat": "Donación",
+          "mon": "ARS",
+          "monto": 15000
         }
       ]
     }
@@ -9856,7 +9875,8 @@
       "1792282006986.7527": true,
       "1792282006986.0535": true,
       "1792282006986.4746": true,
-      "1792282006986.494": true
+      "1792282006986.494": true,
+      "1792282006986.932": true
     }
   },
   "lugares": [
