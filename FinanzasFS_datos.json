@@ -8464,12 +8464,24 @@
           "id": "c1794711669360",
           "nombre": "Aporte Clari",
           "fecha": "2026-11-15",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 15000,
           "cats": [
             "Donación"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1794792095153",
+          "nombre": "Corrientes",
+          "fecha": "2026-11-15",
+          "persona": "Hogar",
+          "total": 11800,
+          "cats": [
+            "Otros"
+          ],
+          "itemCount": 1,
+          "lugar": "Corrientes"
         }
       ],
       "items": [
@@ -9806,6 +9818,19 @@
           "cat": "Donación",
           "mon": "ARS",
           "monto": 15000
+        },
+        {
+          "id": "i1794792095153",
+          "compId": "c1794792095153",
+          "item": "Aporte para el retiro",
+          "cat": "Otros",
+          "mon": "ARS",
+          "monto": 11800,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Corrientes",
+          "obs": ""
         }
       ]
     }
@@ -9954,7 +9979,8 @@
     "Casa Aides",
     "Dr de la Vega",
     "La chimenea",
-    "La Usina"
+    "La Usina",
+    "Corrientes"
   ],
   "marcas": [
     "Pamp",
