@@ -8487,7 +8487,7 @@
           "id": "c1794875386092",
           "nombre": "ticket_dongaston_16112026",
           "fecha": "2026-11-16",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 148528.66,
           "cats": [
             "Alimentación",
@@ -8495,6 +8495,18 @@
           ],
           "itemCount": 33,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1794937242938",
+          "nombre": "Betiana PSA",
+          "fecha": "2026-11-17",
+          "persona": "Hogar",
+          "total": 26000,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Betiana PSA"
         }
       ],
       "items": [
@@ -10240,6 +10252,19 @@
           "cant": 0.74,
           "uni": "kg",
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "i1794937242939",
+          "compId": "c1794937242938",
+          "item": "Tubo para soda",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 26000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Betiana PSA",
+          "obs": ""
         }
       ]
     }
