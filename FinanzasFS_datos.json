@@ -8531,6 +8531,18 @@
           ],
           "itemCount": 1,
           "lugar": "La casa del queso"
+        },
+        {
+          "id": "c1795100699832",
+          "nombre": "La casa del queso",
+          "fecha": "2026-11-18",
+          "persona": "Hogar",
+          "total": 8169.93,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "La casa del queso"
         }
       ],
       "items": [
@@ -10315,6 +10327,19 @@
           "marca": "Arcor",
           "lugar": "La casa del queso",
           "obs": ""
+        },
+        {
+          "id": "i1795100699832",
+          "compId": "c1795100699832",
+          "item": "Salame criollo picado fino",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 8169.93,
+          "cant": 0.37,
+          "uni": "kg",
+          "marca": "Fox",
+          "lugar": "La casa del queso",
+          "obs": "Valor aproximado "
         }
       ]
     }
