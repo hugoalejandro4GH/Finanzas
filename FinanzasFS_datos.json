@@ -8519,6 +8519,18 @@
           ],
           "itemCount": 1,
           "lugar": "Libremax"
+        },
+        {
+          "id": "c1795100597782",
+          "nombre": "La casa del queso",
+          "fecha": "2026-11-18",
+          "persona": "Hogar",
+          "total": 4579.98,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "La casa del queso"
         }
       ],
       "items": [
@@ -10289,6 +10301,19 @@
           "uni": "unidad",
           "marca": null,
           "lugar": "Libremax",
+          "obs": ""
+        },
+        {
+          "id": "i1795100597782",
+          "compId": "c1795100597782",
+          "item": "Choclo cremoso en lata",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4579.98,
+          "cant": 2,
+          "uni": "unidad",
+          "marca": "Arcor",
+          "lugar": "La casa del queso",
           "obs": ""
         }
       ]
