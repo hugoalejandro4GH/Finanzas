@@ -8507,6 +8507,18 @@
           ],
           "itemCount": 1,
           "lugar": "Betiana PSA"
+        },
+        {
+          "id": "c1795050199163",
+          "nombre": "Libremax",
+          "fecha": "2026-11-19",
+          "persona": "Hogar",
+          "total": 2500,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "Libremax"
         }
       ],
       "items": [
@@ -10264,6 +10276,19 @@
           "uni": "unidad",
           "marca": null,
           "lugar": "Betiana PSA",
+          "obs": ""
+        },
+        {
+          "id": "i1795050199163",
+          "compId": "c1795050199163",
+          "item": "Balde para obra fin de año Ramiro",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 2500,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Libremax",
           "obs": ""
         }
       ]
