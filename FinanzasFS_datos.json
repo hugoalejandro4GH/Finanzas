@@ -8543,6 +8543,18 @@
           ],
           "itemCount": 1,
           "lugar": "La casa del queso"
+        },
+        {
+          "id": "c1795182666983",
+          "nombre": "Farmacity",
+          "fecha": "2026-11-20",
+          "persona": "Hogar",
+          "total": 3013.5,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 1,
+          "lugar": "Farmacity"
         }
       ],
       "items": [
@@ -10340,6 +10352,19 @@
           "marca": "Fox",
           "lugar": "La casa del queso",
           "obs": "Valor aproximado "
+        },
+        {
+          "id": "i1795182666983",
+          "compId": "c1795182666983",
+          "item": "Tafirol de 1g",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 3013.5,
+          "cant": 8,
+          "uni": "unidad",
+          "marca": "Tafirol",
+          "lugar": "Farmacity",
+          "obs": "Blister de 8 unidades"
         }
       ]
     }
@@ -10610,7 +10635,8 @@
     "Swift",
     "Veritas",
     "Vin Norton",
-    "Windy"
+    "Windy",
+    "Tafirol"
   ],
   "tarjetas": [
     {
