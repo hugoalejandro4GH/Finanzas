@@ -8555,6 +8555,18 @@
           ],
           "itemCount": 1,
           "lugar": "Farmacity"
+        },
+        {
+          "id": "c1795182733223",
+          "nombre": "Carnicería La esperanza",
+          "fecha": "2026-11-20",
+          "persona": "Hogar",
+          "total": 25998,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Carnicería La esperanza"
         }
       ],
       "items": [
@@ -10365,6 +10377,19 @@
           "marca": "Tafirol",
           "lugar": "Farmacity",
           "obs": "Blister de 8 unidades"
+        },
+        {
+          "id": "i1795182733223",
+          "compId": "c1795182733223",
+          "item": "Carne molida",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 25998,
+          "cant": 2,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Carnicería La esperanza",
+          "obs": ""
         }
       ]
     }
