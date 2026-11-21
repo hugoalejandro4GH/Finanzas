@@ -8579,6 +8579,18 @@
           ],
           "itemCount": 1,
           "lugar": "Pampa"
+        },
+        {
+          "id": "c1795304996372",
+          "nombre": "Pampa",
+          "fecha": "2026-11-20",
+          "persona": "Hogar",
+          "total": 20000,
+          "cats": [
+            "Otros"
+          ],
+          "itemCount": 1,
+          "lugar": "Pampa"
         }
       ],
       "items": [
@@ -10411,6 +10423,19 @@
           "mon": "ARS",
           "monto": 20000,
           "cant": 4,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Pampa",
+          "obs": ""
+        },
+        {
+          "id": "i1795304996372",
+          "compId": "c1795304996372",
+          "item": "Regalo Valiy",
+          "cat": "Otros",
+          "mon": "ARS",
+          "monto": 20000,
+          "cant": 1,
           "uni": "unidad",
           "marca": null,
           "lugar": "Pampa",
