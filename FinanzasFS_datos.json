@@ -8567,6 +8567,18 @@
           ],
           "itemCount": 1,
           "lugar": "Carnicería La esperanza"
+        },
+        {
+          "id": "c1795304934539",
+          "nombre": "Pampa",
+          "fecha": "2026-11-21",
+          "persona": "Hogar",
+          "total": 20000,
+          "cats": [
+            "Casa"
+          ],
+          "itemCount": 1,
+          "lugar": "Pampa"
         }
       ],
       "items": [
@@ -10390,6 +10402,19 @@
           "marca": null,
           "lugar": "Carnicería La esperanza",
           "obs": ""
+        },
+        {
+          "id": "i1795304934539",
+          "compId": "c1795304934539",
+          "item": "Vaso Coca cola",
+          "cat": "Casa",
+          "mon": "ARS",
+          "monto": 20000,
+          "cant": 4,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Pampa",
+          "obs": ""
         }
       ]
     }
@@ -10539,7 +10564,8 @@
     "Dr de la Vega",
     "La chimenea",
     "La Usina",
-    "Corrientes"
+    "Corrientes",
+    "Pampa"
   ],
   "marcas": [
     "Pamp",
