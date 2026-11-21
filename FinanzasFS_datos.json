@@ -8603,6 +8603,18 @@
           ],
           "itemCount": 1,
           "lugar": "Pampa"
+        },
+        {
+          "id": "c1795305194173",
+          "nombre": "Pampa",
+          "fecha": "2026-11-21",
+          "persona": "Hogar",
+          "total": 20000,
+          "cats": [
+            "Otros"
+          ],
+          "itemCount": 1,
+          "lugar": "Pampa"
         }
       ],
       "items": [
@@ -10457,6 +10469,19 @@
           "id": "i1795305089757",
           "compId": "c1795305089757",
           "item": "Torta y bebidas",
+          "cat": "Otros",
+          "mon": "ARS",
+          "monto": 20000,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Pampa",
+          "obs": ""
+        },
+        {
+          "id": "i1795305194173",
+          "compId": "c1795305194173",
+          "item": "Varios",
           "cat": "Otros",
           "mon": "ARS",
           "monto": 20000,
