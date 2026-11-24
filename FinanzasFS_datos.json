@@ -8627,6 +8627,18 @@
           ],
           "itemCount": 1,
           "lugar": "Libremax"
+        },
+        {
+          "id": "c1795553258800",
+          "nombre": "Supermercados Impulso",
+          "fecha": "2026-11-24",
+          "persona": "Hogar",
+          "total": 6439.05,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Supermercados Impulso"
         }
       ],
       "items": [
@@ -10514,6 +10526,19 @@
           "uni": "unidad",
           "marca": null,
           "lugar": "Libremax",
+          "obs": ""
+        },
+        {
+          "id": "i1795553258800",
+          "compId": "c1795553258800",
+          "item": "Pan negro",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6439.05,
+          "cant": 13.14,
+          "uni": "kg",
+          "marca": null,
+          "lugar": "Supermercados Impulso",
           "obs": ""
         }
       ]
