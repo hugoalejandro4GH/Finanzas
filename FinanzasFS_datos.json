@@ -8615,6 +8615,18 @@
           ],
           "itemCount": 1,
           "lugar": "Pampa"
+        },
+        {
+          "id": "c1795491345110",
+          "nombre": "Libremax",
+          "fecha": "2026-11-23",
+          "persona": "Hogar",
+          "total": 2216,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "Libremax"
         }
       ],
       "items": [
@@ -10489,6 +10501,19 @@
           "uni": "unidad",
           "marca": null,
           "lugar": "Pampa",
+          "obs": ""
+        },
+        {
+          "id": "i1795491345113",
+          "compId": "c1795491345110",
+          "item": "Gomaeva",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 2216,
+          "cant": 1,
+          "uni": "unidad",
+          "marca": null,
+          "lugar": "Libremax",
           "obs": ""
         }
       ]
