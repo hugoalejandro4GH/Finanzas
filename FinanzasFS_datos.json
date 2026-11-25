@@ -8639,6 +8639,19 @@
           ],
           "itemCount": 1,
           "lugar": "Supermercados Impulso"
+        },
+        {
+          "id": "c1795578669691",
+          "nombre": "ticket_dongaston_24112026",
+          "fecha": "2026-11-24",
+          "persona": "Clarisa",
+          "total": 132742.34,
+          "cats": [
+            "Limpieza e Higiene",
+            "Alimentación"
+          ],
+          "itemCount": 21,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -10540,6 +10553,258 @@
           "marca": null,
           "lugar": "Supermercados Impulso",
           "obs": ""
+        },
+        {
+          "id": "i17955786696910.061804386398033095",
+          "compId": "c1795578669691",
+          "item": "Líq. lav. ropa ecolavado DP x3lts",
+          "marca": "Ala",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 8795,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.5180303276252187",
+          "compId": "c1795578669691",
+          "item": "Perejil deshidratado s/taco x25g",
+          "marca": "Alicante",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1695,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.6636620858843832",
+          "compId": "c1795578669691",
+          "item": "Banana",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3226.65,
+          "cant": 1.47,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.48251079098644734",
+          "compId": "c1795578669691",
+          "item": "Cebolla",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4138.4,
+          "cant": 1.12,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.7670322107854891",
+          "compId": "c1795578669691",
+          "item": "Shampoo Dream Liso x200ml",
+          "marca": "Elvive",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 6695,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.9158566641076059",
+          "compId": "c1795578669691",
+          "item": "Facturas horneadas",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3900,
+          "cant": 6,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.6727282951128919",
+          "compId": "c1795578669691",
+          "item": "Mayonesa clásica DP x475g",
+          "marca": "Hellmann's",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2895,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.280477421784355",
+          "compId": "c1795578669691",
+          "item": "Huevos doble A E.Grande maple x30u",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6595,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.5974147309600761",
+          "compId": "c1795578669691",
+          "item": "Jamón cocido con cuero tacural s/tac",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 7971.81,
+          "cant": 0.64,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.11958052470328095",
+          "compId": "c1795578669691",
+          "item": "Naranja",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4631.1,
+          "cant": 2.58,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.5155482867423992",
+          "compId": "c1795578669691",
+          "item": "Pan dulce x400g",
+          "marca": "Panino Nuevo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3579.9,
+          "cant": 2,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.24524653629978654",
+          "compId": "c1795578669691",
+          "item": "Papas blancas",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 7014.75,
+          "cant": 2.35,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.24350556248158928",
+          "compId": "c1795578669691",
+          "item": "Acondicionador control frizz x970ml",
+          "marca": "Plusbelle",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 3595,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.931593842015701",
+          "compId": "c1795578669691",
+          "item": "Queso Danbo",
+          "marca": "Tremblay",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 14107.13,
+          "cant": 1.09,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.09969986354104265",
+          "compId": "c1795578669691",
+          "item": "Queso cremoso",
+          "marca": "LS Cremón",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 13493.48,
+          "cant": 1.14,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.5960480714796578",
+          "compId": "c1795578669691",
+          "item": "Galletitas surtido x400g",
+          "marca": "Bagley",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6590,
+          "cant": 2,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.42520443372487715",
+          "compId": "c1795578669691",
+          "item": "Ternera paleta s/hueso",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 16849.12,
+          "cant": 0.99,
+          "uni": "kg",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.2159274935972889",
+          "compId": "c1795578669691",
+          "item": "Tomate triturado x950g",
+          "marca": "Tiempo Libre",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2985,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.35895012851087016",
+          "compId": "c1795578669691",
+          "item": "Vinagre de manzana x500cc",
+          "marca": "Halconero",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1795,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.24325296113493788",
+          "compId": "c1795578669691",
+          "item": "Desodorante Suave Clásico Intenso D/P x3l",
+          "marca": "Vivere",
+          "cat": "Limpieza e Higiene",
+          "mon": "ARS",
+          "monto": 8795,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786696910.808758442650727",
+          "compId": "c1795578669691",
+          "item": "Yogur griego natural s/endulzar x300g",
+          "marca": "Yogurísimo",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 3395,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Don Gastón"
         }
       ]
     }
@@ -10812,7 +11077,9 @@
     "Veritas",
     "Vin Norton",
     "Windy",
-    "Tafirol"
+    "Tafirol",
+    "Alicante",
+    "Halconero"
   ],
   "tarjetas": [
     {
