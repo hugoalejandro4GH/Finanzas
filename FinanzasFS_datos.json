@@ -10852,10 +10852,277 @@
       ]
     },
     "2026_12": {
-      "pi": [],
+      "pi": [
+        {
+          "id": 1795623109974.6487,
+          "fuente": "Tuya Recargable",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 32000
+        },
+        {
+          "id": 1795623109974.9226,
+          "fuente": "Sueldo Clarisa",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 1800000
+        },
+        {
+          "id": 1795623109974.9841,
+          "fuente": "Sueldo Alejandro",
+          "per": "Alejandro",
+          "mon": "ARS",
+          "monto": 2025000
+        }
+      ],
       "pe": [
         {
-          "id": 1795623101444.745,
+          "id": 1795623109974.2307,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Escuela Ramiro",
+          "mon": "ARS",
+          "monto": 280800,
+          "vto": 10,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.1462,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Inglés Ramiro",
+          "mon": "ARS",
+          "monto": 64000,
+          "vto": 10,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.4773,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Inglés Franco",
+          "mon": "ARS",
+          "monto": 64000,
+          "vto": 10,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.9988,
+          "cat": "Educación",
+          "tipo": "Fijo",
+          "desc": "Inglés Clarisa",
+          "mon": "ARS",
+          "monto": 30000,
+          "vto": 10,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.8,
+          "cat": "Vivienda",
+          "tipo": "Fijo",
+          "desc": "Cuota Casa",
+          "mon": "ARS",
+          "monto": 3079.13,
+          "vto": 15,
+          "obs": "",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.3848,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Luz",
+          "mon": "ARS",
+          "monto": 138625.11,
+          "vto": 5,
+          "obs": "",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.6829,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Agua",
+          "mon": "ARS",
+          "monto": 28421.82,
+          "vto": 2,
+          "obs": "Cuota de octubre 2026",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.7676,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Seguridad del barrio",
+          "mon": "ARS",
+          "monto": 43407,
+          "vto": 10,
+          "obs": "",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.5603,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Celular Ale",
+          "mon": "ARS",
+          "monto": 46039.92,
+          "vto": 3,
+          "obs": "",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.9438,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Celular Clari",
+          "mon": "ARS",
+          "monto": 41393.77,
+          "vto": 2,
+          "obs": "",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.4358,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Internet + Flow",
+          "mon": "ARS",
+          "monto": 93506,
+          "vto": 2,
+          "obs": "",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.5635,
+          "cat": "Transporte",
+          "tipo": "Fijo",
+          "desc": "Seguro UP",
+          "mon": "ARS",
+          "monto": 78000,
+          "vto": null,
+          "obs": "",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.2703,
+          "cat": "Transporte",
+          "tipo": "Fijo",
+          "desc": "Seguro Moto",
+          "mon": "ARS",
+          "monto": 18000,
+          "vto": 2,
+          "obs": "",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.9883,
+          "cat": "Transporte",
+          "tipo": "Fijo",
+          "desc": "Nafta Moto",
+          "mon": "ARS",
+          "monto": 32000,
+          "vto": null,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.352,
+          "cat": "Transporte",
+          "tipo": "Variable",
+          "desc": "Nafta UP",
+          "mon": "ARS",
+          "monto": 200000,
+          "vto": null,
+          "obs": "",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.1008,
+          "cat": "Deporte y Salud",
+          "tipo": "Fijo",
+          "desc": "Basquet Ramiro",
+          "mon": "ARS",
+          "monto": 71500,
+          "vto": 10,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.767,
+          "cat": "Deporte y Salud",
+          "tipo": "Fijo",
+          "desc": "Gimnasio Franco ",
+          "mon": "ARS",
+          "monto": 48000,
+          "vto": 10,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.236,
+          "cat": "Deporte y Salud",
+          "tipo": "Fijo",
+          "desc": "Gimnasio Clari",
+          "mon": "ARS",
+          "monto": 48000,
+          "vto": 10,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.457,
+          "cat": "Donación",
+          "tipo": "Fijo",
+          "desc": "Aporte Clari",
+          "mon": "ARS",
+          "monto": 15000,
+          "vto": 10,
+          "obs": "",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.3262,
+          "cat": "Donación",
+          "tipo": "Fijo",
+          "desc": "Aporte médicos sin frentera",
+          "mon": "ARS",
+          "monto": 14000,
+          "vto": 3,
+          "obs": "",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.8657,
+          "cat": "Inversión",
+          "tipo": "Fijo",
+          "desc": "Programa ECI",
+          "mon": "ARS",
+          "monto": 43500,
+          "vto": 24,
+          "obs": "",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.016,
+          "cat": "Alimentación",
+          "tipo": "Variable",
+          "desc": "Previsión de alimentos por poner alguna cosa",
+          "mon": "ARS",
+          "monto": 900000,
+          "vto": null,
+          "obs": "Estimados de alimentación del mes",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.4302,
+          "cat": "Servicios",
+          "tipo": "Fijo",
+          "desc": "Plan de pago deuda tasas y servicios ",
+          "mon": "ARS",
+          "monto": 9182.85,
+          "vto": 15,
+          "obs": "",
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623109974.574,
           "cat": "Tarjetas",
           "tipo": "Fijo",
           "desc": "Visa Santander",
@@ -10869,7 +11136,7 @@
           "estado": "pendiente"
         },
         {
-          "id": 1795623101444.1895,
+          "id": 1795623109974.4514,
           "cat": "Tarjetas",
           "tipo": "Fijo",
           "desc": "Visa Banco del Chaco",
@@ -10883,7 +11150,7 @@
           "estado": "pendiente"
         },
         {
-          "id": 1795623101444.3162,
+          "id": 1795623109974.573,
           "cat": "Tarjetas",
           "tipo": "Fijo",
           "desc": "Tuya Banco del Chaco",
