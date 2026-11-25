@@ -11041,10 +11041,10 @@
           "tipo": "Fijo",
           "desc": "Celular Ale",
           "mon": "ARS",
-          "monto": 46039.92,
-          "vto": 3,
+          "monto": 46480,
+          "vto": 2,
           "obs": "",
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": 1795623109974.9438,
