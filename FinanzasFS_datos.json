@@ -11086,9 +11086,9 @@
           "desc": "Seguro Moto",
           "mon": "ARS",
           "monto": 18000,
-          "vto": 2,
+          "vto": 1,
           "obs": "",
-          "estado": "pendiente"
+          "estado": "confirmado"
         },
         {
           "id": 1795623109974.9883,
