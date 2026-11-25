@@ -8687,6 +8687,18 @@
           ],
           "itemCount": 1,
           "lugar": "YPF"
+        },
+        {
+          "id": "c1795623758593",
+          "nombre": "YPF",
+          "fecha": "2026-11-25",
+          "persona": "Hogar",
+          "total": 45000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "YPF"
         }
       ],
       "items": [
@@ -10873,6 +10885,19 @@
           "marca": "YPF",
           "lugar": "YPF",
           "obs": ""
+        },
+        {
+          "id": "i1795623758593",
+          "compId": "c1795623758593",
+          "item": "Nafta Infinia",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 45000,
+          "cant": 21.523,
+          "uni": "lt",
+          "marca": "Ypf",
+          "lugar": "YPF",
+          "obs": ""
         }
       ]
     },
@@ -11467,7 +11492,8 @@
     "Tafirol",
     "Alicante",
     "Halconero",
-    "Billiken"
+    "Billiken",
+    "Ypf"
   ],
   "tarjetas": [
     {
