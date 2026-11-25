@@ -8652,6 +8652,18 @@
           ],
           "itemCount": 21,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1795578691410",
+          "nombre": "ticket_dongaston_24112026b",
+          "fecha": "2026-11-24",
+          "persona": "Clarisa",
+          "total": 1975,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Don Gastón"
         }
       ],
       "items": [
@@ -10805,6 +10817,18 @@
           "cant": 1,
           "uni": "un",
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "i17955786914100.8374759527577451",
+          "compId": "c1795578691410",
+          "item": "Pastillas Rueditas x30g",
+          "marca": "Billiken",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1975,
+          "cant": 5,
+          "uni": "un",
+          "lugar": "Don Gastón"
         }
       ]
     }
@@ -11079,7 +11103,8 @@
     "Windy",
     "Tafirol",
     "Alicante",
-    "Halconero"
+    "Halconero",
+    "Billiken"
   ],
   "tarjetas": [
     {
