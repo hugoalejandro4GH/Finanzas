@@ -8699,6 +8699,18 @@
           ],
           "itemCount": 1,
           "lugar": "YPF"
+        },
+        {
+          "id": "c1795623911533",
+          "nombre": "La llave del Chaco",
+          "fecha": "2026-11-25",
+          "persona": "Hogar",
+          "total": 12760,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "La llave del Chaco"
         }
       ],
       "items": [
@@ -10897,6 +10909,19 @@
           "uni": "lt",
           "marca": "Ypf",
           "lugar": "YPF",
+          "obs": ""
+        },
+        {
+          "id": "i1795623911533",
+          "compId": "c1795623911533",
+          "item": "Varios librería",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 12760,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "La llave del Chaco",
           "obs": ""
         }
       ]
