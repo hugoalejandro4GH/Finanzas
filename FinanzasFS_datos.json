@@ -8644,7 +8644,7 @@
           "id": "c1795578669691",
           "nombre": "ticket_dongaston_24112026",
           "fecha": "2026-11-24",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 132742.34,
           "cats": [
             "Limpieza e Higiene",
@@ -8657,7 +8657,7 @@
           "id": "c1795578691410",
           "nombre": "ticket_dongaston_24112026b",
           "fecha": "2026-11-24",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 1975,
           "cats": [
             "Alimentación"
@@ -9685,7 +9685,7 @@
           "uni": "lt",
           "marca": "YPF",
           "lugar": "Ypf Luminium",
-          "obs": ""
+          "obs": "Incluye 10% de descuento "
         },
         {
           "id": "i17944803161050.3341024492269816",
