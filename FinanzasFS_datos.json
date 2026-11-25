@@ -8664,6 +8664,17 @@
           ],
           "itemCount": 1,
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "c1795623075359",
+          "nombre": "Programa ECI",
+          "fecha": "2026-11-25",
+          "persona": "Ambos",
+          "total": 43500,
+          "cats": [
+            "Inversión"
+          ],
+          "itemCount": 1
         }
       ],
       "items": [
@@ -10829,8 +10840,66 @@
           "cant": 5,
           "uni": "un",
           "lugar": "Don Gastón"
+        },
+        {
+          "id": "i1795623075359",
+          "compId": "c1795623075359",
+          "item": "Programa ECI",
+          "cat": "Inversión",
+          "mon": "ARS",
+          "monto": 43500
         }
       ]
+    },
+    "2026_12": {
+      "pi": [],
+      "pe": [
+        {
+          "id": 1795623101444.745,
+          "cat": "Tarjetas",
+          "tipo": "Fijo",
+          "desc": "Visa Santander",
+          "mon": "ARS",
+          "monto": 17783.17,
+          "vto": 9,
+          "tj": "tj1",
+          "tjMon": "ARS",
+          "cuotas": 17783.17,
+          "extra": 0,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623101444.1895,
+          "cat": "Tarjetas",
+          "tipo": "Fijo",
+          "desc": "Visa Banco del Chaco",
+          "mon": "ARS",
+          "monto": 80956.31,
+          "vto": null,
+          "tj": "tj2",
+          "tjMon": "ARS",
+          "cuotas": 80956.31,
+          "extra": 0,
+          "estado": "pendiente"
+        },
+        {
+          "id": 1795623101444.3162,
+          "cat": "Tarjetas",
+          "tipo": "Fijo",
+          "desc": "Tuya Banco del Chaco",
+          "mon": "ARS",
+          "monto": 0,
+          "vto": null,
+          "tj": "tj3",
+          "tjMon": "ARS",
+          "cuotas": 0,
+          "extra": 0,
+          "estado": "pendiente"
+        }
+      ],
+      "ir": [],
+      "comps": [],
+      "items": []
     }
   },
   "agenda": {
@@ -10899,8 +10968,10 @@
       "1792282006986.0535": true,
       "1792282006986.4746": true,
       "1792282006986.494": true,
-      "1792282006986.932": true
-    }
+      "1792282006986.932": true,
+      "1792282006986.977": true
+    },
+    "ag_2026_12": {}
   },
   "lugares": [
     "Don Gastón",
