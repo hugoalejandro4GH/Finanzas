@@ -8669,12 +8669,24 @@
           "id": "c1795623075359",
           "nombre": "Programa ECI",
           "fecha": "2026-11-25",
-          "persona": "Ambos",
+          "persona": "Hogar",
           "total": 43500,
           "cats": [
             "Inversión"
           ],
           "itemCount": 1
+        },
+        {
+          "id": "c1795623688565",
+          "nombre": "YPF",
+          "fecha": "2026-11-18",
+          "persona": "Hogar",
+          "total": 45000,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "YPF"
         }
       ],
       "items": [
@@ -10848,6 +10860,19 @@
           "cat": "Inversión",
           "mon": "ARS",
           "monto": 43500
+        },
+        {
+          "id": "i1795623688565",
+          "compId": "c1795623688565",
+          "item": "Nafta Infinia",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 45000,
+          "cant": 21523,
+          "uni": "lt",
+          "marca": "YPF",
+          "lugar": "YPF",
+          "obs": ""
         }
       ]
     },
