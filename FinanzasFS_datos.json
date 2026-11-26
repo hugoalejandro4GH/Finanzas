@@ -8711,6 +8711,18 @@
           ],
           "itemCount": 1,
           "lugar": "La llave del Chaco"
+        },
+        {
+          "id": "c1795725052307",
+          "nombre": "Mercería",
+          "fecha": "2026-11-25",
+          "persona": "Hogar",
+          "total": 1600,
+          "cats": [
+            "Educación"
+          ],
+          "itemCount": 1,
+          "lugar": "Mercería"
         }
       ],
       "items": [
@@ -10923,6 +10935,19 @@
           "marca": null,
           "lugar": "La llave del Chaco",
           "obs": ""
+        },
+        {
+          "id": "i1795725052307",
+          "compId": "c1795725052307",
+          "item": "Cinta de raso negra",
+          "cat": "Educación",
+          "mon": "ARS",
+          "monto": 1600,
+          "cant": 2,
+          "uni": "otro",
+          "marca": null,
+          "lugar": "Mercería",
+          "obs": ""
         }
       ]
     },
@@ -11392,7 +11417,8 @@
     "La chimenea",
     "La Usina",
     "Corrientes",
-    "Pampa"
+    "Pampa",
+    "Mercería"
   ],
   "marcas": [
     "Pamp",
