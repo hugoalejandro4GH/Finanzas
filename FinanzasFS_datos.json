@@ -8723,6 +8723,18 @@
           ],
           "itemCount": 1,
           "lugar": "Mercería"
+        },
+        {
+          "id": "c1795725171991",
+          "nombre": "Frutos del NOA",
+          "fecha": "2026-11-25",
+          "persona": "Hogar",
+          "total": 1590,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Frutos del NOA"
         }
       ],
       "items": [
@@ -10947,6 +10959,19 @@
           "uni": "otro",
           "marca": null,
           "lugar": "Mercería",
+          "obs": ""
+        },
+        {
+          "id": "i1795725171991",
+          "compId": "c1795725171991",
+          "item": "Almohaditas de frutilla",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1590,
+          "cant": 150,
+          "uni": "g",
+          "marca": null,
+          "lugar": "Frutos del NOA",
           "obs": ""
         }
       ]
