@@ -8759,6 +8759,18 @@
           ],
           "itemCount": 1,
           "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "c1795726530016",
+          "nombre": "Shell de Laprida",
+          "fecha": "2026-11-26",
+          "persona": "Hogar",
+          "total": 5200,
+          "cats": [
+            "Transporte"
+          ],
+          "itemCount": 1,
+          "lugar": "Shell de Laprida"
         }
       ],
       "items": [
@@ -11022,6 +11034,19 @@
           "uni": "g",
           "marca": null,
           "lugar": "Frutos del NOA",
+          "obs": ""
+        },
+        {
+          "id": "i1795726530016",
+          "compId": "c1795726530016",
+          "item": "Nafta Super",
+          "cat": "Transporte",
+          "mon": "ARS",
+          "monto": 5200,
+          "cant": 2.36,
+          "uni": "lt",
+          "marca": "Shell",
+          "lugar": "Shell de Laprida",
           "obs": ""
         }
       ]
