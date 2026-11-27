@@ -8726,18 +8726,6 @@
           "lugar": "Mercería"
         },
         {
-          "id": "c1795725171991",
-          "nombre": "Frutos del NOA",
-          "fecha": "2026-11-25",
-          "persona": "Hogar",
-          "total": 1590,
-          "cats": [
-            "Alimentación"
-          ],
-          "itemCount": 1,
-          "lugar": "Frutos del NOA"
-        },
-        {
           "id": "c1795726530016",
           "nombre": "Shell de Laprida",
           "fecha": "2026-11-26",
@@ -8785,6 +8773,18 @@
           ],
           "itemCount": 6,
           "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "c1795742791220",
+          "nombre": "Carrefour",
+          "fecha": "2026-11-27",
+          "persona": "Hogar",
+          "total": -10651.5,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Carrefour"
         }
       ],
       "items": [
@@ -11012,19 +11012,6 @@
           "obs": ""
         },
         {
-          "id": "i1795725171991",
-          "compId": "c1795725171991",
-          "item": "Almohaditas de frutilla",
-          "cat": "Alimentación",
-          "mon": "ARS",
-          "monto": 1590,
-          "cant": 150,
-          "uni": "g",
-          "marca": null,
-          "lugar": "Frutos del NOA",
-          "obs": ""
-        },
-        {
           "id": "i1795726530016",
           "compId": "c1795726530016",
           "item": "Nafta Super",
@@ -11192,6 +11179,19 @@
           "cant": 1,
           "uni": "un",
           "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i1795742791220",
+          "compId": "c1795742791220",
+          "item": "Devolución compra 26/11/2026",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": -10651.5,
+          "cant": null,
+          "uni": null,
+          "marca": "Carrefour",
+          "lugar": "Carrefour",
+          "obs": ""
         }
       ]
     },
