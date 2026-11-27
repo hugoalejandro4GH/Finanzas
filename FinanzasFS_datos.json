@@ -8754,7 +8754,7 @@
           "id": "c1795742394887",
           "nombre": "ticket_farmalife_22112026",
           "fecha": "2026-11-22",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 23325.1,
           "cats": [
             "Deporte y Salud"
@@ -8766,7 +8766,7 @@
           "id": "c1795742594751",
           "nombre": "ticket_frutosnoa_25112026",
           "fecha": "2026-11-25",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 21090,
           "cats": [
             "Alimentación"
@@ -8797,6 +8797,18 @@
           ],
           "itemCount": 1,
           "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "c1795787901087",
+          "nombre": "Gasto",
+          "fecha": "2026-11-27",
+          "persona": "Hogar",
+          "total": 1000.1,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Gasto"
         }
       ],
       "items": [
@@ -11216,6 +11228,19 @@
           "uni": null,
           "marca": null,
           "lugar": "Frutos del NOA",
+          "obs": ""
+        },
+        {
+          "id": "i1795787901087",
+          "compId": "c1795787901087",
+          "item": "Turrones",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1000.1,
+          "cant": 3,
+          "uni": "unidad",
+          "marca": "Arcor",
+          "lugar": "Gasto",
           "obs": ""
         }
       ]
