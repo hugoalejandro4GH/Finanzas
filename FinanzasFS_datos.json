@@ -8777,7 +8777,7 @@
           "id": "c1795742208595",
           "nombre": "ticket_carrefour_26112026 (1) (1)",
           "fecha": "2026-11-26",
-          "persona": "Clarisa",
+          "persona": "Hogar",
           "total": 62967,
           "cats": [
             "Alimentación",
@@ -8785,6 +8785,18 @@
           ],
           "itemCount": 5,
           "lugar": "Carrefour"
+        },
+        {
+          "id": "c1795742394887",
+          "nombre": "ticket_farmalife_22112026",
+          "fecha": "2026-11-22",
+          "persona": "Clarisa",
+          "total": 23325.1,
+          "cats": [
+            "Deporte y Salud"
+          ],
+          "itemCount": 2,
+          "lugar": "Farmacia Farmalife"
         }
       ],
       "items": [
@@ -11122,6 +11134,30 @@
           "cant": 1,
           "uni": "un",
           "lugar": "Carrefour"
+        },
+        {
+          "id": "i17957423948870.8508882356324095",
+          "compId": "c1795742394887",
+          "item": "Sertal Compuesto 20x10 comp rec",
+          "marca": "Sertal",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 9725.1,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Farmacia Farmalife"
+        },
+        {
+          "id": "i17957423948880.6413503146564468",
+          "compId": "c1795742394887",
+          "item": "Tafirolito cereza 160mg comp mast x20",
+          "marca": "Tafirolito",
+          "cat": "Deporte y Salud",
+          "mon": "ARS",
+          "monto": 13600,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Farmacia Farmalife"
         }
       ]
     },
@@ -11592,7 +11628,8 @@
     "La Usina",
     "Corrientes",
     "Pampa",
-    "Mercería"
+    "Mercería",
+    "Farmacia Farmalife"
   ],
   "marcas": [
     "Pamp",
@@ -11722,7 +11759,9 @@
     "Cofler-Gall",
     "Barbara",
     "Carrefour",
-    "Pedigree"
+    "Pedigree",
+    "Sertal",
+    "Tafirolito"
   ],
   "tarjetas": [
     {
