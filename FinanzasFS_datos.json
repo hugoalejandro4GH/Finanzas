@@ -8785,6 +8785,18 @@
           ],
           "itemCount": 1,
           "lugar": "Carrefour"
+        },
+        {
+          "id": "c1795742856000",
+          "nombre": "Frutos del NOA",
+          "fecha": "2026-11-26",
+          "persona": "Hogar",
+          "total": -2530.81,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 1,
+          "lugar": "Frutos del NOA"
         }
       ],
       "items": [
@@ -11191,6 +11203,19 @@
           "uni": null,
           "marca": "Carrefour",
           "lugar": "Carrefour",
+          "obs": ""
+        },
+        {
+          "id": "i1795742856000",
+          "compId": "c1795742856000",
+          "item": "Devolución compra 25/11/2026",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": -2530.81,
+          "cant": null,
+          "uni": null,
+          "marca": null,
+          "lugar": "Frutos del NOA",
           "obs": ""
         }
       ]
