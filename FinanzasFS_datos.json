@@ -8797,6 +8797,18 @@
           ],
           "itemCount": 2,
           "lugar": "Farmacia Farmalife"
+        },
+        {
+          "id": "c1795742594751",
+          "nombre": "ticket_frutosnoa_25112026",
+          "fecha": "2026-11-25",
+          "persona": "Clarisa",
+          "total": 21090,
+          "cats": [
+            "Alimentación"
+          ],
+          "itemCount": 6,
+          "lugar": "Frutos del NOA"
         }
       ],
       "items": [
@@ -11158,6 +11170,78 @@
           "cant": 1,
           "uni": "un",
           "lugar": "Farmacia Farmalife"
+        },
+        {
+          "id": "i17957425947510.21263967797672656",
+          "compId": "c1795742594751",
+          "item": "Almohaditas de frutilla x150g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1590,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17957425947510.44875519490659754",
+          "compId": "c1795742594751",
+          "item": "Castañas enteras x100g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2400,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17957425947510.2317037253675145",
+          "compId": "c1795742594751",
+          "item": "Castañas enteras x200g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4790,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17957425947510.7008549857956506",
+          "compId": "c1795742594751",
+          "item": "Almendras guara x200g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 6570,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17957425947510.7558960619127629",
+          "compId": "c1795742594751",
+          "item": "Nuez entera blanca light x200g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4140,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
+        },
+        {
+          "id": "i17957425947510.8262375036544989",
+          "compId": "c1795742594751",
+          "item": "Maní japonés sabor queso x250g",
+          "marca": null,
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1600,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Frutos del NOA"
         }
       ]
     },
