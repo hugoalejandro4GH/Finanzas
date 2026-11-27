@@ -8750,18 +8750,6 @@
           "lugar": "Frutos del NOA"
         },
         {
-          "id": "c1795726064108",
-          "nombre": "Frutos del NOA",
-          "fecha": "2026-11-25",
-          "persona": "Hogar",
-          "total": 4790,
-          "cats": [
-            "Alimentación"
-          ],
-          "itemCount": 1,
-          "lugar": "Frutos del NOA"
-        },
-        {
           "id": "c1795726530016",
           "nombre": "Shell de Laprida",
           "fecha": "2026-11-26",
@@ -11056,19 +11044,6 @@
           "mon": "ARS",
           "monto": 2400,
           "cant": 100,
-          "uni": "g",
-          "marca": null,
-          "lugar": "Frutos del NOA",
-          "obs": ""
-        },
-        {
-          "id": "i1795726064109",
-          "compId": "c1795726064108",
-          "item": "Castañas enteras x200g",
-          "cat": "Alimentación",
-          "mon": "ARS",
-          "monto": 4790,
-          "cant": 200,
           "uni": "g",
           "marca": null,
           "lugar": "Frutos del NOA",
