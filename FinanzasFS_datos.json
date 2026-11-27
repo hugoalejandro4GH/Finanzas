@@ -8772,6 +8772,19 @@
           ],
           "itemCount": 1,
           "lugar": "Shell de Laprida"
+        },
+        {
+          "id": "c1795742208595",
+          "nombre": "ticket_carrefour_26112026 (1) (1)",
+          "fecha": "2026-11-26",
+          "persona": "Clarisa",
+          "total": 62967,
+          "cats": [
+            "Alimentación",
+            "Mascotas"
+          ],
+          "itemCount": 5,
+          "lugar": "Carrefour"
         }
       ],
       "items": [
@@ -11049,6 +11062,66 @@
           "marca": "Shell",
           "lugar": "Shell de Laprida",
           "obs": ""
+        },
+        {
+          "id": "i17957422085950.49977524163572007",
+          "compId": "c1795742208595",
+          "item": "Galletitas Bon o Bon x10u",
+          "marca": "Cofler-Gall",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 4039,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Carrefour"
+        },
+        {
+          "id": "i17957422085950.504934049537922",
+          "compId": "c1795742208595",
+          "item": "Harina de trigo 100 integral",
+          "marca": "Pureza",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2199,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Carrefour"
+        },
+        {
+          "id": "i17957422085950.40705288590026967",
+          "compId": "c1795742208595",
+          "item": "Harina integral x1kg",
+          "marca": "Barbara",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 1649,
+          "cant": 1,
+          "uni": "kg",
+          "lugar": "Carrefour"
+        },
+        {
+          "id": "i17957422085950.032285412643527356",
+          "compId": "c1795742208595",
+          "item": "Maíz pisingallo Classic x400g",
+          "marca": "Carrefour",
+          "cat": "Alimentación",
+          "mon": "ARS",
+          "monto": 2180,
+          "cant": 2,
+          "uni": "un",
+          "lugar": "Carrefour"
+        },
+        {
+          "id": "i17957422085950.7847755465901729",
+          "compId": "c1795742208595",
+          "item": "Alimento perros Pedigree adultos",
+          "marca": "Pedigree",
+          "cat": "Mascotas",
+          "mon": "ARS",
+          "monto": 52900,
+          "cant": 1,
+          "uni": "un",
+          "lugar": "Carrefour"
         }
       ]
     },
@@ -11645,7 +11718,11 @@
     "Alicante",
     "Halconero",
     "Billiken",
-    "Ypf"
+    "Ypf",
+    "Cofler-Gall",
+    "Barbara",
+    "Carrefour",
+    "Pedigree"
   ],
   "tarjetas": [
     {
