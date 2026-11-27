@@ -24,7 +24,7 @@
     "Alquiler",
     "Otros ingresos"
   ],
-  "tc": 1550,
+  "tc": 1,
   "meses": {
     "2026_9": {
       "pi": [
@@ -8053,7 +8053,7 @@
           "nombre": "Santander Río",
           "fecha": "2026-11-05",
           "persona": "Hogar",
-          "total": 31000,
+          "total": 20,
           "cats": [
             "Inversión"
           ],
